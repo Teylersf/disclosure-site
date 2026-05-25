@@ -1,19 +1,63 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import { AlertTriangle, FileWarning, Wrench, Microscope } from "lucide-react";
 import { FINDINGS, TIER1, TIER2, TIER3 } from "@/lib/findings";
+import { absoluteUrl, SITE_NAME, SITE_URL } from "@/lib/site";
 import FindingCard from "@/components/FindingCard";
+import JsonLd from "@/components/JsonLd";
 
-export const metadata = {
-  title: "Findings — what the official catalog doesn’t say",
+export const metadata: Metadata = {
+  title: "Findings — what the PURSUE catalog doesn’t say",
   description:
-    "Verifiable observations about the released PURSUE files that the official catalog UI does not surface. Embedded PDF titles that disagree with their catalog entries, byte-identical duplicates, scrubbing inconsistencies, archive shelfmarks, and server-hygiene leftovers.",
+    "13 verifiable observations about the U.S. Department of War PURSUE 2026 UAP release that the official catalog UI does not surface. Embedded PDF titles disagreeing with catalog entries, byte-identical duplicates, scrubbing inconsistencies (PR-073 Columbus OH), archive shelfmarks (NARA RG decoded), and server-hygiene leftovers.",
+  keywords: [
+    "PURSUE 2026 findings",
+    "DOW-UAP discrepancy",
+    "DOW-UAP-D20 Iraq Southern United States",
+    "PURSUE PR-073 Columbus Ohio Edward Pajak",
+    "D to PR relabel crosswalk",
+    "Kazakhstan Tajikistan UAP Cable",
+    "war.gov UFO PDF metadata leak",
+    "NARA shelfmark UAP",
+  ],
+  alternates: { canonical: "/findings" },
+  openGraph: {
+    type: "website",
+    title: "13 findings the PURSUE catalog doesn’t show",
+    description: "Independent analysis of the PURSUE 2026 release. Each claim links to the file in the mirror — verify it yourself.",
+    url: absoluteUrl("/findings"),
+    siteName: SITE_NAME,
+    // Image auto-supplied by app/opengraph-image.tsx
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "13 findings the PURSUE catalog doesn’t show",
+    description: "Verifiable observations about the PURSUE 2026 UAP release.",
+  },
 };
 
 export default function FindingsPage() {
   const lead = TIER1[0]; // d20-location-swap — most impactful
   const rest1 = TIER1.slice(1);
+
+  const itemListJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "PURSUE 2026 findings",
+    description: "Independent observations about the U.S. Department of War PURSUE 2026 UAP release.",
+    numberOfItems: FINDINGS.length,
+    itemListElement: FINDINGS.map((f, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      url: absoluteUrl(`/findings/${f.id}`),
+      name: f.title,
+      description: f.claim,
+    })),
+  };
+
   return (
     <div>
+      <JsonLd data={itemListJsonLd} />
       <section className="relative overflow-hidden border-b border-[var(--border)]">
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-10 left-1/3 w-[500px] h-[500px] rounded-full bg-[var(--gold)] opacity-[0.07] blur-3xl" />

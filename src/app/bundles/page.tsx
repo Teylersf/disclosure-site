@@ -1,7 +1,27 @@
+import type { Metadata } from "next";
 import { Download, FileArchive } from "lucide-react";
 import { assetUrl } from "@/lib/asset-url";
+import { absoluteUrl } from "@/lib/site";
 
-export const metadata = { title: "Bundles — Disclosure" };
+export const metadata: Metadata = {
+  title: "Download bundles — PURSUE 2026 UAP files (8 GB total)",
+  description:
+    "Download the four official Department of War PURSUE 2026 release bundles as one-shot ZIP files — Release 1 (1.22 GB), Release 2 combined (5.64 GB), Release 2 documents only (70 MB), and Release 1 videos (1.33 GB).",
+  keywords: [
+    "PURSUE 2026 download",
+    "war.gov UFO zip",
+    "uap052226.zip",
+    "uapvideos.zip",
+    "Release_1.zip UFO",
+    "Pentagon UAP bulk download",
+  ],
+  alternates: { canonical: "/bundles" },
+  openGraph: {
+    title: "Download the full PURSUE 2026 bundles",
+    description: "All four official Department of War ZIP bundles — 8 GB of declassified UAP files.",
+    url: absoluteUrl("/bundles"),
+  },
+};
 
 const BUNDLES = [
   {

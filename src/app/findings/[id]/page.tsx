@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import type { Metadata } from "next";
 import {
   ArrowLeft, AlertTriangle, FileWarning, Microscope, Hash, FileText,
   Link2, ExternalLink,
@@ -7,19 +8,47 @@ import {
 import { getFinding, getAllFindingIds, FINDINGS } from "@/lib/findings";
 import { getRecord } from "@/lib/manifest";
 import { assetUrl } from "@/lib/asset-url";
+import { absoluteUrl, SITE_NAME, SITE_URL } from "@/lib/site";
 import FindingEvidenceText from "@/components/FindingEvidenceText";
+import JsonLd from "@/components/JsonLd";
 
 export function generateStaticParams() {
   return getAllFindingIds().map((id) => ({ id }));
 }
 
-export async function generateMetadata({ params }: { params: Promise<{ id: string }> }) {
+export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
   const { id } = await params;
   const f = getFinding(id);
   if (!f) return { title: "Finding not found" };
+  const desc = `${f.claim} — ${f.significance}`.slice(0, 300);
+  const keywords = [
+    f.title,
+    f.id,
+    "PURSUE 2026 finding",
+    "DOW-UAP discrepancy",
+    "declassified UFO files",
+    "war.gov UFO",
+    "PURSUE catalog",
+    ...(f.relatedRecordIds ?? []),
+  ];
   return {
     title: `${f.title} — Finding ${f.id}`,
-    description: f.claim,
+    description: desc,
+    keywords,
+    alternates: { canonical: `/findings/${id}` },
+    openGraph: {
+      type: "article",
+      title: `${f.title} — Finding ${f.id}`,
+      description: desc,
+      url: absoluteUrl(`/findings/${id}`),
+      siteName: SITE_NAME,
+      // Image auto-supplied by app/opengraph-image.tsx
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${f.title} — Finding ${f.id}`,
+      description: desc,
+    },
   };
 }
 
@@ -42,8 +71,38 @@ export default async function FindingPage({ params }: { params: Promise<{ id: st
   const next = idx < FINDINGS.length - 1 ? FINDINGS[idx + 1] : null;
   const relatedRecords = (f.relatedRecordIds ?? []).map((rid) => getRecord(rid)).filter(Boolean);
 
+  const articleJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ReportageNewsArticle",
+    headline: f.title,
+    abstract: f.claim,
+    articleBody: `${f.claim}\n\n${f.significance}\n\n${f.evidence}`,
+    url: absoluteUrl(`/findings/${id}`),
+    inLanguage: "en",
+    isAccessibleForFree: true,
+    keywords: [f.id, "PURSUE 2026", "DOW-UAP", "declassified UFO files"].join(", "),
+    author: { "@type": "Organization", name: "Disclosure" },
+    publisher: { "@type": "Organization", name: "Disclosure", url: SITE_URL },
+    image: `${SITE_URL}/og.png`,
+    datePublished: "2026-05-25",
+    dateModified: "2026-05-25",
+    mainEntityOfPage: { "@type": "WebPage", "@id": absoluteUrl(`/findings/${id}`) },
+  };
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+      { "@type": "ListItem", position: 2, name: "Findings", item: `${SITE_URL}/findings` },
+      { "@type": "ListItem", position: 3, name: f.title, item: absoluteUrl(`/findings/${id}`) },
+    ],
+  };
+
   return (
     <div className="max-w-[1280px] mx-auto px-6 py-8">
+      <JsonLd data={articleJsonLd} />
+      <JsonLd data={breadcrumbJsonLd} />
       <div className="flex items-center justify-between mb-8">
         <Link href="/findings" className="btn"><ArrowLeft size={14}/> All findings</Link>
         <div className="flex gap-2 text-xs">

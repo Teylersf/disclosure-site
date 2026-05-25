@@ -3,19 +3,100 @@ import { Geist, Geist_Mono } from "next/font/google";
 import Link from "next/link";
 import { Tv, Search, Archive, Home, AlertTriangle } from "lucide-react";
 import "./globals.css";
+import { SITE_URL, SITE_NAME, SITE_DESCRIPTION, SITE_KEYWORDS, SITE_TWITTER } from "@/lib/site";
 
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Disclosure — UAP Files (PURSUE 2026)",
-  description:
-    "Searchable archive of every record released by the U.S. Department of War PURSUE program: declassified UAP / UFO files, photographs, mission reports, sensor footage, and audio.",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: SITE_NAME,
+    template: "%s — Disclosure",
+  },
+  description: SITE_DESCRIPTION,
+  applicationName: "Disclosure",
+  keywords: SITE_KEYWORDS,
+  authors: [{ name: "Disclosure", url: SITE_URL }],
+  creator: "Disclosure",
+  publisher: "Disclosure",
+  category: "news",
+  classification: "Government documents archive",
+  referrer: "origin-when-cross-origin",
+  formatDetection: { email: false, address: false, telephone: false },
+  alternates: {
+    canonical: "/",
+    types: { "application/rss+xml": "/feed.xml" },
+  },
+  openGraph: {
+    type: "website",
+    siteName: SITE_NAME,
+    title: SITE_NAME,
+    description: SITE_DESCRIPTION,
+    url: SITE_URL,
+    locale: "en_US",
+    // Image auto-supplied by app/opengraph-image.tsx
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: SITE_NAME,
+    description: SITE_DESCRIPTION,
+    site: SITE_TWITTER,
+    creator: SITE_TWITTER,
+    // Image auto-supplied by app/opengraph-image.tsx
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
+  icons: { icon: "/favicon.ico" },
+};
+
+const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: SITE_NAME,
+  url: SITE_URL,
+  description: SITE_DESCRIPTION,
+  potentialAction: {
+    "@type": "SearchAction",
+    target: {
+      "@type": "EntryPoint",
+      urlTemplate: `${SITE_URL}/search?q={search_term_string}`,
+    },
+    "query-input": "required name=search_term_string",
+  },
+};
+
+const orgJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Disclosure",
+  url: SITE_URL,
+  description: "Independent searchable mirror of the U.S. Department of War PURSUE program UAP file release.",
+  sameAs: ["https://www.war.gov/UFO/"],
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }}
+        />
+      </head>
       <body className="min-h-full flex flex-col grain">
         <header className="relative z-10 border-b border-[var(--border)] bg-[var(--bg-0)]/80 backdrop-blur">
           <div className="max-w-[1600px] mx-auto px-6 py-3 flex items-center justify-between gap-6">
@@ -40,7 +121,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
             <span className="mx-2">·</span>
             Source: <a href="https://www.war.gov/UFO/" target="_blank" rel="noreferrer">war.gov/UFO/</a>
             <span className="mx-2">·</span>
-            Local archive — not affiliated with the U.S. government
+            Independent mirror — not affiliated with the U.S. government
           </p>
         </footer>
       </body>

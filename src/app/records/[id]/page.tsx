@@ -1,12 +1,72 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import type { Metadata } from "next";
 import { ArrowLeft, Building2, Calendar, MapPin, FileText, Hash, Clock, AlertTriangle, ArrowUpRight } from "lucide-react";
 import { getManifest, getRecord, getAllRecordIds } from "@/lib/manifest";
 import { findingsForRecord } from "@/lib/findings";
+import { assetUrl } from "@/lib/asset-url";
+import { absoluteUrl, SITE_NAME, SITE_URL } from "@/lib/site";
 import RecordViewer from "@/components/RecordViewer";
+import JsonLd from "@/components/JsonLd";
 
 export function generateStaticParams() {
   return getAllRecordIds().map((id) => ({ id }));
+}
+
+const TYPE_LABEL: Record<string, string> = {
+  PDF: "document",
+  VID: "video",
+  IMG: "photograph",
+  AUD: "audio recording",
+};
+
+export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
+  const { id } = await params;
+  const record = getRecord(id);
+  if (!record) return { title: "Record not found" };
+
+  const typeLabel = TYPE_LABEL[record.type] ?? "record";
+  const where = [record.incidentLocation, record.incidentDate].filter((x) => x && x !== "N/A").join(" · ");
+  const desc = `${record.agency || "Department of War"} ${typeLabel}${where ? ` — ${where}` : ""}. ${record.description.slice(0, 200)}${record.description.length > 200 ? "…" : ""}`;
+
+  // Prefer the record's own thumbnail as OG image; fall back to the auto-generated
+  // /opengraph-image route from app/opengraph-image.tsx
+  const ogImage = record.thumbnail?.url
+    ? assetUrl(record.thumbnail.url).startsWith("http")
+      ? assetUrl(record.thumbnail.url)
+      : `${SITE_URL}${assetUrl(record.thumbnail.url)}`
+    : `${SITE_URL}/opengraph-image`;
+
+  return {
+    title: record.title,
+    description: desc,
+    keywords: [
+      record.title,
+      record.agency,
+      record.incidentLocation,
+      "PURSUE 2026",
+      "DOW-UAP",
+      record.dvidsId ? `DVIDS ${record.dvidsId}` : "",
+      record.type === "VID" ? "UAP video" : "",
+      record.type === "PDF" ? "declassified UAP document" : "",
+      record.type === "AUD" ? "NASA UAP audio" : "",
+    ].filter(Boolean) as string[],
+    alternates: { canonical: `/records/${id}` },
+    openGraph: {
+      type: "article",
+      title: record.title,
+      description: desc,
+      url: absoluteUrl(`/records/${id}`),
+      siteName: SITE_NAME,
+      images: [{ url: ogImage, width: 1200, height: 630, alt: record.imageAlt ?? record.title }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: record.title,
+      description: desc,
+      images: [ogImage],
+    },
+  };
 }
 
 export default async function RecordPage({ params }: { params: Promise<{ id: string }> }) {
@@ -22,8 +82,51 @@ export default async function RecordPage({ params }: { params: Promise<{ id: str
   const isNew = record.release === "release_2";
   const findings = findingsForRecord(id);
 
+  // JSON-LD structured data
+  const typeMap: Record<string, string> = { PDF: "DigitalDocument", VID: "VideoObject", AUD: "AudioObject", IMG: "ImageObject" };
+  const sdType = typeMap[record.type] ?? "CreativeWork";
+  const jsonLd: Record<string, unknown> = {
+    "@context": "https://schema.org",
+    "@type": sdType,
+    name: record.title,
+    description: record.description,
+    url: absoluteUrl(`/records/${id}`),
+    dateCreated: record.incidentDate,
+    datePublished: record.releaseDate,
+    inLanguage: "en",
+    isAccessibleForFree: true,
+    isFamilyFriendly: true,
+    keywords: [record.agency, record.incidentLocation, "PURSUE 2026", "DOW-UAP", record.dvidsId].filter(Boolean).join(", "),
+    publisher: { "@type": "Organization", name: record.agency || "U.S. Department of War" },
+    sourceOrganization: { "@type": "Organization", name: record.agency || "U.S. Department of War", url: "https://www.war.gov/UFO/" },
+    contentLocation: record.incidentLocation && record.incidentLocation !== "N/A" ? { "@type": "Place", name: record.incidentLocation } : undefined,
+  };
+  if (record.type === "VID" && record.dvids) {
+    const f0 = record.dvids.files?.[0];
+    Object.assign(jsonLd, {
+      duration: record.dvids.duration ? `PT${Math.floor(record.dvids.duration)}S` : undefined,
+      thumbnailUrl: record.thumbnail?.url ? assetUrl(record.thumbnail.url) : undefined,
+      contentUrl: f0 ? assetUrl(f0.src) : undefined,
+      uploadDate: record.dvids.date_published,
+      width: f0?.width,
+      height: f0?.height,
+    });
+  }
+
+  const breadcrumb = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+      { "@type": "ListItem", position: 2, name: "Records", item: `${SITE_URL}/#explore` },
+      { "@type": "ListItem", position: 3, name: record.title, item: absoluteUrl(`/records/${id}`) },
+    ],
+  };
+
   return (
     <div className="max-w-[1600px] mx-auto px-6 py-8">
+      <JsonLd data={jsonLd} />
+      <JsonLd data={breadcrumb} />
       <div className="flex items-center justify-between mb-6">
         <Link href="/" className="btn"><ArrowLeft size={14}/> Back to archive</Link>
         <div className="flex gap-2">
