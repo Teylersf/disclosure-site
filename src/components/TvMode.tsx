@@ -5,6 +5,7 @@ import Link from "next/link";
 import {
   Play, Pause, SkipBack, SkipForward, Shuffle, Repeat, ListFilter,
   Volume2, VolumeX, ChevronRight, ChevronLeft, Loader2, AlertCircle,
+  Maximize, Gauge, ChevronsLeft, ChevronsRight,
 } from "lucide-react";
 import type { UapRecord } from "@/lib/types";
 import { assetUrl } from "@/lib/asset-url";
@@ -13,11 +14,23 @@ type Props = { videos: UapRecord[] };
 
 type LoadState = "idle" | "loading" | "buffering" | "ready" | "playing" | "error";
 
+const SPEEDS = [0.1, 0.25, 0.5, 0.75, 1, 1.25, 1.5, 2, 4];
+const ASSUMED_FPS = 30; // DVIDS UAP videos are mostly 29.97/30fps
+
+function fmtTime(sec: number): string {
+  if (!isFinite(sec) || sec < 0) return "0:00";
+  const m = Math.floor(sec / 60);
+  const s = Math.floor(sec % 60);
+  return `${m}:${String(s).padStart(2, "0")}`;
+}
+
 export default function TvMode({ videos }: Props) {
   const [order, setOrder] = useState<number[]>(() => videos.map((_, i) => i));
   const [pos, setPos] = useState(0);
   const [playing, setPlaying] = useState(true);
-  const [muted, setMuted] = useState(false);
+  // Default muted so cascading autoplay across the queue is allowed by browsers.
+  // User can unmute with M; once they do, all subsequent videos respect that choice.
+  const [muted, setMuted] = useState(true);
   const [shuffle, setShuffle] = useState(false);
   const [loop, setLoop] = useState(true);
   const [filter, setFilter] = useState<"" | "VID" | "AUD">("");
@@ -26,6 +39,8 @@ export default function TvMode({ videos }: Props) {
   const [bufferedPct, setBufferedPct] = useState(0);
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
+  const [speed, setSpeed] = useState(1);
+  const playerRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
 
   const queue = useMemo(() => {
@@ -54,26 +69,18 @@ export default function TvMode({ videos }: Props) {
   const currentIdx = order[pos];
   const current = currentIdx !== undefined ? videos[currentIdx] : undefined;
 
-  // When video element source changes, autoplay
+  // When the video source changes, reset UI state — but DON'T call play() yet.
+  // The actual play() happens on the `canplay` event below, once the browser
+  // confirms the media is ready. Calling play() immediately after a src change
+  // races the load and silently fails on most browsers.
   useEffect(() => {
     if (!videoRef.current || !current) return;
     videoRef.current.muted = muted;
+    videoRef.current.playbackRate = speed;
     setLoadState("loading");
     setBufferedPct(0);
     setCurrentTime(0);
     setDuration(0);
-    if (playing) {
-      videoRef.current.play().catch(() => {
-        // Autoplay blocked; mute and try again
-        if (videoRef.current) {
-          videoRef.current.muted = true;
-          setMuted(true);
-          videoRef.current.play().catch(() => setPlaying(false));
-        }
-      });
-    } else {
-      videoRef.current.pause();
-    }
   }, [currentIdx]); // eslint-disable-line react-hooks/exhaustive-deps
 
   // Track loading / buffering / playback state for the UI
@@ -83,7 +90,22 @@ export default function TvMode({ videos }: Props) {
 
     const onLoadStart = () => setLoadState("loading");
     const onWaiting = () => setLoadState((s) => (s === "playing" ? "buffering" : "loading"));
-    const onCanPlay = () => setLoadState((s) => (s === "playing" ? s : "ready"));
+    const onCanPlay = () => {
+      setLoadState((s) => (s === "playing" ? s : "ready"));
+      // Now that the video is ready, honor the playing state
+      if (playing && v.paused) {
+        v.play().catch(() => {
+          // Autoplay blocked because we're unmuted; mute and retry once
+          if (!v.muted) {
+            v.muted = true;
+            setMuted(true);
+            v.play().catch(() => setPlaying(false));
+          } else {
+            setPlaying(false);
+          }
+        });
+      }
+    };
     const onPlaying = () => setLoadState("playing");
     const onError = () => setLoadState("error");
     const onLoadedMeta = () => setDuration(v.duration || 0);
@@ -120,16 +142,28 @@ export default function TvMode({ videos }: Props) {
       v.removeEventListener("timeupdate", onTimeUpdate);
       v.removeEventListener("progress", onProgress);
     };
-  }, [currentIdx]);
+    // Re-bind on playing/muted change so onCanPlay always reads current state
+  }, [currentIdx, playing, muted]);
 
   useEffect(() => {
     if (videoRef.current) videoRef.current.muted = muted;
   }, [muted]);
 
   useEffect(() => {
+    if (videoRef.current) videoRef.current.playbackRate = speed;
+  }, [speed]);
+
+  useEffect(() => {
     if (!videoRef.current) return;
-    if (playing) videoRef.current.play().catch(() => setPlaying(false));
-    else videoRef.current.pause();
+    // Only honor playing=true if the video is past HAVE_FUTURE_DATA (readyState >= 3).
+    // Otherwise the canplay handler above will auto-start once the media is ready.
+    if (playing) {
+      if (videoRef.current.readyState >= 3) {
+        videoRef.current.play().catch(() => setPlaying(false));
+      }
+    } else {
+      videoRef.current.pause();
+    }
   }, [playing]);
 
   const goNext = () => {
@@ -142,21 +176,60 @@ export default function TvMode({ videos }: Props) {
     else if (loop) setPos(order.length - 1);
   };
 
+  // Seek / frame-step / fullscreen helpers
+  const seekTo = (sec: number) => {
+    if (!videoRef.current) return;
+    videoRef.current.currentTime = Math.max(0, Math.min(videoRef.current.duration || sec, sec));
+  };
+  const seekBy = (delta: number) => {
+    if (!videoRef.current) return;
+    seekTo(videoRef.current.currentTime + delta);
+  };
+  const frameStep = (frames: number) => {
+    if (!videoRef.current) return;
+    // Pause first; HTMLVideoElement doesn't have a native frame-step, so we
+    // bump currentTime by 1/fps. Defaults to 30fps if we don't know the rate.
+    videoRef.current.pause();
+    setPlaying(false);
+    seekBy(frames / ASSUMED_FPS);
+  };
+  const changeSpeed = (delta: number) => {
+    const idx = SPEEDS.indexOf(speed);
+    const next = idx >= 0 ? SPEEDS[Math.max(0, Math.min(SPEEDS.length - 1, idx + delta))] : 1;
+    setSpeed(next);
+  };
+  const toggleFullscreen = async () => {
+    if (!playerRef.current) return;
+    if (document.fullscreenElement) await document.exitFullscreen();
+    else await playerRef.current.requestFullscreen();
+  };
+
   // Keyboard shortcuts
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
-      if ((e.target as HTMLElement)?.tagName === "INPUT") return;
-      if (e.code === "Space") { e.preventDefault(); setPlaying((p) => !p); }
+      const tag = (e.target as HTMLElement)?.tagName;
+      if (tag === "INPUT" || tag === "TEXTAREA" || tag === "SELECT") return;
+      if (e.code === "Space" || e.code === "KeyK") { e.preventDefault(); setPlaying((p) => !p); }
+      else if (e.code === "ArrowRight" && e.shiftKey) seekBy(5);
+      else if (e.code === "ArrowLeft" && e.shiftKey) seekBy(-5);
       else if (e.code === "ArrowRight") goNext();
       else if (e.code === "ArrowLeft") goPrev();
+      else if (e.code === "KeyJ") seekBy(-10);
+      else if (e.code === "KeyL" && e.shiftKey) seekBy(10);
+      else if (e.code === "Comma") { e.preventDefault(); frameStep(-1); }
+      else if (e.code === "Period") { e.preventDefault(); frameStep(1); }
       else if (e.code === "KeyM") setMuted((m) => !m);
       else if (e.code === "KeyS") setShuffle((s) => !s);
       else if (e.code === "KeyL") setLoop((l) => !l);
       else if (e.code === "KeyB") setSidebar((s) => !s);
+      else if (e.code === "KeyF") toggleFullscreen();
+      else if (e.code === "Minus") changeSpeed(-1);
+      else if (e.code === "Equal") changeSpeed(1);
+      else if (e.code === "Digit0") setSpeed(1);
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [order.length, pos, loop]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [order.length, pos, loop, speed]); // eslint-disable-line react-hooks/exhaustive-deps
 
   if (!current) {
     return <div className="p-10 text-center text-[var(--muted)]">No videos match the current filter.</div>;
@@ -182,7 +255,7 @@ export default function TvMode({ videos }: Props) {
   return (
     <div className="flex h-[calc(100vh-65px)] overflow-hidden">
       {/* Player */}
-      <div className="flex-1 flex flex-col bg-black relative">
+      <div ref={playerRef} className="flex-1 flex flex-col bg-black relative">
         <div className="flex-1 relative">
           <video
             key={currentIdx}
@@ -268,33 +341,130 @@ export default function TvMode({ videos }: Props) {
           </div>
         </div>
 
-        {/* Controls bar */}
-        <div className="bg-[var(--bg-0)] border-t border-[var(--border)] px-6 py-3 flex items-center gap-3">
-          <button type="button" onClick={goPrev} className="btn" title="Previous (←)"><SkipBack size={14}/></button>
-          <button type="button" onClick={() => setPlaying((p) => !p)} className="btn btn-primary" title="Play/pause (space)">
-            {playing ? <Pause size={14}/> : <Play size={14}/>}
-          </button>
-          <button type="button" onClick={goNext} className="btn" title="Next (→)"><SkipForward size={14}/></button>
-          <div className="w-px h-6 bg-[var(--border)] mx-2"/>
-          <button type="button" onClick={() => setMuted((m) => !m)} className="btn" title="Mute (M)">
-            {muted ? <VolumeX size={14}/> : <Volume2 size={14}/>}
-          </button>
-          <button type="button" onClick={() => setShuffle((s) => !s)} className={`btn ${shuffle ? "btn-gold" : ""}`} title="Shuffle (S)">
-            <Shuffle size={14}/>
-          </button>
-          <button type="button" onClick={() => setLoop((l) => !l)} className={`btn ${loop ? "btn-primary" : ""}`} title="Loop (L)">
-            <Repeat size={14}/>
-          </button>
-          <select value={filter} onChange={(e) => setFilter(e.target.value as "" | "VID" | "AUD")} className="select text-xs">
-            <option value="">All ({videos.length})</option>
-            <option value="VID">Videos ({videos.filter(v => v.type === "VID").length})</option>
-            <option value="AUD">Audio ({videos.filter(v => v.type === "AUD").length})</option>
-          </select>
-          <div className="ml-auto flex items-center gap-3 text-[10px] uppercase tracking-widest text-[var(--muted)]">
-            <span>Space · ← → · M · S · L · B</span>
-            <button type="button" onClick={() => setSidebar((s) => !s)} className="btn" title="Toggle sidebar (B)">
-              {sidebar ? <ChevronRight size={14}/> : <ChevronLeft size={14}/>}
+        {/* Full media controls */}
+        <div className="bg-[var(--bg-0)] border-t border-[var(--border)] flex flex-col">
+          {/* Scrubber row */}
+          <div className="px-6 pt-3 flex items-center gap-3">
+            <span className="text-xs font-mono text-[var(--muted)] tabular-nums w-12 text-right">
+              {fmtTime(currentTime)}
+            </span>
+            <div className="flex-1 relative h-5 flex items-center group">
+              {/* Buffered + filled track behind the slider */}
+              <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 h-1.5 bg-white/8 rounded-full overflow-hidden pointer-events-none">
+                <div
+                  className="absolute top-0 left-0 h-full bg-white/15"
+                  style={{ width: `${bufferedPct}%` }}
+                />
+                <div
+                  className="absolute top-0 left-0 h-full bg-[var(--accent-glow)] transition-[width] duration-100"
+                  style={{ width: `${duration > 0 ? (currentTime / duration) * 100 : 0}%` }}
+                />
+              </div>
+              <input
+                type="range"
+                min={0}
+                max={duration || 0}
+                step={0.01}
+                value={currentTime}
+                onChange={(e) => seekTo(parseFloat(e.target.value))}
+                className="relative w-full h-5 appearance-none bg-transparent cursor-pointer
+                           [&::-webkit-slider-thumb]:appearance-none
+                           [&::-webkit-slider-thumb]:h-3
+                           [&::-webkit-slider-thumb]:w-3
+                           [&::-webkit-slider-thumb]:rounded-full
+                           [&::-webkit-slider-thumb]:bg-[var(--accent-glow)]
+                           [&::-webkit-slider-thumb]:shadow-[0_0_8px_rgba(94,234,212,0.8)]
+                           [&::-moz-range-thumb]:h-3
+                           [&::-moz-range-thumb]:w-3
+                           [&::-moz-range-thumb]:border-0
+                           [&::-moz-range-thumb]:rounded-full
+                           [&::-moz-range-thumb]:bg-[var(--accent-glow)]
+                           opacity-0 group-hover:opacity-100 focus:opacity-100 transition"
+                aria-label="Seek"
+              />
+            </div>
+            <span className="text-xs font-mono text-[var(--muted)] tabular-nums w-12">
+              {fmtTime(duration)}
+            </span>
+          </div>
+
+          {/* Button row */}
+          <div className="px-6 py-3 flex items-center gap-2 flex-wrap">
+            <button type="button" onClick={goPrev} className="btn" title="Previous video (←)"><SkipBack size={14}/></button>
+            <button type="button" onClick={() => frameStep(-1)} className="btn" title="Frame back (,)">
+              <ChevronsLeft size={14}/>
             </button>
+            <button type="button" onClick={() => setPlaying((p) => !p)} className="btn btn-primary" title="Play / pause (space or K)">
+              {playing ? <Pause size={14}/> : <Play size={14}/>}
+            </button>
+            <button type="button" onClick={() => frameStep(1)} className="btn" title="Frame forward (.)">
+              <ChevronsRight size={14}/>
+            </button>
+            <button type="button" onClick={goNext} className="btn" title="Next video (→)"><SkipForward size={14}/></button>
+
+            <div className="w-px h-6 bg-[var(--border)] mx-1"/>
+
+            <button type="button" onClick={() => seekBy(-10)} className="btn text-[10px] font-mono" title="Back 10 seconds (J)">-10s</button>
+            <button type="button" onClick={() => seekBy(-5)} className="btn text-[10px] font-mono" title="Back 5 seconds (Shift+←)">-5s</button>
+            <button type="button" onClick={() => seekBy(5)} className="btn text-[10px] font-mono" title="Forward 5 seconds (Shift+→)">+5s</button>
+            <button type="button" onClick={() => seekBy(10)} className="btn text-[10px] font-mono" title="Forward 10 seconds (Shift+L)">+10s</button>
+
+            <div className="w-px h-6 bg-[var(--border)] mx-1"/>
+
+            <div className="flex items-center gap-1.5">
+              <Gauge size={14} className={speed === 1 ? "text-[var(--muted)]" : "text-[var(--gold)]"}/>
+              <select
+                value={String(speed)}
+                onChange={(e) => setSpeed(parseFloat(e.target.value))}
+                className="select text-xs"
+                title="Playback speed (- / + to nudge, 0 to reset)"
+              >
+                {SPEEDS.map((s) => (
+                  <option key={s} value={s}>{s}× {s < 1 ? "slow" : s > 1 ? "fast" : "normal"}</option>
+                ))}
+              </select>
+            </div>
+
+            <button type="button" onClick={() => setMuted((m) => !m)} className="btn" title="Mute (M)">
+              {muted ? <VolumeX size={14}/> : <Volume2 size={14}/>}
+            </button>
+
+            <div className="w-px h-6 bg-[var(--border)] mx-1"/>
+
+            <button type="button" onClick={() => setShuffle((s) => !s)} className={`btn ${shuffle ? "btn-gold" : ""}`} title="Shuffle queue (S)">
+              <Shuffle size={14}/>
+            </button>
+            <button type="button" onClick={() => setLoop((l) => !l)} className={`btn ${loop ? "btn-primary" : ""}`} title="Loop queue (L)">
+              <Repeat size={14}/>
+            </button>
+            <select value={filter} onChange={(e) => setFilter(e.target.value as "" | "VID" | "AUD")} className="select text-xs" title="Filter queue by type">
+              <option value="">All ({videos.length})</option>
+              <option value="VID">Videos ({videos.filter(v => v.type === "VID").length})</option>
+              <option value="AUD">Audio ({videos.filter(v => v.type === "AUD").length})</option>
+            </select>
+
+            <div className="ml-auto flex items-center gap-2">
+              <button type="button" onClick={toggleFullscreen} className="btn" title="Fullscreen (F)"><Maximize size={14}/></button>
+              <button type="button" onClick={() => setSidebar((s) => !s)} className="btn" title="Toggle queue sidebar (B)">
+                {sidebar ? <ChevronRight size={14}/> : <ChevronLeft size={14}/>}
+              </button>
+            </div>
+          </div>
+
+          {/* Keyboard help row */}
+          <div className="px-6 pb-2 text-[10px] text-[var(--muted)] tracking-wider flex flex-wrap gap-x-4 gap-y-1">
+            <span><kbd className="font-mono text-[var(--accent-glow)]">space</kbd> play/pause</span>
+            <span><kbd className="font-mono text-[var(--accent-glow)]">← →</kbd> prev/next video</span>
+            <span><kbd className="font-mono text-[var(--accent-glow)]">shift+←/→</kbd> ±5s</span>
+            <span><kbd className="font-mono text-[var(--accent-glow)]">J / shift+L</kbd> ±10s</span>
+            <span><kbd className="font-mono text-[var(--accent-glow)]">,  /  .</kbd> frame back/forward</span>
+            <span><kbd className="font-mono text-[var(--accent-glow)]">−  /  =</kbd> speed</span>
+            <span><kbd className="font-mono text-[var(--accent-glow)]">0</kbd> 1× speed</span>
+            <span><kbd className="font-mono text-[var(--accent-glow)]">M</kbd> mute</span>
+            <span><kbd className="font-mono text-[var(--accent-glow)]">F</kbd> fullscreen</span>
+            <span><kbd className="font-mono text-[var(--accent-glow)]">S</kbd> shuffle</span>
+            <span><kbd className="font-mono text-[var(--accent-glow)]">L</kbd> loop</span>
+            <span><kbd className="font-mono text-[var(--accent-glow)]">B</kbd> sidebar</span>
           </div>
         </div>
       </div>
