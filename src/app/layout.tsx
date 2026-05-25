@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Link from "next/link";
 import { Tv, Search, Archive, Home, AlertTriangle } from "lucide-react";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import { SITE_URL, SITE_NAME, SITE_DESCRIPTION, SITE_KEYWORDS, SITE_TWITTER } from "@/lib/site";
 
@@ -124,6 +125,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
             Independent mirror — not affiliated with the U.S. government
           </p>
         </footer>
+        <Analytics />
       </body>
     </html>
   );
