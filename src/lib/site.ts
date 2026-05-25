@@ -5,7 +5,7 @@
  * canonical public URL where the site will be served (e.g. https://disclosure.example.com).
  */
 
-export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://disclosure-site.vercel.app").replace(/\/+$/, "");
+export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://pursue.report").replace(/\/+$/, "");
 
 export const SITE_NAME = "Disclosure — PURSUE 2026 UAP Archive";
 
