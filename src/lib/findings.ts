@@ -383,6 +383,225 @@ Several PDFs have *only* the shelfmark as their embedded title — no UAP descri
       { path: "www.war.gov/UFO/index.html", note: "Live page HTML" },
     ],
   },
+  {
+    id: "placeholder-footer-links",
+    tier: 2,
+    title: "Two literal “Place Holder” links shipped live in the war.gov homepage footer",
+    claim: "Two `<a href=\"#\">Place Holder</a>` links sit in the rendered war.gov homepage footer. Devs forgot to fill in two nav slots and the placeholder text shipped to production.",
+    significance: "Visible in every page load of the most-visited Department of War page. Easiest possible verification: view source on war.gov, search “Place Holder”.",
+    evidence: `Direct from the homepage source:
+
+\`\`\`html
+<a href="#">Place Holder</a>
+<a href="#">Place Holder</a>
+\`\`\`
+
+Two instances — almost certainly the mobile-display and desktop-display variants of the same nav slot. Both render as clickable text in the footer area that does nothing when clicked (href="#" scrolls to the top of the page).
+
+The same homepage source ships with 13 surviving "DOD" references (the agency renamed to "Department of War" but the markup wasn't fully purged) and 14 instances of the \`noopeneer\` typo — this fits a pattern of partial cleanup.`,
+    stats: [
+      { big: "2", label: "“Place Holder” links live in footer" },
+      { big: "203 KB", label: "homepage HTML size" },
+    ],
+    sources: [
+      { path: "https://www.war.gov/", note: "View source, search “Place Holder”" },
+    ],
+  },
+  {
+    id: "noopeneer-typo",
+    tier: 2,
+    title: "rel=“noopeneer noreferrer” — typo appears 14× on the war.gov homepage",
+    claim: "Every external link on the war.gov homepage uses `rel=\"noopeneer noreferrer\"`. The correct attribute is `noopener`. The typo got copy-pasted into the template and shows up 14 times.",
+    significance: "Minor security regression they don’t know about. Browsers ignore the unknown `noopeneer` token and fall back to `noreferrer` only — which means external sites the user navigates to can still touch `window.opener` and trigger reverse tab-napping if a malicious link were ever embedded.",
+    evidence: `Searching the homepage HTML for the literal string \`noopeneer\` returns 14 matches. Every one is in a \`<a rel="noopeneer noreferrer" ...>\` external link.
+
+The intended attribute is \`noopener\`. From MDN: *"Without this, the new page can use \`window.opener\` to redirect your page to a phishing URL."* Browsers don’t throw an error on unknown rel tokens — they silently ignore them — so the typo is functionally equivalent to never having added the protection at all.
+
+The same typo is noted as a sub-bullet in finding \`html-curios\` for the /UFO/ page; counting across war.gov, it’s pervasive.`,
+    stats: [
+      { big: "14×", label: "occurrences on homepage" },
+      { big: "0", label: "occurrences of correct `noopener`" },
+    ],
+    sources: [
+      { path: "https://www.war.gov/", note: "Homepage HTML — grep for noopeneer" },
+    ],
+  },
+  {
+    id: "dod-rename-vestiges",
+    tier: 2,
+    title: "The Department of Defense → Department of War rename is half-finished in markup",
+    claim: "Despite the public rebrand to “Department of War,” the war.gov homepage HTML still contains 13 “DOD” references, hosts every image from `media.defense.gov`, and lists both `DoW` and `DOW` capitalizations in its meta keywords.",
+    significance: "The rebrand is more press-release than infrastructure. Petabytes of imagery (general portraits, banners, press photos) still live on the old DoD media host — moving them is expensive and breaks years of inbound links. Open the page-source on any war.gov page and the legacy identity is right there.",
+    evidence: `**On the homepage HTML:**
+• 13 surviving references to the string \`DOD\` (including in JavaScript variables, paths, and a meta keyword)
+• 22+ image URLs pointing to \`media.defense.gov\` (general portraits, OG-card images, banner photos)
+• Meta keywords list: \`War Department, Department of War, DoW, DOW, Secretary, Deputy Secretary, Joint Chief, United States, Military, Government\` — both \`DoW\` and \`DOW\` are listed; they couldn’t commit to one capitalization
+
+**On the UFO press release page (the one announcing the PURSUE program):**
+• Multiple links use \`media.defense.gov/2026/...\` URLs for their imagery
+
+**On the live PURSUE manifest:**
+• PDFs at \`media.defense.gov/2023/Mar/13/.../DOD-STRATEGIC-MGMT-PLAN-2023.PDF\` — filename still has \`DOD-\` prefix`,
+    sources: [
+      { path: "https://www.war.gov/", note: "Homepage source — grep for `DOD` and `media.defense.gov`" },
+      { path: "https://media.defense.gov", note: "Live imagery host still used by war.gov" },
+    ],
+  },
+  {
+    id: "stale-verification-tokens",
+    tier: 2,
+    title: "Old Google + Bing site-verification tokens still in the `<head>`",
+    claim: "The war.gov homepage carries two `google-site-verification` meta tags and two `msvalidate.01` (Bing) tags. In each pair, one token is presumably stale; nobody removed the old ones during whatever migration left them behind.",
+    significance: "Harmless on its own, but reveals at least one prior site ownership-handoff or platform migration. Whoever held the stale tokens once had verified ownership in Google Search Console / Bing Webmaster Tools.",
+    evidence: `From the homepage \`<head>\`:
+
+\`\`\`html
+<meta name="google-site-verification" content="lcQS9MV5xMisePG-IKaE9ZNfyaMJ9qVLemvuOy3PRFQ" />
+<meta name="msvalidate.01" content="235F405786FAB553A2A8EF5FD13514A7" />
+<meta name="msvalidate.01" content="4BAA65E882EAE4403F4FAB3443D34664" />
+<meta name="google-site-verification" content="nfNn_S6Ki0r3N9JWs7xQ6wLvXG7aNfgm5yKHnZMobhU" />
+\`\`\`
+
+Notice the interleaved order (Google, Bing, Bing, Google) — likely two different teams added their own verification tokens at different times. Bing is duplicated within consecutive lines; Google’s two are on the outside. Both Google and Bing accept either token, so the site stays verified for both teams.`,
+    sources: [
+      { path: "https://www.war.gov/", note: "View source — search `site-verification` and `msvalidate`" },
+    ],
+  },
+  {
+    id: "iis-404-fingerprint",
+    tier: 3,
+    title: "Two different 404 pages — one reveals which paths Akamai blocks at the edge",
+    claim: "Most 404s on war.gov return a 98 KB DotNetNuke-styled error page with the full site chrome. But `/Admin/`, `/Install/`, `/Login.aspx`, and `/Login` return the 1245-byte raw Microsoft IIS 7 stock 404 — gray header, Verdana, “Server Error”. That tells you the path is intercepted at Akamai / the edge before the DNN app ever sees the request.",
+    significance: "404 size alone is enough to fingerprint which paths are filtered at the CDN versus app layer. Belt-and-suspenders blocking on `/Admin/` etc. implies recent security hardening (and confirms war.gov runs on Microsoft IIS + DotNetNuke, despite the `Server: AkamaiGHost` masking header).",
+    evidence: `Probing war.gov with curl:
+
+\`\`\`
+HTTP=404 SIZE=1245  /Admin/         ← IIS 7 stock 404 (edge-blocked)
+HTTP=404 SIZE=1245  /Install/       ← IIS 7 stock 404 (edge-blocked)
+HTTP=404 SIZE=1245  /Login          ← IIS 7 stock 404 (edge-blocked)
+HTTP=404 SIZE=1245  /Login.aspx     ← IIS 7 stock 404 (edge-blocked)
+
+HTTP=404 SIZE=98417 /humans.txt     ← DNN-styled 404 (app-reached)
+HTTP=404 SIZE=98411 /UAP            ← DNN-styled 404 (app-reached)
+HTTP=404 SIZE=98410 /api            ← DNN-styled 404 (app-reached)
+\`\`\`
+
+The stock IIS 404 contains:
+\`\`\`html
+<title>404 - File or directory not found.</title>
+...
+<div id="header"><h1>Server Error</h1></div>
+<h2>404 - File or directory not found.</h2>
+\`\`\`
+…served with no Akamai cache headers and no DNN chrome. The DNN-styled 404 is 80× larger and includes the full site nav, footer, and meta keywords.
+
+Combined with finding \`robots-discloses-dnn-tree\` (below), it’s now public knowledge that war.gov is IIS + DNN behind Akamai.`,
+    comparisons: [
+      {
+        leftLabel: "Edge-blocked path (e.g. /Admin/)",
+        leftValue: "IIS stock 404 · 1,245 bytes · Verdana · no chrome",
+        rightLabel: "App-reached path (e.g. /UAP)",
+        rightValue: "DNN-styled 404 · 98,411 bytes · full nav & footer",
+      },
+    ],
+    sources: [
+      { path: "https://www.war.gov/Admin/", note: "Returns raw IIS 7 stock 404" },
+      { path: "https://www.war.gov/Login.aspx", note: "Same edge-blocked 404" },
+      { path: "https://www.war.gov/Install/", note: "Same edge-blocked 404" },
+    ],
+  },
+  {
+    id: "robots-discloses-dnn-tree",
+    tier: 3,
+    title: "robots.txt names the entire DotNetNuke internal file tree",
+    claim: "war.gov's robots.txt lists every internal DotNetNuke path — `/App_Code/`, `/App_GlobalResources/`, `/Controls/`, `/Utility/`, `/Components/`, `/Providers/`, `/Documentation/`, `/Install/`, `/Admin/`, `/bin/`, plus extensions `*.axd`, `*.exe`, `*.bin`, `*.dll`, `*.ssi`.",
+    significance: "Belt-and-suspenders: those paths are *already* blocked at the Akamai edge (see finding \`iis-404-fingerprint\`), but they’re also explicitly named in robots.txt — which is itself a CMS-fingerprinting tell. Anyone curious learns war.gov runs DotNetNuke just from one HTTP request.",
+    evidence: `\`\`\`
+Sitemap: /DesktopModules/SiteData/SiteMap.ashx
+User-agent: *
+Disallow: *captcha*
+Disallow: /*Print.aspx
+Disallow: /*.axd$
+Disallow: /*.exe$
+Disallow: /bin/
+Disallow: /Bin/
+Disallow: /*.bin$
+Disallow: /*.dll$
+Disallow: /*.ssi$
+Disallow: /Error/
+Disallow: /Controls/
+Disallow: /controls/
+Disallow: /Utility/
+Disallow: /install/
+Disallow: /Admin/
+Disallow: /App_Browser/
+Disallow: /App_Code/
+Disallow: /App_Data/
+Disallow: /App_GlobalResources/
+Disallow: /Components/
+Disallow: /Config/
+Disallow: /Documentation/
+Disallow: /Install/
+Disallow: /Providers/
+\`\`\`
+
+Note: the sitemap path \`/DesktopModules/SiteData/SiteMap.ashx\` is itself the canonical DNN sitemap-handler URL. Also: \`Disallow: *captcha*\` implies there’s a CAPTCHA somewhere they’d rather Google didn’t index.
+
+The real sitemap (at the DNN ashx URL) contains 390 entries, with sub-sitemaps like \`DesktopModules/DVIDSVideoPlayer/SiteMap.ashx?moduleid=581\` — module IDs 581, 966, 2435, 2440, 2842 are publicly enumerated.`,
+    sources: [
+      { path: "https://www.war.gov/robots.txt", note: "Live robots.txt" },
+      { path: "https://www.war.gov/DesktopModules/SiteData/SiteMap.ashx", note: "DNN sitemap handler (390 URLs)" },
+    ],
+  },
+  {
+    id: "operation-epic-fury",
+    tier: 3,
+    title: "Spotlights nav includes “Operation Epic Fury”",
+    claim: "Alongside “Memorial Day” and “Freedom 250”, the war.gov homepage Spotlights nav surfaces “Operation Epic Fury” — the public codename for the Feb 28, 2026 strikes against the Iranian regime’s security apparatus.",
+    significance: "Not hidden, not classified. Just a cinematically-named active military operation sitting in a CMS dropdown next to civic spotlights. Notable for the tonal contrast.",
+    evidence: `From the homepage:
+
+\`\`\`html
+<a class="btn btn-primary" href="/Spotlights/Operation-Epic-Fury/" title="Operation Epic Fury">See More</a>
+\`\`\`
+
+The spotlight page itself opens with:
+
+> *"On Feb. 28, 2026, the U.S. military commenced Operation Epic Fury under the direction and direct orders of the president of the United States. U.S. and partner forces are striking targets to dismantle the Iranian regime’s security apparatus, prioritizing locations that pose an imminent threat."*
+
+OG title: \`Operation Epic Fury\`.
+
+The full Spotlights list as of capture:
+\`/Spotlights/COVID-19-Reinstatement/\` ·
+\`/Spotlights/DOW-Support-to-the-Southern-Border/\` ·
+\`/Spotlights/Drone-Dominance/\` ·
+\`/Spotlights/Freedom250/\` ·
+\`/Spotlights/Guidance-for-Federal-Personnel-and-Readiness-Policies/\` ·
+\`/Spotlights/Memorial-Day/\` ·
+\`/Spotlights/Operation-Epic-Fury/\` ·
+\`/Spotlights/Value-of-Service/\``,
+    sources: [
+      { path: "https://www.war.gov/Spotlights/Operation-Epic-Fury/", note: "Live spotlight page" },
+    ],
+  },
+  {
+    id: "pentagon-quizzes",
+    tier: 3,
+    title: "The Pentagon publishes quizzes",
+    claim: "war.gov hosts a `/Multimedia/Quizzes` page, linked from the homepage with a “Quizzes” CTA button. The Department of War runs trivia quizzes.",
+    significance: "Pure curio. The world’s largest military bureaucracy has a quiz section in its CMS nav.",
+    evidence: `From the homepage:
+
+\`\`\`html
+<a class="btn btn-primary" href="/Multimedia/Quizzes" tabindex="0"> Quizzes </a>
+\`\`\`
+
+The Quizzes route itself is currently fronted by Akamai edge filtering for non-browser User-Agents, but the link is plainly visible in the rendered footer and the route is part of the DNN module tree.`,
+    sources: [
+      { path: "https://www.war.gov/Multimedia/Quizzes", note: "Live Quizzes route" },
+      { path: "https://www.war.gov/", note: "Homepage CTA button linking to Quizzes" },
+    ],
+  },
 ];
 
 export const TIER1 = FINDINGS.filter((f) => f.tier === 1);

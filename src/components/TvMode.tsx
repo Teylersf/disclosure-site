@@ -4,12 +4,14 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import {
   Play, Pause, SkipBack, SkipForward, Shuffle, Repeat, ListFilter,
-  Volume2, VolumeX, ChevronRight, ChevronLeft,
+  Volume2, VolumeX, ChevronRight, ChevronLeft, Loader2, AlertCircle,
 } from "lucide-react";
 import type { UapRecord } from "@/lib/types";
 import { assetUrl } from "@/lib/asset-url";
 
 type Props = { videos: UapRecord[] };
+
+type LoadState = "idle" | "loading" | "buffering" | "ready" | "playing" | "error";
 
 export default function TvMode({ videos }: Props) {
   const [order, setOrder] = useState<number[]>(() => videos.map((_, i) => i));
@@ -20,6 +22,10 @@ export default function TvMode({ videos }: Props) {
   const [loop, setLoop] = useState(true);
   const [filter, setFilter] = useState<"" | "VID" | "AUD">("");
   const [sidebar, setSidebar] = useState(true);
+  const [loadState, setLoadState] = useState<LoadState>("idle");
+  const [bufferedPct, setBufferedPct] = useState(0);
+  const [currentTime, setCurrentTime] = useState(0);
+  const [duration, setDuration] = useState(0);
   const videoRef = useRef<HTMLVideoElement>(null);
 
   const queue = useMemo(() => {
@@ -52,6 +58,10 @@ export default function TvMode({ videos }: Props) {
   useEffect(() => {
     if (!videoRef.current || !current) return;
     videoRef.current.muted = muted;
+    setLoadState("loading");
+    setBufferedPct(0);
+    setCurrentTime(0);
+    setDuration(0);
     if (playing) {
       videoRef.current.play().catch(() => {
         // Autoplay blocked; mute and try again
@@ -65,6 +75,52 @@ export default function TvMode({ videos }: Props) {
       videoRef.current.pause();
     }
   }, [currentIdx]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  // Track loading / buffering / playback state for the UI
+  useEffect(() => {
+    const v = videoRef.current;
+    if (!v) return;
+
+    const onLoadStart = () => setLoadState("loading");
+    const onWaiting = () => setLoadState((s) => (s === "playing" ? "buffering" : "loading"));
+    const onCanPlay = () => setLoadState((s) => (s === "playing" ? s : "ready"));
+    const onPlaying = () => setLoadState("playing");
+    const onError = () => setLoadState("error");
+    const onLoadedMeta = () => setDuration(v.duration || 0);
+    const onTimeUpdate = () => {
+      setCurrentTime(v.currentTime);
+      // Compute buffered % through the current playback position
+      if (v.buffered.length > 0 && v.duration > 0) {
+        const end = v.buffered.end(v.buffered.length - 1);
+        setBufferedPct(Math.min(100, (end / v.duration) * 100));
+      }
+    };
+    const onProgress = () => {
+      if (v.buffered.length > 0 && v.duration > 0) {
+        const end = v.buffered.end(v.buffered.length - 1);
+        setBufferedPct(Math.min(100, (end / v.duration) * 100));
+      }
+    };
+
+    v.addEventListener("loadstart", onLoadStart);
+    v.addEventListener("waiting", onWaiting);
+    v.addEventListener("canplay", onCanPlay);
+    v.addEventListener("playing", onPlaying);
+    v.addEventListener("error", onError);
+    v.addEventListener("loadedmetadata", onLoadedMeta);
+    v.addEventListener("timeupdate", onTimeUpdate);
+    v.addEventListener("progress", onProgress);
+    return () => {
+      v.removeEventListener("loadstart", onLoadStart);
+      v.removeEventListener("waiting", onWaiting);
+      v.removeEventListener("canplay", onCanPlay);
+      v.removeEventListener("playing", onPlaying);
+      v.removeEventListener("error", onError);
+      v.removeEventListener("loadedmetadata", onLoadedMeta);
+      v.removeEventListener("timeupdate", onTimeUpdate);
+      v.removeEventListener("progress", onProgress);
+    };
+  }, [currentIdx]);
 
   useEffect(() => {
     if (videoRef.current) videoRef.current.muted = muted;
@@ -111,6 +167,18 @@ export default function TvMode({ videos }: Props) {
     : assetUrl(current.asset?.url);
   const poster = assetUrl(current.thumbnail?.url);
 
+  // Size of the file we're loading, if known
+  const fileSizeMB = current.dvids?.files?.[0]?.size
+    ? (current.dvids.files[0].size / 1024 / 1024).toFixed(1)
+    : null;
+
+  const showOverlay = loadState === "loading" || loadState === "buffering" || loadState === "error";
+  const overlayLabel =
+    loadState === "loading" ? "Loading video"
+    : loadState === "buffering" ? "Buffering"
+    : loadState === "error" ? "Couldn’t load this video"
+    : "";
+
   return (
     <div className="flex h-[calc(100vh-65px)] overflow-hidden">
       {/* Player */}
@@ -121,11 +189,63 @@ export default function TvMode({ videos }: Props) {
             ref={videoRef}
             src={src}
             poster={poster || undefined}
+            preload="auto"
             className="w-full h-full object-contain bg-black"
             onEnded={goNext}
             playsInline
             controls={false}
           />
+          {/* Loading / buffering / error overlay */}
+          {showOverlay && (
+            <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+              <div className="bg-black/70 backdrop-blur-sm rounded-lg px-6 py-5 flex flex-col items-center gap-3 max-w-md text-center pointer-events-auto">
+                {loadState === "error" ? (
+                  <AlertCircle size={32} className="text-[var(--pdf)]" />
+                ) : (
+                  <Loader2 size={32} className="text-[var(--accent-glow)] animate-spin" />
+                )}
+                <div className="text-sm font-semibold text-white">{overlayLabel}</div>
+                {loadState !== "error" ? (
+                  <>
+                    <div className="text-[11px] text-[var(--muted)]">
+                      {fileSizeMB ? `${fileSizeMB} MB · streaming from Linode Object Storage` : "Streaming from Linode Object Storage"}
+                    </div>
+                    {bufferedPct > 0 && (
+                      <div className="w-64 h-1.5 bg-white/10 rounded-full overflow-hidden">
+                        <div
+                          className="h-full bg-[var(--accent-glow)] transition-[width] duration-200"
+                          style={{ width: `${bufferedPct.toFixed(0)}%` }}
+                        />
+                      </div>
+                    )}
+                    {bufferedPct > 0 && (
+                      <div className="text-[10px] text-[var(--muted)]">{bufferedPct.toFixed(0)}% buffered</div>
+                    )}
+                  </>
+                ) : (
+                  <>
+                    <div className="text-[11px] text-[var(--muted)]">The video may not be fully uploaded to the bucket yet.</div>
+                    <button type="button" onClick={goNext} className="btn btn-primary">
+                      Skip to next →
+                    </button>
+                  </>
+                )}
+              </div>
+            </div>
+          )}
+          {/* Progress / scrub bar (always visible at bottom of video area) */}
+          {duration > 0 && (
+            <div className="absolute bottom-0 left-0 right-0 h-1 bg-black/40">
+              <div
+                className="absolute top-0 left-0 h-full bg-white/15"
+                style={{ width: `${bufferedPct}%` }}
+              />
+              <div
+                className="absolute top-0 left-0 h-full bg-[var(--accent-glow)]"
+                style={{ width: `${duration > 0 ? (currentTime / duration) * 100 : 0}%` }}
+              />
+            </div>
+          )}
           {/* Overlay info */}
           <div className="absolute top-4 left-4 right-4 flex items-start justify-between pointer-events-none">
             <div className="bg-black/70 backdrop-blur-sm px-4 py-3 rounded-md pointer-events-auto max-w-xl">
