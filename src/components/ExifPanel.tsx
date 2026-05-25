@@ -1,7 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import exifr from "exifr";
+// Use the lite browser bundle to skip exifr's optional Node fs/zlib deps —
+// avoids "Couldn't load fs/zlib" warnings during Next.js build.
+import exifr from "exifr/dist/lite.esm.mjs";
 
 type Props = { src: string };
 
