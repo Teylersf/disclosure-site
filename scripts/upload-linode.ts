@@ -22,7 +22,12 @@ import { promises as fs, createReadStream } from "node:fs";
 import { stat } from "node:fs/promises";
 import path from "node:path";
 import { S3Client, PutObjectCommand, HeadObjectCommand } from "@aws-sdk/client-s3";
+import { Upload } from "@aws-sdk/lib-storage";
 import mime from "mime-types";
+
+// Files larger than this get a multipart upload (chunked, resumable per-part).
+// Below this, a single PutObject is faster and uses less memory.
+const MULTIPART_THRESHOLD = 100 * 1024 * 1024; // 100 MB
 
 // Load .env from the disclosure-site root
 import { config as loadDotenv } from "dotenv";
@@ -92,16 +97,35 @@ async function uploadOne(filePath: string, key: string, size: number) {
   }
   if (DRY) return { key, status: "dry" as const, size };
   const ct = mime.lookup(filePath) || "application/octet-stream";
-  const body = createReadStream(filePath);
-  await s3.send(new PutObjectCommand({
-    Bucket: BUCKET,
-    Key: key,
-    Body: body,
-    ContentType: ct,
-    ContentLength: size,
-    ACL: "public-read",
-    CacheControl: "public, max-age=86400",
-  }));
+
+  if (size >= MULTIPART_THRESHOLD) {
+    // Multipart for big files (resumable per part, no single-stream timeout)
+    const upload = new Upload({
+      client: s3,
+      params: {
+        Bucket: BUCKET,
+        Key: key,
+        Body: createReadStream(filePath),
+        ContentType: ct,
+        ACL: "public-read",
+        CacheControl: "public, max-age=86400",
+      },
+      partSize: 16 * 1024 * 1024, // 16 MB parts
+      queueSize: 4,               // 4 parts in flight per file
+      leavePartsOnError: false,
+    });
+    await upload.done();
+  } else {
+    await s3.send(new PutObjectCommand({
+      Bucket: BUCKET,
+      Key: key,
+      Body: createReadStream(filePath),
+      ContentType: ct,
+      ContentLength: size,
+      ACL: "public-read",
+      CacheControl: "public, max-age=86400",
+    }));
+  }
   return { key, status: "uploaded" as const, size };
 }
 
