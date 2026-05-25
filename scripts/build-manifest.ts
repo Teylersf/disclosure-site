@@ -92,6 +92,23 @@ async function loadDvidsMeta(dvidsId: string): Promise<DvidsMeta | undefined> {
 }
 
 async function main() {
+  // On Vercel/CI there's no parent mirror folder — the committed manifest is
+  // the source of truth. Skip cleanly so the build doesn't fail.
+  try {
+    await fs.access(CSV_PATH);
+  } catch {
+    try {
+      const existing = await fs.readFile(OUT_FILE, "utf8");
+      const j = JSON.parse(existing);
+      console.log(`Source CSV not found at ${CSV_PATH} — using committed manifest (${j.totalCount ?? "?"} records).`);
+      return;
+    } catch {
+      console.error(`Source CSV not found at ${CSV_PATH} and no committed manifest at ${OUT_FILE}.`);
+      console.error("Run \`npm run manifest\` locally with the mirror present, then commit src/lib/manifest.json.");
+      process.exit(1);
+    }
+  }
+
   const csvText = await fs.readFile(CSV_PATH, "utf8");
   const parsed = Papa.parse<Record<string, string>>(csvText, {
     header: true,
