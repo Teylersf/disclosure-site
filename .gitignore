@@ -40,6 +40,6 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# local logs (not source)
-upload.log
-dev.log
+# local logs (not source) — broadened so retry runs (upload2, upload3, …) are also ignored
+upload*.log
+dev*.log
