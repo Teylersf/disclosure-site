@@ -66,8 +66,10 @@ export default function RecordsExplorer({ records, agencies, initialQuery = "" }
 
   return (
     <div className="space-y-6">
-      <div className="flex flex-wrap items-center gap-3">
-        <div className="relative flex-1 min-w-[280px]">
+      {/* Mobile: search on its own row, then 2-col filter grid, then controls.
+          Desktop: everything in one wrapping row. */}
+      <div className="space-y-3 md:space-y-0 md:flex md:flex-wrap md:items-center md:gap-3">
+        <div className="relative md:flex-1 md:min-w-[280px]">
           <Search size={14} className="absolute left-3 top-1/2 -translate-y-1/2 text-[var(--muted)]" />
           <input
             type="text"
@@ -77,32 +79,34 @@ export default function RecordsExplorer({ records, agencies, initialQuery = "" }
             className="input w-full pl-9"
           />
         </div>
-        <select value={type} onChange={(e) => setType(e.target.value)} className="select">
-          {TYPES.map((t) => <option key={t.value} value={t.value}>{t.label}</option>)}
-        </select>
-        <select value={release} onChange={(e) => setRelease(e.target.value)} className="select">
-          {RELEASES.map((r) => <option key={r.value} value={r.value}>{r.label}</option>)}
-        </select>
-        <select value={agency} onChange={(e) => setAgency(e.target.value)} className="select">
-          <option value="">All agencies</option>
-          {agencies.map((a) => <option key={a} value={a}>{a}</option>)}
-        </select>
-        <button
-          type="button"
-          onClick={() => setOnlyNew(!onlyNew)}
-          className={`btn ${onlyNew ? "btn-gold" : ""}`}
-          title="Only show 5/22 release"
-        >
-          <Sparkles size={14}/> New
-        </button>
-        {hasFilters && (
-          <button type="button" onClick={clearFilters} className="btn">
-            <X size={14}/> Clear
+        <div className="grid grid-cols-2 gap-2 md:flex md:gap-3 md:items-center">
+          <select value={type} onChange={(e) => setType(e.target.value)} className="select min-w-0">
+            {TYPES.map((t) => <option key={t.value} value={t.value}>{t.label}</option>)}
+          </select>
+          <select value={release} onChange={(e) => setRelease(e.target.value)} className="select min-w-0">
+            {RELEASES.map((r) => <option key={r.value} value={r.value}>{r.label}</option>)}
+          </select>
+          <select value={agency} onChange={(e) => setAgency(e.target.value)} className="select min-w-0 col-span-2 md:col-span-1">
+            <option value="">All agencies</option>
+            {agencies.map((a) => <option key={a} value={a}>{a}</option>)}
+          </select>
+          <button
+            type="button"
+            onClick={() => setOnlyNew(!onlyNew)}
+            className={`btn ${onlyNew ? "btn-gold" : ""} justify-center`}
+            title="Only show 5/22 release"
+          >
+            <Sparkles size={14}/> New
           </button>
-        )}
-        <div className="ml-auto text-sm text-[var(--muted)] flex items-center gap-3">
+          {hasFilters && (
+            <button type="button" onClick={clearFilters} className="btn justify-center">
+              <X size={14}/> Clear
+            </button>
+          )}
+        </div>
+        <div className="flex items-center gap-3 md:ml-auto text-sm text-[var(--muted)]">
           <span><FilterIcon size={12} className="inline mr-1" />{filtered.length} / {records.length}</span>
-          <div className="flex border border-[var(--border)] rounded-md overflow-hidden">
+          <div className="flex border border-[var(--border)] rounded-md overflow-hidden ml-auto md:ml-0">
             <button type="button" onClick={() => setView("grid")} className={`px-2.5 py-1 text-xs ${view === "grid" ? "bg-[var(--accent)] text-[var(--bg-0)]" : ""}`}>Grid</button>
             <button type="button" onClick={() => setView("list")} className={`px-2.5 py-1 text-xs ${view === "list" ? "bg-[var(--accent)] text-[var(--bg-0)]" : ""}`}>List</button>
           </div>

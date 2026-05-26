@@ -47,7 +47,7 @@ export default function RecordViewer({ record }: { record: UapRecord }) {
         {isPdf && primary && (
           <iframe
             src={primary}
-            className="w-full h-[85vh] bg-black"
+            className="w-full h-[60vh] md:h-[85vh] bg-black"
             title={record.title}
           />
         )}

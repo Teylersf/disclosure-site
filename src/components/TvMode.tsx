@@ -253,10 +253,12 @@ export default function TvMode({ videos }: Props) {
     : "";
 
   return (
-    <div className="flex h-[calc(100vh-65px)] overflow-hidden">
+    // Mobile: vertical stack, scroll the page. Desktop: fixed viewport, side-by-side.
+    <div className="flex flex-col md:flex-row md:h-[calc(100dvh-65px)] md:overflow-hidden">
       {/* Player */}
       <div ref={playerRef} className="flex-1 flex flex-col bg-black relative">
-        <div className="flex-1 relative">
+        {/* On mobile: fixed 16:9 aspect ratio. On desktop: fills remaining height. */}
+        <div className="relative aspect-video md:aspect-auto md:flex-1">
           <video
             key={currentIdx}
             ref={videoRef}
@@ -320,23 +322,23 @@ export default function TvMode({ videos }: Props) {
             </div>
           )}
           {/* Overlay info */}
-          <div className="absolute top-4 left-4 right-4 flex items-start justify-between pointer-events-none">
-            <div className="bg-black/70 backdrop-blur-sm px-4 py-3 rounded-md pointer-events-auto max-w-xl">
-              <div className="flex items-center gap-2 mb-1">
+          <div className="absolute top-2 left-2 right-2 md:top-4 md:left-4 md:right-4 flex items-start justify-between gap-2 pointer-events-none">
+            <div className="bg-black/70 backdrop-blur-sm px-3 py-2 md:px-4 md:py-3 rounded-md pointer-events-auto max-w-[70%] md:max-w-xl">
+              <div className="flex items-center gap-2 mb-1 flex-wrap">
                 <span className={`chip chip-${current.type}`}>{current.type}</span>
                 <span className="text-[10px] tracking-widest text-[var(--muted)] uppercase">
                   {pos + 1} / {order.length} · {current.agency}
                 </span>
               </div>
-              <h2 className="text-lg font-bold leading-tight text-white">{current.title}</h2>
+              <h2 className="text-sm md:text-lg font-bold leading-tight text-white line-clamp-2 md:line-clamp-none">{current.title}</h2>
               {current.incidentLocation && current.incidentLocation !== "N/A" && (
-                <div className="text-xs text-[var(--muted)] mt-1">
+                <div className="text-[10px] md:text-xs text-[var(--muted)] mt-1 hidden md:block">
                   {current.incidentLocation} · {current.incidentDate}
                 </div>
               )}
             </div>
-            <Link href={`/records/${current.id}`} className="btn pointer-events-auto">
-              Open details →
+            <Link href={`/records/${current.id}`} className="btn pointer-events-auto text-[10px] md:text-sm px-2 md:px-3 py-1 md:py-2">
+              <span className="hidden sm:inline">Open details </span>→
             </Link>
           </div>
         </div>
@@ -344,11 +346,11 @@ export default function TvMode({ videos }: Props) {
         {/* Full media controls */}
         <div className="bg-[var(--bg-0)] border-t border-[var(--border)] flex flex-col">
           {/* Scrubber row */}
-          <div className="px-6 pt-3 flex items-center gap-3">
-            <span className="text-xs font-mono text-[var(--muted)] tabular-nums w-12 text-right">
+          <div className="px-3 md:px-6 pt-3 flex items-center gap-2 md:gap-3">
+            <span className="text-[10px] md:text-xs font-mono text-[var(--muted)] tabular-nums w-10 md:w-12 text-right">
               {fmtTime(currentTime)}
             </span>
-            <div className="flex-1 relative h-5 flex items-center group">
+            <div className="flex-1 relative h-6 md:h-5 flex items-center group">
               {/* Buffered + filled track behind the slider */}
               <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 h-1.5 bg-white/8 rounded-full overflow-hidden pointer-events-none">
                 <div
@@ -367,29 +369,33 @@ export default function TvMode({ videos }: Props) {
                 step={0.01}
                 value={currentTime}
                 onChange={(e) => seekTo(parseFloat(e.target.value))}
-                className="relative w-full h-5 appearance-none bg-transparent cursor-pointer
+                className="relative w-full h-6 md:h-5 appearance-none bg-transparent cursor-pointer touch-none
                            [&::-webkit-slider-thumb]:appearance-none
-                           [&::-webkit-slider-thumb]:h-3
-                           [&::-webkit-slider-thumb]:w-3
+                           [&::-webkit-slider-thumb]:h-4
+                           [&::-webkit-slider-thumb]:w-4
+                           md:[&::-webkit-slider-thumb]:h-3
+                           md:[&::-webkit-slider-thumb]:w-3
                            [&::-webkit-slider-thumb]:rounded-full
                            [&::-webkit-slider-thumb]:bg-[var(--accent-glow)]
                            [&::-webkit-slider-thumb]:shadow-[0_0_8px_rgba(94,234,212,0.8)]
-                           [&::-moz-range-thumb]:h-3
-                           [&::-moz-range-thumb]:w-3
+                           [&::-moz-range-thumb]:h-4
+                           [&::-moz-range-thumb]:w-4
+                           md:[&::-moz-range-thumb]:h-3
+                           md:[&::-moz-range-thumb]:w-3
                            [&::-moz-range-thumb]:border-0
                            [&::-moz-range-thumb]:rounded-full
                            [&::-moz-range-thumb]:bg-[var(--accent-glow)]
-                           opacity-0 group-hover:opacity-100 focus:opacity-100 transition"
+                           opacity-100 md:opacity-0 md:group-hover:opacity-100 md:focus:opacity-100 transition"
                 aria-label="Seek"
               />
             </div>
-            <span className="text-xs font-mono text-[var(--muted)] tabular-nums w-12">
+            <span className="text-[10px] md:text-xs font-mono text-[var(--muted)] tabular-nums w-10 md:w-12">
               {fmtTime(duration)}
             </span>
           </div>
 
-          {/* Button row */}
-          <div className="px-6 py-3 flex items-center gap-2 flex-wrap">
+          {/* Button row — scrollable horizontally on mobile if it overflows */}
+          <div className="px-3 md:px-6 py-2 md:py-3 flex items-center gap-1.5 md:gap-2 overflow-x-auto md:flex-wrap [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
             <button type="button" onClick={goPrev} className="btn" title="Previous video (←)"><SkipBack size={14}/></button>
             <button type="button" onClick={() => frameStep(-1)} className="btn" title="Frame back (,)">
               <ChevronsLeft size={14}/>
@@ -451,8 +457,8 @@ export default function TvMode({ videos }: Props) {
             </div>
           </div>
 
-          {/* Keyboard help row */}
-          <div className="px-6 pb-2 text-[10px] text-[var(--muted)] tracking-wider flex flex-wrap gap-x-4 gap-y-1">
+          {/* Keyboard help row — hidden on mobile (no keyboard) */}
+          <div className="hidden md:flex px-6 pb-2 text-[10px] text-[var(--muted)] tracking-wider flex-wrap gap-x-4 gap-y-1">
             <span><kbd className="font-mono text-[var(--accent-glow)]">space</kbd> play/pause</span>
             <span><kbd className="font-mono text-[var(--accent-glow)]">← →</kbd> prev/next video</span>
             <span><kbd className="font-mono text-[var(--accent-glow)]">shift+←/→</kbd> ±5s</span>
@@ -469,9 +475,9 @@ export default function TvMode({ videos }: Props) {
         </div>
       </div>
 
-      {/* Queue sidebar */}
+      {/* Queue sidebar — full-width below player on mobile, fixed-width sidebar on desktop */}
       {sidebar && (
-        <aside className="w-[340px] border-l border-[var(--border)] bg-[var(--bg-1)] overflow-y-auto">
+        <aside className="w-full md:w-[340px] border-t md:border-t-0 md:border-l border-[var(--border)] bg-[var(--bg-1)] md:overflow-y-auto md:max-h-full max-h-[60vh] overflow-y-auto">
           <div className="p-3 border-b border-[var(--border)] flex items-center gap-2 sticky top-0 bg-[var(--bg-1)] z-10">
             <ListFilter size={14} className="text-[var(--accent)]"/>
             <span className="text-xs uppercase tracking-widest text-[var(--accent)]">Up Next</span>

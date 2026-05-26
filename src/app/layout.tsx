@@ -100,18 +100,18 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       </head>
       <body className="min-h-full flex flex-col grain">
         <header className="relative z-10 border-b border-[var(--border)] bg-[var(--bg-0)]/80 backdrop-blur">
-          <div className="max-w-[1600px] mx-auto px-6 py-3 flex items-center justify-between gap-6">
-            <Link href="/" className="flex items-center gap-3 text-[var(--text)]">
-              <span className="inline-block w-2 h-2 rounded-full bg-[var(--accent-glow)] shadow-[0_0_12px_rgba(94,234,212,0.8)]" />
-              <span className="text-base font-semibold tracking-[0.18em] uppercase">Disclosure</span>
-              <span className="text-xs text-[var(--muted)] tracking-widest hidden sm:inline">PURSUE 2026</span>
+          <div className="max-w-[1600px] mx-auto px-3 sm:px-6 py-3 flex items-center justify-between gap-3 sm:gap-6">
+            <Link href="/" className="flex items-center gap-2 sm:gap-3 text-[var(--text)] min-w-0">
+              <span className="inline-block w-2 h-2 rounded-full bg-[var(--accent-glow)] shadow-[0_0_12px_rgba(94,234,212,0.8)] flex-shrink-0" />
+              <span className="text-sm sm:text-base font-semibold tracking-[0.15em] sm:tracking-[0.18em] uppercase">Disclosure</span>
+              <span className="text-xs text-[var(--muted)] tracking-widest hidden md:inline">PURSUE 2026</span>
             </Link>
-            <nav className="flex items-center gap-1 text-sm">
-              <Link href="/" className="btn"><Home size={14}/> Home</Link>
-              <Link href="/search" className="btn"><Search size={14}/> Search</Link>
-              <Link href="/findings" className="btn" style={{ borderColor: "var(--gold)", color: "var(--gold)" }}><AlertTriangle size={14}/> Findings</Link>
-              <Link href="/bundles" className="btn"><Archive size={14}/> Bundles</Link>
-              <Link href="/tv" className="btn btn-gold"><Tv size={14}/> TV Mode</Link>
+            <nav className="flex items-center gap-1 text-sm" aria-label="Main navigation">
+              <Link href="/" className="btn px-2 sm:px-3" title="Home"><Home size={14}/> <span className="hidden lg:inline">Home</span></Link>
+              <Link href="/search" className="btn px-2 sm:px-3" title="Search"><Search size={14}/> <span className="hidden lg:inline">Search</span></Link>
+              <Link href="/findings" className="btn px-2 sm:px-3" style={{ borderColor: "var(--gold)", color: "var(--gold)" }} title="Findings"><AlertTriangle size={14}/> <span className="hidden lg:inline">Findings</span></Link>
+              <Link href="/bundles" className="btn px-2 sm:px-3" title="Bundles"><Archive size={14}/> <span className="hidden lg:inline">Bundles</span></Link>
+              <Link href="/tv" className="btn btn-gold px-2 sm:px-3" title="TV Mode"><Tv size={14}/> <span className="hidden sm:inline">TV{" "}</span><span className="hidden lg:inline">Mode</span></Link>
             </nav>
           </div>
         </header>
