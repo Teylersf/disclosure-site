@@ -40,9 +40,7 @@ export default function TvMode({ videos }: Props) {
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
   const [speed, setSpeed] = useState(1);
-  // crossOrigin enables canvas screenshots. Falls back to null on video-error so playback always works.
-  const [useCors, setUseCors] = useState<"anonymous" | null>("anonymous");
-  const [flash, setFlash] = useState<null | "shot" | "downloaded" | "error">(null);
+  const [flash, setFlash] = useState<null | "shot" | "downloaded" | "blocked" | "error">(null);
   const playerRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
 
@@ -110,15 +108,7 @@ export default function TvMode({ videos }: Props) {
       }
     };
     const onPlaying = () => setLoadState("playing");
-    const onError = () => {
-      // CORS misconfigured on the bucket can break playback when crossOrigin is set.
-      // Retry once without CORS so the video at least plays (screenshots will be disabled).
-      if (useCors === "anonymous") {
-        setUseCors(null);
-        return;
-      }
-      setLoadState("error");
-    };
+    const onError = () => setLoadState("error");
     const onLoadedMeta = () => setDuration(v.duration || 0);
     const onTimeUpdate = () => {
       setCurrentTime(v.currentTime);
@@ -216,9 +206,9 @@ export default function TvMode({ videos }: Props) {
   };
 
   // Pulse a brief on-screen confirmation so the user sees the action worked.
-  const briefFlash = (kind: "shot" | "downloaded" | "error") => {
+  const briefFlash = (kind: "shot" | "downloaded" | "blocked" | "error") => {
     setFlash(kind);
-    setTimeout(() => setFlash(null), 1400);
+    setTimeout(() => setFlash(null), 2400);
   };
 
   // Slugify the title for a sensible filename
@@ -230,8 +220,10 @@ export default function TvMode({ videos }: Props) {
 
   /**
    * Capture the current video frame to a PNG and trigger a download.
-   * Requires the bucket to send CORS headers (set the video's crossOrigin
-   * attribute to "anonymous"); otherwise the canvas is tainted and toBlob throws.
+   * Pure browser-side — reads pixels from the already-loaded <video> element,
+   * no bucket / network hit. If the browser blocks the canvas read because the
+   * video came from a different origin (cross-origin taint), shows a friendly
+   * tip pointing at the OS screenshot shortcut.
    */
   const takeScreenshot = () => {
     const v = videoRef.current;
@@ -249,8 +241,11 @@ export default function TvMode({ videos }: Props) {
     }
     try {
       ctx.drawImage(v, 0, 0, canvas.width, canvas.height);
+      // toDataURL throws SecurityError synchronously on a tainted canvas;
+      // toBlob would call its callback with null instead. Using toBlob and
+      // checking for null covers both cases without an extra try.
       canvas.toBlob((blob) => {
-        if (!blob) { briefFlash("error"); return; }
+        if (!blob) { briefFlash("blocked"); return; }
         const url = URL.createObjectURL(blob);
         const a = document.createElement("a");
         a.href = url;
@@ -262,36 +257,28 @@ export default function TvMode({ videos }: Props) {
         briefFlash("shot");
       }, "image/png");
     } catch {
-      briefFlash("error");
+      briefFlash("blocked");
     }
   };
 
   /**
-   * Download the current MP4 to the user's computer. Fetches as a blob so the
-   * `download` attribute is respected even for cross-origin URLs; falls back to
-   * opening the file in a new tab if CORS blocks the fetch.
+   * Download the current MP4 directly via an <a download> click. The browser
+   * may honor the download attribute and save the file, or open the video in
+   * a new tab for cross-origin URLs (in which case the user can right-click
+   * → Save Video As). No fetch / blob round-trip.
    */
-  const downloadVideo = async () => {
+  const downloadVideo = () => {
     if (!src) { briefFlash("error"); return; }
-    try {
-      const resp = await fetch(src);
-      if (!resp.ok) throw new Error(String(resp.status));
-      const blob = await resp.blob();
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement("a");
-      a.href = url;
-      const ext = src.split("?")[0].split(".").pop() || "mp4";
-      a.download = `${slug}.${ext}`;
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-      URL.revokeObjectURL(url);
-      briefFlash("downloaded");
-    } catch {
-      // CORS-blocked or network error: open in new tab, browser will offer save
-      window.open(src, "_blank");
-      briefFlash("downloaded");
-    }
+    const a = document.createElement("a");
+    a.href = src;
+    a.target = "_blank";
+    a.rel = "noopener noreferrer";
+    const ext = src.split("?")[0].split(".").pop() || "mp4";
+    a.download = `${slug}.${ext}`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    briefFlash("downloaded");
   };
 
   // Keyboard shortcuts
@@ -347,17 +334,18 @@ export default function TvMode({ videos }: Props) {
     // is sized by the app-shell layout in layout.tsx), no overflow.
     <div className="flex flex-col md:flex-row md:h-full md:overflow-hidden">
       {/* Player */}
-      <div ref={playerRef} className="flex-1 flex flex-col bg-black relative">
-        {/* On mobile: fixed 16:9 aspect ratio. On desktop: fills remaining height. */}
-        <div className="relative aspect-video md:aspect-auto md:flex-1">
+      <div ref={playerRef} className="md:flex-1 md:min-w-0 flex flex-col bg-black relative md:min-h-0">
+        {/*
+          Video area. Mobile: fixed 16:9 aspect. Desktop: flex-1 + min-h-0 so it can
+          shrink to make room for the controls below.
+        */}
+        <div className="relative aspect-video md:aspect-auto md:flex-1 md:min-h-0 z-0">
           <video
-            // include useCors in the key so toggling the value re-mounts the element
-            key={`${currentIdx}-${useCors ?? "raw"}`}
+            key={currentIdx}
             ref={videoRef}
             src={src}
             poster={poster || undefined}
             preload="auto"
-            crossOrigin={useCors ?? undefined}
             className="w-full h-full object-contain bg-black"
             onEnded={goNext}
             playsInline
@@ -365,11 +353,12 @@ export default function TvMode({ videos }: Props) {
           />
           {/* Brief confirmation flash for screenshot / download actions */}
           {flash && (
-            <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 flex items-center justify-center pointer-events-none">
-              <div className={`px-4 py-2.5 rounded-md text-sm font-semibold flex items-center gap-2 backdrop-blur-md shadow-lg ${flash === "error" ? "bg-[var(--pdf)]/85 text-white" : "bg-[var(--accent-glow)]/90 text-[var(--bg-0)]"}`}>
+            <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 flex items-center justify-center pointer-events-none px-4">
+              <div className={`px-4 py-2.5 rounded-md text-xs md:text-sm font-semibold flex items-center gap-2 backdrop-blur-md shadow-lg max-w-md text-center ${flash === "blocked" || flash === "error" ? "bg-[var(--pdf)]/85 text-white" : "bg-[var(--accent-glow)]/90 text-[var(--bg-0)]"}`}>
                 {flash === "shot" && <><Check size={16}/> Screenshot saved</>}
                 {flash === "downloaded" && <><Check size={16}/> Download started</>}
-                {flash === "error" && <><AlertCircle size={16}/> Couldn’t capture (set CORS on bucket)</>}
+                {flash === "blocked" && <><AlertCircle size={16}/> Browser blocked the frame capture — use Win+Shift+S / Cmd+Shift+4 to grab the frame</>}
+                {flash === "error" && <><AlertCircle size={16}/> Video not ready yet</>}
               </div>
             </div>
           )}
@@ -446,8 +435,12 @@ export default function TvMode({ videos }: Props) {
           </div>
         </div>
 
-        {/* Full media controls */}
-        <div className="bg-[var(--bg-0)] border-t border-[var(--border)] flex flex-col">
+        {/*
+          Full media controls. flex-shrink-0 + relative z-10 guarantees this bar
+          always renders below the video (in document flow) at its natural height,
+          even if the video element does something unexpected with sizing.
+        */}
+        <div className="flex-shrink-0 relative z-10 bg-[var(--bg-0)] border-t border-[var(--border)] flex flex-col">
           {/* Scrubber row */}
           <div className="px-3 md:px-6 pt-3 flex items-center gap-2 md:gap-3">
             <span className="text-[10px] md:text-xs font-mono text-[var(--muted)] tabular-nums w-10 md:w-12 text-right">

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Link from "next/link";
 import { Tv, Search, Archive, Home, AlertTriangle } from "lucide-react";
@@ -58,6 +58,15 @@ export const metadata: Metadata = {
     },
   },
   icons: { icon: "/favicon.ico" },
+};
+
+// Next 16 doesn't auto-inject <meta name="viewport"> — declare it explicitly so
+// mobile browsers render at device-width (not the default ~980px desktop fallback).
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+  themeColor: "#050610",
 };
 
 const websiteJsonLd = {
