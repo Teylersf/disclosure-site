@@ -2,18 +2,35 @@ import type { MetadataRoute } from "next";
 import { SITE_URL } from "@/lib/site";
 import { getManifest } from "@/lib/manifest";
 import { FINDINGS } from "@/lib/findings";
+import { getTothemoon } from "@/lib/tothemoon";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
   const m = getManifest();
+  const ttm = getTothemoon();
 
   const staticPages: MetadataRoute.Sitemap = [
     { url: `${SITE_URL}/`, lastModified: now, changeFrequency: "weekly", priority: 1.0 },
     { url: `${SITE_URL}/findings`, lastModified: now, changeFrequency: "weekly", priority: 0.95 },
+    { url: `${SITE_URL}/missions`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
     { url: `${SITE_URL}/search`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },
     { url: `${SITE_URL}/tv`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },
     { url: `${SITE_URL}/bundles`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
   ];
+
+  const programPages: MetadataRoute.Sitemap = ttm.programs.map((p) => ({
+    url: `${SITE_URL}/missions/${p.toLowerCase()}`,
+    lastModified: now,
+    changeFrequency: "monthly",
+    priority: 0.85,
+  }));
+
+  const galleryPages: MetadataRoute.Sitemap = ttm.galleries.map((g) => ({
+    url: `${SITE_URL}/missions/${g.program.toLowerCase()}/${g.mission_num}/${g.magazine}`,
+    lastModified: now,
+    changeFrequency: "monthly",
+    priority: 0.7,
+  }));
 
   const findingPages: MetadataRoute.Sitemap = FINDINGS.map((f) => ({
     url: `${SITE_URL}/findings/${f.id}`,
@@ -31,5 +48,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: r.release === "release_2" ? 0.75 : 0.7,
   }));
 
-  return [...staticPages, ...findingPages, ...recordPages];
+  return [...staticPages, ...findingPages, ...recordPages, ...programPages, ...galleryPages];
 }

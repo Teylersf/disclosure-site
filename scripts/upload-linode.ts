@@ -44,6 +44,7 @@ const ALLOWED_HOSTS = [
   "fonts.googleapis.com",
   "cdn.datatables.net",
   "cdn.jsdelivr.net",
+  "tothemoon.im-ldi.com",
 ];
 
 const ENDPOINT = required("LINODE_ENDPOINT");

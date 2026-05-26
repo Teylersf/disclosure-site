@@ -19,6 +19,7 @@ const ALLOWED_HOSTS = new Set([
   "fonts.googleapis.com",
   "cdn.datatables.net",
   "cdn.jsdelivr.net",
+  "tothemoon.im-ldi.com",
 ]);
 
 export async function GET(

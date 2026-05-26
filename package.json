@@ -7,10 +7,12 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "manifest": "tsx scripts/build-manifest.ts",
+    "manifest": "tsx scripts/build-manifest.ts && tsx scripts/build-tothemoon-manifest.ts",
+    "manifest:pursue": "tsx scripts/build-manifest.ts",
+    "manifest:tothemoon": "tsx scripts/build-tothemoon-manifest.ts",
     "upload": "tsx scripts/upload-linode.ts",
     "upload:dry": "tsx scripts/upload-linode.ts --dry",
-    "prebuild": "tsx scripts/build-manifest.ts"
+    "prebuild": "tsx scripts/build-manifest.ts && tsx scripts/build-tothemoon-manifest.ts"
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.1053.0",
