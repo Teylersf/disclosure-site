@@ -5,7 +5,7 @@ import Link from "next/link";
 import {
   Play, Pause, SkipBack, SkipForward, Shuffle, Repeat, ListFilter,
   Volume2, VolumeX, ChevronRight, ChevronLeft, Loader2, AlertCircle,
-  Maximize, Gauge, ChevronsLeft, ChevronsRight,
+  Maximize, Gauge, ChevronsLeft, ChevronsRight, Camera, Download, Check,
 } from "lucide-react";
 import type { UapRecord } from "@/lib/types";
 import { assetUrl } from "@/lib/asset-url";
@@ -40,6 +40,9 @@ export default function TvMode({ videos }: Props) {
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
   const [speed, setSpeed] = useState(1);
+  // crossOrigin enables canvas screenshots. Falls back to null on video-error so playback always works.
+  const [useCors, setUseCors] = useState<"anonymous" | null>("anonymous");
+  const [flash, setFlash] = useState<null | "shot" | "downloaded" | "error">(null);
   const playerRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
 
@@ -107,7 +110,15 @@ export default function TvMode({ videos }: Props) {
       }
     };
     const onPlaying = () => setLoadState("playing");
-    const onError = () => setLoadState("error");
+    const onError = () => {
+      // CORS misconfigured on the bucket can break playback when crossOrigin is set.
+      // Retry once without CORS so the video at least plays (screenshots will be disabled).
+      if (useCors === "anonymous") {
+        setUseCors(null);
+        return;
+      }
+      setLoadState("error");
+    };
     const onLoadedMeta = () => setDuration(v.duration || 0);
     const onTimeUpdate = () => {
       setCurrentTime(v.currentTime);
@@ -204,6 +215,85 @@ export default function TvMode({ videos }: Props) {
     else await playerRef.current.requestFullscreen();
   };
 
+  // Pulse a brief on-screen confirmation so the user sees the action worked.
+  const briefFlash = (kind: "shot" | "downloaded" | "error") => {
+    setFlash(kind);
+    setTimeout(() => setFlash(null), 1400);
+  };
+
+  // Slugify the title for a sensible filename
+  const slug = (current?.title ?? "video")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "")
+    .slice(0, 60);
+
+  /**
+   * Capture the current video frame to a PNG and trigger a download.
+   * Requires the bucket to send CORS headers (set the video's crossOrigin
+   * attribute to "anonymous"); otherwise the canvas is tainted and toBlob throws.
+   */
+  const takeScreenshot = () => {
+    const v = videoRef.current;
+    if (!v || !v.videoWidth || !v.videoHeight) {
+      briefFlash("error");
+      return;
+    }
+    const canvas = document.createElement("canvas");
+    canvas.width = v.videoWidth;
+    canvas.height = v.videoHeight;
+    const ctx = canvas.getContext("2d");
+    if (!ctx) {
+      briefFlash("error");
+      return;
+    }
+    try {
+      ctx.drawImage(v, 0, 0, canvas.width, canvas.height);
+      canvas.toBlob((blob) => {
+        if (!blob) { briefFlash("error"); return; }
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = `${slug}-t${v.currentTime.toFixed(2)}s.png`;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+        briefFlash("shot");
+      }, "image/png");
+    } catch {
+      briefFlash("error");
+    }
+  };
+
+  /**
+   * Download the current MP4 to the user's computer. Fetches as a blob so the
+   * `download` attribute is respected even for cross-origin URLs; falls back to
+   * opening the file in a new tab if CORS blocks the fetch.
+   */
+  const downloadVideo = async () => {
+    if (!src) { briefFlash("error"); return; }
+    try {
+      const resp = await fetch(src);
+      if (!resp.ok) throw new Error(String(resp.status));
+      const blob = await resp.blob();
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      const ext = src.split("?")[0].split(".").pop() || "mp4";
+      a.download = `${slug}.${ext}`;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+      briefFlash("downloaded");
+    } catch {
+      // CORS-blocked or network error: open in new tab, browser will offer save
+      window.open(src, "_blank");
+      briefFlash("downloaded");
+    }
+  };
+
   // Keyboard shortcuts
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
@@ -253,23 +343,36 @@ export default function TvMode({ videos }: Props) {
     : "";
 
   return (
-    // Mobile: vertical stack, scroll the page. Desktop: fixed viewport, side-by-side.
-    <div className="flex flex-col md:flex-row md:h-[calc(100dvh-65px)] md:overflow-hidden">
+    // Mobile: vertical stack, scroll the page. Desktop: fills `main` exactly (which
+    // is sized by the app-shell layout in layout.tsx), no overflow.
+    <div className="flex flex-col md:flex-row md:h-full md:overflow-hidden">
       {/* Player */}
       <div ref={playerRef} className="flex-1 flex flex-col bg-black relative">
         {/* On mobile: fixed 16:9 aspect ratio. On desktop: fills remaining height. */}
         <div className="relative aspect-video md:aspect-auto md:flex-1">
           <video
-            key={currentIdx}
+            // include useCors in the key so toggling the value re-mounts the element
+            key={`${currentIdx}-${useCors ?? "raw"}`}
             ref={videoRef}
             src={src}
             poster={poster || undefined}
             preload="auto"
+            crossOrigin={useCors ?? undefined}
             className="w-full h-full object-contain bg-black"
             onEnded={goNext}
             playsInline
             controls={false}
           />
+          {/* Brief confirmation flash for screenshot / download actions */}
+          {flash && (
+            <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 flex items-center justify-center pointer-events-none">
+              <div className={`px-4 py-2.5 rounded-md text-sm font-semibold flex items-center gap-2 backdrop-blur-md shadow-lg ${flash === "error" ? "bg-[var(--pdf)]/85 text-white" : "bg-[var(--accent-glow)]/90 text-[var(--bg-0)]"}`}>
+                {flash === "shot" && <><Check size={16}/> Screenshot saved</>}
+                {flash === "downloaded" && <><Check size={16}/> Download started</>}
+                {flash === "error" && <><AlertCircle size={16}/> Couldn’t capture (set CORS on bucket)</>}
+              </div>
+            </div>
+          )}
           {/* Loading / buffering / error overlay */}
           {showOverlay && (
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
@@ -433,6 +536,15 @@ export default function TvMode({ videos }: Props) {
 
             <button type="button" onClick={() => setMuted((m) => !m)} className="btn" title="Mute (M)">
               {muted ? <VolumeX size={14}/> : <Volume2 size={14}/>}
+            </button>
+
+            <div className="w-px h-6 bg-[var(--border)] mx-1"/>
+
+            <button type="button" onClick={takeScreenshot} className="btn" title="Save screenshot of current frame as PNG">
+              <Camera size={14}/> <span className="hidden sm:inline">Screenshot</span>
+            </button>
+            <button type="button" onClick={downloadVideo} className="btn" title="Download this video to your computer">
+              <Download size={14}/> <span className="hidden sm:inline">Download</span>
             </button>
 
             <div className="w-px h-6 bg-[var(--border)] mx-1"/>

@@ -88,6 +88,12 @@ const orgJsonLd = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}>
+      {/*
+        Layout shell:
+        - mobile: min-h-dvh body, natural document scroll (URL bar collapses normally).
+        - desktop: h-dvh body with internal main scrolling, so header + footer stay in
+          place and TV mode can fill `main` exactly with h-full.
+      */}
       <head>
         <script
           type="application/ld+json"
@@ -98,7 +104,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }}
         />
       </head>
-      <body className="min-h-full flex flex-col grain">
+      <body className="min-h-dvh md:h-dvh flex flex-col grain">
         <header className="relative z-10 border-b border-[var(--border)] bg-[var(--bg-0)]/80 backdrop-blur">
           <div className="max-w-[1600px] mx-auto px-3 sm:px-6 py-3 flex items-center justify-between gap-3 sm:gap-6">
             <Link href="/" className="flex items-center gap-2 sm:gap-3 text-[var(--text)] min-w-0">
@@ -115,7 +121,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
             </nav>
           </div>
         </header>
-        <main className="relative z-10 flex-1">{children}</main>
+        <main className="relative z-10 flex-1 md:min-h-0 md:overflow-y-auto">{children}</main>
         <footer className="relative z-10 border-t border-[var(--border)] mt-16 py-8 text-center text-xs text-[var(--muted)]">
           <p>
             U.S. Department of War — Presidential Unsealing and Reporting System for UAP Encounters
