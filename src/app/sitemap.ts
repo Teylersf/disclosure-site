@@ -32,6 +32,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
+  // Mission landing pages (one per program × mission)
+  const missionSeen = new Set<string>();
+  const missionPages: MetadataRoute.Sitemap = [];
+  for (const g of ttm.galleries) {
+    const key = `${g.program.toLowerCase()}/${g.mission_num}`;
+    if (missionSeen.has(key)) continue;
+    missionSeen.add(key);
+    missionPages.push({
+      url: `${SITE_URL}/missions/${key}`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.75,
+    });
+  }
+
   const findingPages: MetadataRoute.Sitemap = FINDINGS.map((f) => ({
     url: `${SITE_URL}/findings/${f.id}`,
     lastModified: now,
@@ -48,5 +63,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: r.release === "release_2" ? 0.75 : 0.7,
   }));
 
-  return [...staticPages, ...findingPages, ...recordPages, ...programPages, ...galleryPages];
+  return [...staticPages, ...findingPages, ...recordPages, ...programPages, ...missionPages, ...galleryPages];
 }

@@ -65,13 +65,14 @@ export function getProgramGalleries(program: Program): Gallery[] {
 
 /**
  * Resolve a relative image path (e.g. "/data_a/AS11/png/AS11-45-6697A_THM.png")
- * to an asset URL through our standard assetUrl helper.
+ * to a fully-qualified URL. Image files (/data_a/...) live on the live
+ * tothemoon.im-ldi.com server — we never mirror those because there are
+ * ~25,800 images × 5 size variants. They explicitly permit hot-linking.
  */
-export function imagePath(relPath: string | null | undefined): string | undefined {
+export function imageUrl(relPath: string | null | undefined): string | undefined {
   if (!relPath) return undefined;
-  // The original paths are root-relative on tothemoon.im-ldi.com, so prepend the host folder.
   const clean = relPath.startsWith("/") ? relPath.slice(1) : relPath;
-  return `tothemoon.im-ldi.com/${clean}`;
+  return `https://tothemoon.im-ldi.com/${clean}`;
 }
 
 /**

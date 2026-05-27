@@ -1,8 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { Rocket, ArrowRight, Image as ImageIcon, Film } from "lucide-react";
-import { getTothemoon, type Program, programDescription } from "@/lib/tothemoon";
-import { assetUrl } from "@/lib/asset-url";
+import { getTothemoon, type Program, programDescription, imageUrl } from "@/lib/tothemoon";
 import { absoluteUrl, SITE_NAME } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -72,10 +71,7 @@ export default function MissionsPage() {
             const theme = PROGRAM_THEME[p];
             // Pick a representative image from the first gallery of this program
             const firstGallery = m.galleries.find((g) => g.program === p);
-            const hero = firstGallery?.images?.find((i) => i.thumb_image)?.thumb_image;
-            const heroUrl = hero
-              ? assetUrl(`tothemoon.im-ldi.com${hero}`)
-              : undefined;
+            const heroUrl = imageUrl(firstGallery?.images?.find((i) => i.thumb_image)?.thumb_image);
             return (
               <Link key={p} href={`/missions/${p.toLowerCase()}`} className="card block group overflow-hidden">
                 <div className="aspect-[4/3] bg-[var(--bg-0)] relative overflow-hidden">

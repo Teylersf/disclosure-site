@@ -3,18 +3,16 @@
 import { useState, useEffect, useCallback, useMemo } from "react";
 import { ChevronLeft, ChevronRight, X, Maximize, Download, ExternalLink } from "lucide-react";
 import type { Gallery, MissionImage } from "@/lib/tothemoon";
-import { assetUrl } from "@/lib/asset-url";
+import { imageUrl } from "@/lib/tothemoon";
 
 function imageHref(relPath: string | null | undefined): string {
-  if (!relPath) return "#";
-  const clean = relPath.startsWith("/") ? relPath.slice(1) : relPath;
-  return assetUrl(`tothemoon.im-ldi.com/${clean}`);
+  return imageUrl(relPath) ?? "#";
 }
 
 function pickUrl(img: MissionImage, ...candidates: (keyof MissionImage)[]): string | undefined {
   for (const k of candidates) {
     const v = img[k];
-    if (typeof v === "string" && v) return imageHref(v);
+    if (typeof v === "string" && v) return imageUrl(v);
   }
   return undefined;
 }

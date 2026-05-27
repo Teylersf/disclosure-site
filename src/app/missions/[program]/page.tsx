@@ -2,8 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { ArrowLeft, Image as ImageIcon } from "lucide-react";
-import { getTothemoon, getProgramGalleries, programDescription, type Program } from "@/lib/tothemoon";
-import { assetUrl } from "@/lib/asset-url";
+import { getTothemoon, getProgramGalleries, programDescription, type Program, imageUrl } from "@/lib/tothemoon";
 import { absoluteUrl } from "@/lib/site";
 
 const PROGRAMS: Program[] = ["Apollo", "Gemini", "Mercury"];
@@ -72,8 +71,7 @@ export default async function ProgramPage({ params }: { params: Promise<{ progra
           {missions.map((num) => {
             const mGalleries = byMission.get(num)!;
             const totalImages = mGalleries.reduce((s, g) => s + g.imageCount, 0);
-            const hero = mGalleries[0].images.find((i) => i.thumb_image)?.thumb_image;
-            const heroUrl = hero ? assetUrl(`tothemoon.im-ldi.com${hero}`) : undefined;
+            const heroUrl = imageUrl(mGalleries[0].images.find((i) => i.thumb_image)?.thumb_image);
 
             return (
               <div key={num} className="card overflow-hidden">
