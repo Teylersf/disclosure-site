@@ -21,7 +21,7 @@
 import { promises as fs, createReadStream } from "node:fs";
 import { stat } from "node:fs/promises";
 import path from "node:path";
-import { S3Client, PutObjectCommand, HeadObjectCommand } from "@aws-sdk/client-s3";
+import { S3Client, PutObjectCommand, HeadObjectCommand, CopyObjectCommand } from "@aws-sdk/client-s3";
 import { Upload } from "@aws-sdk/lib-storage";
 import mime from "mime-types";
 
@@ -45,6 +45,7 @@ const ALLOWED_HOSTS = [
   "cdn.datatables.net",
   "cdn.jsdelivr.net",
   "tothemoon.im-ldi.com",
+  "archive",
 ];
 
 const ENDPOINT = required("LINODE_ENDPOINT");
@@ -81,22 +82,64 @@ async function* walk(dir: string): AsyncGenerator<string> {
   }
 }
 
-async function existsOnRemote(key: string, size: number): Promise<boolean> {
+/**
+ * Returns { exists, size } for the key on the bucket. Used to decide skip vs replace.
+ */
+async function remoteState(key: string): Promise<{ exists: boolean; size?: number; lastModified?: Date }> {
   try {
     const out = await s3.send(new HeadObjectCommand({ Bucket: BUCKET, Key: key }));
-    return out.ContentLength === size;
+    return { exists: true, size: out.ContentLength, lastModified: out.LastModified };
   } catch (e: unknown) {
     const err = e as { $metadata?: { httpStatusCode?: number } };
-    if (err.$metadata?.httpStatusCode === 404) return false;
+    if (err.$metadata?.httpStatusCode === 404 || err.$metadata?.httpStatusCode === 403) return { exists: false };
     throw e;
   }
 }
 
+/**
+ * Never-delete policy: before overwriting any key, server-side-copy the existing
+ * version to archive/<remote-last-modified-date>/<original-key>. This means past
+ * versions are always preserved at a stable URL.
+ *
+ * Skipped if:
+ *  - destination is already under archive/<date>/... (those are immutable snapshots)
+ *  - archive copy already exists at that destination
+ */
+async function archiveExistingVersion(key: string, lastModified?: Date): Promise<string | null> {
+  if (key.startsWith("archive/")) return null;
+  const date = (lastModified ?? new Date()).toISOString().slice(0, 10);
+  const archiveKey = `archive/${date}/${key}`;
+  // Skip if an archive at this date already exists for this key
+  const a = await remoteState(archiveKey);
+  if (a.exists) return archiveKey;
+  await s3.send(new CopyObjectCommand({
+    Bucket: BUCKET,
+    CopySource: `/${BUCKET}/${key}`,
+    Key: archiveKey,
+    ACL: "public-read",
+    MetadataDirective: "COPY",
+  }));
+  return archiveKey;
+}
+
 async function uploadOne(filePath: string, key: string, size: number) {
-  if (await existsOnRemote(key, size)) {
+  const remote = await remoteState(key);
+  if (remote.exists && remote.size === size) {
     return { key, status: "skip" as const, size };
   }
   if (DRY) return { key, status: "dry" as const, size };
+
+  // If a different version exists, archive it before overwriting.
+  let archivedTo: string | null = null;
+  if (remote.exists && remote.size !== size) {
+    try {
+      archivedTo = await archiveExistingVersion(key, remote.lastModified);
+    } catch (e) {
+      const err = e as Error;
+      console.error(`  ! could not archive existing ${key}: ${err.message}`);
+    }
+  }
+
   const ct = mime.lookup(filePath) || "application/octet-stream";
 
   if (size >= MULTIPART_THRESHOLD) {
@@ -127,7 +170,7 @@ async function uploadOne(filePath: string, key: string, size: number) {
       CacheControl: "public, max-age=86400",
     }));
   }
-  return { key, status: "uploaded" as const, size };
+  return { key, status: "uploaded" as const, size, archivedTo: archivedTo ?? undefined };
 }
 
 async function main() {

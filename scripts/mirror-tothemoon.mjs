@@ -127,7 +127,21 @@ async function fileExists(p) {
 
 async function downloadOne(u) {
   const local = urlToLocalPath(u);
-  if (await fileExists(local)) return { url: u, status: "skip", path: local };
+  if (await fileExists(local)) {
+    // If this is an HTML page we already have, read its content from disk so the
+    // caller can still extract links and keep crawling — otherwise a resumed
+    // run halts at the first cached page.
+    if (/\.html?$/i.test(local)) {
+      try {
+        const text = await fs.readFile(local, "utf8");
+        // Heuristic: only treat as HTML if it actually starts with <
+        if (text.trimStart().startsWith("<")) {
+          return { url: u, status: "skip", path: local, html: text };
+        }
+      } catch {}
+    }
+    return { url: u, status: "skip", path: local };
+  }
 
   await fs.mkdir(path.dirname(local), { recursive: true });
 
@@ -172,7 +186,7 @@ async function crawlOne(u) {
   }
   logResult(r, u);
 
-  if (r.status === "ok" && r.html) {
+  if ((r.status === "ok" || r.status === "skip") && r.html) {
     const links = extractLinks(r.html, u);
     for (const link of links) {
       if (!isSameSite(link) || visited.has(link)) continue;
@@ -180,7 +194,8 @@ async function crawlOne(u) {
       else assets.add(link);
     }
   }
-  await sleep(DELAY_MS);
+  // Only sleep when we actually hit the network
+  if (r.status === "ok") await sleep(DELAY_MS);
 }
 
 async function downloadAssets() {

@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Link from "next/link";
-import { Tv, Search, Archive, Home, AlertTriangle, Rocket } from "lucide-react";
+import { Tv, Search, Archive, Home, AlertTriangle, Rocket, Clock } from "lucide-react";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import { SITE_URL, SITE_NAME, SITE_DESCRIPTION, SITE_KEYWORDS, SITE_TWITTER } from "@/lib/site";
@@ -126,6 +126,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
               <Link href="/search" className="btn px-2 sm:px-3" title="Search"><Search size={14}/> <span className="hidden lg:inline">Search</span></Link>
               <Link href="/findings" className="btn px-2 sm:px-3" style={{ borderColor: "var(--gold)", color: "var(--gold)" }} title="Findings"><AlertTriangle size={14}/> <span className="hidden lg:inline">Findings</span></Link>
               <Link href="/missions" className="btn px-2 sm:px-3" title="NASA Missions Archive"><Rocket size={14}/> <span className="hidden lg:inline">Missions</span></Link>
+              <Link href="/timeline" className="btn px-2 sm:px-3" title="File version timeline"><Clock size={14}/> <span className="hidden lg:inline">Timeline</span></Link>
               <Link href="/bundles" className="btn px-2 sm:px-3" title="Bundles"><Archive size={14}/> <span className="hidden lg:inline">Bundles</span></Link>
               <Link href="/tv" className="btn btn-gold px-2 sm:px-3" title="TV Mode"><Tv size={14}/> <span className="hidden sm:inline">TV{" "}</span><span className="hidden lg:inline">Mode</span></Link>
             </nav>

@@ -20,6 +20,7 @@ const ALLOWED_HOSTS = new Set([
   "cdn.datatables.net",
   "cdn.jsdelivr.net",
   "tothemoon.im-ldi.com",
+  "archive",
 ]);
 
 export async function GET(
