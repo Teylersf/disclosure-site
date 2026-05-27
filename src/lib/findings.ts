@@ -65,6 +65,79 @@ export interface Finding {
 
 export const FINDINGS: Finding[] = [
   {
+    id: "may-27-silent-republish",
+    tier: 1,
+    title: "Between May 25 and May 27, 2026, the Department of War silently republished 69 PDFs without a public announcement",
+    claim: "A byte-level diff between a snapshot of the war.gov/UFO/ archive captured on 2026-05-25 and the live state on 2026-05-27 shows 69 PDFs and 1 thumbnail with completely different MD5 hashes from the originals. The CSV manifest still lists exactly 222 records and only one of them (`ODNI-UAP-D001`) carries a public correction note explaining the change. The other 68 file replacements are undocumented anywhere on war.gov.",
+    significance: "This is a live, observable thing — anyone who downloaded the original May 8 / May 22 release ZIPs from war.gov now has different files than someone who downloads them today. The net delta is **1,162 MB removed** (2.31 GB → 1.09 GB across the affected files). 42 PDFs got smaller (re-compression), 22 got larger (re-OCR or added content), 3 changed by <1% (minor edits). Only the ODNI-UAP-D001 change is acknowledged in the public catalog. This is the kind of provenance question journalists and researchers should care about.",
+    evidence: `**Method:** snapshot the public manifest and every asset URL on 2026-05-25; re-fetch each on 2026-05-27 via a Range request to recover the server-reported Content-Length, compare to the locally-stored byte size. Confirm any divergence with a full GET + md5.
+
+**The one publicly-acknowledged change** (ODNI-UAP-D001 USPER Narrative):
+The CSV's Description Blurb on the live site now ends with:
+> *"May 26, 2026, correction: The document originally posted to the PURSUE collection of UAP-related records on May 22, 2026, under the name 'ODNI-UAP-D001, USPER Narrative, Senior USIC Official,' contained a typographic error in the second paragraph, describing a helicopter flight profile as 'map-of-the-earth.' The correct military aviation term for this profile is 'nap-of-the-earth.' This document has been updated to reflect this correction."*
+
+The PDF went from **34,195 bytes → 58,516 bytes** (the correction note is rendered into the document itself).
+
+**The 68 unannounced changes** include — but are not limited to:
+
+• Every \`fbi-photo-b*.pdf\` (24 files). All shrank by roughly **80%** (e.g. \`fbi-photo-b1.pdf\` went from **613,116 → 126,599 bytes** — same filename, different MD5). Embedded image quality was lowered.
+• Every \`65_hs1-834228961_62-hq-83894_section_*.pdf\` (10 sections). Most shrank dramatically; \`section_6\` went from **370 MB → 60 MB**. \`section_8\` went the *opposite* direction (120 MB → **255 MB** — added content).
+• \`38_143685_box7_incident_summaries_173-233.pdf\` grew **3.3×** (49 MB → 161 MB). Whatever was added here is substantial.
+• The State Department UAP cables (\`dos-uap-d1\`, \`dos-uap-d2\`) grew slightly — re-OCR pass.
+• NASA transcripts (\`nasa-uap-d1\` Apollo 12, \`nasa-uap-d2\` Apollo 17) grew slightly.
+• A subtle CSV-only edit on **DOW-UAP-PR072** (the Kazakhstan "ADMINISTRATIVE REVISION" video): the description was edited from "February 2022" to "**March 2022**" as the date the video was captured — no other change, no public note.
+
+**Also fixed without acknowledgement:** the war.gov/UFO/ Open Graph description had mojibake on the apostrophe (\`governmentâ€™s\`). The live version now serves proper UTF-8 (\`government's\`). Silent fix.`,
+    stats: [
+      { big: "69", label: "files silently replaced" },
+      { big: "1,162 MB", label: "net deletion" },
+      { big: "42 / 22 / 3", label: "smaller / larger / approx-same" },
+      { big: "1", label: "publicly-disclosed change" },
+    ],
+    comparisons: [
+      {
+        leftLabel: "Before (May 25, 2026)",
+        leftValue: "fbi-photo-b1.pdf · 613,116 bytes · md5 0004971aa366cf2fbcbff1c032c2cb16",
+        rightLabel: "After (May 27, 2026)",
+        rightValue: "fbi-photo-b1.pdf · 126,599 bytes · md5 79ebf276f4a6a35126afd679a68f5f50",
+      },
+      {
+        leftLabel: "Before — ODNI-UAP-D001 (May 22 release)",
+        leftValue: "34,195 bytes — typo: 'map-of-the-earth' helicopter profile",
+        rightLabel: "After — ODNI-UAP-D001 (May 26 correction)",
+        rightValue: "58,516 bytes — corrected to 'nap-of-the-earth', notice rendered in-document",
+      },
+      {
+        leftLabel: "DOW-UAP-PR072 description (cached)",
+        leftValue: "...derived from a commercially available cellular device's rear-facing camera in **February 2022**.",
+        rightLabel: "DOW-UAP-PR072 description (live)",
+        rightValue: "...derived from a commercially available cellular device's rear-facing camera in **March 2022**.",
+      },
+    ],
+    tables: [
+      {
+        caption: "Sample of unannounced replacements (selected)",
+        headers: ["File", "Before (bytes)", "After (bytes)", "Δ"],
+        rows: [
+          { cells: ["65_hs1-834228961_62-hq-83894_section_6.pdf", "370,571,478", "60,929,949", "−83%"] },
+          { cells: ["65_hs1-834228961_62-hq-83894_section_8.pdf", "120,391,107", "255,526,310", "+112%"] },
+          { cells: ["38_143685_box7_incident_summaries_173-233.pdf", "49,382,924", "161,362,330", "+227%"] },
+          { cells: ["38_143685_box7_incident_summaries_1-100.pdf", "247,087,612", "32,675,506", "−87%"] },
+          { cells: ["18_6369445_general_1948_vol_1.pdf", "65,878,977", "4,740,807", "−93%"] },
+          { cells: ["fbi-photo-b1.pdf", "613,116", "126,599", "−79%"] },
+          { cells: ["fbi-photo-b13.pdf", "434,067", "66,245", "−85%"] },
+        ],
+      },
+    ],
+    sources: [
+      { path: "https://www.war.gov/Portals/1/Interactive/2026/UFO/uap-data.csv", note: "Live manifest; only ODNI-UAP-D001 has a correction note" },
+      { path: "../before-resync/", note: "All 69 pre-correction files preserved locally in this archive (not committed; available on the maintainer's machine)" },
+      { path: "https://www.war.gov/medialink/ufo/052226/release_02/documents/ODNI-UAP-D001_USPER_Narrative_Senior_USIC.pdf", note: "The one publicly-corrected PDF" },
+      { path: "https://www.war.gov/medialink/ufo/release_1/fbi-photo-b1.pdf", note: "Sample of an unannounced replacement" },
+    ],
+    relatedRecordIds: ["pdf-odni-uap-d001-usper-narrative-senior-usic-official", "dvids-1007795"],
+  },
+  {
     id: "d20-location-swap",
     tier: 1,
     title: "D-020 was relabeled from “Southern United States, 2020” to “Iraq, 2023”",

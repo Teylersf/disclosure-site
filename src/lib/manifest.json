@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-25T22:38:50.651Z",
+  "generatedAt": "2026-05-27T21:27:14.925Z",
   "totalCount": 222,
   "byType": {
     "PDF": 122,
@@ -15,8 +15,8 @@
     "Department of War": 131,
     "Central Intelligence Agency": 1,
     "Office of the Director of National Intelligence": 1,
-    "NASA": 22,
     "Department of Energy": 3,
+    "NASA": 22,
     "Department of State": 7,
     "FBI": 57
   },
@@ -263,7 +263,7 @@
       "type": "PDF",
       "title": "ODNI-UAP-D001, USPER Narrative, Senior USIC Official",
       "agency": "Office of the Director of National Intelligence",
-      "description": "This document is a first-hand account written by a currently serving (May 2026) senior U.S. intelligence official. The official was part of a team investigating reports of unusual noises and sightings of unidentified anomalous phenomena in and near a sensitive U.S. military facility in late 2025. From the official’s vantage point as a helicopter passenger, the official recounts encountering unidentified “glowing orbs” both at close range and at a distance. The account describes an apparent high-speed object moving low to the ground, which appeared to split in two and accelerate away in two different directions. It also describes numerous higher-altitude “orbs,” some of which the official assessed to be in close proximity to the helicopter. This account is accompanied by infrared imagery taken during the same exercise by other federal officials from the ground, originally released on war.gov/UFO on May 8, 2026.",
+      "description": "This document is a first-hand account written by a currently serving (May 2026) senior U.S. intelligence official. The official was part of a team investigating reports of unusual noises and sightings of unidentified anomalous phenomena in and near a sensitive U.S. military facility in late 2025. From the official’s vantage point as a helicopter passenger, the official recounts encountering unidentified “glowing orbs” both at close range and at a distance. The account describes an apparent high-speed object moving low to the ground, which appeared to split in two and accelerate away in two different directions. It also describes numerous higher-altitude “orbs,” some of which the official assessed to be in close proximity to the helicopter. This account is accompanied by infrared imagery taken during the same exercise by other federal officials from the ground, originally released on war.gov/UFO on May 8, 2026.\n\nMay 26, 2026, correction: The document originally posted to the PURSUE collection of UAP-related records on May 22, 2026, under the name “ODNI-UAP-D001, USPER Narrative, Senior USIC Official,” contained a typographic error in the second paragraph, describing a helicopter flight profile as “map-of-the-earth.” The correct military aviation term for this profile is “nap-of-the-earth.” This document has been updated to reflect this correction.",
       "incidentDate": "2025",
       "incidentLocation": "Western United States",
       "releaseDate": "5/22/26",
@@ -276,6 +276,26 @@
       },
       "thumbnail": {
         "url": "www.war.gov/medialink/ufo/052226/release_02/thumbnails/ODNI-UAP-D001_USPER_Narrative_Senior_USIC.jpg"
+      }
+    },
+    {
+      "id": "pdf-doe-uap-d001-enhanced-pantex-imagery",
+      "type": "PDF",
+      "title": "DOE-UAP-D001, Enhanced PANTEX Imagery",
+      "agency": "Department of Energy",
+      "description": "A Pantex Unidentified Object Incident Report that includes an enhanced image from ground surveillance radar tower.",
+      "incidentDate": "",
+      "incidentLocation": "",
+      "releaseDate": "5/22/26",
+      "release": "release_2",
+      "redacted": true,
+      "imageAlt": "An unidentified object report with enhanced imagery from a PANTEX radar tower.",
+      "imageVirin": "260508-O-D0360-1077",
+      "asset": {
+        "url": "www.war.gov/medialink/ufo/052226/release_02/documents/DOE-UAP-D001_PANTEX_Image.pdf"
+      },
+      "thumbnail": {
+        "url": "www.war.gov/medialink/ufo/052226/release_02/thumbnails/DOE-UAP-D001_PANTEX_Image.jpg"
       }
     },
     {
@@ -372,26 +392,6 @@
           "srt": "https://api.dvidshub.net/closed-captions/get?asset_id=video:1007870&format=srt&api_key=key-68bb60d16b35e",
           "webvtt": "https://api.dvidshub.net/closed-captions/get?asset_id=video:1007870&format=webvtt&api_key=key-68bb60d16b35e"
         }
-      }
-    },
-    {
-      "id": "pdf-doe-uap-d001-enhanced-pantex-imagery",
-      "type": "PDF",
-      "title": "DOE-UAP-D001, Enhanced PANTEX Imagery",
-      "agency": "Department of Energy",
-      "description": "A Pantex Unidentified Object Incident Report that includes an enhanced image from ground surveillance radar tower.",
-      "incidentDate": "",
-      "incidentLocation": "",
-      "releaseDate": "5/22/26",
-      "release": "release_2",
-      "redacted": true,
-      "imageAlt": "An unidentified object report with enhanced imagery from a PANTEX radar tower.",
-      "imageVirin": "260508-O-D0360-1077",
-      "asset": {
-        "url": "www.war.gov/medialink/ufo/052226/release_02/documents/DOE-UAP-D001_PANTEX_Image.pdf"
-      },
-      "thumbnail": {
-        "url": "www.war.gov/medialink/ufo/052226/release_02/thumbnails/DOE-UAP-D001_PANTEX_Image.jpg"
       }
     },
     {
@@ -7017,7 +7017,7 @@
       "type": "VID",
       "title": "DOW-UAP-PR072, \"ADMINISTRATIVE REVISION: IIR 1777 J0032 22 Kazakhstan - UAP in the vicinity of Karaganda International Airport\"",
       "agency": "Department of War",
-      "description": "On March 6, 2026, eight members of the U.S. House of Representatives requested access to 51 potentially UAP-related records allegedly held by the Department of War and the Intelligence Community. The All-domain Anomaly Resolution Office (AARO) identified a collection of responsive materials held on a classified network. Many of these materials lack a substantiated chain-of-custody.\n\nAARO assesses that this video, whose uploader-defined title is, “ADMINISTRATIVE REVISION: IIR 1777 J0032 22 Kazakhstan - UAP in the vicinity of Karaganda International Airport,” is likely derived from a commercially available cellular device’s rear-facing camera in March 2022. A user uploaded this video to a classified network in April 2023. \n\nVideo Duration: 00:00:17\nVideo Description: This media was digitally altered prior to its upload to a classified network, and is presented as received.\n\n00:00-00:03: No Content.\n00:04-00:12: The video fades in from black to show a luminous phenomenon with trails of diminishing brightness extending from the center. The camera pans left and right, and zooms in on the phenomenon.\n00:13: Video fades to black.\n00:14-00:17: No content.\n\nThis video description is provided for informational purposes only. Readers should not interpret any part of this description as reflecting an analytical judgment, investigative conclusion, or factual determination regarding the described event’s validity, nature, or significance.",
+      "description": "On March 6, 2026, eight members of the U.S. House of Representatives requested access to 51 potentially UAP-related records allegedly held by the Department of War and the Intelligence Community. The All-domain Anomaly Resolution Office (AARO) identified a collection of responsive materials held on a classified network. Many of these materials lack a substantiated chain-of-custody.\n\nAARO assesses that this video, whose uploader-defined title is, “ADMINISTRATIVE REVISION: IIR 1777 J0032 22 Kazakhstan - UAP in the vicinity of Karaganda International Airport,” is likely derived from a commercially available cellular device’s rear-facing camera in February 2022. A user uploaded this video to a classified network in April 2023. \n\nVideo Duration: 00:00:17\nVideo Description: This media was digitally altered prior to its upload to a classified network, and is presented as received.\n\n00:00-00:03: No Content.\n00:04-00:12: The video fades in from black to show a luminous phenomenon with trails of diminishing brightness extending from the center. The camera pans left and right, and zooms in on the phenomenon.\n00:13: Video fades to black.\n00:14-00:17: No content.\n\nThis video description is provided for informational purposes only. Readers should not interpret any part of this description as reflecting an analytical judgment, investigative conclusion, or factual determination regarding the described event’s validity, nature, or significance.",
       "incidentDate": "2022",
       "incidentLocation": "Kazakhstan",
       "releaseDate": "5/22/26",
