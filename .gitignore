@@ -44,3 +44,6 @@ next-env.d.ts
 upload*.log
 dev*.log
 mirror.log
+
+# diff/temp working files (out-of-band; not source)
+.tmp-*
