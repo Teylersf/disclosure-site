@@ -406,12 +406,41 @@ export default function VideoAnalyzer({ records, initialId }: Props) {
 
   if (!record) return <div className="p-10 text-center text-[var(--muted)]">No video records available.</div>;
 
+  const currentIdx = videoRecords.findIndex((r) => r.id === selectedId);
+  const goPrev = () => { if (currentIdx > 0) setSelectedId(videoRecords[currentIdx - 1].id); };
+  const goNext = () => { if (currentIdx < videoRecords.length - 1) setSelectedId(videoRecords[currentIdx + 1].id); };
+
   return (
     <div className="grid lg:grid-cols-[1fr_360px] gap-4 h-full">
-      <div ref={playerRef} className="flex flex-col gap-3 min-w-0">
-        {/* Video stage */}
-        <div className="card bg-black overflow-hidden relative">
-          <div className="relative" style={{ aspectRatio: `${videoSize.w} / ${videoSize.h}` }}>
+      <div ref={playerRef} className="flex flex-col gap-3 min-w-0 min-h-0">
+        {/* Video picker — prominent, top of player column */}
+        <div className="card p-2.5 flex items-center gap-2 flex-wrap">
+          <label className="text-[10px] uppercase tracking-widest text-[var(--accent)] flex-shrink-0">Video</label>
+          <select value={selectedId} onChange={(e) => setSelectedId(e.target.value)} className="select flex-1 min-w-0 text-sm">
+            {videoRecords.map((r, i) => (
+              <option key={r.id} value={r.id}>
+                {String(i + 1).padStart(3, "0")}. [{r.type}] {r.title.slice(0, 80)}{r.title.length > 80 ? "…" : ""}
+              </option>
+            ))}
+          </select>
+          <span className="text-[11px] text-[var(--muted)] font-mono tabular-nums flex-shrink-0">
+            {currentIdx + 1} / {videoRecords.length}
+          </span>
+          <button type="button" onClick={goPrev} disabled={currentIdx <= 0} className="btn disabled:opacity-30" title="Previous video"><ChevronsLeft size={14}/></button>
+          <button type="button" onClick={goNext} disabled={currentIdx >= videoRecords.length - 1} className="btn disabled:opacity-30" title="Next video"><ChevronsRight size={14}/></button>
+          <Link href={`/records/${record.id}`} className="btn text-xs" title="Open full record page"><FileText size={12}/></Link>
+        </div>
+
+        {/* Video stage — viewport-bounded, centered, scales by aspect ratio */}
+        <div className="card bg-black overflow-hidden relative flex items-center justify-center">
+          <div
+            className="relative mx-auto"
+            style={{
+              aspectRatio: `${videoSize.w} / ${videoSize.h}`,
+              maxHeight: "calc(100dvh - 360px)",
+              maxWidth: "100%",
+              width: `min(100%, calc((100dvh - 360px) * ${videoSize.w} / ${videoSize.h}))`,
+            }}>
             {/* Hidden video — actual media source */}
             <video
               key={`${selectedId}`}
@@ -592,14 +621,13 @@ export default function VideoAnalyzer({ records, initialId }: Props) {
 
       {/* Right sidebar */}
       <aside className="space-y-3 overflow-y-auto max-h-[calc(100dvh-180px)]">
-        {/* Video picker */}
+        {/* Current record summary */}
         <div className="card p-3">
-          <label className="text-[10px] uppercase tracking-widest text-[var(--accent)] mb-2 block">Video</label>
-          <select value={selectedId} onChange={(e) => setSelectedId(e.target.value)} className="select w-full text-sm">
-            {videoRecords.map((r) => (
-              <option key={r.id} value={r.id}>{r.title.slice(0, 60)}{r.title.length > 60 ? "…" : ""}</option>
-            ))}
-          </select>
+          <div className="text-[10px] uppercase tracking-widest text-[var(--accent)] mb-2">Now analyzing</div>
+          <div className="text-sm font-semibold text-[var(--text)] leading-snug line-clamp-2">{record.title}</div>
+          <div className="text-[11px] text-[var(--muted)] mt-1">
+            {record.type} · {record.agency} · {record.release}
+          </div>
           <Link href={`/records/${record.id}`} className="text-[11px] text-[var(--accent-glow)] mt-2 inline-block">
             <FileText size={11} className="inline mr-1"/> Open full record →
           </Link>
