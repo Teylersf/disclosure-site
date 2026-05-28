@@ -15,6 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}/timeline`, lastModified: now, changeFrequency: "daily", priority: 0.92 },
     { url: `${SITE_URL}/missions`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
     { url: `${SITE_URL}/analyze`, lastModified: now, changeFrequency: "monthly", priority: 0.88 },
+    { url: `${SITE_URL}/whitehouse-uap`, lastModified: now, changeFrequency: "daily", priority: 0.9 },
     { url: `${SITE_URL}/search`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },
     { url: `${SITE_URL}/tv`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },
     { url: `${SITE_URL}/bundles`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },

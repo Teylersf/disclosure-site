@@ -1,0 +1,165 @@
+{
+  "generatedAt": "2026-05-28T22:18:28.424Z",
+  "totalTweets": 2,
+  "accounts": [
+    "WhiteHouse"
+  ],
+  "entries": [
+    {
+      "tweet_id": "2060107136148091190",
+      "tweet_url": "https://x.com/WhiteHouse/status/2060107136148091190",
+      "account": "WhiteHouse",
+      "account_id": "1879644163769335808",
+      "account_verified_type": "Government",
+      "posted_at": "2026-05-28T21:13:10.000Z",
+      "archived_at": "2026-05-28T22:08:00.000Z",
+      "text": "Loading… tonight. 👀",
+      "engagement_at_capture": {
+        "favorites": 11134,
+        "conversations": 1368
+      },
+      "wayback_url": "https://web.archive.org/web/2026/https://x.com/WhiteHouse/status/2060107136148091190",
+      "media": [
+        {
+          "type": "video",
+          "file": "video-1280x720.mp4",
+          "source_url": "https://video.twimg.com/amplify_video/2060106919550042112/vid/avc1/1280x720/_-ySiKi_3Ts_FvkS.mp4",
+          "size_bytes": 1224345,
+          "md5": "94b787bd2061527089cb41274418bf20",
+          "width": 1280,
+          "height": 720,
+          "duration_ms": 13763,
+          "frame_rate": "23.976",
+          "codec": "h264 High",
+          "bitrate_kbps": 575,
+          "aspect_ratio": "16:9"
+        },
+        {
+          "type": "video",
+          "file": "video-640x360.mp4",
+          "source_url": "https://video.twimg.com/amplify_video/2060106919550042112/vid/avc1/640x360/Fp4tP2COT04k-625.mp4",
+          "size_bytes": 434544,
+          "md5": "39019c20b0a5bd32f4f88eac5d36e021",
+          "width": 640,
+          "height": 360,
+          "duration_ms": 13763,
+          "codec": "h264",
+          "bitrate_kbps": 256
+        },
+        {
+          "type": "poster",
+          "file": "poster.jpg",
+          "source_url": "https://pbs.twimg.com/amplify_video_thumb/2060106919550042112/img/eZKxS-tv8z1Tjg7q.jpg",
+          "size_bytes": 43358,
+          "md5": "b5f5bdb294135675751ac1e892e7967d",
+          "width": 1280,
+          "height": 720
+        }
+      ],
+      "notes": [
+        "Teaser post for a then-unreleased UAP video. Posted at 21:13 UTC on May 28, 2026; caption 'Loading… tonight. 👀' with eyes emoji.",
+        "Video shows what appears to be a heat/IR-style frame with twin glowing yellow lights against an industrial/structural backdrop with white plume.",
+        "User-downloaded MP4 is byte-identical to Twitter's 1280x720 master variant (md5 94b787bd...) — confirmed provenance, no re-encoding."
+      ],
+      "capture_date": "2026-05-28",
+      "bucket_prefix": "whitehouse-uap/2026-05-28/2060107136148091190",
+      "public_urls": {
+        "video-1280x720.mp4": "https://disclosure.us-east-1.linodeobjects.com/whitehouse-uap/2026-05-28/2060107136148091190/video-1280x720.mp4",
+        "video-640x360.mp4": "https://disclosure.us-east-1.linodeobjects.com/whitehouse-uap/2026-05-28/2060107136148091190/video-640x360.mp4",
+        "poster.jpg": "https://disclosure.us-east-1.linodeobjects.com/whitehouse-uap/2026-05-28/2060107136148091190/poster.jpg",
+        "tweet.json": "https://disclosure.us-east-1.linodeobjects.com/whitehouse-uap/2026-05-28/2060107136148091190/tweet.json",
+        "meta.json": "https://disclosure.us-east-1.linodeobjects.com/whitehouse-uap/2026-05-28/2060107136148091190/meta.json"
+      },
+      "poster_url": "https://disclosure.us-east-1.linodeobjects.com/whitehouse-uap/2026-05-28/2060107136148091190/poster.jpg",
+      "master_video_url": "https://disclosure.us-east-1.linodeobjects.com/whitehouse-uap/2026-05-28/2060107136148091190/video-1280x720.mp4",
+      "master_video_width": 1280,
+      "master_video_height": 720,
+      "duration_ms": 13763
+    },
+    {
+      "tweet_id": "2060013820139942309",
+      "tweet_url": "https://x.com/WhiteHouse/status/2060013820139942309",
+      "account": "WhiteHouse",
+      "account_id": "1879644163769335808",
+      "account_verified_type": "Government",
+      "posted_at": "2026-05-28T15:02:22.000Z",
+      "archived_at": "2026-05-28T22:09:00.000Z",
+      "text": "Are you listening? 🔊",
+      "engagement_at_capture": {
+        "favorites": 13200,
+        "conversations": 1668
+      },
+      "wayback_url": "https://web.archive.org/web/2026/https://x.com/WhiteHouse/status/2060013820139942309",
+      "media": [
+        {
+          "type": "video",
+          "file": "video-3840x2160.mp4",
+          "source_url": "https://video.twimg.com/amplify_video/2060013265242009610/vid/avc1/3840x2160/pq9ym9KSlOAjLXpU.mp4",
+          "size_bytes": 9418462,
+          "md5": "ca3bf02036747aea8bddbf6189046b84",
+          "width": 3840,
+          "height": 2160,
+          "duration_ms": 10552,
+          "frame_rate": "23.976",
+          "codec": "h264 High",
+          "level": "5.1",
+          "bitrate_kbps": 7004,
+          "aspect_ratio": "16:9",
+          "is_master": true
+        },
+        {
+          "type": "video",
+          "file": "video-1920x1080.mp4",
+          "source_url": "https://video.twimg.com/amplify_video/2060013265242009610/vid/avc1/1920x1080/9hJR_4e5zjffWgpx.mp4",
+          "size_bytes": 2644030,
+          "md5": "9c93b4c7a980d203e449ad3ebd6de407",
+          "width": 1920,
+          "height": 1080,
+          "duration_ms": 10552,
+          "codec": "h264"
+        },
+        {
+          "type": "video",
+          "file": "video-1280x720.mp4",
+          "source_url": "https://video.twimg.com/amplify_video/2060013265242009610/vid/avc1/1280x720/Dk6fcJHsHjXzNYya.mp4",
+          "size_bytes": 1309955,
+          "md5": "25954ebb3d9b462eaa73aa3d3efc518e",
+          "width": 1280,
+          "height": 720,
+          "duration_ms": 10552,
+          "codec": "h264"
+        },
+        {
+          "type": "poster",
+          "file": "poster.jpg",
+          "source_url": "https://pbs.twimg.com/amplify_video_thumb/2060013265242009610/img/oWhUYmzSpXFz9XxX.jpg",
+          "size_bytes": 45278,
+          "md5": "91806112697ee52cd842f7b90165fbb1",
+          "width": 3840,
+          "height": 2160
+        }
+      ],
+      "notes": [
+        "Posted 6h 11m before the 'Loading… tonight' teaser (id 2060107136148091190). Caption 'Are you listening? 🔊' with speaker emoji — audio-first framing.",
+        "Video shows the White House illustration with text 'PRESIDENT DONALD J. TRUMP' — likely the audio-asset cover frame for a UAP-themed audio drop.",
+        "User-downloaded MP4 is byte-identical to Twitter's 4K (3840x2160) master variant (md5 ca3bf020...) — full provenance, no re-encoding.",
+        "Twitter served 5 MP4 variants here including a 25 Mbps 4K — unusual quality ladder for a 10s social post."
+      ],
+      "capture_date": "2026-05-28",
+      "bucket_prefix": "whitehouse-uap/2026-05-28/2060013820139942309",
+      "public_urls": {
+        "video-3840x2160.mp4": "https://disclosure.us-east-1.linodeobjects.com/whitehouse-uap/2026-05-28/2060013820139942309/video-3840x2160.mp4",
+        "video-1920x1080.mp4": "https://disclosure.us-east-1.linodeobjects.com/whitehouse-uap/2026-05-28/2060013820139942309/video-1920x1080.mp4",
+        "video-1280x720.mp4": "https://disclosure.us-east-1.linodeobjects.com/whitehouse-uap/2026-05-28/2060013820139942309/video-1280x720.mp4",
+        "poster.jpg": "https://disclosure.us-east-1.linodeobjects.com/whitehouse-uap/2026-05-28/2060013820139942309/poster.jpg",
+        "tweet.json": "https://disclosure.us-east-1.linodeobjects.com/whitehouse-uap/2026-05-28/2060013820139942309/tweet.json",
+        "meta.json": "https://disclosure.us-east-1.linodeobjects.com/whitehouse-uap/2026-05-28/2060013820139942309/meta.json"
+      },
+      "poster_url": "https://disclosure.us-east-1.linodeobjects.com/whitehouse-uap/2026-05-28/2060013820139942309/poster.jpg",
+      "master_video_url": "https://disclosure.us-east-1.linodeobjects.com/whitehouse-uap/2026-05-28/2060013820139942309/video-3840x2160.mp4",
+      "master_video_width": 3840,
+      "master_video_height": 2160,
+      "duration_ms": 10552
+    }
+  ]
+}
