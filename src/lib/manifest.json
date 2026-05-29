@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-27T21:27:14.925Z",
+  "generatedAt": "2026-05-29T04:36:53.184Z",
   "totalCount": 222,
   "byType": {
     "PDF": 122,
@@ -408,10 +408,10 @@
       "imageAlt": "Declassified Secret document from Air Materiel Command.",
       "imageVirin": "260508-D-D0360-1001",
       "asset": {
-        "url": "www.war.gov/medialink/ufo/release_1/18_100754_ general 1946-7_vol_2.pdf"
+        "url": "www.war.gov/medialink/ufo/release_1/18_100754_%20general%201946-7_vol_2.pdf"
       },
       "thumbnail": {
-        "url": "www.war.gov/medialink/ufo/release_1/thumbnail/18_100754_ general 1946-7_vol_2.jpg"
+        "url": "www.war.gov/medialink/ufo/release_1/thumbnail/18_100754_%20general%201946-7_vol_2.jpg"
       }
     },
     {
@@ -468,10 +468,10 @@
       "imageAlt": "Declassified Air Staff document.",
       "imageVirin": "260508-D-D0360-1003",
       "asset": {
-        "url": "www.war.gov/medialink/ufo/release_1/331_120752_numeric_files_1944–1945_37153_german_armament_equipment_documents.pdf"
+        "url": "www.war.gov/medialink/ufo/release_1/331_120752_numeric_files_1944%E2%80%931945_37153_german_armament_equipment_documents.pdf"
       },
       "thumbnail": {
-        "url": "www.war.gov/medialink/ufo/release_1/thumbnail/331_120752_numeric_files_1944–1945_37153_german_armament_equipment_documents.jpg"
+        "url": "www.war.gov/medialink/ufo/release_1/thumbnail/331_120752_numeric_files_1944%E2%80%931945_37153_german_armament_equipment_documents.jpg"
       }
     },
     {
@@ -10336,10 +10336,10 @@
       "imageAlt": "Heavily redacted Federal Bureau of Investigation official record.",
       "imageVirin": "260508-O-D0360-1054",
       "asset": {
-        "url": "www.war.gov/medialink/ufo/release_1/serial 5 redacted_redacted.pdf"
+        "url": "www.war.gov/medialink/ufo/release_1/serial%205%20redacted_redacted.pdf"
       },
       "thumbnail": {
-        "url": "www.war.gov/medialink/ufo/release_1/thumbnail/serial 5 redacted_redacted.jpg"
+        "url": "www.war.gov/medialink/ufo/release_1/thumbnail/serial%205%20redacted_redacted.jpg"
       }
     },
     {
