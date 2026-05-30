@@ -43,7 +43,11 @@ async function main() {
         ],
         AllowedMethods: ["GET", "HEAD"],
         AllowedHeaders: ["*"],
-        ExposeHeaders: ["ETag", "Content-Length", "Content-Type"],
+        // Browser EXIF readers (exifr) use HTTP Range to stream the first few
+        // KB of an image. Without exposing Accept-Ranges + Content-Range the
+        // browser blocks the partial read and the fetch fails with the
+        // generic "Failed to fetch" error.
+        ExposeHeaders: ["ETag", "Content-Length", "Content-Type", "Accept-Ranges", "Content-Range", "Last-Modified"],
         MaxAgeSeconds: 86400,
       },
     ],
