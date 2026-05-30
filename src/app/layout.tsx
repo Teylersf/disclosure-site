@@ -114,7 +114,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         />
       </head>
       <body className="min-h-dvh md:h-dvh flex flex-col grain">
-        <header className="relative z-10 border-b border-[var(--border)] bg-[var(--bg-0)]/80 backdrop-blur">
+        <header className="relative z-50 border-b border-[var(--border)] bg-[var(--bg-0)]/80 backdrop-blur">
           <div className="max-w-[1600px] mx-auto px-3 sm:px-6 py-3 flex items-center justify-between gap-3 sm:gap-6">
             <Link href="/" className="flex items-center gap-2 sm:gap-3 text-[var(--text)] min-w-0">
               <span className="inline-block w-2 h-2 rounded-full bg-[var(--accent-glow)] shadow-[0_0_12px_rgba(94,234,212,0.8)] flex-shrink-0" />
