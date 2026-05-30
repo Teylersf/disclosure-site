@@ -6,6 +6,13 @@ export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 export const alt = "Disclosure — the PURSUE 2026 UAP archive";
 
+// Force fully-static generation. Without this, every social-media crawl of
+// any page that inherits this OG image triggers a fresh ImageResponse render
+// and a write to Vercel's image-optimization cache. Static = built once,
+// served as a plain CDN asset for the life of the deploy.
+export const dynamic = "force-static";
+export const revalidate = false;
+
 export default async function Image() {
   const m = getManifest();
   const r1 = m.byRelease["5/8/26"];
