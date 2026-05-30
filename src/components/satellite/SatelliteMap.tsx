@@ -36,10 +36,14 @@ import XYZ from "ol/source/XYZ";
 import VectorSource from "ol/source/Vector";
 import Feature from "ol/Feature";
 import Point from "ol/geom/Point";
-import { fromLonLat } from "ol/proj";
 import { Style, Circle, Fill, Stroke, Text } from "ol/style";
 import Overlay from "ol/Overlay";
 import "ol/ol.css";
+
+// We render the map in EPSG:4326 (plate carrée) to match GIBS's native
+// projection — same as NASA Worldview. This avoids the reprojection that
+// caused the markers to drift from the basemap. With a 4326 view, raw
+// [lng, lat] coordinates can be used directly without fromLonLat().
 
 function ymd(d: Date): string { return d.toISOString().slice(0, 10); }
 function clampDate(s: string): string {
@@ -106,10 +110,10 @@ export default function SatelliteMap({ initialDate, initialBase, initialOverlays
     });
     baseLayerRef.current = baseLayer;
 
-    // Build AOI marker layer
+    // Build AOI marker layer — coords are raw [lng, lat] in EPSG:4326
     const aoiSource = new VectorSource({
       features: INCIDENT_AOIS.map((a) => {
-        const f = new Feature({ geometry: new Point(fromLonLat([a.lng, a.lat])), aoi: a });
+        const f = new Feature({ geometry: new Point([a.lng, a.lat]), aoi: a });
         f.setId(a.id);
         return f;
       }),
@@ -137,11 +141,11 @@ export default function SatelliteMap({ initialDate, initialBase, initialOverlays
       target: mapDivRef.current,
       layers: [baseLayer, aoiLayer],
       view: new View({
-        center: fromLonLat([0, 25]),
+        projection: "EPSG:4326",
+        center: [0, 20],
         zoom: 2,
         minZoom: 1,
         maxZoom: 9,
-        projection: "EPSG:3857",
       }),
       controls: [],
     });
@@ -279,7 +283,7 @@ export default function SatelliteMap({ initialDate, initialBase, initialOverlays
   }, [stepDay]);
 
   const resetView = useCallback(() => {
-    mapRef.current?.getView().animate({ center: fromLonLat([0, 25]), zoom: 2, duration: 400 });
+    mapRef.current?.getView().animate({ center: [0, 20], zoom: 2, duration: 400 });
   }, []);
 
   const toggleFullscreen = useCallback(() => {
@@ -462,9 +466,9 @@ export default function SatelliteMap({ initialDate, initialBase, initialOverlays
               <li key={a.id}>
                 <button
                   onClick={() => {
-                    mapRef.current?.getView().animate({ center: fromLonLat([a.lng, a.lat]), zoom: 6, duration: 600 });
+                    mapRef.current?.getView().animate({ center: [a.lng, a.lat], zoom: 6, duration: 600 });
                     setPopupAoi(a);
-                    popupOverlayRef.current?.setPosition(fromLonLat([a.lng, a.lat]));
+                    popupOverlayRef.current?.setPosition([a.lng, a.lat]);
                   }}
                   className="text-[var(--text)] hover:text-[var(--accent-glow)] text-left w-full px-1.5 py-1 rounded hover:bg-[var(--bg-1)]"
                 >
