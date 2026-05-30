@@ -50,9 +50,10 @@ const NAV: NavSection[] = [
   {
     id: "satellite", label: "Satellite", icon: <Satellite size={14}/>,
     items: [
-      { href: "/satellite",       label: "Daily archive",      icon: <Satellite size={14}/>, sub: "Landing — what we mirror, every day" },
-      { href: "/satellite/map",   label: "Interactive map",    icon: <MapIcon size={14}/>,   sub: "30+ NASA GIBS layers · time slider · share-by-URL" },
-      { href: "/satellite/iotd",  label: "Image of the Day",   icon: <Camera size={14}/>,    sub: "NASA Earth Observatory IOTD mirror" },
+      { href: "/satellite/live",  label: "Live frames (every 30 min)", icon: <Satellite size={14}/>, sub: "GOES + Himawari full-disc captures, time-lapse, scrub today's frames" },
+      { href: "/satellite",       label: "Archive landing",            icon: <Satellite size={14}/>, sub: "Overview of every source we mirror" },
+      { href: "/satellite/map",   label: "Interactive map",            icon: <MapIcon size={14}/>,   sub: "30+ NASA GIBS layers · time slider · share-by-URL" },
+      { href: "/satellite/iotd",  label: "Image of the Day",           icon: <Camera size={14}/>,    sub: "NASA Earth Observatory IOTD mirror" },
     ],
   },
   { id: "social", label: "@WH", icon: <AtSign size={14}/>, href: "/whitehouse-uap" },

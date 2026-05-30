@@ -79,8 +79,11 @@ export default async function SatellitePage() {
         </div>
 
         <div className="mt-5 flex flex-wrap gap-2">
-          <Link href="/satellite/map" className="btn btn-primary">
-            <MapIcon size={14}/> Open interactive map
+          <Link href="/satellite/live" className="btn btn-primary">
+            <Satellite size={14}/> Live frames (every 30 min)
+          </Link>
+          <Link href="/satellite/map" className="btn">
+            <MapIcon size={14}/> Interactive world map
           </Link>
           <Link href="/satellite/iotd" className="btn">
             <Camera size={14}/> Image of the Day archive
