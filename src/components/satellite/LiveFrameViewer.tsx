@@ -49,38 +49,70 @@ export default function LiveFrameViewer({ data }: Props) {
   const frames: GeostationaryFrame[] = day?.frames ?? [];
   const [frameIdx, setFrameIdx] = useState(frames.length - 1);
   const [playing, setPlaying] = useState(false);
+  const [preloadProgress, setPreloadProgress] = useState<{ loaded: number; total: number } | null>(null);
   const stageRef = useRef<HTMLDivElement>(null);
   const playTimerRef = useRef<number | null>(null);
+  const framesRef = useRef(frames);
+  useEffect(() => { framesRef.current = frames; }, [frames]);
 
   // Reset to latest frame when sat or day changes
   useEffect(() => { setFrameIdx(frames.length - 1); }, [satId, dayIdx, frames.length]);
 
   const frame = frames[frameIdx];
 
-  const togglePlay = useCallback(() => {
-    setPlaying((p) => {
-      if (p) {
-        if (playTimerRef.current != null) window.clearInterval(playTimerRef.current);
-        playTimerRef.current = null;
-        return false;
-      }
-      // Start from beginning of day for a clean time-lapse
-      setFrameIdx(0);
-      playTimerRef.current = window.setInterval(() => {
-        setFrameIdx((i) => {
-          if (i + 1 >= frames.length) {
-            // Loop or stop?  Loop is more fun.
-            return 0;
-          }
-          return i + 1;
-        });
-      }, 500);
-      return true;
-    });
-  }, [frames.length]);
+  // Preload every frame for the day as an Image() so the browser has them
+  // fully decoded before the animation starts. Without this, each tick
+  // triggers a fresh network fetch + JPEG decode — visible flicker.
+  const preloadAll = useCallback(async (): Promise<void> => {
+    const list = framesRef.current;
+    if (list.length === 0) return;
+    setPreloadProgress({ loaded: 0, total: list.length });
+    let done = 0;
+    await Promise.all(list.map((f) =>
+      new Promise<void>((resolve) => {
+        const img = new Image();
+        const finish = () => { done++; setPreloadProgress({ loaded: done, total: list.length }); resolve(); };
+        img.onload = finish;
+        img.onerror = finish;
+        img.src = f.url;
+      })
+    ));
+    setPreloadProgress(null);
+  }, []);
+
+  const togglePlay = useCallback(async () => {
+    // If currently playing, just pause
+    if (playing) {
+      if (playTimerRef.current != null) window.clearInterval(playTimerRef.current);
+      playTimerRef.current = null;
+      setPlaying(false);
+      return;
+    }
+    // Preload, then start the interval
+    await preloadAll();
+    setFrameIdx(0);
+    setPlaying(true);
+    playTimerRef.current = window.setInterval(() => {
+      setFrameIdx((i) => {
+        const len = framesRef.current.length;
+        if (len === 0) return 0;
+        return (i + 1) % len; // loop
+      });
+    }, 500);
+  }, [playing, preloadAll]);
 
   // Clean up timer on unmount
   useEffect(() => () => { if (playTimerRef.current != null) window.clearInterval(playTimerRef.current); }, []);
+
+  // Pause if user changes sat or day mid-play (otherwise we'd animate the wrong set)
+  useEffect(() => {
+    if (playing && playTimerRef.current != null) {
+      window.clearInterval(playTimerRef.current);
+      playTimerRef.current = null;
+      setPlaying(false);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [satId, dayIdx]);
 
   // Keyboard
   useEffect(() => {
@@ -160,39 +192,69 @@ export default function LiveFrameViewer({ data }: Props) {
         ><Maximize size={14}/></button>
       </div>
 
-      {/* Image stage */}
-      <div ref={stageRef} className="card bg-black overflow-hidden relative" style={{ minHeight: 400 }}>
-        {frame ? (
+      {/* Image stage — stacked frames with opacity toggle so playback is
+          flicker-free once all frames are preloaded into the browser cache. */}
+      <div
+        ref={stageRef}
+        className="card bg-black overflow-hidden relative"
+        style={{ minHeight: 400, aspectRatio: "1 / 1", maxHeight: "calc(100dvh - 280px)" }}
+      >
+        {frames.length > 0 ? (
           <>
-            <img
-              src={frame.url}
-              alt={`${SAT_LABELS[satId]?.label ?? satId} · ${day.date} ${frame.hhmm}`}
-              className="w-full h-auto block select-none"
-              style={{ maxHeight: "calc(100dvh - 280px)", margin: "0 auto", objectFit: "contain" }}
-              draggable={false}
-            />
+            {/* All frames stacked — only the active one is opacity:1. After
+                preloading, every browser-side swap is just a CSS opacity flip
+                with no network or JPEG decode. */}
+            {frames.map((f, i) => (
+              <img
+                key={f.url}
+                src={f.url}
+                alt={i === frameIdx ? `${SAT_LABELS[satId]?.label ?? satId} · ${day.date} ${f.hhmm}` : ""}
+                className="absolute inset-0 w-full h-full object-contain select-none pointer-events-none"
+                style={{ opacity: i === frameIdx ? 1 : 0 }}
+                decoding="async"
+                loading={Math.abs(i - frameIdx) <= 2 ? "eager" : "lazy"}
+                draggable={false}
+              />
+            ))}
+
             {/* Info overlay */}
             <div className="absolute top-2 left-2 bg-[var(--bg-0)]/85 backdrop-blur rounded px-3 py-1.5 pointer-events-none">
               <div className="text-[10px] uppercase tracking-widest text-[var(--accent)]">{SAT_LABELS[satId]?.label ?? satId}</div>
               <div className="text-xs font-mono text-[var(--text)] mt-0.5">
-                {day.date}  ·  <span className="text-[var(--accent-glow)]">{frame.hhmm.slice(0, 2)}:{frame.hhmm.slice(2)} UTC</span>
+                {day.date}  ·  <span className="text-[var(--accent-glow)]">{frame ? `${frame.hhmm.slice(0, 2)}:${frame.hhmm.slice(2)}` : "—"} UTC</span>
               </div>
             </div>
             <div className="absolute top-2 right-2 bg-[var(--bg-0)]/85 backdrop-blur rounded px-2 py-1 text-[11px] text-[var(--muted)] pointer-events-none">
-              {fmtBytes(frame.size_bytes)}
+              {frame ? fmtBytes(frame.size_bytes) : ""}
             </div>
+
+            {/* Preload progress */}
+            {preloadProgress && (
+              <div className="absolute inset-x-0 bottom-12 mx-auto w-fit bg-[var(--bg-0)]/95 backdrop-blur border border-[var(--accent)] rounded-lg px-4 py-2 shadow-2xl pointer-events-none">
+                <div className="text-[10px] uppercase tracking-widest text-[var(--accent)] mb-1">Buffering for smooth playback</div>
+                <div className="flex items-center gap-2 text-xs font-mono">
+                  <span className="text-[var(--text)]">{preloadProgress.loaded} / {preloadProgress.total}</span>
+                  <div className="w-32 h-1 bg-[var(--bg-1)] rounded overflow-hidden">
+                    <div className="h-full bg-[var(--accent-glow)] transition-all" style={{ width: `${(preloadProgress.loaded / Math.max(1, preloadProgress.total)) * 100}%` }}/>
+                  </div>
+                </div>
+              </div>
+            )}
+
             {/* Download button */}
-            <a
-              href={frame.url}
-              download
-              className="absolute bottom-2 right-2 bg-[var(--bg-0)]/85 backdrop-blur rounded px-2 py-1.5 text-[11px] text-[var(--text)] hover:text-[var(--accent-glow)] inline-flex items-center gap-1.5"
-              title="Download this frame"
-            >
-              <Download size={12}/> JPEG
-            </a>
+            {frame && (
+              <a
+                href={frame.url}
+                download
+                className="absolute bottom-2 right-2 bg-[var(--bg-0)]/85 backdrop-blur rounded px-2 py-1.5 text-[11px] text-[var(--text)] hover:text-[var(--accent-glow)] inline-flex items-center gap-1.5 z-10"
+                title="Download this frame"
+              >
+                <Download size={12}/> JPEG
+              </a>
+            )}
           </>
         ) : (
-          <div className="p-12 text-center text-[var(--muted)] text-sm">No frame at this index.</div>
+          <div className="p-12 text-center text-[var(--muted)] text-sm">No frames for this day.</div>
         )}
       </div>
 
