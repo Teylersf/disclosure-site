@@ -22,8 +22,8 @@ function fmtDate(d: string): string {
   return new Date(d).toLocaleDateString("en-US", { weekday: "short", year: "numeric", month: "short", day: "numeric" });
 }
 
-export default function IotdPage() {
-  const sat = getSatellite();
+export default async function IotdPage() {
+  const sat = await getSatellite();
   const entries = sat.iotd;
 
   return (

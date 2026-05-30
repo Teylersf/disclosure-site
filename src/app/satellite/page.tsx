@@ -33,8 +33,8 @@ function fmtBytes(b: number): string {
   return `${(b / 1024 / 1024).toFixed(2)} MB`;
 }
 
-export default function SatellitePage() {
-  const sat = getSatellite();
+export default async function SatellitePage() {
+  const sat = await getSatellite();
 
   // Group incident-days by AOI for the index
   const byAoi = new Map<string, typeof sat.incidentDays>();

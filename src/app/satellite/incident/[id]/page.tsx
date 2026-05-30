@@ -36,7 +36,7 @@ export default async function IncidentPage({ params }: PageProps) {
   const aoi = INCIDENT_AOIS.find((a) => a.id === id);
   if (!aoi) notFound();
 
-  const sat = getSatellite();
+  const sat = await getSatellite();
   const days: IncidentDayBundle[] = sat.incidentDays
     .filter((d) => d.aoi_id === id)
     .sort((a, b) => b.date.localeCompare(a.date));

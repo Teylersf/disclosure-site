@@ -31,7 +31,7 @@ modal/
     ├── sentinel1_daily.py   # daily: SAR per AOI (cloud-piercing radar)
     ├── landsat_daily.py     # daily: Landsat 8/9 30m per AOI
     ├── iotd_daily.py        # daily 12:00 UTC: NASA EO Image of the Day
-    └── manifest_rebuild.py  # daily 22:00 UTC: re-LIST bucket, regen satellite.json, git commit
+    └── manifest_rebuild.py  # hourly: re-LIST bucket, regen satellite.json, push to Linode
 ```
 
 ## Storage layout on Linode
@@ -65,22 +65,13 @@ the same paths and `manifest_rebuild` picks up both sources transparently.
    modal token new   # opens browser, sets ~/.modal.toml automatically
    ```
 
-2. Create the Modal secret holding our env vars (Linode creds + GitHub token):
+2. Create the Modal secret holding our env vars (Linode creds only — no
+   GitHub token needed, the manifest writes back to Linode):
 
    ```bash
    cd modal
-   modal secret create pursue-secrets \
-     LINODE_ENDPOINT=https://us-east-1.linodeobjects.com \
-     LINODE_REGION=us-east-1 \
-     LINODE_BUCKET=disclosure \
-     LINODE_ACCESS_KEY=... \
-     LINODE_SECRET_KEY=... \
-     GITHUB_TOKEN=... \
-     GITHUB_REPO=Teylersf/disclosure-site \
-     GITHUB_BRANCH=main
+   modal secret create pursue-secrets --from-dotenv ../.env
    ```
-
-   (Or, easier: `modal secret create pursue-secrets --from-dotenv ../.env`)
 
 3. Deploy any single job to verify:
 
