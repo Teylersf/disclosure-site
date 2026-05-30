@@ -3,6 +3,7 @@ import { SITE_URL } from "@/lib/site";
 import { getManifest } from "@/lib/manifest";
 import { FINDINGS } from "@/lib/findings";
 import { getTothemoon } from "@/lib/tothemoon";
+import { INCIDENT_AOIS } from "@/lib/satellite-aois";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
@@ -16,6 +17,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}/missions`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
     { url: `${SITE_URL}/analyze`, lastModified: now, changeFrequency: "monthly", priority: 0.88 },
     { url: `${SITE_URL}/whitehouse-uap`, lastModified: now, changeFrequency: "daily", priority: 0.9 },
+    { url: `${SITE_URL}/satellite`, lastModified: now, changeFrequency: "daily", priority: 0.92 },
+    { url: `${SITE_URL}/satellite/iotd`, lastModified: now, changeFrequency: "daily", priority: 0.85 },
     { url: `${SITE_URL}/search`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },
     { url: `${SITE_URL}/tv`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },
     { url: `${SITE_URL}/bundles`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
@@ -66,5 +69,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: r.release === "release_2" ? 0.75 : 0.7,
   }));
 
-  return [...staticPages, ...findingPages, ...recordPages, ...programPages, ...missionPages, ...galleryPages];
+  const incidentPages: MetadataRoute.Sitemap = INCIDENT_AOIS.map((aoi) => ({
+    url: `${SITE_URL}/satellite/incident/${aoi.id}`,
+    lastModified: now,
+    changeFrequency: "daily",
+    priority: 0.8,
+  }));
+
+  return [...staticPages, ...findingPages, ...recordPages, ...programPages, ...missionPages, ...galleryPages, ...incidentPages];
 }

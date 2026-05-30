@@ -1,0 +1,24 @@
+{
+  "source": "sentinel-2-l2a",
+  "aoi_id": "sandia-base-nm",
+  "aoi_name": "Sandia Base, New Mexico",
+  "date": "2026-05-27",
+  "datetime_utc": "2026-05-27T17:54:23.882000Z",
+  "stac_id": "S2B_13SCU_20260527_0_L2A",
+  "cloud_cover_percent": 5.840348,
+  "platform": "sentinel-2b",
+  "bbox": [
+    -106.887132,
+    34.238405,
+    -105.979603,
+    35.239008
+  ],
+  "assets": {
+    "preview": {
+      "file": "sentinel2-preview.jpg",
+      "source_url": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/13/S/CU/2026/5/S2B_13SCU_20260527_0_L2A/preview.jpg",
+      "size_bytes": 27351
+    },
+    "visual_cog_url": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/13/S/CU/2026/5/S2B_13SCU_20260527_0_L2A/TCI.tif"
+  }
+}

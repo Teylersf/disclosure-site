@@ -1,0 +1,68 @@
+{
+  "source": "nasa-gibs",
+  "aoi_id": "columbus-oh",
+  "aoi_name": "Columbus, Ohio",
+  "lat": 39.9612,
+  "lng": -82.9988,
+  "bbox": [
+    -83.58648749579325,
+    39.510749549549544,
+    -82.41111250420676,
+    40.41165045045045
+  ],
+  "date": "2026-05-29",
+  "captures": [
+    {
+      "id": "viirs-noaa20-truecolor.jpg",
+      "layer": "VIIRS_NOAA20_CorrectedReflectance_TrueColor",
+      "source": "VIIRS NOAA-20 True Color",
+      "resolution_m": 375,
+      "size_bytes": 79770,
+      "bbox": [
+        -83.58648749579325,
+        39.510749549549544,
+        -82.41111250420676,
+        40.41165045045045
+      ]
+    },
+    {
+      "id": "viirs-snpp-truecolor.jpg",
+      "layer": "VIIRS_SNPP_CorrectedReflectance_TrueColor",
+      "source": "VIIRS Suomi NPP True Color",
+      "resolution_m": 375,
+      "size_bytes": 65632,
+      "bbox": [
+        -83.58648749579325,
+        39.510749549549544,
+        -82.41111250420676,
+        40.41165045045045
+      ]
+    },
+    {
+      "id": "modis-terra-truecolor.jpg",
+      "layer": "MODIS_Terra_CorrectedReflectance_TrueColor",
+      "source": "MODIS Terra True Color",
+      "resolution_m": 250,
+      "size_bytes": 151267,
+      "bbox": [
+        -83.58648749579325,
+        39.510749549549544,
+        -82.41111250420676,
+        40.41165045045045
+      ]
+    },
+    {
+      "id": "modis-aqua-truecolor.jpg",
+      "layer": "MODIS_Aqua_CorrectedReflectance_TrueColor",
+      "source": "MODIS Aqua True Color",
+      "resolution_m": 250,
+      "size_bytes": 157744,
+      "bbox": [
+        -83.58648749579325,
+        39.510749549549544,
+        -82.41111250420676,
+        40.41165045045045
+      ]
+    }
+  ]
+}

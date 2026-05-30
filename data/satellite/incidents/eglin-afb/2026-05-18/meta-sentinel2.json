@@ -1,0 +1,24 @@
+{
+  "source": "sentinel-2-l2a",
+  "aoi_id": "eglin-afb",
+  "aoi_name": "Eglin AFB, Florida",
+  "date": "2026-05-18",
+  "datetime_utc": "2026-05-18T16:35:10.733000Z",
+  "stac_id": "S2C_16RDU_20260518_0_L2A",
+  "cloud_cover_percent": 17.509153,
+  "platform": "sentinel-2c",
+  "bbox": [
+    -87.950927,
+    29.738796,
+    -86.898058,
+    30.733021
+  ],
+  "assets": {
+    "preview": {
+      "file": "sentinel2-preview.jpg",
+      "source_url": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/16/R/DU/2026/5/S2C_16RDU_20260518_0_L2A/preview.jpg",
+      "size_bytes": 26268
+    },
+    "visual_cog_url": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/16/R/DU/2026/5/S2C_16RDU_20260518_0_L2A/TCI.tif"
+  }
+}

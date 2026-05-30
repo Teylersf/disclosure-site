@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Link from "next/link";
-import { Tv, Search, Archive, Home, AlertTriangle, Rocket, Clock, Cpu, AtSign } from "lucide-react";
+import { Tv, Search, Archive, Home, AlertTriangle, Rocket, Clock, Cpu, AtSign, Satellite } from "lucide-react";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import { SITE_URL, SITE_NAME, SITE_DESCRIPTION, SITE_KEYWORDS, SITE_TWITTER } from "@/lib/site";
@@ -127,6 +127,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
               <Link href="/findings" className="btn px-2 sm:px-3" style={{ borderColor: "var(--gold)", color: "var(--gold)" }} title="Findings"><AlertTriangle size={14}/> <span className="hidden lg:inline">Findings</span></Link>
               <Link href="/missions" className="btn px-2 sm:px-3" title="NASA Missions Archive"><Rocket size={14}/> <span className="hidden lg:inline">Missions</span></Link>
               <Link href="/analyze" className="btn px-2 sm:px-3" title="Video Analysis Lab"><Cpu size={14}/> <span className="hidden lg:inline">Analyze</span></Link>
+              <Link href="/satellite" className="btn px-2 sm:px-3" title="Daily satellite imagery archive"><Satellite size={14}/> <span className="hidden lg:inline">Satellite</span></Link>
               <Link href="/whitehouse-uap" className="btn px-2 sm:px-3" title="@WhiteHouse UAP teasers"><AtSign size={14}/> <span className="hidden lg:inline">@WH</span></Link>
               <Link href="/timeline" className="btn px-2 sm:px-3" title="File version timeline"><Clock size={14}/> <span className="hidden lg:inline">Timeline</span></Link>
               <Link href="/bundles" className="btn px-2 sm:px-3" title="Bundles"><Archive size={14}/> <span className="hidden lg:inline">Bundles</span></Link>

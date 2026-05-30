@@ -1,0 +1,68 @@
+{
+  "source": "nasa-gibs",
+  "aoi_id": "sandia-base-nm",
+  "aoi_name": "Sandia Base, New Mexico",
+  "lat": 35.0577,
+  "lng": -106.5494,
+  "bbox": [
+    -107.09968677571698,
+    34.60724954954954,
+    -105.99911322428304,
+    35.50815045045045
+  ],
+  "date": "2026-05-29",
+  "captures": [
+    {
+      "id": "viirs-noaa20-truecolor.jpg",
+      "layer": "VIIRS_NOAA20_CorrectedReflectance_TrueColor",
+      "source": "VIIRS NOAA-20 True Color",
+      "resolution_m": 375,
+      "size_bytes": 67954,
+      "bbox": [
+        -107.09968677571698,
+        34.60724954954954,
+        -105.99911322428304,
+        35.50815045045045
+      ]
+    },
+    {
+      "id": "viirs-snpp-truecolor.jpg",
+      "layer": "VIIRS_SNPP_CorrectedReflectance_TrueColor",
+      "source": "VIIRS Suomi NPP True Color",
+      "resolution_m": 375,
+      "size_bytes": 58114,
+      "bbox": [
+        -107.09968677571698,
+        34.60724954954954,
+        -105.99911322428304,
+        35.50815045045045
+      ]
+    },
+    {
+      "id": "modis-terra-truecolor.jpg",
+      "layer": "MODIS_Terra_CorrectedReflectance_TrueColor",
+      "source": "MODIS Terra True Color",
+      "resolution_m": 250,
+      "size_bytes": 102617,
+      "bbox": [
+        -107.09968677571698,
+        34.60724954954954,
+        -105.99911322428304,
+        35.50815045045045
+      ]
+    },
+    {
+      "id": "modis-aqua-truecolor.jpg",
+      "layer": "MODIS_Aqua_CorrectedReflectance_TrueColor",
+      "source": "MODIS Aqua True Color",
+      "resolution_m": 250,
+      "size_bytes": 148452,
+      "bbox": [
+        -107.09968677571698,
+        34.60724954954954,
+        -105.99911322428304,
+        35.50815045045045
+      ]
+    }
+  ]
+}

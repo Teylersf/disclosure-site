@@ -11,13 +11,20 @@
     "manifest:pursue": "tsx scripts/build-manifest.ts",
     "manifest:tothemoon": "tsx scripts/build-tothemoon-manifest.ts",
     "manifest:whitehouse-uap": "tsx scripts/build-whitehouse-uap-manifest.ts",
+    "manifest:satellite": "tsx scripts/satellite/build-manifest.ts",
     "upload": "tsx scripts/upload-linode.ts",
     "upload:dry": "tsx scripts/upload-linode.ts --dry",
     "upload:whitehouse-uap": "tsx scripts/upload-whitehouse-uap.ts",
+    "upload:satellite": "tsx scripts/satellite/upload.ts",
     "fetch:war-csv": "tsx scripts/fetch-war-csv.ts",
+    "sat:fetch-iotd": "tsx scripts/satellite/fetch-iotd.ts",
+    "sat:fetch-gibs": "tsx scripts/satellite/fetch-gibs.ts",
+    "sat:fetch-sentinel2": "tsx scripts/satellite/fetch-sentinel2.ts",
+    "sat:fetch-all": "tsx scripts/satellite/fetch-iotd.ts && tsx scripts/satellite/fetch-gibs.ts && tsx scripts/satellite/fetch-sentinel2.ts",
+    "sat:publish": "tsx scripts/satellite/auto-publish.ts",
     "auto-publish": "tsx scripts/auto-publish.ts",
     "setup-cors": "tsx scripts/setup-linode-cors.ts",
-    "prebuild": "tsx scripts/build-manifest.ts && tsx scripts/build-tothemoon-manifest.ts && tsx scripts/build-whitehouse-uap-manifest.ts"
+    "prebuild": "tsx scripts/build-manifest.ts && tsx scripts/build-tothemoon-manifest.ts && tsx scripts/build-whitehouse-uap-manifest.ts && tsx scripts/satellite/build-manifest.ts"
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.1053.0",

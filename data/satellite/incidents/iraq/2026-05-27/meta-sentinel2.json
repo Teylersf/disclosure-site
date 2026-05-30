@@ -1,0 +1,24 @@
+{
+  "source": "sentinel-2-l2a",
+  "aoi_id": "iraq",
+  "aoi_name": "Iraq",
+  "date": "2026-05-27",
+  "datetime_utc": "2026-05-27T08:01:17.849000Z",
+  "stac_id": "S2A_38SKA_20260527_0_L2A",
+  "cloud_cover_percent": 6.343526,
+  "platform": "sentinel-2a",
+  "bbox": [
+    41.807059,
+    31.762308,
+    42.991477,
+    32.521038
+  ],
+  "assets": {
+    "preview": {
+      "file": "sentinel2-preview.jpg",
+      "source_url": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/38/S/KA/2026/5/S2A_38SKA_20260527_0_L2A/preview.jpg",
+      "size_bytes": 14459
+    },
+    "visual_cog_url": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/38/S/KA/2026/5/S2A_38SKA_20260527_0_L2A/TCI.tif"
+  }
+}

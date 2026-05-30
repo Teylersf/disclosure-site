@@ -1,0 +1,24 @@
+{
+  "source": "sentinel-2-l2a",
+  "aoi_id": "persian-gulf",
+  "aoi_name": "Persian Gulf",
+  "date": "2026-05-28",
+  "datetime_utc": "2026-05-28T07:22:29.391000Z",
+  "stac_id": "S2B_39RVJ_20260528_0_L2A",
+  "cloud_cover_percent": 0.994818,
+  "platform": "sentinel-2b",
+  "bbox": [
+    49.998575,
+    25.225085,
+    51.097697,
+    26.219887
+  ],
+  "assets": {
+    "preview": {
+      "file": "sentinel2-preview.jpg",
+      "source_url": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/39/R/VJ/2026/5/S2B_39RVJ_20260528_0_L2A/preview.jpg",
+      "size_bytes": 21437
+    },
+    "visual_cog_url": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/39/R/VJ/2026/5/S2B_39RVJ_20260528_0_L2A/TCI.tif"
+  }
+}
