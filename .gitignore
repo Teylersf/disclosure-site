@@ -47,3 +47,8 @@ mirror.log
 
 # diff/temp working files (out-of-band; not source)
 .tmp-*
+
+# python (modal/ pipeline)
+__pycache__/
+*.pyc
+.venv/
