@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-30T03:09:12.953Z",
+  "generatedAt": "2026-05-30T13:10:19.094Z",
   "aois": [
     {
       "id": "sandia-base-nm",
@@ -474,6 +474,22 @@
           "datetime_utc": "2026-05-28T07:30:22.559000Z",
           "cloud_cover_percent": 6.502394,
           "platform": "sentinel-2a"
+        }
+      ]
+    },
+    {
+      "aoi_id": "iraq",
+      "date": "2026-05-30",
+      "captures": [
+        {
+          "source": "Sentinel-2 (sentinel-2b)",
+          "file": "sentinel2-preview.jpg",
+          "url": "https://disclosure.us-east-1.linodeobjects.com/satellite/incidents/iraq/2026-05-30/sentinel2-preview.jpg",
+          "size_bytes": 15439,
+          "resolution_m": 10,
+          "datetime_utc": "2026-05-30T08:00:59.208000Z",
+          "cloud_cover_percent": 0,
+          "platform": "sentinel-2b"
         }
       ]
     },
