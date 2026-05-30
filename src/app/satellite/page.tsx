@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Satellite, Globe2, Camera, ArrowRight, MapPin, Layers } from "lucide-react";
+import { Satellite, Globe2, Camera, ArrowRight, MapPin, Layers, Map as MapIcon } from "lucide-react";
 import { getSatellite, INCIDENT_AOIS } from "@/lib/satellite";
 import { absoluteUrl, SITE_NAME } from "@/lib/site";
 
@@ -76,6 +76,15 @@ export default function SatellitePage() {
           <Stat label="IOTD images" value={sat.iotd.length} />
           <Stat label="Archive size" value={fmtBytes(totalBytes)} />
           <Stat label="Cost to you" value="$0.00" />
+        </div>
+
+        <div className="mt-5 flex flex-wrap gap-2">
+          <Link href="/satellite/map" className="btn btn-primary">
+            <MapIcon size={14}/> Open interactive map
+          </Link>
+          <Link href="/satellite/iotd" className="btn">
+            <Camera size={14}/> Image of the Day archive
+          </Link>
         </div>
       </header>
 

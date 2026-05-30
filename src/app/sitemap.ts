@@ -18,6 +18,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}/analyze`, lastModified: now, changeFrequency: "monthly", priority: 0.88 },
     { url: `${SITE_URL}/whitehouse-uap`, lastModified: now, changeFrequency: "daily", priority: 0.9 },
     { url: `${SITE_URL}/satellite`, lastModified: now, changeFrequency: "daily", priority: 0.92 },
+    { url: `${SITE_URL}/satellite/map`, lastModified: now, changeFrequency: "daily", priority: 0.93 },
     { url: `${SITE_URL}/satellite/iotd`, lastModified: now, changeFrequency: "daily", priority: 0.85 },
     { url: `${SITE_URL}/search`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },
     { url: `${SITE_URL}/tv`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },

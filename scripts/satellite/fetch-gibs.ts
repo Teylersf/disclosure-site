@@ -41,11 +41,14 @@ interface Layer {
 }
 
 const AOI_LAYERS: Layer[] = [
-  { id: "viirs-noaa20-truecolor.jpg", layer: "VIIRS_NOAA20_CorrectedReflectance_TrueColor", resolution_m: 375, source: "VIIRS NOAA-20 True Color" },
-  { id: "viirs-snpp-truecolor.jpg",   layer: "VIIRS_SNPP_CorrectedReflectance_TrueColor",   resolution_m: 375, source: "VIIRS Suomi NPP True Color" },
-  { id: "modis-terra-truecolor.jpg",  layer: "MODIS_Terra_CorrectedReflectance_TrueColor",  resolution_m: 250, source: "MODIS Terra True Color" },
-  { id: "modis-aqua-truecolor.jpg",   layer: "MODIS_Aqua_CorrectedReflectance_TrueColor",   resolution_m: 250, source: "MODIS Aqua True Color" },
-  { id: "viirs-noaa20-night.jpg",     layer: "VIIRS_NOAA20_DayNightBand_ENCC",              resolution_m: 750, source: "VIIRS NOAA-20 Day/Night Band" },
+  { id: "viirs-noaa20-truecolor.jpg",     layer: "VIIRS_NOAA20_CorrectedReflectance_TrueColor", resolution_m: 375, source: "VIIRS NOAA-20 True Color" },
+  { id: "viirs-snpp-truecolor.jpg",       layer: "VIIRS_SNPP_CorrectedReflectance_TrueColor",   resolution_m: 375, source: "VIIRS Suomi NPP True Color" },
+  { id: "modis-terra-truecolor.jpg",      layer: "MODIS_Terra_CorrectedReflectance_TrueColor",  resolution_m: 250, source: "MODIS Terra True Color" },
+  { id: "modis-aqua-truecolor.jpg",       layer: "MODIS_Aqua_CorrectedReflectance_TrueColor",   resolution_m: 250, source: "MODIS Aqua True Color" },
+  { id: "viirs-noaa20-night.jpg",         layer: "VIIRS_NOAA20_DayNightBand_ENCC",              resolution_m: 750, source: "VIIRS NOAA-20 Day/Night Band" },
+  { id: "viirs-noaa20-fires.jpg",         layer: "VIIRS_NOAA20_Thermal_Anomalies_375m_Day",     resolution_m: 375, source: "VIIRS NOAA-20 Active Fires" },
+  { id: "modis-terra-thermal.jpg",        layer: "MODIS_Terra_Thermal_Anomalies_All",           resolution_m: 1000, source: "MODIS Terra Thermal Anomalies" },
+  { id: "modis-aqua-cloudtop-temp.jpg",   layer: "MODIS_Aqua_Cloud_Top_Temp_Day",               resolution_m: 1000, source: "MODIS Aqua Cloud-Top Temperature" },
 ];
 
 function ymd(d: Date): string { return d.toISOString().slice(0, 10); }

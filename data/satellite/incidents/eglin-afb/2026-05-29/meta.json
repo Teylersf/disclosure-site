@@ -63,6 +63,45 @@
         -86.02940944261026,
         30.91345045045045
       ]
+    },
+    {
+      "id": "viirs-noaa20-fires.jpg",
+      "layer": "VIIRS_NOAA20_Thermal_Anomalies_375m_Day",
+      "source": "VIIRS NOAA-20 Active Fires",
+      "resolution_m": 375,
+      "size_bytes": 6428,
+      "bbox": [
+        -87.07459055738975,
+        30.01254954954955,
+        -86.02940944261026,
+        30.91345045045045
+      ]
+    },
+    {
+      "id": "modis-terra-thermal.jpg",
+      "layer": "MODIS_Terra_Thermal_Anomalies_All",
+      "source": "MODIS Terra Thermal Anomalies",
+      "resolution_m": 1000,
+      "size_bytes": 6428,
+      "bbox": [
+        -87.07459055738975,
+        30.01254954954955,
+        -86.02940944261026,
+        30.91345045045045
+      ]
+    },
+    {
+      "id": "modis-aqua-cloudtop-temp.jpg",
+      "layer": "MODIS_Aqua_Cloud_Top_Temp_Day",
+      "source": "MODIS Aqua Cloud-Top Temperature",
+      "resolution_m": 1000,
+      "size_bytes": 20796,
+      "bbox": [
+        -87.07459055738975,
+        30.01254954954955,
+        -86.02940944261026,
+        30.91345045045045
+      ]
     }
   ]
 }
