@@ -52,9 +52,13 @@ export const GIBS_LAYERS: GibsLayer[] = [
   { id: "earth-at-night",   layer: "VIIRS_Black_Marble",             name: "VIIRS · Black Marble (composite)", group: "Night", matrixSet: "500m", ext: "png", cadence: "static", resolution_m: 500, blurb: "Cloud-free night-lights composite." },
 
   // -- Geostationary (GOES + Himawari) --
-  { id: "goes-east-geo", layer: "GOES-East_ABI_GeoColor",       name: "GOES-East · GeoColor", group: "Geostationary", matrixSet: "2km", ext: "png", cadence: "10min", resolution_m: 1000, blurb: "Americas full-disc true-color composite, ~10-minute cadence." },
-  { id: "goes-west-geo", layer: "GOES-West_ABI_GeoColor",       name: "GOES-West · GeoColor", group: "Geostationary", matrixSet: "2km", ext: "png", cadence: "10min", resolution_m: 1000, blurb: "Pacific full-disc true-color, ~10-minute cadence." },
-  { id: "himawari-geo",  layer: "Himawari_AHI_True_Color",      name: "Himawari · True Color", group: "Geostationary", matrixSet: "2km", ext: "png", cadence: "10min", resolution_m: 2000, blurb: "Japan/Asia/Pacific geostationary, ~10-minute cadence." },
+  // GIBS exposes GOES as GeoColor PNG and Himawari only as single bands
+  // (no true-color composite). Meteosat/MSG isn't in GIBS at all.
+  { id: "goes-east-geo",   layer: "GOES-East_ABI_GeoColor",                 name: "GOES-East · GeoColor",                   group: "Geostationary", matrixSet: "2km", ext: "png", cadence: "10min", resolution_m: 1000, blurb: "Americas full-disc true-color composite, ~10-minute cadence." },
+  { id: "goes-west-geo",   layer: "GOES-West_ABI_GeoColor",                 name: "GOES-West · GeoColor",                   group: "Geostationary", matrixSet: "2km", ext: "png", cadence: "10min", resolution_m: 1000, blurb: "Pacific full-disc true-color, ~10-minute cadence." },
+  { id: "himawari-vis",    layer: "Himawari_AHI_Band3_Red_Visible_1km",     name: "Himawari · Band 3 (Red, daytime)",       group: "Geostationary", matrixSet: "1km", ext: "png", cadence: "10min", resolution_m: 1000, blurb: "Asia/Pacific daytime visible at 1 km." },
+  { id: "himawari-ir",     layer: "Himawari_AHI_Band13_Clean_Infrared",     name: "Himawari · Band 13 (Clean IR, 24/7)",    group: "Geostationary", matrixSet: "2km", ext: "png", cadence: "10min", resolution_m: 2000, blurb: "Asia/Pacific thermal IR, works at night." },
+  { id: "himawari-airmass",layer: "Himawari_AHI_Air_Mass",                  name: "Himawari · Air Mass (RGB composite)",    group: "Geostationary", matrixSet: "2km", ext: "png", cadence: "10min", resolution_m: 2000, blurb: "Multi-band RGB highlighting dry/moist air, jet streams, dust." },
 
   // -- Fire & smoke --
   { id: "fires-viirs-noaa20",  layer: "VIIRS_NOAA20_Thermal_Anomalies_375m_Day",  name: "VIIRS NOAA-20 · Active Fires (Day, 375m)", group: "Fire & smoke", matrixSet: "2km", ext: "png", cadence: "daily", resolution_m: 375, blurb: "Active-fire detections, day pass." },

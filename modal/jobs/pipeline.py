@@ -25,7 +25,6 @@ import sys
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-import base64
 import json
 import os
 import re
@@ -42,8 +41,16 @@ from lib.storage import Storage
 
 
 app = modal.App("pursue-pipeline")
-image = modal.Image.debian_slim(python_version="3.11").pip_install(
-    "boto3>=1.34", "requests>=2.31",
+
+# Mount the sibling lib/ directory inside the container at /root/lib so the
+# `from lib.X import Y` imports resolve at import time. Without this Modal
+# only ships pipeline.py and the imports crash-loop with ModuleNotFoundError.
+LIB_DIR = str(Path(__file__).parent.parent / "lib")
+
+image = (
+    modal.Image.debian_slim(python_version="3.11")
+    .pip_install("boto3>=1.34", "requests>=2.31")
+    .add_local_dir(LIB_DIR, remote_path="/root/lib")
 )
 SECRETS = [modal.Secret.from_name("pursue-secrets")]
 
@@ -69,36 +76,71 @@ def _http_get(url: str, timeout: int = 60, headers: dict | None = None) -> bytes
 # 1) Geostationary — runs every 30 min
 # ====================================================================
 GEO_SATS = [
-    ("goes-east", "GOES-East_ABI_GeoColor",         (-135.0, -65.0, -15.0, 65.0)),
-    ("goes-west", "GOES-West_ABI_GeoColor",         (-180.0, -65.0, -90.0, 65.0)),
-    ("himawari",  "Himawari_AHI_True_Color",        (80.0,   -60.0, 200.0, 60.0)),
-    ("meteosat",  "MSG_IODC_True_Color_OSI_SAF",    (-65.0,  -65.0, 65.0,  65.0)),
+    # GIBS exposes these GeoColor composites as PNG. GOES-East covers the
+    # Americas, GOES-West covers the Pacific Basin.
+    ("goes-east", "GOES-East_ABI_GeoColor",                 (-135.0, -65.0, -15.0, 65.0)),
+    ("goes-west", "GOES-West_ABI_GeoColor",                 (-180.0, -65.0, -90.0, 65.0)),
+    # Himawari true color isn't in GIBS — but Band 3 (red visible) gives a
+    # daytime grayscale image at 1 km, and Band 13 (clean IR) works 24/7 for
+    # cloud-top thermal. Together they cover the full Asia/Pacific basin.
+    ("himawari-vis", "Himawari_AHI_Band3_Red_Visible_1km",  (80.0,   -60.0, 200.0, 60.0)),
+    ("himawari-ir",  "Himawari_AHI_Band13_Clean_Infrared",  (80.0,   -60.0, 200.0, 60.0)),
+    # Meteosat: not in GIBS at all. To capture Europe/Africa we'd need
+    # EUMETSAT Data Store (requires free registration + token). Deferred.
 ]
 
 
 def _round_to_10min_back(now: datetime, back_min: int = 15) -> datetime:
-    minute = (now.minute // 10) * 10
-    return now.replace(minute=minute, second=0, microsecond=0) - timedelta(minutes=back_min)
+    """Subtract `back_min` minutes (lag for GIBS ingestion), then snap down
+    to a 10-minute boundary. GIBS only publishes frames at HH:00, HH:10, ...
+    so we MUST land on a multiple of 10, otherwise the WMS returns a tiny
+    'no data' placeholder JPEG."""
+    earlier = now - timedelta(minutes=back_min)
+    minute = (earlier.minute // 10) * 10
+    return earlier.replace(minute=minute, second=0, microsecond=0)
+
+
+def _try_frame(layer: str, bbox, frame_at: datetime) -> tuple[bytes | None, str]:
+    """Try to fetch one 2048×2048 full-disc frame. Returns (body|None, time_iso)."""
+    time_iso = frame_at.strftime("%Y-%m-%dT%H:%M:%SZ")
+    url = wms_url(layer, bbox, time_iso, width=2048, height=2048)
+    body = _http_get(url, timeout=90)
+    if body is None or len(body) < 50_000:
+        return None, time_iso
+    return body, time_iso
 
 
 def do_geostationary(now: datetime, storage: Storage) -> dict:
-    frame_at = _round_to_10min_back(now, 15)
-    time_iso = frame_at.strftime("%Y-%m-%dT%H:%M:%SZ")
-    date_str = _ymd(frame_at)
-    hhmm = frame_at.strftime("%H%M")
+    """For each satellite, find the most-recent published frame by walking
+    backward in 5-min steps. GIBS publishing is irregular — sometimes only
+    HH:10 / HH:50 frames have real data, sometimes every 10 min. The walk
+    tries up to 12 timestamps (~60 min back) before giving up."""
     out = []
     total = 0
     for sat_id, layer, bbox in GEO_SATS:
-        url = wms_url(layer, bbox, time_iso, width=2048, height=2048)
-        body = _http_get(url, timeout=90)
-        if body is None:
-            out.append({"sat": sat_id, "ok": False, "frame_at": time_iso})
+        body = None
+        time_iso = ""
+        frame_at = None
+        # Start 10 min back (account for ingestion lag) then walk back in 5-min steps
+        base = now - timedelta(minutes=10)
+        # Snap to a 5-min boundary
+        base = base.replace(minute=(base.minute // 5) * 5, second=0, microsecond=0)
+        for i in range(12):
+            attempt = base - timedelta(minutes=5 * i)
+            body, time_iso = _try_frame(layer, bbox, attempt)
+            if body is not None:
+                frame_at = attempt
+                break
+        if body is None or frame_at is None:
+            out.append({"sat": sat_id, "ok": False, "frame_at": time_iso, "tried": 12})
             continue
+        date_str = _ymd(frame_at)
+        hhmm = frame_at.strftime("%H%M")
         key = f"geostationary/{sat_id}/{date_str}/{hhmm}.jpg"
         r = storage.put(key, body, content_type="image/jpeg")
         total += r["size"]
         out.append({"sat": sat_id, "ok": True, "key": r["key"], "skipped": r["skipped"], "size": r["size"], "frame_at": time_iso})
-    return {"frame_at": time_iso, "results": out, "bytes": total}
+    return {"results": out, "bytes": total}
 
 
 # ====================================================================
