@@ -1,0 +1,24 @@
+{
+  "source": "sentinel-2-l2a",
+  "aoi_id": "columbus-oh",
+  "aoi_name": "Columbus, Ohio",
+  "date": "2026-05-30",
+  "datetime_utc": "2026-05-30T16:32:37.807000Z",
+  "stac_id": "S2A_17TKE_20260530_0_L2A",
+  "cloud_cover_percent": 25.98049,
+  "platform": "sentinel-2a",
+  "bbox": [
+    -84.545451,
+    39.609022,
+    -83.216777,
+    40.62894
+  ],
+  "assets": {
+    "preview": {
+      "file": "sentinel2-preview.jpg",
+      "source_url": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/17/T/KE/2026/5/S2A_17TKE_20260530_0_L2A/preview.jpg",
+      "size_bytes": 49625
+    },
+    "visual_cog_url": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/17/T/KE/2026/5/S2A_17TKE_20260530_0_L2A/TCI.tif"
+  }
+}
