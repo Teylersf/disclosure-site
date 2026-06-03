@@ -1,0 +1,24 @@
+{
+  "source": "sentinel-2-l2a",
+  "aoi_id": "lake-huron",
+  "aoi_name": "Lake Huron",
+  "date": "2026-06-02",
+  "datetime_utc": "2026-06-02T16:41:36.303000Z",
+  "stac_id": "S2A_16TGP_20260602_1_L2A",
+  "cloud_cover_percent": 13.55609,
+  "platform": "sentinel-2a",
+  "bbox": [
+    -84.537252,
+    43.201221,
+    -83.124274,
+    44.225966
+  ],
+  "assets": {
+    "preview": {
+      "file": "sentinel2-preview.jpg",
+      "source_url": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/16/T/GP/2026/6/S2A_16TGP_20260602_1_L2A/preview.jpg",
+      "size_bytes": 39362
+    },
+    "visual_cog_url": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/16/T/GP/2026/6/S2A_16TGP_20260602_1_L2A/TCI.tif"
+  }
+}
