@@ -1,0 +1,24 @@
+{
+  "source": "sentinel-2-l2a",
+  "aoi_id": "kazakhstan",
+  "aoi_name": "Kazakhstan",
+  "date": "2026-06-07",
+  "datetime_utc": "2026-06-07T06:26:08.070000Z",
+  "stac_id": "S2C_42TVT_20260607_0_L2A",
+  "cloud_cover_percent": 22.848757,
+  "platform": "sentinel-2c",
+  "bbox": [
+    68.170355,
+    46.862702,
+    69.130457,
+    47.853619
+  ],
+  "assets": {
+    "preview": {
+      "file": "sentinel2-preview.jpg",
+      "source_url": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/42/T/VT/2026/6/S2C_42TVT_20260607_0_L2A/preview.jpg",
+      "size_bytes": 26571
+    },
+    "visual_cog_url": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/42/T/VT/2026/6/S2C_42TVT_20260607_0_L2A/TCI.tif"
+  }
+}
