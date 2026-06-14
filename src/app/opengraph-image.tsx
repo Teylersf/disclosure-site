@@ -17,6 +17,7 @@ export default async function Image() {
   const m = getManifest();
   const r1 = m.byRelease["5/8/26"];
   const r2 = m.byRelease["5/22/26"];
+  const r3 = m.byRelease["6/12/26"];
 
   return new ImageResponse(
     (
@@ -71,7 +72,7 @@ export default async function Image() {
             <Stat n={FINDINGS.length} l="findings" c="#ffd166" />
           </div>
           <div style={{ display: "flex", marginTop: 24, fontSize: 18, color: "#8c95b5" }}>
-            {`Mirror of the U.S. Department of War 2026 UAP release · ${r1} from 5/8 · ${r2} from 5/22`}
+            {`Mirror of the U.S. Department of War 2026 UAP releases · ${r1} from 5/8 · ${r2} from 5/22 · ${r3} from 6/12`}
           </div>
         </div>
       </div>

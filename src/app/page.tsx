@@ -167,7 +167,7 @@ export default async function Home() {
         <div className="flex items-baseline justify-between mb-6">
           <h2 className="text-2xl font-semibold tracking-tight">Explore the archive</h2>
           <span className="text-sm text-[var(--muted)]">
-            {m.byRelease["5/8/26"]} from 5/8 · {m.byRelease["5/22/26"]} from 5/22
+            {m.byRelease["5/8/26"]} from 5/8 · {m.byRelease["5/22/26"]} from 5/22 · {m.byRelease["6/12/26"]} from 6/12
           </span>
         </div>
         <RecordsExplorer records={m.records} agencies={m.agencies} />
