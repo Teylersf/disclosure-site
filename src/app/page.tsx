@@ -23,8 +23,8 @@ export default async function Home() {
             The full PURSUE archive,<br/>searchable, viewable, playable.
           </h1>
           <p className="text-[var(--muted)] mt-6 max-w-3xl text-lg leading-relaxed">
-            Every record from the U.S. Department of War&apos;s two 2026 UAP releases — {m.totalCount} documents,
-            videos, audio recordings, and photographs from FBI, CIA, NASA, ODNI, DoE, and the All-domain
+            Every record from the U.S. Department of War&apos;s three 2026 UAP releases — {m.totalCount} documents,
+            videos, audio recordings, and photographs from FBI, CIA, NASA, ODNI, DoE, ICA, and the All-domain
             Anomaly Resolution Office. Mirrored locally, indexed, and ready to explore.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
@@ -58,8 +58,11 @@ export default async function Home() {
               </h2>
               <p className="text-[var(--muted)] mt-3 max-w-2xl">
                 Independent analysis of the released PDFs and DVIDS metadata surfaces {FINDINGS.length} verifiable
-                observations the official UI doesn&apos;t expose &mdash; misattributed countries, byte-identical
-                duplicates, scrubbing inconsistencies, archive shelfmarks, and one video that wasn&apos;t scrubbed.
+                observations the official UI doesn&apos;t expose &mdash; an Apollo&nbsp;16 timecode pointing at the
+                phrase &ldquo;could be an alien starbase,&rdquo; a 1962 Cronkite&nbsp;×&nbsp;Gordon&nbsp;Cooper UFO
+                interview, AARO calling the Colorado Springs UAP an &ldquo;angular, non-symmetrical potato,&rdquo;
+                misattributed countries, byte-identical duplicates, archive shelfmarks, and the one video that
+                wasn&apos;t scrubbed.
               </p>
             </div>
             <Link href="/findings" className="btn btn-gold hidden md:inline-flex">

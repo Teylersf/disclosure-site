@@ -32,7 +32,7 @@ export interface UapRecord {
   incidentDate: string;
   incidentLocation: string;
   releaseDate: string;
-  release: "release_1" | "release_2";
+  release: "release_1" | "release_2" | "release_3";
   redacted: boolean;
   imageAlt?: string;
   imageVirin?: string;

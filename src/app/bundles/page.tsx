@@ -4,13 +4,15 @@ import { assetUrl } from "@/lib/asset-url";
 import { absoluteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Download bundles — PURSUE 2026 UAP files (8 GB total)",
+  title: "Download bundles — PURSUE 2026 UAP files (14 GB total across 3 releases)",
   description:
-    "Download the four official Department of War PURSUE 2026 release bundles as one-shot ZIP files — Release 1 (1.22 GB), Release 2 combined (5.64 GB), Release 2 documents only (70 MB), and Release 1 videos (1.33 GB).",
+    "Download every official Department of War PURSUE 2026 release bundle as one-shot ZIP files — Release 1 (1.22 GB), Release 2 combined (5.64 GB), Release 2 documents only (70 MB), Release 1 videos (1.33 GB), Release 3 documents (826 MB), and Release 3 videos (4.6 GB).",
   keywords: [
     "PURSUE 2026 download",
     "war.gov UFO zip",
     "uap052226.zip",
+    "uap_videos_061226.zip",
+    "release_03_documents.zip",
     "uapvideos.zip",
     "Release_1.zip UFO",
     "Pentagon UAP bulk download",
@@ -18,18 +20,25 @@ export const metadata: Metadata = {
   alternates: { canonical: "/bundles" },
   openGraph: {
     title: "Download the full PURSUE 2026 bundles",
-    description: "All four official Department of War ZIP bundles — 8 GB of declassified UAP files.",
+    description: "Every official Department of War ZIP bundle across all three releases — ~14 GB of declassified UAP files.",
     url: absoluteUrl("/bundles"),
   },
 };
 
 const BUNDLES = [
   {
-    name: "Release 1 (complete)",
-    key: "www.war.gov/medialink/ufo/bundle/Release_1.zip",
-    size: "1.22 GB",
-    desc: "All 158 records from the initial May 8, 2026 release — PDFs, videos, images, and the lone audio record packaged together.",
-    date: "2026-05-08",
+    name: "Release 3 videos",
+    key: "d34w7g4gy10iej.cloudfront.net/release_03/uap_videos_061226.zip",
+    size: "4.6 GB",
+    desc: "All 6 videos and 3 audio tracks from the June 12, 2026 release — including the 1962 Walter Cronkite × Gordon Cooper interview, the Apollo 16 Scientific Debriefings, Gemini-era audio tracks, and the FBI digital recreations of the Western US Event narratives.",
+    date: "2026-06-12",
+  },
+  {
+    name: "Release 3 documents",
+    key: "www.war.gov/medialink/ufo/061226/release_03/release_03_documents.zip",
+    size: "826 MB",
+    desc: "All 53 PDFs and 10 images from the June 12, 2026 release — including 18 CIA Cold War UFO files (Robertson Panel, U-2/OXCART history, Kardashev & Sakharov), the Western US Event cluster (21 docs), the Colorado Springs incident (FBI + ICA), and the 1949 J. Edgar Hoover correspondence with Rev. Charles Barnes.",
+    date: "2026-06-12",
   },
   {
     name: "Release 2 (videos + audio + new PDFs)",
@@ -44,6 +53,13 @@ const BUNDLES = [
     size: "70 MB",
     desc: "Just the 6 PDFs from the May 22 release. Lightweight if you only want the new written records.",
     date: "2026-05-22",
+  },
+  {
+    name: "Release 1 (complete)",
+    key: "www.war.gov/medialink/ufo/bundle/Release_1.zip",
+    size: "1.22 GB",
+    desc: "All 158 records from the initial May 8, 2026 release — PDFs, videos, images, and the lone audio record packaged together.",
+    date: "2026-05-08",
   },
   {
     name: "Release 1 videos",

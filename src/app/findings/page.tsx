@@ -9,7 +9,7 @@ import JsonLd from "@/components/JsonLd";
 export const metadata: Metadata = {
   title: "Findings — what the PURSUE catalog doesn’t say",
   description:
-    "13 verifiable observations about the U.S. Department of War PURSUE 2026 UAP release that the official catalog UI does not surface. Embedded PDF titles disagreeing with catalog entries, byte-identical duplicates, scrubbing inconsistencies (PR-073 Columbus OH), archive shelfmarks (NARA RG decoded), and server-hygiene leftovers.",
+    "Verifiable observations about the U.S. Department of War PURSUE 2026 UAP releases (May 8, May 22, June 12) that the official catalog UI does not surface. Embedded PDF titles disagreeing with catalog entries, byte-identical duplicates, scrubbing inconsistencies (PR-073 Columbus OH), the Apollo 16 “alien starbase” timecode, the Colorado Springs “potato,” the Western US Event cluster, archive shelfmarks (NARA RG decoded), and Release-3 tradecraft cleanup.",
   keywords: [
     "PURSUE 2026 findings",
     "DOW-UAP discrepancy",
@@ -19,20 +19,27 @@ export const metadata: Metadata = {
     "Kazakhstan Tajikistan UAP Cable",
     "war.gov UFO PDF metadata leak",
     "NARA shelfmark UAP",
+    "Apollo 16 alien starbase 32:41",
+    "Gordon Cooper Cronkite UFO 1962",
+    "Colorado Springs UAP angular non-symmetrical potato",
+    "Western US Event UAP cluster",
+    "Kardashev Sakharov UFO CIA paper",
+    "Harare International Airport UFO 2008 CIA",
+    "PURSUE release 3 tradecraft cleanup",
   ],
   alternates: { canonical: "/findings" },
   openGraph: {
     type: "website",
-    title: "13 findings the PURSUE catalog doesn’t show",
-    description: "Independent analysis of the PURSUE 2026 release. Each claim links to the file in the mirror — verify it yourself.",
+    title: "Findings the PURSUE catalog doesn’t show",
+    description: "Independent analysis of all three PURSUE 2026 releases. Each claim links to the file in the mirror — verify it yourself.",
     url: absoluteUrl("/findings"),
     siteName: SITE_NAME,
     // Image auto-supplied by app/opengraph-image.tsx
   },
   twitter: {
     card: "summary_large_image",
-    title: "13 findings the PURSUE catalog doesn’t show",
-    description: "Verifiable observations about the PURSUE 2026 UAP release.",
+    title: "Findings the PURSUE catalog doesn’t show",
+    description: "Verifiable observations across all three PURSUE 2026 UAP releases.",
   },
 };
 

@@ -1,397 +1,389 @@
 {
-  "generatedAt": "2026-05-29T04:36:53.184Z",
-  "totalCount": 222,
+  "generatedAt": "2026-06-14T22:05:48.278Z",
+  "totalCount": 294,
   "byType": {
-    "PDF": 122,
-    "VID": 78,
-    "IMG": 14,
-    "AUD": 8
+    "PDF": 175,
+    "VID": 84,
+    "IMG": 24,
+    "AUD": 11
   },
   "byRelease": {
-    "5/22/26": 64,
-    "5/8/26": 158
+    "6/12/26": 72,
+    "5/8/26": 158,
+    "5/22/26": 64
   },
   "byAgency": {
-    "Department of War": 131,
-    "Central Intelligence Agency": 1,
-    "Office of the Director of National Intelligence": 1,
-    "Department of Energy": 3,
-    "NASA": 22,
+    "CIA": 18,
+    "Department of War": 143,
+    "FBI": 86,
+    "Intelligence Community Agency": 1,
+    "NASA": 33,
     "Department of State": 7,
-    "FBI": 57
+    "Central Intelligence Agency": 1,
+    "Department of Energy": 3,
+    "Office of the Director of National Intelligence": 1,
+    "U.S. Government": 1
   },
   "agencies": [
+    "CIA",
     "Central Intelligence Agency",
     "Department of Energy",
     "Department of State",
     "Department of War",
     "FBI",
+    "Intelligence Community Agency",
     "NASA",
-    "Office of the Director of National Intelligence"
+    "Office of the Director of National Intelligence",
+    "U.S. Government"
   ],
   "releases": [
     "5/22/26",
-    "5/8/26"
+    "5/8/26",
+    "6/12/26"
   ],
   "records": [
     {
-      "id": "dvids-1007706",
-      "type": "VID",
-      "title": "DOW-UAP-PR050, \"4 UAP Formation Iran 26 Aug 2022 over water [CALLSIGN]\"",
-      "agency": "Department of War",
-      "description": "On March 6, 2026, eight members of the U.S. House of Representatives requested access to 51 potentially UAP-related records allegedly held by the Department of War and the Intelligence Community. The All-domain Anomaly Resolution Office (AARO) identified a collection of responsive materials held on a classified network. Many of these materials lack a substantiated chain-of-custody.\n\nAARO assesses that this video, whose uploader-defined title is, “4 UAP Formation Iran 26 Aug 2022 over water [CALLSIGN],” is likely derived from an infrared sensor aboard a U.S. military platform operating within the United States Central Command area of responsibility in 2022. A user uploaded this video to a classified network in June 2024.\n\nVideo Duration: 00:00:20\nVideo Description:\n00:01-00:04: Four areas of contrast transit the sensor field-of-view, entering from the lower third of the left side of the screen and exiting near the center of the bottom of the frame.\n00:05-00:06: An area of contrast enters the sensor field-of-view from the top left corner of the screen.\n\nThis video description is provided for informational purposes only. Readers should not interpret any part of this description as reflecting an analytical judgment, investigative conclusion, or factual determination regarding the described event’s validity, nature, or significance.",
-      "incidentDate": "2022",
-      "incidentLocation": "CENTCOM",
-      "releaseDate": "5/22/26",
-      "release": "release_2",
-      "redacted": true,
-      "asset": {
-        "url": "d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111719709/DOD_111719709.mp4"
-      },
-      "thumbnail": {
-        "url": "d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007706/DOD_111719709.0000001/720w_q95.jpg"
-      },
-      "dvidsId": "1007706",
-      "dvids": {
-        "id": "video:1007706",
-        "title": "DOW-UAP-PR050, \"4 UAP Formation Iran 26 Aug 2022 over water [CALLSIGN]\"",
-        "description": "On March 6, 2026, eight members of the U.S. House of Representatives requested access to 51 potentially UAP-related records allegedly held by the Department of War and the Intelligence Community. The All-domain Anomaly Resolution Office (AARO) identified a collection of responsive materials held on a classified network. Many of these materials lack a substantiated chain-of-custody.\r\n\r\nAARO assesses that this video, whose uploader-defined title is, “4 UAP Formation Iran 26 Aug 2022 over water [CALLSIGN],” is likely derived from an infrared sensor aboard a U.S. military platform operating within the United States Central Command area of responsibility in 2022. A user uploaded this video to a classified network in June 2024.\r\n\r\nVideo Duration: 00:00:20\r\nVideo Description:\r\n00:01-00:04: Four areas of contrast transit the sensor field-of-view, entering from the lower third of the left side of the screen and exiting near the center of the bottom of the frame.\r\n00:05-00:06: An area of contrast enters the sensor field-of-view from the top left corner of the screen.\r\nThis video description is provided for informational purposes only. Readers should not interpret any part of this description as reflecting an analytical judgment, investigative conclusion, or factual determination regarding the described event’s validity, nature, or significance.",
-        "date_published": "2026-05-22T07:30:10-04:00",
-        "date": "2022-08-26T00:00:00-04:00",
-        "duration": 9,
-        "files": [
-          {
-            "src": "d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111719709/DOD_111719709.mp4",
-            "width": 640,
-            "height": 360,
-            "size": 3097929,
-            "bitrate": 0,
-            "type": "video/mp4"
-          },
-          {
-            "src": "d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111719709/DOD_111719709-1920x1080-9000k.mp4",
-            "width": 1920,
-            "height": 1080,
-            "size": 10346860,
-            "bitrate": 0,
-            "type": "video/mp4"
-          },
-          {
-            "src": "d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111719709/DOD_111719709-1920x1080-6000k.mp4",
-            "width": 1920,
-            "height": 1080,
-            "size": 7209260,
-            "bitrate": 0,
-            "type": "video/mp4"
-          },
-          {
-            "src": "d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111719709/DOD_111719709-1280x720-3000k.mp4",
-            "width": 1280,
-            "height": 720,
-            "size": 3631455,
-            "bitrate": 0,
-            "type": "video/mp4"
-          },
-          {
-            "src": "d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111719709/DOD_111719709-1024x576-2000k.mp4",
-            "width": 1024,
-            "height": 576,
-            "size": 2391916,
-            "bitrate": 0,
-            "type": "video/mp4"
-          },
-          {
-            "src": "d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111719709/DOD_111719709-512x288-1000k.mp4",
-            "width": 512,
-            "height": 288,
-            "size": 1266687,
-            "bitrate": 0,
-            "type": "video/mp4"
-          },
-          {
-            "src": "d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111719709/DOD_111719709-256x144-1000k.mp4",
-            "width": 256,
-            "height": 144,
-            "size": 756877,
-            "bitrate": 0,
-            "type": "video/mp4"
-          }
-        ],
-        "thumbnail": {
-          "url": "d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007706/DOD_111719709.0000001/720w_q95.jpg",
-          "width": 720,
-          "height": 0
-        },
-        "image": "d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007706/DOD_111719709.0000001/2000w_q95.jpg",
-        "hls_url": "https://api.dvidshub.net/hls/video/1007706.m3u8?api_key=key-68bb60d16b35e"
-      }
-    },
-    {
-      "id": "dvids-1007707",
-      "type": "VID",
-      "title": "DOW-UAP-PR051, \"Syrian UAP instant acceleration\"",
-      "agency": "Department of War",
-      "description": "On March 6, 2026, eight members of the U.S. House of Representatives requested access to 51 potentially UAP-related records allegedly held by the Department of War and the Intelligence Community. The All-domain Anomaly Resolution Office (AARO) identified a collection of responsive materials held on a classified network. Many of these materials lack a substantiated chain-of-custody.\n\nAARO assesses that this video, whose uploader-defined title is, “Syrian UAP instant acceleration,” is likely derived from an infrared sensor aboard a U.S. military platform operating within the United States Central Command area of responsibility in 2021. A user uploaded this video to a classified network in June 2024.\n\nVideo Duration: 00:05:02\nVideo Description: This media was digitally altered prior to its upload to a classified network, and is presented as received.\n00:01-00:19: The sensor pans to maintain the position of an area of contrast within the center of the frame.\n00:20-00:21: The sensor stops tracking the area of contrast, causing it to rapidly exit the right side of the frame.\n00:22-00:27: No content.\n00:27-00:29 A black screen appears featuring the phrase “white edge threshold enhancement in attempt to highlight UAP shape. Original clip excerpt at 100% speed.” \n00:30-00:50: The video replays with digital alterations applied.\n00:51-00:53: A black screen appears featuring the phrase “50% speed.”\n00:54-01:05: The video replays with digital alterations applied.\n01:06-01:08: A black screen appears featuring the phrase “25% speed.”\n01:09-01:35: The video replays with digital alterations applied.\n01:36-01:41: A black screen appears featuring the phrase “B/W values inverted, picture zoomed”\n01:42-02:03: The video replays with digital alterations applied.\n02:04-02:09: A black screen appears featuring the phrase “full original clip TRT: 2:52”\n02:10-03:49: The video replays, showing additional footage of the area of contrast at its original resolution on a far zoom.\n03:50-04:02: The sensor rapidly zooms in and out.\n04:03-04:28: The sensor focuses and zooms in, locking a reticle around the area of contrast.\n04:29-5:01: The video replays 00:20-00:21, the period in which the sensor stops tracking the area of contrast, causing it to rapidly exit the right side of the frame.\n\nThis video description is provided for informational purposes only. Readers should not interpret any part of this description as reflecting an analytical judgment, investigative conclusion, or factual determination regarding the described event’s validity, nature, or significance.",
-      "incidentDate": "2021",
-      "incidentLocation": "CENTCOM",
-      "releaseDate": "5/22/26",
-      "release": "release_2",
-      "redacted": true,
-      "asset": {
-        "url": "d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111719715/DOD_111719715.mp4"
-      },
-      "thumbnail": {
-        "url": "d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007707/DOD_111719715.0000001/720w_q95.jpg"
-      },
-      "dvidsId": "1007707",
-      "dvids": {
-        "id": "video:1007707",
-        "title": "DOW-UAP-PR051, \"Syrian UAP instant acceleration\"",
-        "description": "On March 6, 2026, eight members of the U.S. House of Representatives requested access to 51 potentially UAP-related records allegedly held by the Department of War and the Intelligence Community. The All-domain Anomaly Resolution Office (AARO) identified a collection of responsive materials held on a classified network. Many of these materials lack a substantiated chain-of-custody.\r\n\r\nAARO assesses that this video, whose uploader-defined title is, “Syrian UAP instant acceleration,” is likely derived from an infrared sensor aboard a U.S. military platform operating within the United States Central Command area of responsibility in 2021. A user uploaded this video to a classified network in June 2024.\r\n\r\nVideo Duration: 00:05:02\r\nVideo Description: This media was digitally altered prior to its upload to a classified network, and is presented as received.\r\n00:01-00:19: The sensor pans to maintain the position of an area of contrast within the center of the frame.\r\n00:20-00:21: The sensor stops tracking the area of contrast, causing it to rapidly exit the right side of the frame.\r\n00:22-00:27: No content.\r\n00:27-00:29 A black screen appears featuring the phrase “white edge threshold enhancement in attempt to highlight UAP shape. Original clip excerpt at 100% speed.” \r\n00:30-00:50: The video replays with digital alterations applied.\r\n00:51-00:53: A black screen appears featuring the phrase “50% speed.”\r\n00:54-01:05: The video replays with digital alterations applied.\r\n01:06-01:08: A black screen appears featuring the phrase “25% speed.”\r\n01:09-01:35: The video replays with digital alterations applied.\r\n01:36-01:41: A black screen appears featuring the phrase “B/W values inverted, picture zoomed”\r\n01:42-02:03: The video replays with digital alterations applied.\r\n02:04-02:09: A black screen appears featuring the phrase “full original clip TRT: 2:52”\r\n02:10-03:49: The video replays, showing additional footage of the area of contrast at its original resolution on a far zoom.\r\n03:50-04:02: The sensor rapidly zooms in and out.\r\n04:03-04:28: The sensor focuses and zooms in, locking a reticle around the area of contrast.\r\n04:29-5:01: The video replays 00:20-00:21, the period in which the sensor stops tracking the area of contrast, causing it to rapidly exit the right side of the frame.\r\n\r\nThis video description is provided for informational purposes only. Readers should not interpret any part of this description as reflecting an analytical judgment, investigative conclusion, or factual determination regarding the described event’s validity, nature, or significance.",
-        "date_published": "2026-05-22T07:30:19-04:00",
-        "date": "2021-01-01T00:00:00-05:00",
-        "duration": 302,
-        "files": [
-          {
-            "src": "d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111719715/DOD_111719715.mp4",
-            "width": 1280,
-            "height": 720,
-            "size": 154578710,
-            "bitrate": 0,
-            "type": "video/mp4"
-          },
-          {
-            "src": "d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111719715/DOD_111719715-1920x1080-9000k.mp4",
-            "width": 1920,
-            "height": 1080,
-            "size": 235062797,
-            "bitrate": 0,
-            "type": "video/mp4"
-          },
-          {
-            "src": "d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111719715/DOD_111719715-1920x1080-6000k.mp4",
-            "width": 1920,
-            "height": 1080,
-            "size": 162161907,
-            "bitrate": 0,
-            "type": "video/mp4"
-          },
-          {
-            "src": "d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111719715/DOD_111719715-1280x720-3000k.mp4",
-            "width": 1280,
-            "height": 720,
-            "size": 85754416,
-            "bitrate": 0,
-            "type": "video/mp4"
-          },
-          {
-            "src": "d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111719715/DOD_111719715-1024x576-2000k.mp4",
-            "width": 1024,
-            "height": 576,
-            "size": 59161868,
-            "bitrate": 0,
-            "type": "video/mp4"
-          },
-          {
-            "src": "d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111719715/DOD_111719715-512x288-1000k.mp4",
-            "width": 512,
-            "height": 288,
-            "size": 31884888,
-            "bitrate": 0,
-            "type": "video/mp4"
-          },
-          {
-            "src": "d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111719715/DOD_111719715-256x144-1000k.mp4",
-            "width": 256,
-            "height": 144,
-            "size": 19939125,
-            "bitrate": 0,
-            "type": "video/mp4"
-          }
-        ],
-        "thumbnail": {
-          "url": "d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007707/DOD_111719715.0000001/720w_q95.jpg",
-          "width": 720,
-          "height": 0
-        },
-        "image": "d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007707/DOD_111719715.0000001/2000w_q95.jpg",
-        "hls_url": "https://api.dvidshub.net/hls/video/1007707.m3u8?api_key=key-68bb60d16b35e"
-      }
-    },
-    {
-      "id": "pdf-dow-uap-d017-uap-reported-at-sandia-base-1948-1950",
+      "id": "pdf-cia-uap-017-placement-on-high-alert-due-to-perceived-aggressive-foreign-posturin",
       "type": "PDF",
-      "title": "DOW-UAP-D017, UAP Reported at Sandia Base, 1948-1950",
-      "agency": "Department of War",
-      "description": "This file contains 116 pages of documentation from the Armed Forces Special Weapons Program (AFSWP) – the direct, post-World War II successor to the Manhattan Project – and from the U.S. Air Force – relating to a series of sightings and investigations in Sandia, New Mexico, from 1948-1950. This file contains 209 sightings of “green orbs,” “discs,” and “fireballs” reported near the military base. Witnesses reported unidentified anomalous phenomena (UAP) maneuvering, flying out of sight, disappearing, or exploding. The documents also include the results of contemporary investigations into residual copper powder found in some areas where sightings were reported. A few of these investigations became the basis for Project Grudge, which collected reports of unidentified flying objects from various other military installations – also included in this collection.",
-      "incidentDate": "1948-1950",
-      "incidentLocation": "New Mexico",
-      "releaseDate": "5/22/26",
-      "release": "release_2",
+      "title": "CIA-UAP-017, Placement on High Alert Due to Perceived Aggressive Foreign Posturing",
+      "agency": "CIA",
+      "description": "A never before released July 2008 report on a UFO sighting at the Harare International Airport. Individuals debated if the sighting was an advanced reconnaissance device of a foreign government or of extraterrestrial origins.",
+      "incidentDate": "July, 2008",
+      "incidentLocation": "Harare, Zimbabwe",
+      "releaseDate": "6/12/26",
+      "release": "release_3",
       "redacted": false,
-      "imageAlt": "A collection of UAP reports and documents from a national security site in New Mexico 1948-1950",
-      "imageVirin": "260508-D-D0360-1053",
+      "imageAlt": "A document with routing information and the topic \"ZIMBABWE\".",
+      "imageVirin": "260508-O-D0360-1094",
       "asset": {
-        "url": "www.war.gov/medialink/ufo/052226/release_02/documents/DOW-UAP-D017_General_Correspondence_Of_Sandia.pdf"
+        "url": "www.war.gov/medialink/ufo/061226/release_03/documents/CIA-UAP-017_Placement_on_High_Alert_Due_to_Perceived_Aggressive_Foreign_Posturing.pdf"
       },
       "thumbnail": {
-        "url": "www.war.gov/medialink/ufo/052226/release_02/thumbnails/DOW-UAP-D017_General_Correspondence_Of_Sandia.jpg"
+        "url": "www.war.gov/medialink/ufo/061226/release_03/thumbnails/CIA-UAP-017_Placement_on_High_Alert_Due_to_Perceived_Aggressive_Foreign_Posturing.jpg"
       }
     },
     {
-      "id": "pdf-cia-uap-d001-intelligence-information-report-ussr-1973",
+      "id": "pdf-dow-uap-d084-us-army-flying-saucer-study_1949",
       "type": "PDF",
-      "title": "CIA-UAP-D001, Intelligence Information Report, USSR, 1973",
-      "agency": "Central Intelligence Agency",
-      "description": "This document is a Central Intelligence Agency (CIA) intelligence information report (IIR) that describes human intelligence gathering activities in the Union of Soviet Socialist Republics (USSR). This report characterizes its content as informational, not as finally evaluated intelligence. In section 14 of this document, the source describes an incident occurring in summer of 1973, where he allegedly observed an airborne, luminous, bright green, unidentified object. The source described concentric circles forming around the phenomenon over a period of several minutes, before it dissipated. The source also stated that no sound attended the observation. The source offered no opinion on the nature of the phenomenon and was unable to provide further details regarding the incident.",
-      "incidentDate": "12/20/73",
-      "incidentLocation": "USSR",
-      "releaseDate": "5/22/26",
-      "release": "release_2",
-      "redacted": true,
-      "imageAlt": "A CIA report about a UAP sighting in the USSR.",
-      "imageVirin": "260508-O-D0360-1073",
-      "asset": {
-        "url": "www.war.gov/medialink/ufo/052226/release_02/documents/CIA-UAP-D001_Intelligence_Information_Report_USSR_1973.pdf"
-      },
-      "thumbnail": {
-        "url": "www.war.gov/medialink/ufo/052226/release_02/thumbnails/CIA-UAP-D001_Intelligence_Information_Report_USSR_1973.jpg"
-      }
-    },
-    {
-      "id": "pdf-odni-uap-d001-usper-narrative-senior-usic-official",
-      "type": "PDF",
-      "title": "ODNI-UAP-D001, USPER Narrative, Senior USIC Official",
-      "agency": "Office of the Director of National Intelligence",
-      "description": "This document is a first-hand account written by a currently serving (May 2026) senior U.S. intelligence official. The official was part of a team investigating reports of unusual noises and sightings of unidentified anomalous phenomena in and near a sensitive U.S. military facility in late 2025. From the official’s vantage point as a helicopter passenger, the official recounts encountering unidentified “glowing orbs” both at close range and at a distance. The account describes an apparent high-speed object moving low to the ground, which appeared to split in two and accelerate away in two different directions. It also describes numerous higher-altitude “orbs,” some of which the official assessed to be in close proximity to the helicopter. This account is accompanied by infrared imagery taken during the same exercise by other federal officials from the ground, originally released on war.gov/UFO on May 8, 2026.\n\nMay 26, 2026, correction: The document originally posted to the PURSUE collection of UAP-related records on May 22, 2026, under the name “ODNI-UAP-D001, USPER Narrative, Senior USIC Official,” contained a typographic error in the second paragraph, describing a helicopter flight profile as “map-of-the-earth.” The correct military aviation term for this profile is “nap-of-the-earth.” This document has been updated to reflect this correction.",
-      "incidentDate": "2025",
-      "incidentLocation": "Western United States",
-      "releaseDate": "5/22/26",
-      "release": "release_2",
-      "redacted": false,
-      "imageAlt": "A first-hand narrative describing a UAP incident.",
-      "imageVirin": "260508-O-D0360-1074",
-      "asset": {
-        "url": "www.war.gov/medialink/ufo/052226/release_02/documents/ODNI-UAP-D001_USPER_Narrative_Senior_USIC.pdf"
-      },
-      "thumbnail": {
-        "url": "www.war.gov/medialink/ufo/052226/release_02/thumbnails/ODNI-UAP-D001_USPER_Narrative_Senior_USIC.jpg"
-      }
-    },
-    {
-      "id": "pdf-doe-uap-d001-enhanced-pantex-imagery",
-      "type": "PDF",
-      "title": "DOE-UAP-D001, Enhanced PANTEX Imagery",
-      "agency": "Department of Energy",
-      "description": "A Pantex Unidentified Object Incident Report that includes an enhanced image from ground surveillance radar tower.",
+      "title": "DOW-UAP-D084, US Army-Flying-Saucer-Study_1949",
+      "agency": "Department of War",
+      "description": "This file contains an Evaluation Study of the Phenomenon (Flying Saucers) prepared at the request of the Plans & Operations Divisions of the General Staff, U.S. Army (P&O, GSUSA) to determine if the origin could be traced to natural phenomena or the activities of a foreign power.",
       "incidentDate": "",
       "incidentLocation": "",
-      "releaseDate": "5/22/26",
-      "release": "release_2",
-      "redacted": true,
-      "imageAlt": "An unidentified object report with enhanced imagery from a PANTEX radar tower.",
-      "imageVirin": "260508-O-D0360-1077",
+      "releaseDate": "6/12/26",
+      "release": "release_3",
+      "redacted": false,
+      "imageAlt": "A file folder with a declassification sticker.",
+      "imageVirin": "260508-D-D0360-1066",
       "asset": {
-        "url": "www.war.gov/medialink/ufo/052226/release_02/documents/DOE-UAP-D001_PANTEX_Image.pdf"
+        "url": "www.war.gov/medialink/ufo/061226/release_03/documents/DOW-UAP-D084_USArmy-Flying-Saucer-Study_1949.pdf"
       },
       "thumbnail": {
-        "url": "www.war.gov/medialink/ufo/052226/release_02/thumbnails/DOE-UAP-D001_PANTEX_Image.jpg"
+        "url": "www.war.gov/medialink/ufo/061226/release_03/thumbnails/DOW-UAP-D084_USArmy-Flying-Saucer-Study_1949.jpg"
       }
     },
     {
-      "id": "dvids-1007870",
-      "type": "AUD",
-      "title": "NASA-UAP-D008, Apollo 12 Medical Debriefing - Tape 12, 1969",
-      "agency": "NASA",
-      "description": "During a medical debriefing of the crew of the Apollo 12 mission, Commander Charles “Pete” Conrad, Command Module Pilot Richard “Dick” F. Gordon, and Lunar Module Pilot Alan L. Bean describe their observations of instances of light flashes or “streaks of lights.” The astronauts each reported that these experiences occurred in the dark as they tried to sleep.\nThe NASA medical team considered whether similar phenomena reported by Apollo 11 Lunar Module Pilot Buzz Aldrin had been attributable to exposure of the retina by cosmic rays. NASA later determined that the phenomena reported by the Apollo 12 flight crew were internal to the astronauts’ vision rather than external light sources.",
-      "incidentDate": "1969",
-      "incidentLocation": "Texas",
-      "releaseDate": "5/22/26",
-      "release": "release_2",
-      "redacted": false,
+      "id": "pdf-fbi-uap-d002-fd-1057-unresolved-uap-report-colorado-springs-2022",
+      "type": "PDF",
+      "title": "FBI-UAP-D002, FD-1057, Unresolved UAP Report, Colorado Springs, 2022",
+      "agency": "FBI",
+      "description": "This document is an FBI FD-1057, a form the Federal Bureau of Investigation (FBI) uses to record investigative activity. This FD-1057 contains a first-hand narrative description of unidentified anomalous phenomena (UAP) reported near Colorado Springs, Colorado. The interviewee provided this statement to FBI special agents to aid in producing a digital artistic interpretation of the incident.",
+      "incidentDate": "2022",
+      "incidentLocation": "Colorado Springs, Colorado, U.S.",
+      "releaseDate": "6/12/26",
+      "release": "release_3",
+      "redacted": true,
+      "imageAlt": "FBI document with redacted text about a sketch interview.",
+      "imageVirin": "260508-O-D0360-1098",
       "asset": {
-        "url": "d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111721693/DOD_111721693.mp4"
+        "url": "www.war.gov/medialink/ufo/061226/release_03/documents/FBI-UAP-D002_FD-1057_Unresolved-UAP-Report_ColoradoSprings_2022.pdf"
       },
       "thumbnail": {
-        "url": "d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007870/DOD_111721693.0000001/720w_q95.jpg"
+        "url": "www.war.gov/medialink/ufo/061226/release_03/thumbnails/FBI-UAP-D002_FD-1057_Unresolved-UAP-Report_ColoradoSprings_2022.jpg"
+      }
+    },
+    {
+      "id": "pdf-fbi-uap-d003-digital-rendering-unresolved-uap-report-colorado-springs-2022",
+      "type": "PDF",
+      "title": "FBI-UAP-D003, Digital Rendering, Unresolved UAP Report, Colorado Springs, 2022",
+      "agency": "FBI",
+      "description": "This image is an artistic interpretation of a 2022 incident potentially involving unidentified anomalous phenomena (UAP) reported near Colorado Springs, Colorado. This image is derived from the first-hand narrative description contained in “FBI-UAP-D002, FD-1057, Unresolved UAP Report, Colorado Springs, 2022”.",
+      "incidentDate": "2022",
+      "incidentLocation": "Colorado Springs, Colorado, U.S.",
+      "releaseDate": "6/12/26",
+      "release": "release_3",
+      "redacted": false,
+      "imageAlt": "Rendering of an object over a mountain landscape.",
+      "imageVirin": "260508-O-D0360-1099",
+      "asset": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/documents/FBI-UAP-D003_Digital-Rendering_Unresolved-UAP-Report_ColoradoSprings_2022.pdf"
       },
-      "dvidsId": "1007870",
+      "thumbnail": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/thumbnails/FBI-UAP-D003_Digital-Rendering_Unresolved-UAP-Report_ColoradoSprings_2022.jpg"
+      }
+    },
+    {
+      "id": "pdf-fbi-uap-d009-fd-302-67-northeastern-orb-sighting-2026",
+      "type": "PDF",
+      "title": "FBI-UAP-D009, FD-302-67, “Northeastern Orb Sighting,” 2026",
+      "agency": "FBI",
+      "description": "This document is an FBI FD-302, a form the Federal Bureau of Investigation uses to record interviews. This FD-302 records a February 2026 interview with a U.S. person, in which they described incidents potentially involving unidentified anomalous phenomena. \n\n The subject matter described in files FBI-UAP-D009 and FBI-UAP-D010 and depicted in the video footage FBI-UAP-PR004 corresponds to reports originating from the same general area in the northeastern United States.",
+      "incidentDate": "2026",
+      "incidentLocation": "Northeastern United States",
+      "releaseDate": "6/12/26",
+      "release": "release_3",
+      "redacted": true,
+      "imageAlt": "FBI document with redacted text about an orb sighting.",
+      "imageVirin": "260508-O-D0360-1105",
+      "asset": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/documents/FBI-UAP-D009_FD-302-67_Northeastern-Orb-Sighting_2026.pdf"
+      },
+      "thumbnail": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/thumbnails/FBI-UAP-D009_FD-302-67_Northeastern-Orb-Sighting_2026.jpg"
+      }
+    },
+    {
+      "id": "pdf-fbi-uap-d010-fd-302-71-northeastern-orb-sighting-2026",
+      "type": "PDF",
+      "title": "FBI-UAP-D010, FD-302-71, “Northeastern Orb Sighting,” 2026",
+      "agency": "FBI",
+      "description": "This document is an FBI FD-302, a form the Federal Bureau of Investigation uses to record interviews. This FD-302 records an interview with a U.S. person regarding their first-hand account of an incident potentially involving unidentified anomalous phenomena. \n\n The subject matter described in files FBI-UAP-D009 and FBI-UAP-D010 and depicted in the video footage FBI-UAP-PR004 corresponds to reports originating from the same general area in the northeastern United States.",
+      "incidentDate": "2026",
+      "incidentLocation": "Northeastern United States",
+      "releaseDate": "6/12/26",
+      "release": "release_3",
+      "redacted": true,
+      "imageAlt": "FBI document with redacted text about a light sighting.",
+      "imageVirin": "260508-O-D0360-1106",
+      "asset": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/documents/FBI-UAP-D010_FD-302-71_Northeastern-Orb-Sighting_2026.pdf"
+      },
+      "thumbnail": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/thumbnails/FBI-UAP-D010_FD-302-71_Northeastern-Orb-Sighting_2026.jpg"
+      }
+    },
+    {
+      "id": "pdf-fbi-uap-d011-dfbi-correspondence-referral-1949",
+      "type": "PDF",
+      "title": "FBI-UAP-D011, D/FBI Correspondence Referral, 1949",
+      "agency": "FBI",
+      "description": "This collection of documents contains correspondence between the Director of the Federal Bureau of Investigation (FBI), J. Edgar Hoover, and Rev. Charles Barnes concerning Barnes’ account of an incident potentially involving unidentified anomalous phenomena (UAP). Rev. Barnes described observing four beams of light “converging in the Cascade Mountains,” at an altitude of approximately 10,000 feet, with a “great explosion” visible at the convergence point of those beams for at least ten minutes. Director Hoover replied to Rev. Barnes thanking him for his letter and informing him that he had forwarded it to the Atomic Energy Commission (AEC). Director Hoover conveyed to the AEC that Rev. Barnes believed that the event may relate to a military or scientific experiment within the commission’s purview.",
+      "incidentDate": "1949",
+      "incidentLocation": "",
+      "releaseDate": "6/12/26",
+      "release": "release_3",
+      "redacted": false,
+      "imageAlt": "Stamped Department of Justice file cover.",
+      "imageVirin": "260508-O-D0360-1107",
+      "asset": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/documents/FBI-UAP-D011_DFBI-Correspondence-Referral_1949.pdf"
+      },
+      "thumbnail": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/thumbnails/FBI-UAP-D011_DFBI-Correspondence-Referral_1949.jpg"
+      }
+    },
+    {
+      "id": "dvids-1010267",
+      "type": "VID",
+      "title": "FBI-UAP-PR003, “Orbs Over the Pond,” 2024",
+      "agency": "FBI",
+      "description": "In October 2024, at approximately 1851 local time in the northeastern United States, an eyewitness observed a light source below the horizon, hovering above a pond at an estimated distance of 2,700 feet. The luminous object resembled a “plasma-like sphere” intermittently changing shape and luminosity. At times, the primary light source appeared to separate into smaller luminous points. A luminous point below the primary source hovered just above the water and did not appear consistent with a surface reflection. The object remained generally stationary for approximately 45 minutes before disappearing. The eyewitness did not hear any sound from the objects. This video was captured by a private citizen on an iPhone and subsequently analyzed and authenticated by the U.S. Government. To protect the individual’s privacy, the footage has been cropped. Apart from this privacy-protective measure, no edits, enhancements, or alterations have been made to the visual content.  \n\n The description above is derived from statements provided to the Federal Bureau of Investigation (FBI) by an eyewitness to the event. The FBI assesses the individual who reported this event as highly credible. The subject matter described in files FBI-UAP-D004 through FBI-UAP-D008 and depicted in the video footage FBI-UAP-PR001 through FBI-UAP-PR003 corresponds to reports originating from the same general area in the northeastern United States.",
+      "incidentDate": "October, 2024",
+      "incidentLocation": "Northeastern United States",
+      "releaseDate": "6/12/26",
+      "release": "release_3",
+      "redacted": false,
+      "asset": {
+        "url": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764159/DOD_111764159.mp4"
+      },
+      "thumbnail": {
+        "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2606/1010267/DOD_111764159.0000001/122x92_q95.jpg"
+      },
+      "dvidsId": "1010267",
       "dvids": {
-        "id": "video:1007870",
-        "title": "NASA-UAP-D008, Apollo 12 Medical Debriefing - Tape 12, 1969",
-        "description": "During a medical debriefing of the crew of the Apollo 12 mission, Commander Charles “Pete” Conrad, Command Module Pilot Richard “Dick” F. Gordon, and Lunar Module Pilot Alan L. Bean describe their observations of instances of light flashes or “streaks of lights.” The astronauts each reported that these experiences occurred in the dark as they tried to sleep.\r\nThe NASA medical team considered whether similar phenomena reported by Apollo 11 Lunar Module Pilot Buzz Aldrin had been attributable to exposure of the retina by cosmic rays. NASA later determined that the phenomena reported by the Apollo 12 flight crew were internal to the astronauts’ vision rather than external light sources.",
-        "date_published": "2026-05-22T07:30:20-04:00",
-        "date": "1969-12-31T00:00:00-05:00",
-        "duration": 470,
+        "id": "video:1010267",
+        "title": "FBI-UAP-PR003, “Orbs Over the Pond,” 2024",
+        "description": "\"In October 2024, at approximately 1851 local time in the northeastern United States, an eyewitness observed a light source below the horizon, hovering above a pond at an estimated distance of 2,700 feet. The luminous object resembled a “plasma-like sphere” intermittently changing shape and luminosity. At times, the primary light source appeared to separate into smaller luminous points. A luminous point below the primary source hovered just above the water and did not appear consistent with a surface reflection. The object remained generally stationary for approximately 45 minutes before disappearing. The eyewitness did not hear any sound from the objects. This video was captured by a private citizen on an iPhone and subsequently analyzed and authenticated by the U.S. Government. To protect the individual’s privacy, the footage has been cropped. Apart from this privacy-protective measure, no edits, enhancements, or alterations have been made to the visual content.  \r\n\r\n The description above is derived from statements provided to the Federal Bureau of Investigation (FBI) by an eyewitness to the event. The FBI assesses the individual who reported this event as highly credible. The subject matter described in files FBI-UAP-D004 through FBI-UAP-D008 and depicted in the video footage FBI-UAP-PR001 through FBI-UAP-PR003 corresponds to reports originating from the same general area in the northeastern United States.   \"",
+        "date_published": "2026-06-12T07:00:15-04:00",
+        "date": "2024-10-01T00:00:00-04:00",
+        "duration": 265,
         "files": [
           {
-            "src": "d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111721693/DOD_111721693.mp4",
-            "width": 1920,
-            "height": 1080,
-            "size": 157246201,
+            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764159/DOD_111764159.mp4",
+            "width": 1080,
+            "height": 1920,
+            "size": 296462678,
             "bitrate": 0,
             "type": "video/mp4"
           },
           {
-            "src": "d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111721693/DOD_111721693-1920x1080-9000k.mp4",
+            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764159/DOD_111764159-1920x1080-9000k.mp4",
             "width": 1920,
             "height": 1080,
-            "size": 158294418,
+            "size": 123247302,
             "bitrate": 0,
             "type": "video/mp4"
           },
           {
-            "src": "d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111721693/DOD_111721693-1920x1080-6000k.mp4",
+            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764159/DOD_111764159-1920x1080-6000k.mp4",
             "width": 1920,
             "height": 1080,
-            "size": 126924337,
+            "size": 95287556,
             "bitrate": 0,
             "type": "video/mp4"
           },
           {
-            "src": "d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111721693/DOD_111721693-1280x720-3000k.mp4",
+            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764159/DOD_111764159-1280x720-3000k.mp4",
             "width": 1280,
             "height": 720,
-            "size": 85418965,
+            "size": 41701322,
             "bitrate": 0,
             "type": "video/mp4"
           },
           {
-            "src": "d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111721693/DOD_111721693-1024x576-2000k.mp4",
+            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764159/DOD_111764159-1024x576-2000k.mp4",
             "width": 1024,
             "height": 576,
-            "size": 61225240,
+            "size": 32129865,
             "bitrate": 0,
             "type": "video/mp4"
           },
           {
-            "src": "d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111721693/DOD_111721693-512x288-1000k.mp4",
+            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764159/DOD_111764159-512x288-1000k.mp4",
             "width": 512,
             "height": 288,
-            "size": 32244524,
+            "size": 16671699,
             "bitrate": 0,
             "type": "video/mp4"
           },
           {
-            "src": "d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111721693/DOD_111721693-256x144-1000k.mp4",
+            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764159/DOD_111764159-256x144-1000k.mp4",
             "width": 256,
             "height": 144,
-            "size": 15127966,
+            "size": 6216550,
             "bitrate": 0,
             "type": "video/mp4"
           }
         ],
         "thumbnail": {
-          "url": "d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007870/DOD_111721693.0000001/720w_q95.jpg",
-          "width": 720,
-          "height": 0
+          "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2606/1010267/DOD_111764159.0000001/122x92_q95.jpg",
+          "width": 122,
+          "height": 92
         },
-        "image": "d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007870/DOD_111721693.0000001/2000w_q95.jpg",
-        "hls_url": "https://api.dvidshub.net/hls/video/1007870.m3u8?api_key=key-68bb60d16b35e",
-        "closed_captions": {
-          "srt": "https://api.dvidshub.net/closed-captions/get?asset_id=video:1007870&format=srt&api_key=key-68bb60d16b35e",
-          "webvtt": "https://api.dvidshub.net/closed-captions/get?asset_id=video:1007870&format=webvtt&api_key=key-68bb60d16b35e"
-        }
+        "image": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2606/1010267/DOD_111764159.0000001/2000w_q95.jpg",
+        "hls_url": "https://api.dvidshub.net/hls/video/1010267.m3u8?api_key=key-68bb60d16b35e"
+      }
+    },
+    {
+      "id": "dvids-1010269",
+      "type": "VID",
+      "title": "FBI-UAP-PR004, “Northeastern Orb Sighting,” 2025",
+      "agency": "FBI",
+      "description": "In July 2025, at approximately 2100 local time in the northeastern United States, an eyewitness observed an intense bright light in their backyard as they parked their car upon returning home from work. The light was hovering approximately 25 feet off the ground, below a tree line near the center of their backyard, at an estimated distance of 90 feet. The eyewitness exited their vehicle briefly before retrieving their phone to record the event. The spouse of the eyewitness came outside to assess the situation. The spouse also witnessed the light, describing it as a “brilliant red sphere” about one meter in diameter. The center of the red sphere appeared to be a white plasma “sun” about the size of a basketball. The orb slowly rose and moved to the left, and both eyewitnesses observed a second, identical orb, hovering above the other orb.  \n\nThe eyewitness then began recording the event using an iPhone 14 Pro Max, capturing the footage depicted in this video. As the eyewitness began recording, the orbs moved westward together above a nearby tree line. The witnesses described the orbs’ motion as silent and smooth, and as moving in tandem as though they were flying in formation or tethered together. As the orbs moved out of sight, both eyewitnesses saw them appear to merge. The eyewitnesses estimated that the orbs moved from their initial position before disappearing from view at an estimated distance of 75 yards. This observation occurred within 25 miles of the “Triangle Orbs,” “Red Orb Rotation,” and “Orbs Over the Pond,” sightings at a location well known to them, which is sparsely populated. \n\n The description above is derived from statements provided to the Federal Bureau of Investigation (FBI) by eyewitnesses to the event. The FBI assesses the individuals who reported this event as credible. The subject matter described in files FBI-UAP-D009 through FBI-UAP-D010 and depicted in the video footage FBI-UAP-PR004 corresponds to reports originating from the same general area in the northeastern United States.",
+      "incidentDate": "July, 2025",
+      "incidentLocation": "Northeastern United States",
+      "releaseDate": "6/12/26",
+      "release": "release_3",
+      "redacted": false,
+      "asset": {
+        "url": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764177/DOD_111764177.mp4"
+      },
+      "thumbnail": {
+        "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2606/1010269/DOD_111764177.0000001/122x92_q95.jpg"
+      },
+      "dvidsId": "1010269",
+      "dvids": {
+        "id": "video:1010269",
+        "title": "FBI-UAP-PR004, “Northeastern Orb Sighting,” 2025",
+        "description": "\"In July 2025, at approximately 2100 local time in the northeastern United States, an eyewitness observed an intense bright light in their backyard as they parked their car upon returning home from work. The light was hovering approximately 25 feet off the ground, below a tree line near the center of their backyard, at an estimated distance of 90 feet. The eyewitness exited their vehicle briefly before retrieving their phone to record the event. The spouse of the eyewitness came outside to assess the situation. The spouse also witnessed the light, describing it as a “brilliant red sphere” about one meter in diameter. The center of the red sphere appeared to be a white plasma “sun” about the size of a basketball. The orb slowly rose and moved to the left, and both eyewitnesses observed a second, identical orb, hovering above the other orb.  \r\n\r\n The eyewitness then began recording the event using an iPhone 14 Pro Max, capturing the footage depicted in this video. As the eyewitness began recording, the orbs moved westward together above a nearby tree line. The witnesses described the orbs’ motion as silent and smooth, and as moving in tandem as though they were flying in formation or tethered together. As the orbs moved out of sight, both eyewitnesses saw them appear to merge. The eyewitnesses estimated that the orbs moved from their initial position before disappearing from view at an estimated distance of 75 yards. This observation occurred within 25 miles of the “Triangle Orbs,” “Red Orb Rotation,” and “Orbs Over the Pond,” sightings at a location well known to them, which is sparsely populated. \r\n\r\n The description above is derived from statements provided to the Federal Bureau of Investigation (FBI) by eyewitnesses to the event. The FBI assesses the individuals who reported this event as credible. The subject matter described in files FBI-UAP-D009 through FBI-UAP-D010 and depicted in the video footage FBI-UAP-PR004 corresponds to reports originating from the same general area in the northeastern United States. \"",
+        "date_published": "2026-06-12T07:00:16-04:00",
+        "date": "2025-07-01T00:00:00-04:00",
+        "duration": 49,
+        "files": [
+          {
+            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764177/DOD_111764177.mp4",
+            "width": 720,
+            "height": 1280,
+            "size": 25863205,
+            "bitrate": 0,
+            "type": "video/mp4"
+          },
+          {
+            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764177/DOD_111764177-1920x1080-9000k.mp4",
+            "width": 1920,
+            "height": 1080,
+            "size": 21072448,
+            "bitrate": 0,
+            "type": "video/mp4"
+          },
+          {
+            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764177/DOD_111764177-1920x1080-6000k.mp4",
+            "width": 1920,
+            "height": 1080,
+            "size": 16118698,
+            "bitrate": 0,
+            "type": "video/mp4"
+          },
+          {
+            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764177/DOD_111764177-1280x720-3000k.mp4",
+            "width": 1280,
+            "height": 720,
+            "size": 8674942,
+            "bitrate": 0,
+            "type": "video/mp4"
+          },
+          {
+            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764177/DOD_111764177-1024x576-2000k.mp4",
+            "width": 1024,
+            "height": 576,
+            "size": 5833086,
+            "bitrate": 0,
+            "type": "video/mp4"
+          },
+          {
+            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764177/DOD_111764177-512x288-1000k.mp4",
+            "width": 512,
+            "height": 288,
+            "size": 2677364,
+            "bitrate": 0,
+            "type": "video/mp4"
+          },
+          {
+            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764177/DOD_111764177-256x144-1000k.mp4",
+            "width": 256,
+            "height": 144,
+            "size": 1170039,
+            "bitrate": 0,
+            "type": "video/mp4"
+          }
+        ],
+        "thumbnail": {
+          "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2606/1010269/DOD_111764177.0000001/122x92_q95.jpg",
+          "width": 122,
+          "height": 92
+        },
+        "image": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2606/1010269/DOD_111764177.0000001/2000w_q95.jpg",
+        "hls_url": "https://api.dvidshub.net/hls/video/1010269.m3u8?api_key=key-68bb60d16b35e"
+      }
+    },
+    {
+      "id": "pdf-ica-uap-d001-analysis-colorado-springs-uap-incident-2022",
+      "type": "PDF",
+      "title": "ICA-UAP-D001, Analysis: Colorado Springs UAP Incident, 2022",
+      "agency": "Intelligence Community Agency",
+      "description": "This document contains analysis by an All-domain Anomaly Resolution Office (AARO) Intelligence Community (IC) partner to account for a 2022 incident involving an airborne object near Colorado Springs, Colorado. U.S. military service members reported the incident to AARO in 2023. AARO’s IC partner assessed, with low confidence, that the reported phenomenon, which observers characterized as resembling an “angular, non-symmetrical potato,” was attributable to sunlight backscattering, where sunlight reflecting from mountain snow cover illuminated the underside of low-altitude clouds. This low-confidence assessment contributes to AARO’s consideration of the incident, which remains unresolved as of June 2026.",
+      "incidentDate": "2022",
+      "incidentLocation": "Colorado Springs, Colorado, U.S.",
+      "releaseDate": "6/12/26",
+      "release": "release_3",
+      "redacted": true,
+      "imageAlt": "Document with text and a subject line.",
+      "imageVirin": "260508-O-D0360-1119",
+      "asset": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/documents/ICA-UAP-D001_Analysis_Colorado-Springs-UAP-Incident.pdf"
+      },
+      "thumbnail": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/thumbnails/ICA-UAP-D001_Analysis_Colorado-Springs-UAP-Incident.jpg"
       }
     },
     {
@@ -1035,6 +1027,386 @@
       }
     },
     {
+      "id": "pdf-cia-uap-002-scientific-advisory-panel-on-unidentified-flying-objects-report-1952",
+      "type": "PDF",
+      "title": "CIA-UAP-002, Scientific Advisory Panel on Unidentified Flying Objects, Report, 1952-1953",
+      "agency": "CIA",
+      "description": "This file contains correspondence and reports dated 1952–1953 from the Scientific Advisory Panel on Unidentified Flying Objects, convened by the CIA’s Office of Scientific Intelligence. The panel’s primary conclusion was that “flying saucers” did not pose a direct physical threat to the national security of the United States. The panel found no evidence that these phenomena were attributable to hostile foreign artifacts or indicated a need to revise existing scientific concepts. \n\nHowever, the panel identified a significant indirect threat stemming from the public’s fascination with the subject. The panel concluded that the high volume of reports, encouraged by a \"sensationalist press,\" could overwhelm and clog vital intelligence and communication channels, potentially distracting from genuine threats. Furthermore, they warned that a “morbid national psychology” could be exploited by adversaries to incite “hysterical behavior and harmful distrust of duly constituted authority.” To mitigate these risks, the panel recommended an official policy of “debunking” to “strip the UFO subject of its mystery,” alongside a training initiative for military personnel to better recognize and filter out misidentified objects, thereby reducing communication “noise” and allowing the national security apparatus to focus on more \"legitimate defense concerns.\"",
+      "incidentDate": "1952-1953",
+      "incidentLocation": "",
+      "releaseDate": "6/12/26",
+      "release": "release_3",
+      "redacted": false,
+      "imageAlt": "A file folder with labels for \"Flying Objects\" and \"DECLARED\".",
+      "imageVirin": "260508-O-D0360-1079",
+      "asset": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/documents/CIA-UAP-002_Scientific-Advisory-Panel-on-Unidentified-Flying-Objects_Report_1952-1953.pdf"
+      },
+      "thumbnail": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/thumbnails/CIA-UAP-002_Scientific-Advisory-Panel-on-Unidentified-Flying-Objects_Report_1952-1953.jpg"
+      }
+    },
+    {
+      "id": "pdf-cia-uap-003-the-central-intelligence-agency-and-overhead-reconnaissance-the-u-2-",
+      "type": "PDF",
+      "title": "CIA-UAP-003, The Central Intelligence Agency and Overhead Reconnaissance; The U-2 and OXCART Programs, 1954-1974",
+      "agency": "CIA",
+      "description": "This CIA History Staff document chronicles the complete history of the U-2 and OXCART (A-12) high-altitude reconnaissance aircraft programs from 1954 to 1974, detailing their development, operations over the Soviet Union and other targets worldwide, the famous downing of Francis Gary Powers in 1960, organizational reforms following that incident, and the eventual transfer of operations from CIA to Air Force control. A more redacted version of this document has been available on CIA's public website.",
+      "incidentDate": "1954-1974",
+      "incidentLocation": "",
+      "releaseDate": "6/12/26",
+      "release": "release_3",
+      "redacted": false,
+      "imageAlt": "Cover of a report titled \"The Central Intelligence Agency and Overhead Reconnaissance\".",
+      "imageVirin": "260508-O-D0360-1080",
+      "asset": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/documents/CIA-UAP-003-THE_CENTRAL_INTELLIGENCE_AGENCY_AND_OVERHEAD_RECONNAISSANCE-THE_U-2_AND_OXCART_PROGRAMS_1954-1974.pdf"
+      },
+      "thumbnail": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/thumbnails/CIA-UAP-003-THE_CENTRAL_INTELLIGENCE_AGENCY_AND_OVERHEAD_RECONNAISSANCE-THE_U-2_AND_OXCART_PROGRAMS_1954-1974.jpg"
+      }
+    },
+    {
+      "id": "pdf-cia-uap-004-case-17708-closed-and-dr-leon-davidson",
+      "type": "PDF",
+      "title": "CIA-UAP-004, CASE 17708 (CLOSED) and DR. Leon Davidson",
+      "agency": "CIA",
+      "description": "This 1958 CIA memorandum discussing a phone conversation with Dr. Leon Davidson regarding concerns about a destroyed \"space message and its transmitter.\" A redacted version of this memorandum has been available on CIA's public website.",
+      "incidentDate": "1958",
+      "incidentLocation": "",
+      "releaseDate": "6/12/26",
+      "release": "release_3",
+      "redacted": false,
+      "imageAlt": "Typed document with handwritten notes about a case.",
+      "imageVirin": "260508-O-D0360-1081",
+      "asset": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/documents/CIA-UAP-004-CASE_17708_CLOSED_AND_DR_LEON_DAVIDSON.pdf"
+      },
+      "thumbnail": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/thumbnails/CIA-UAP-004-CASE_17708_CLOSED_AND_DR_LEON_DAVIDSON.jpg"
+      }
+    },
+    {
+      "id": "pdf-cia-uap-005-german-scientists-article-on-flying-discs",
+      "type": "PDF",
+      "title": "CIA-UAP-005, German Scientist's Article on 'Flying Discs'",
+      "agency": "CIA",
+      "description": "This 1950 CIA Information Report from Chile discusses a German scientist's article theorizing that \"Flying Discs\" could be explained as a new type of aircraft based on aerodynamic principles developed in German research facilities during and after WWI, using rotating cylinders or gas-turbines to create lift through boundary layer manipulation, rather than conventional wings. A redacted version of this report has been available on CIA's public website.",
+      "incidentDate": "1950",
+      "incidentLocation": "",
+      "releaseDate": "6/12/26",
+      "release": "release_3",
+      "redacted": false,
+      "imageAlt": "An Information Report with handwritten notes.",
+      "imageVirin": "260508-O-D0360-1082",
+      "asset": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/documents/CIA-UAP-005-GERMAN_SCIENTISTS_%20ARTICLE_ON_FLYING_DISCS.pdf"
+      },
+      "thumbnail": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/thumbnails/CIA-UAP-005-GERMAN_SCIENTISTS_%20ARTICLE_ON_FLYING_DISCS.jpg"
+      }
+    },
+    {
+      "id": "pdf-cia-uap-006-sighting-of-unconventional-aircraft",
+      "type": "PDF",
+      "title": "CIA-UAP-006, Sighting Of Unconventional Aircraft",
+      "agency": "CIA",
+      "description": "This CIA information report from November 1955 describes a US national's eyewitness account of triangular aircraft with wing lights launch at a steep angle from an airfield near Baku, Azerbaijan on October 4, 1955. A redacted version of this report has been available on CIA's public website.",
+      "incidentDate": "November, 1955",
+      "incidentLocation": "Baku, Azerbaijan",
+      "releaseDate": "6/12/26",
+      "release": "release_3",
+      "redacted": false,
+      "imageAlt": "An Information Report about an aircraft sighting.",
+      "imageVirin": "260508-O-D0360-1083",
+      "asset": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/documents/CIA-UAP-006_Sighting_of_Unconventional_Aircraft.pdf"
+      },
+      "thumbnail": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/thumbnails/CIA-UAP-006_Sighting_of_Unconventional_Aircraft.jpg"
+      }
+    },
+    {
+      "id": "pdf-cia-uap-007-current-status-of-unidentified-flying-objects-ufo-project",
+      "type": "PDF",
+      "title": "CIA-UAP-007, Current Status Of Unidentified Flying Objects (UFO) Project.",
+      "agency": "CIA",
+      "description": "This December 1953 memorandum provides a status update on the Air Force's UFO project activities, including ongoing intelligence operations, equipment procurement for photographing UFOs, and Canada’s establishment of a \"laboratory\" for recording observable phenomena. A more redacted version of this memorandum has been available on CIA's public website.",
+      "incidentDate": "December, 1953",
+      "incidentLocation": "",
+      "releaseDate": "6/12/26",
+      "release": "release_3",
+      "redacted": false,
+      "imageAlt": "Memorandum with the subject \"Current Status of Unidentified Flying Objects (UFOB) Project\".",
+      "imageVirin": "260508-O-D0360-1084",
+      "asset": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/documents/CIA-UAP-007_Current_Status_of_Unidentified_Flying_Objects_UFO_Project.pdf"
+      },
+      "thumbnail": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/thumbnails/CIA-UAP-007_Current_Status_of_Unidentified_Flying_Objects_UFO_Project.jpg"
+      }
+    },
+    {
+      "id": "pdf-cia-uap-008-speculative-paper-by-n-kardashev-and-a-sakharov-on-charged-mass-in-s",
+      "type": "PDF",
+      "title": "CIA-UAP-008, Speculative Paper By N Kardashev and A Sakharov on Charged Mass in Space at Conference on Origins Of Life, Armenia, 6-8 September 1971/Low Scientific Level Of Other Soviet Papers",
+      "agency": "CIA",
+      "description": "This 1972 CIA Intelligence Information Report summarizes a US attendee's observations of a speculative paper regarding charged mass behavior in space presented by Soviet scientists N.S. Kardashev and A. Sakharov at a conference in Armenia. A more redacted version of this report has been available on CIA's public website.",
+      "incidentDate": "1972",
+      "incidentLocation": "",
+      "releaseDate": "6/12/26",
+      "release": "release_3",
+      "redacted": false,
+      "imageAlt": "Intelligence Information Report cover page.",
+      "imageVirin": "260508-O-D0360-1085",
+      "asset": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/documents/CIA-UAP-008_SPECULATIVE_PAPER_BY_N_KARDASHEV_AND_A_SAKHAROV.pdf"
+      },
+      "thumbnail": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/thumbnails/CIA-UAP-008_SPECULATIVE_PAPER_BY_N_KARDASHEV_AND_A_SAKHAROV.jpg"
+      }
+    },
+    {
+      "id": "pdf-cia-uap-009-unknown-flying-objects-observed-over-budapest",
+      "type": "PDF",
+      "title": "CIA-UAP-009, Unknown Flying Objects Observed Over Budapest",
+      "agency": "CIA",
+      "description": "This is a 1957 CIA Information Report regarding UFO sightings over Budapest. A more redacted version of this report has been available on CIA's public website.",
+      "incidentDate": "1957",
+      "incidentLocation": "Budapest, Hungary",
+      "releaseDate": "6/12/26",
+      "release": "release_3",
+      "redacted": false,
+      "imageAlt": "A grainy document with text about flying objects.",
+      "imageVirin": "260508-O-D0360-1086",
+      "asset": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/documents/CIA-UAP-009-UNKNOWN-FLYING_OBJECTS_OBERVED_OVER_BUDAPEST.pdf"
+      },
+      "thumbnail": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/thumbnails/CIA-UAP-009-UNKNOWN-FLYING_OBJECTS_OBERVED_OVER_BUDAPEST.jpg"
+      }
+    },
+    {
+      "id": "pdf-cia-uap-010-report-on-conversations-with-soviet-scientists-on-subject-of-unident",
+      "type": "PDF",
+      "title": "CIA-UAP-010, Report on Conversations with Soviet Scientists on Subject of Unidentified Flying Objects in the USSR",
+      "agency": "CIA",
+      "description": "This CIA document from August 1967 reports on conversations about UFO sightings with Soviet scientists during a US astrophysicist's trip to the USSR.",
+      "incidentDate": "August, 1967",
+      "incidentLocation": "USSR",
+      "releaseDate": "6/12/26",
+      "release": "release_3",
+      "redacted": false,
+      "imageAlt": "A document with the subject \"Report on Conversations With Soviet Scientists\".",
+      "imageVirin": "260508-O-D0360-1087",
+      "asset": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/documents/CIA-UAP-010_REPORT_ON_CONVERSATIONS_WITH_SOVIET_SCIENTISTS_ON_SUBJECT_OF_UNIDENTIFIED_FLYING_OBJECTS_IS_THE_USSR.pdf"
+      },
+      "thumbnail": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/thumbnails/CIA-UAP-010_REPORT_ON_CONVERSATIONS_WITH_SOVIET_SCIENTISTS_ON_SUBJECT_OF_UNIDENTIFIED_FLYING_OBJECTS_IS_THE_USSR.jpg"
+      }
+    },
+    {
+      "id": "pdf-cia-uap-011-the-sary-shagan-weapons-testing-range",
+      "type": "PDF",
+      "title": "CIA-UAP-011, The Sary Shagan Weapons Testing Range",
+      "agency": "CIA",
+      "description": "This CIA Intelligence Information Report from December 1973 provides information on the Soviet Sary Shagan Weapons Testing Range, including details about its facilities, weapons systems (System-75 SA-2 and System-300/Aldan warheads), rumored laser weapon research, and unidentified aerial phenomenon observed at the site. A more redacted version of this report has been available on CIA's public website.",
+      "incidentDate": "December, 1973",
+      "incidentLocation": "USSR",
+      "releaseDate": "6/12/26",
+      "release": "release_3",
+      "redacted": false,
+      "imageAlt": "Intelligence Information Report cover page with subject \"The Sary Shagan Weapons Testing Range\".",
+      "imageVirin": "260508-O-D0360-1088",
+      "asset": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/documents/CIA-UAP-011-The_Sary_Shagan_Weapons_Testing_Range.pdf"
+      },
+      "thumbnail": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/thumbnails/CIA-UAP-011-The_Sary_Shagan_Weapons_Testing_Range.jpg"
+      }
+    },
+    {
+      "id": "pdf-cia-uap-012-combating-fatigue-in-crewmembers",
+      "type": "PDF",
+      "title": "CIA-UAP-012, Combating Fatigue In Crewmembers",
+      "agency": "CIA",
+      "description": "This November 1976 CIA Foreign Intelligence Information Report summarizes Soviet Aeroflot's involvement in aerospace medical research, including their methods for combating crew fatigue through physical conditioning, automated biological testing equipment that measures vital signs in 1-3 minutes, and discussions about UFO phenomena with a Soviet radiation biologist. A more redacted version of this report has been available on CIA's public website.",
+      "incidentDate": "November, 1976",
+      "incidentLocation": "",
+      "releaseDate": "6/12/26",
+      "release": "release_3",
+      "redacted": false,
+      "imageAlt": "Foreign Intelligence Information Report cover page.",
+      "imageVirin": "260508-O-D0360-1089",
+      "asset": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/documents/CIA-UAP-012-Combatting_Fatigue_in_Crewmembers.pdf"
+      },
+      "thumbnail": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/thumbnails/CIA-UAP-012-Combatting_Fatigue_in_Crewmembers.jpg"
+      }
+    },
+    {
+      "id": "pdf-cia-uap-013-report-of-unusual-flying-object-sightings-and-attendant-scientific-a",
+      "type": "PDF",
+      "title": "CIA-UAP-013, Report of Unusual Flying Object Sightings and Attendant Scientific Activity",
+      "agency": "CIA",
+      "description": "This 1956 CIA Information Report describes flying object sightings reported by a Budapest-based sub-source, including a sketch showing the objects' suspected formation and flight path between Budapest and Moscow. A more redacted version of this report has been available on CIA's public website.",
+      "incidentDate": "1956",
+      "incidentLocation": "Budapest, Hungary",
+      "releaseDate": "6/12/26",
+      "release": "release_3",
+      "redacted": false,
+      "imageAlt": "Information report with a diagram of object formation.",
+      "imageVirin": "260508-O-D0360-1090",
+      "asset": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/documents/CIA-UAP-013-Report_of_Unusual_Flying_Object_Sightings_and_Attendant_Scientific_Activity.pdf"
+      },
+      "thumbnail": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/thumbnails/CIA-UAP-013-Report_of_Unusual_Flying_Object_Sightings_and_Attendant_Scientific_Activity.jpg"
+      }
+    },
+    {
+      "id": "pdf-cia-uap-014-british-activity-in-the-field-of-unidentified-flying-objects",
+      "type": "PDF",
+      "title": "CIA-UAP-014, British activity in the Field of \"Unidentified Flying Objects\"",
+      "agency": "CIA",
+      "description": "A December 1952 Memo on the activities the British are taking to identify UFOs. The memo references a UFO sighting at an RAF field seen by high officials and RAF pilots. A more redacted version of the memo has been available on CIA's public website.",
+      "incidentDate": "December, 1952",
+      "incidentLocation": "",
+      "releaseDate": "6/12/26",
+      "release": "release_3",
+      "redacted": false,
+      "imageAlt": "Memorandum for record about \"Unidentified Flying Objects\".",
+      "imageVirin": "260508-O-D0360-1091",
+      "asset": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/documents/CIA-UAP-014_British_Activity_in_the_Field_of_Unidentified_Flying_Objects.pdf"
+      },
+      "thumbnail": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/thumbnails/CIA-UAP-014_British_Activity_in_the_Field_of_Unidentified_Flying_Objects.jpg"
+      }
+    },
+    {
+      "id": "pdf-cia-uap-015-project-blue-book-special-report-no-14-analysis-of-reports-of-uniden",
+      "type": "PDF",
+      "title": "CIA-UAP-015, Project Blue Book Special Report No. 14 (Analysis of Reports of Unidentified Aerial Objects)",
+      "agency": "CIA",
+      "description": "This is the USAF Project Blue Book with a CIA cover sheet stating the document is \"Official Record Copy.\" With the exception of the handwritten note on the first page, the content of this document has been available on CIA's public website.",
+      "incidentDate": "",
+      "incidentLocation": "",
+      "releaseDate": "6/12/26",
+      "release": "release_3",
+      "redacted": false,
+      "imageAlt": "Cover page for an official record.",
+      "imageVirin": "260508-O-D0360-1092",
+      "asset": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/documents/CIA-UAP-015-Project_Blue_Book_Special_Report_No_14.pdf"
+      },
+      "thumbnail": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/thumbnails/CIA-UAP-015-Project_Blue_Book_Special_Report_No_14.jpg"
+      }
+    },
+    {
+      "id": "pdf-cia-uap-016-sightings-of-unidentified-flying-objects-in-ladakh-nepal-sikkim-and-",
+      "type": "PDF",
+      "title": "CIA-UAP-016, Sightings of Unidentified Flying Objects in Ladakh, Nepal, Sikkim and Bhutan",
+      "agency": "CIA",
+      "description": "A 1968 report about UFO sightings in Ladakh, Nepal, Sikkim and Bhutan. Seven UFO sightings are listed that took place between 19 Feb. to 25 Mar. 1968. A more redacted version of the report has been available on CIA's public website.",
+      "incidentDate": "1968",
+      "incidentLocation": "Ladakh, Nepal | Sikkim, India | Bhutam",
+      "releaseDate": "6/12/26",
+      "release": "release_3",
+      "redacted": false,
+      "imageAlt": "A page with two portraits and captions.",
+      "imageVirin": "260508-O-D0360-1093",
+      "asset": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/documents/CIA-UAP-016-Sightings_of_Unidentified_Flying_Ojbects_in_Ladakh_Nepal_Sikkim_and_Bhutan.pdf"
+      },
+      "thumbnail": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/thumbnails/CIA-UAP-016-Sightings_of_Unidentified_Flying_Ojbects_in_Ladakh_Nepal_Sikkim_and_Bhutan.jpg"
+      }
+    },
+    {
+      "id": "pdf-cia-uap-018-report-of-unusual-flying-object-sightings-and-attendant-scientific-a",
+      "type": "PDF",
+      "title": "CIA-UAP-018, Report of Unusual Flying Object Sightings and Attendant Scientific Activity",
+      "agency": "CIA",
+      "description": "A 1955 report on a UFO sighting in Hungary. The information came from a letter between Hungarian relatives, living in the USA and Budapest. A more redacted version of the report has been available on CIA's public website.",
+      "incidentDate": "1955",
+      "incidentLocation": "Hungary",
+      "releaseDate": "6/12/26",
+      "release": "release_3",
+      "redacted": false,
+      "imageAlt": "Information report with a diagram of object formation.",
+      "imageVirin": "260508-O-D0360-1095",
+      "asset": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/documents/CIA-UAP-018_Report_of_Unusual_Flying_Object_Sightings_and_Attendant_Scientific_Activity.pdf"
+      },
+      "thumbnail": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/thumbnails/CIA-UAP-018_Report_of_Unusual_Flying_Object_Sightings_and_Attendant_Scientific_Activity.jpg"
+      }
+    },
+    {
+      "id": "pdf-cia-uap-019-australian-dept-of-defense-scientific-and-intel-aspects-of-the-ufo-p",
+      "type": "PDF",
+      "title": "CIA-UAP-019, Australian Dept of Defense Scientific and Intel Aspects of the UFO Problem",
+      "agency": "CIA",
+      "description": "Dated to 1971, an Australian review of the USAF Project Blue Book. This document was released by the National Archives of Australia.",
+      "incidentDate": "1971",
+      "incidentLocation": "Australia",
+      "releaseDate": "6/12/26",
+      "release": "release_3",
+      "redacted": false,
+      "imageAlt": "A \"FILE CLOSED\" cover page from the Department of Defence.",
+      "imageVirin": "260508-O-D0360-1096",
+      "asset": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/documents/CIA-UAP-019-Australian_Dept_of_Defense_Scientific_and_Intel_Aspects_of_the_UFO_Problem.pdf"
+      },
+      "thumbnail": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/thumbnails/CIA-UAP-019-Australian_Dept_of_Defense_Scientific_and_Intel_Aspects_of_the_UFO_Problem.jpg"
+      }
+    },
+    {
+      "id": "pdf-cia-uap-d001-intelligence-information-report-ussr-1973",
+      "type": "PDF",
+      "title": "CIA-UAP-D001, Intelligence Information Report, USSR, 1973",
+      "agency": "Central Intelligence Agency",
+      "description": "This document is a Central Intelligence Agency (CIA) intelligence information report (IIR) that describes human intelligence gathering activities in the Union of Soviet Socialist Republics (USSR). This report characterizes its content as informational, not as finally evaluated intelligence. In section 14 of this document, the source describes an incident occurring in summer of 1973, where he allegedly observed an airborne, luminous, bright green, unidentified object. The source described concentric circles forming around the phenomenon over a period of several minutes, before it dissipated. The source also stated that no sound attended the observation. The source offered no opinion on the nature of the phenomenon and was unable to provide further details regarding the incident.",
+      "incidentDate": "12/20/73",
+      "incidentLocation": "USSR",
+      "releaseDate": "5/22/26",
+      "release": "release_2",
+      "redacted": true,
+      "imageAlt": "A CIA report about a UAP sighting in the USSR.",
+      "imageVirin": "260508-O-D0360-1073",
+      "asset": {
+        "url": "www.war.gov/medialink/ufo/052226/release_02/documents/CIA-UAP-D001_Intelligence_Information_Report_USSR_1973.pdf"
+      },
+      "thumbnail": {
+        "url": "www.war.gov/medialink/ufo/052226/release_02/thumbnails/CIA-UAP-D001_Intelligence_Information_Report_USSR_1973.jpg"
+      }
+    },
+    {
+      "id": "pdf-doe-uap-d001-enhanced-pantex-imagery",
+      "type": "PDF",
+      "title": "DOE-UAP-D001, Enhanced PANTEX Imagery",
+      "agency": "Department of Energy",
+      "description": "A Pantex Unidentified Object Incident Report that includes an enhanced image from ground surveillance radar tower.",
+      "incidentDate": "",
+      "incidentLocation": "",
+      "releaseDate": "5/22/26",
+      "release": "release_2",
+      "redacted": true,
+      "imageAlt": "An unidentified object report with enhanced imagery from a PANTEX radar tower.",
+      "imageVirin": "260508-O-D0360-1077",
+      "asset": {
+        "url": "www.war.gov/medialink/ufo/052226/release_02/documents/DOE-UAP-D001_PANTEX_Image.pdf"
+      },
+      "thumbnail": {
+        "url": "www.war.gov/medialink/ufo/052226/release_02/thumbnails/DOE-UAP-D001_PANTEX_Image.jpg"
+      }
+    },
+    {
       "id": "pdf-doe-uap-d002-james-tuck-correspondence-1970s",
       "type": "PDF",
       "title": "DOE-UAP-D002, James Tuck Correspondence, 1970s",
@@ -1494,6 +1866,26 @@
         },
         "image": "d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1006060/DOD_111688775.0000001/2000w_q95.jpg",
         "hls_url": "https://api.dvidshub.net/hls/video/1006060.m3u8?api_key=key-68bb60d16b35e"
+      }
+    },
+    {
+      "id": "pdf-dow-uap-d017-uap-reported-at-sandia-base-1948-1950",
+      "type": "PDF",
+      "title": "DOW-UAP-D017, UAP Reported at Sandia Base, 1948-1950",
+      "agency": "Department of War",
+      "description": "This file contains 116 pages of documentation from the Armed Forces Special Weapons Program (AFSWP) – the direct, post-World War II successor to the Manhattan Project – and from the U.S. Air Force – relating to a series of sightings and investigations in Sandia, New Mexico, from 1948-1950. This file contains 209 sightings of “green orbs,” “discs,” and “fireballs” reported near the military base. Witnesses reported unidentified anomalous phenomena (UAP) maneuvering, flying out of sight, disappearing, or exploding. The documents also include the results of contemporary investigations into residual copper powder found in some areas where sightings were reported. A few of these investigations became the basis for Project Grudge, which collected reports of unidentified flying objects from various other military installations – also included in this collection.",
+      "incidentDate": "1948-1950",
+      "incidentLocation": "New Mexico",
+      "releaseDate": "5/22/26",
+      "release": "release_2",
+      "redacted": false,
+      "imageAlt": "A collection of UAP reports and documents from a national security site in New Mexico 1948-1950",
+      "imageVirin": "260508-D-D0360-1053",
+      "asset": {
+        "url": "www.war.gov/medialink/ufo/052226/release_02/documents/DOW-UAP-D017_General_Correspondence_Of_Sandia.pdf"
+      },
+      "thumbnail": {
+        "url": "www.war.gov/medialink/ufo/052226/release_02/thumbnails/DOW-UAP-D017_General_Correspondence_Of_Sandia.jpg"
       }
     },
     {
@@ -2281,9 +2673,9 @@
       }
     },
     {
-      "id": "pdf-dow-uap-d052-email-correspondance-na-august-2024",
+      "id": "pdf-dow-uap-d052-email-correspondence-na-august-2024",
       "type": "PDF",
-      "title": "DOW-UAP-D052, Email Correspondance, NA, August 2024",
+      "title": "DOW-UAP-D052, Email Correspondence, NA, August 2024",
       "agency": "Department of War",
       "description": "This document is email correspondence describing the content of a mission report and requesting clarification on its content.\nAll descriptive and estimative language contained in this report reflects the reporter’s subjective interpretation at the time of the event. Such characterizations should not be interpreted as a conclusive indication of the presence or absence of any intrinsic object features or performance characteristics.",
       "incidentDate": "10/31/24",
@@ -2558,6 +2950,226 @@
       },
       "thumbnail": {
         "url": "www.war.gov/medialink/ufo/release_1/thumbnail/dow-uap-d75-mission-report-gulf-of-aden-july-2024.jpg"
+      }
+    },
+    {
+      "id": "pdf-dow-uap-d077-aaro-unresolved-case-analysis-update-western-united-states-event",
+      "type": "PDF",
+      "title": "DOW-UAP-D077, AARO Unresolved Case Analysis Update: Western United States Event",
+      "agency": "Department of War",
+      "description": "This memorandum summarizes the All-domain Anomaly Resolution Office’s (AARO) ongoing analysis of a reported incident near a sensitive national security site in the western United States involving unidentified anomalous phenomena (UAP) over a period of two days in 2023. As of June 2026, the case remains unresolved.",
+      "incidentDate": "2023",
+      "incidentLocation": "Western United States",
+      "releaseDate": "6/12/26",
+      "release": "release_3",
+      "redacted": false,
+      "imageAlt": "A Department of War memorandum about orbs.",
+      "imageVirin": "260508-D-D0360-1059",
+      "asset": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/documents/DOW-UAP-D077_Unresolved-Case-Analysis-Update_Western-United-States-Event.pdf"
+      },
+      "thumbnail": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/thumbnails/DOW-UAP-D077_Unresolved-Case-Analysis-Update_Western-United-States-Event.jpg"
+      }
+    },
+    {
+      "id": "pdf-dow-uap-d078-notional-map-western-united-states-event",
+      "type": "PDF",
+      "title": "DOW-UAP-D078, Notional Map: Western United States Event",
+      "agency": "Department of War",
+      "description": "This image is a notional representation of four incidents reportedly involving unidentified anomalous phenomena in the western United States, as seen from above. This illustration depicts multiple incidents reported by U.S. federal law enforcement special agents over a period of several days in October 2023.",
+      "incidentDate": "October, 2023",
+      "incidentLocation": "Westen United States",
+      "releaseDate": "6/12/26",
+      "release": "release_3",
+      "redacted": false,
+      "imageAlt": "Map with text explaining four UAP incidents.",
+      "imageVirin": "260508-D-D0360-1060",
+      "asset": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/documents/DOW-UAP-D078_Notional-Map_Western-United-States-Event.pdf"
+      },
+      "thumbnail": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/thumbnails/DOW-UAP-D078_Notional-Map_Western-United-States-Event.jpg"
+      }
+    },
+    {
+      "id": "pdf-dow-uap-d079-narrative-statement-1-western-united-states-event-2023",
+      "type": "PDF",
+      "title": "DOW-UAP-D079, Narrative Statement 1, Western United States Event, 2023",
+      "agency": "Department of War",
+      "description": "This memorandum presents the first-hand narrative from Witness 1 provided to the All-domain Anomaly Resolution Office (AARO). Witness 1 was one of several United States (U.S.) federal law enforcement special agents who reported observing unidentified anomalous phenomena (UAP) over a period of two days in October 2023 in the western United States.",
+      "incidentDate": "October, 2023",
+      "incidentLocation": "Westen United States",
+      "releaseDate": "6/12/26",
+      "release": "release_3",
+      "redacted": false,
+      "imageAlt": "A Department of War memorandum with a witness narrative.",
+      "imageVirin": "260508-D-D0360-1061",
+      "asset": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/documents/DoW-UAP-D079_Narrative-1_Western-US-Event.pdf"
+      },
+      "thumbnail": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/thumbnails/DoW-UAP-D079_Narrative-1_Western-US-Event.jpg"
+      }
+    },
+    {
+      "id": "pdf-dow-uap-d080-narrative-statement-2-western-united-states-event-2023",
+      "type": "PDF",
+      "title": "DOW-UAP-D080, Narrative Statement 2, Western United States Event, 2023",
+      "agency": "Department of War",
+      "description": "This memorandum presents the first-hand narrative from Witness 2 provided to the All-domain Anomaly Resolution Office (AARO). Witness 2 was one of several United States (U.S.) federal law enforcement special agents who reported observing unidentified anomalous phenomena (UAP) over a period of two days in October 2023 in the western United States.",
+      "incidentDate": "October, 2023",
+      "incidentLocation": "Westen United States",
+      "releaseDate": "6/12/26",
+      "release": "release_3",
+      "redacted": false,
+      "imageAlt": "A Department of War memorandum with a witness narrative.",
+      "imageVirin": "260508-D-D0360-1062",
+      "asset": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/documents/DoW-UAP-D080_Narrative-2_Western-US-Event.pdf"
+      },
+      "thumbnail": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/thumbnails/DoW-UAP-D080_Narrative-2_Western-US-Event.jpg"
+      }
+    },
+    {
+      "id": "pdf-dow-uap-d081-narrative-statement-3-western-united-states-event-2023",
+      "type": "PDF",
+      "title": "DOW-UAP-D081, Narrative Statement 3, Western United States Event, 2023",
+      "agency": "Department of War",
+      "description": "This memorandum presents the first-hand narrative from Witness 3 provided to the All-domain Anomaly Resolution Office (AARO). Witness 3 was one of several United States (U.S.) federal law enforcement special agents who reported observing unidentified anomalous phenomena (UAP) over a period of two days in October 2023 in the western United States.",
+      "incidentDate": "October, 2023",
+      "incidentLocation": "Westen United States",
+      "releaseDate": "6/12/26",
+      "release": "release_3",
+      "redacted": false,
+      "imageAlt": "A Department of War memorandum with a witness narrative.",
+      "imageVirin": "260508-D-D0360-1063",
+      "asset": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/documents/DoW-UAP-D081_Narrative-3_Western-US-Event.pdf"
+      },
+      "thumbnail": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/thumbnails/DoW-UAP-D081_Narrative-3_Western-US-Event.jpg"
+      }
+    },
+    {
+      "id": "pdf-dow-uap-d082-narrative-statement-4-western-united-states-event-2023",
+      "type": "PDF",
+      "title": "DOW-UAP-D082, Narrative Statement 4, Western United States Event, 2023",
+      "agency": "Department of War",
+      "description": "This memorandum presents the first-hand narrative from Witness 4 provided to the All-domain Anomaly Resolution Office (AARO). Witness 4 was one of several United States (U.S.) federal law enforcement special agents who reported observing unidentified anomalous phenomena (UAP) over a period of two days in October 2023 in the western United States.",
+      "incidentDate": "October, 2023",
+      "incidentLocation": "Westen United States",
+      "releaseDate": "6/12/26",
+      "release": "release_3",
+      "redacted": false,
+      "imageAlt": "A Department of War memorandum with a witness narrative.",
+      "imageVirin": "260508-D-D0360-1064",
+      "asset": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/documents/DoW-UAP-D082_Narrative-4_Western-US-Event.pdf"
+      },
+      "thumbnail": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/thumbnails/DoW-UAP-D082_Narrative-4_Western-US-Event.jpg"
+      }
+    },
+    {
+      "id": "pdf-dow-uap-d083-narrative-statement-5-western-united-states-event-2023",
+      "type": "PDF",
+      "title": "DOW-UAP-D083, Narrative Statement 5, Western United States Event, 2023",
+      "agency": "Department of War",
+      "description": "This memorandum presents the first-hand narrative from Witness 5 provided to the All-domain Anomaly Resolution Office (AARO). Witness 5 was one of several United States (U.S.) federal law enforcement special agents who reported observing unidentified anomalous phenomena (UAP) over a period of two days in October 2023 in the western United States.",
+      "incidentDate": "October, 2023",
+      "incidentLocation": "Westen United States",
+      "releaseDate": "6/12/26",
+      "release": "release_3",
+      "redacted": true,
+      "imageAlt": "A Department of War memorandum with a witness narrative.",
+      "imageVirin": "260508-D-D0360-1065",
+      "asset": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/documents/DoW-UAP-D083_Narrative-5_Western-US-Event.pdf"
+      },
+      "thumbnail": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/thumbnails/DoW-UAP-D083_Narrative-5_Western-US-Event.jpg"
+      }
+    },
+    {
+      "id": "pdf-dow-uap-d085_transmission-of-cia-scientific-advisory-panel-rept_1953",
+      "type": "PDF",
+      "title": "DOW-UAP-D085_Transmission-of-CIA-Scientific-Advisory-Panel-Rept_1953",
+      "agency": "Department of War",
+      "description": "This file contains a copy of the CIA's 1953 \"Report of the Scientific Panel on Unidentified Flying Objects\" that was sent to the Secretary of Defense.",
+      "incidentDate": "1953",
+      "incidentLocation": "",
+      "releaseDate": "6/12/26",
+      "release": "release_3",
+      "redacted": false,
+      "imageAlt": "A file folder with a declassification sticker and tab.",
+      "imageVirin": "260508-D-D0360-1067",
+      "asset": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/documents/DOW-UAP-D085_Transmission-of-CIA-Scientific-Advisory-Panel-Rept_1953.pdf"
+      },
+      "thumbnail": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/thumbnails/DOW-UAP-D085_Transmission-of-CIA-Scientific-Advisory-Panel-Rept_1953.jpg"
+      }
+    },
+    {
+      "id": "pdf-dow-uap-d086-usnavy-report-of-flying-discs_1948",
+      "type": "PDF",
+      "title": "DOW-UAP-D086, USNavy-Report-of-Flying-Discs_1948",
+      "agency": "Department of War",
+      "description": "This document is a memorandum from the Commandant of the 5th Naval District, and it cites a memorandum related to \"flying discs\" from the Chief of Naval Operations. The memorandum requests that naval stations report incidents to the nearest Air Force command and to the Naval District Intelligence Office.",
+      "incidentDate": "",
+      "incidentLocation": "",
+      "releaseDate": "6/12/26",
+      "release": "release_3",
+      "redacted": false,
+      "imageAlt": "File cover for \"Office, Chief Army Field Forces\".",
+      "imageVirin": "260508-D-D0360-1068",
+      "asset": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/documents/DOW-UAP-D086_USNavy-Report-of-Flying-Discs_1948.pdf"
+      },
+      "thumbnail": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/thumbnails/DOW-UAP-D086_USNavy-Report-of-Flying-Discs_1948.jpg"
+      }
+    },
+    {
+      "id": "pdf-dow-uap-d087-us-air-force-analysis-of-flying-objects-in-the-united-states-1-100",
+      "type": "PDF",
+      "title": "DOW-UAP-D087, U.S. Air Force Analysis of Flying Objects in the United States, 1-100",
+      "agency": "Department of War",
+      "description": "Includes a \"Check-List - Unidentified Flying Objects\" that contains details about the incident. Many summaries also include witness lists or statements and other narrative reports or descriptions.",
+      "incidentDate": "",
+      "incidentLocation": "United States",
+      "releaseDate": "6/12/26",
+      "release": "release_3",
+      "redacted": false,
+      "imageAlt": "A file cover with a declassification sticker.",
+      "imageVirin": "260508-D-D0360-1069",
+      "asset": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/documents/DOW-UAP-D087_US-AirForce_Analysis-of-Flying-Objects-in-the-US_1-100.pdf"
+      },
+      "thumbnail": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/thumbnails/DOW-UAP-D087_US-AirForce_Analysis-of-Flying-Objects-in-the-US_1-100.jpg"
+      }
+    },
+    {
+      "id": "pdf-dow-uap-d088-us-air-force-analysis-of-flying-objects-in-the-united-states-101-17",
+      "type": "PDF",
+      "title": "DOW-UAP-D088, U.S. Air Force Analysis of Flying Objects in the United States, 101-172",
+      "agency": "Department of War",
+      "description": "Includes a \"Check-List - Unidentified Flying Objects\" that contains details about the incident. Many summaries also include witness lists or statements and other narrative reports or descriptions.",
+      "incidentDate": "",
+      "incidentLocation": "",
+      "releaseDate": "6/12/26",
+      "release": "release_3",
+      "redacted": false,
+      "imageAlt": "A file cover with notes and a declassification sticker.",
+      "imageVirin": "260508-D-D0360-1070",
+      "asset": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/documents/DOW-UAP-D088_US-AirForce_Analysis-of-Flying-Objects-in-the-US_101-172.pdf"
+      },
+      "thumbnail": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/thumbnails/DOW-UAP-D088_US-AirForce_Analysis-of-Flying-Objects-in-the-US_101-172.jpg"
       }
     },
     {
@@ -5065,6 +5677,190 @@
       }
     },
     {
+      "id": "dvids-1007706",
+      "type": "VID",
+      "title": "DOW-UAP-PR050, \"4 UAP Formation Iran 26 Aug 2022 over water [CALLSIGN]\"",
+      "agency": "Department of War",
+      "description": "On March 6, 2026, eight members of the U.S. House of Representatives requested access to 51 potentially UAP-related records allegedly held by the Department of War and the Intelligence Community. The All-domain Anomaly Resolution Office (AARO) identified a collection of responsive materials held on a classified network. Many of these materials lack a substantiated chain-of-custody.\n\nAARO assesses that this video, whose uploader-defined title is, “4 UAP Formation Iran 26 Aug 2022 over water [CALLSIGN],” is likely derived from an infrared sensor aboard a U.S. military platform operating within the United States Central Command area of responsibility in 2022. A user uploaded this video to a classified network in June 2024.\n\nVideo Duration: 00:00:20\nVideo Description:\n00:01-00:04: Four areas of contrast transit the sensor field-of-view, entering from the lower third of the left side of the screen and exiting near the center of the bottom of the frame.\n00:05-00:06: An area of contrast enters the sensor field-of-view from the top left corner of the screen.\n\nThis video description is provided for informational purposes only. Readers should not interpret any part of this description as reflecting an analytical judgment, investigative conclusion, or factual determination regarding the described event’s validity, nature, or significance.",
+      "incidentDate": "2022",
+      "incidentLocation": "CENTCOM",
+      "releaseDate": "5/22/26",
+      "release": "release_2",
+      "redacted": true,
+      "asset": {
+        "url": "d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111719709/DOD_111719709.mp4"
+      },
+      "thumbnail": {
+        "url": "d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007706/DOD_111719709.0000001/720w_q95.jpg"
+      },
+      "dvidsId": "1007706",
+      "dvids": {
+        "id": "video:1007706",
+        "title": "DOW-UAP-PR050, \"4 UAP Formation Iran 26 Aug 2022 over water [CALLSIGN]\"",
+        "description": "On March 6, 2026, eight members of the U.S. House of Representatives requested access to 51 potentially UAP-related records allegedly held by the Department of War and the Intelligence Community. The All-domain Anomaly Resolution Office (AARO) identified a collection of responsive materials held on a classified network. Many of these materials lack a substantiated chain-of-custody.\r\n\r\nAARO assesses that this video, whose uploader-defined title is, “4 UAP Formation Iran 26 Aug 2022 over water [CALLSIGN],” is likely derived from an infrared sensor aboard a U.S. military platform operating within the United States Central Command area of responsibility in 2022. A user uploaded this video to a classified network in June 2024.\r\n\r\nVideo Duration: 00:00:20\r\nVideo Description:\r\n00:01-00:04: Four areas of contrast transit the sensor field-of-view, entering from the lower third of the left side of the screen and exiting near the center of the bottom of the frame.\r\n00:05-00:06: An area of contrast enters the sensor field-of-view from the top left corner of the screen.\r\nThis video description is provided for informational purposes only. Readers should not interpret any part of this description as reflecting an analytical judgment, investigative conclusion, or factual determination regarding the described event’s validity, nature, or significance.",
+        "date_published": "2026-05-22T07:30:10-04:00",
+        "date": "2022-08-26T00:00:00-04:00",
+        "duration": 9,
+        "files": [
+          {
+            "src": "d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111719709/DOD_111719709.mp4",
+            "width": 640,
+            "height": 360,
+            "size": 3097929,
+            "bitrate": 0,
+            "type": "video/mp4"
+          },
+          {
+            "src": "d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111719709/DOD_111719709-1920x1080-9000k.mp4",
+            "width": 1920,
+            "height": 1080,
+            "size": 10346860,
+            "bitrate": 0,
+            "type": "video/mp4"
+          },
+          {
+            "src": "d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111719709/DOD_111719709-1920x1080-6000k.mp4",
+            "width": 1920,
+            "height": 1080,
+            "size": 7209260,
+            "bitrate": 0,
+            "type": "video/mp4"
+          },
+          {
+            "src": "d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111719709/DOD_111719709-1280x720-3000k.mp4",
+            "width": 1280,
+            "height": 720,
+            "size": 3631455,
+            "bitrate": 0,
+            "type": "video/mp4"
+          },
+          {
+            "src": "d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111719709/DOD_111719709-1024x576-2000k.mp4",
+            "width": 1024,
+            "height": 576,
+            "size": 2391916,
+            "bitrate": 0,
+            "type": "video/mp4"
+          },
+          {
+            "src": "d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111719709/DOD_111719709-512x288-1000k.mp4",
+            "width": 512,
+            "height": 288,
+            "size": 1266687,
+            "bitrate": 0,
+            "type": "video/mp4"
+          },
+          {
+            "src": "d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111719709/DOD_111719709-256x144-1000k.mp4",
+            "width": 256,
+            "height": 144,
+            "size": 756877,
+            "bitrate": 0,
+            "type": "video/mp4"
+          }
+        ],
+        "thumbnail": {
+          "url": "d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007706/DOD_111719709.0000001/720w_q95.jpg",
+          "width": 720,
+          "height": 0
+        },
+        "image": "d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007706/DOD_111719709.0000001/2000w_q95.jpg",
+        "hls_url": "https://api.dvidshub.net/hls/video/1007706.m3u8?api_key=key-68bb60d16b35e"
+      }
+    },
+    {
+      "id": "dvids-1007707",
+      "type": "VID",
+      "title": "DOW-UAP-PR051, \"Syrian UAP instant acceleration\"",
+      "agency": "Department of War",
+      "description": "On March 6, 2026, eight members of the U.S. House of Representatives requested access to 51 potentially UAP-related records allegedly held by the Department of War and the Intelligence Community. The All-domain Anomaly Resolution Office (AARO) identified a collection of responsive materials held on a classified network. Many of these materials lack a substantiated chain-of-custody.\n\nAARO assesses that this video, whose uploader-defined title is, “Syrian UAP instant acceleration,” is likely derived from an infrared sensor aboard a U.S. military platform operating within the United States Central Command area of responsibility in 2021. A user uploaded this video to a classified network in June 2024.\n\nVideo Duration: 00:05:02\nVideo Description: This media was digitally altered prior to its upload to a classified network, and is presented as received.\n00:01-00:19: The sensor pans to maintain the position of an area of contrast within the center of the frame.\n00:20-00:21: The sensor stops tracking the area of contrast, causing it to rapidly exit the right side of the frame.\n00:22-00:27: No content.\n00:27-00:29 A black screen appears featuring the phrase “white edge threshold enhancement in attempt to highlight UAP shape. Original clip excerpt at 100% speed.” \n00:30-00:50: The video replays with digital alterations applied.\n00:51-00:53: A black screen appears featuring the phrase “50% speed.”\n00:54-01:05: The video replays with digital alterations applied.\n01:06-01:08: A black screen appears featuring the phrase “25% speed.”\n01:09-01:35: The video replays with digital alterations applied.\n01:36-01:41: A black screen appears featuring the phrase “B/W values inverted, picture zoomed”\n01:42-02:03: The video replays with digital alterations applied.\n02:04-02:09: A black screen appears featuring the phrase “full original clip TRT: 2:52”\n02:10-03:49: The video replays, showing additional footage of the area of contrast at its original resolution on a far zoom.\n03:50-04:02: The sensor rapidly zooms in and out.\n04:03-04:28: The sensor focuses and zooms in, locking a reticle around the area of contrast.\n04:29-5:01: The video replays 00:20-00:21, the period in which the sensor stops tracking the area of contrast, causing it to rapidly exit the right side of the frame.\n\nThis video description is provided for informational purposes only. Readers should not interpret any part of this description as reflecting an analytical judgment, investigative conclusion, or factual determination regarding the described event’s validity, nature, or significance.",
+      "incidentDate": "2021",
+      "incidentLocation": "CENTCOM",
+      "releaseDate": "5/22/26",
+      "release": "release_2",
+      "redacted": true,
+      "asset": {
+        "url": "d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111719715/DOD_111719715.mp4"
+      },
+      "thumbnail": {
+        "url": "d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007707/DOD_111719715.0000001/720w_q95.jpg"
+      },
+      "dvidsId": "1007707",
+      "dvids": {
+        "id": "video:1007707",
+        "title": "DOW-UAP-PR051, \"Syrian UAP instant acceleration\"",
+        "description": "On March 6, 2026, eight members of the U.S. House of Representatives requested access to 51 potentially UAP-related records allegedly held by the Department of War and the Intelligence Community. The All-domain Anomaly Resolution Office (AARO) identified a collection of responsive materials held on a classified network. Many of these materials lack a substantiated chain-of-custody.\r\n\r\nAARO assesses that this video, whose uploader-defined title is, “Syrian UAP instant acceleration,” is likely derived from an infrared sensor aboard a U.S. military platform operating within the United States Central Command area of responsibility in 2021. A user uploaded this video to a classified network in June 2024.\r\n\r\nVideo Duration: 00:05:02\r\nVideo Description: This media was digitally altered prior to its upload to a classified network, and is presented as received.\r\n00:01-00:19: The sensor pans to maintain the position of an area of contrast within the center of the frame.\r\n00:20-00:21: The sensor stops tracking the area of contrast, causing it to rapidly exit the right side of the frame.\r\n00:22-00:27: No content.\r\n00:27-00:29 A black screen appears featuring the phrase “white edge threshold enhancement in attempt to highlight UAP shape. Original clip excerpt at 100% speed.” \r\n00:30-00:50: The video replays with digital alterations applied.\r\n00:51-00:53: A black screen appears featuring the phrase “50% speed.”\r\n00:54-01:05: The video replays with digital alterations applied.\r\n01:06-01:08: A black screen appears featuring the phrase “25% speed.”\r\n01:09-01:35: The video replays with digital alterations applied.\r\n01:36-01:41: A black screen appears featuring the phrase “B/W values inverted, picture zoomed”\r\n01:42-02:03: The video replays with digital alterations applied.\r\n02:04-02:09: A black screen appears featuring the phrase “full original clip TRT: 2:52”\r\n02:10-03:49: The video replays, showing additional footage of the area of contrast at its original resolution on a far zoom.\r\n03:50-04:02: The sensor rapidly zooms in and out.\r\n04:03-04:28: The sensor focuses and zooms in, locking a reticle around the area of contrast.\r\n04:29-5:01: The video replays 00:20-00:21, the period in which the sensor stops tracking the area of contrast, causing it to rapidly exit the right side of the frame.\r\n\r\nThis video description is provided for informational purposes only. Readers should not interpret any part of this description as reflecting an analytical judgment, investigative conclusion, or factual determination regarding the described event’s validity, nature, or significance.",
+        "date_published": "2026-05-22T07:30:19-04:00",
+        "date": "2021-01-01T00:00:00-05:00",
+        "duration": 302,
+        "files": [
+          {
+            "src": "d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111719715/DOD_111719715.mp4",
+            "width": 1280,
+            "height": 720,
+            "size": 154578710,
+            "bitrate": 0,
+            "type": "video/mp4"
+          },
+          {
+            "src": "d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111719715/DOD_111719715-1920x1080-9000k.mp4",
+            "width": 1920,
+            "height": 1080,
+            "size": 235062797,
+            "bitrate": 0,
+            "type": "video/mp4"
+          },
+          {
+            "src": "d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111719715/DOD_111719715-1920x1080-6000k.mp4",
+            "width": 1920,
+            "height": 1080,
+            "size": 162161907,
+            "bitrate": 0,
+            "type": "video/mp4"
+          },
+          {
+            "src": "d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111719715/DOD_111719715-1280x720-3000k.mp4",
+            "width": 1280,
+            "height": 720,
+            "size": 85754416,
+            "bitrate": 0,
+            "type": "video/mp4"
+          },
+          {
+            "src": "d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111719715/DOD_111719715-1024x576-2000k.mp4",
+            "width": 1024,
+            "height": 576,
+            "size": 59161868,
+            "bitrate": 0,
+            "type": "video/mp4"
+          },
+          {
+            "src": "d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111719715/DOD_111719715-512x288-1000k.mp4",
+            "width": 512,
+            "height": 288,
+            "size": 31884888,
+            "bitrate": 0,
+            "type": "video/mp4"
+          },
+          {
+            "src": "d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111719715/DOD_111719715-256x144-1000k.mp4",
+            "width": 256,
+            "height": 144,
+            "size": 19939125,
+            "bitrate": 0,
+            "type": "video/mp4"
+          }
+        ],
+        "thumbnail": {
+          "url": "d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007707/DOD_111719715.0000001/720w_q95.jpg",
+          "width": 720,
+          "height": 0
+        },
+        "image": "d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007707/DOD_111719715.0000001/2000w_q95.jpg",
+        "hls_url": "https://api.dvidshub.net/hls/video/1007707.m3u8?api_key=key-68bb60d16b35e"
+      }
+    },
+    {
       "id": "dvids-1007708",
       "type": "VID",
       "title": "DOW-UAP-PR052, \"UAP USO Formation [CALLSIGN] (Mission)\"",
@@ -5159,7 +5955,7 @@
     {
       "id": "dvids-1007709",
       "type": "VID",
-      "title": "DOW-UAP-PR053, \"Cigar Shaped or Fast Sherical UAP clip 15 OCT 22\"",
+      "title": "DOW-UAP-PR053, \"Cigar Shaped or Fast Spherical UAP clip 15 OCT 22\"",
       "agency": "Department of War",
       "description": "On March 6, 2026, eight members of the U.S. House of Representatives requested access to 51 potentially UAP-related records allegedly held by the Department of War and the Intelligence Community. The All-domain Anomaly Resolution Office (AARO) identified a collection of responsive materials held on a classified network. Many of these materials lack a substantiated chain-of-custody.\n\nAARO assesses that this video, whose uploader-defined title is, “Cigar Shaped or Fast Spherical UAP clip 15 OCT 22,” is likely derived from an infrared sensor aboard a U.S. military platform operating within the United States Central Command area of responsibility in October 2022. A user uploaded this video to a classified network in June 2024.\n\nVideo Duration: 00:00:21\nVideo Description: This media was digitally altered prior to its upload to a classified network, and is presented as received.\n\n00:01-00:04: An area of contrast transits the sensor field-of-view from left to right. \n00:06-00:14: The video replays at a slower speed.\n00:15-00:21: The video replays again at an even slower speed.\n\nThis video description is provided for informational purposes only. Readers should not interpret any part of this description as reflecting an analytical judgment, investigative conclusion, or factual determination regarding the described event’s validity, nature, or significance.",
       "incidentDate": "2022",
@@ -10383,6 +11179,738 @@
       }
     },
     {
+      "id": "pdf-fbi-uap-d001-fd-302-unresolved-uap-report-colorado-springs-2022",
+      "type": "PDF",
+      "title": "FBI-UAP-D001, FD-302, Unresolved UAP Report, Colorado Springs, 2022",
+      "agency": "FBI",
+      "description": "This document is a Federal Bureau of Investigation (FBI) FD-302, a form the FBI uses to record interviews. This FD-302 contains a summary of an interview with a U.S. military service member in March 2025 regarding a February 2022 incident potentially involving unidentified anomalous phenomena (UAP). The individual described the phenomenon as being “bean shaped,” “matte white” or “off-white” in color, with a surface covered in “intersecting lines or ridges which formed an abstract polygon pattern.” The individual described the phenomenon as “motionless” and that “no sound could be heard coming from it.” FBI Note: AARO has since been in contact with the interviewee to conduct subsequent interviews to inform its analysis of this incident.",
+      "incidentDate": "February, 2022",
+      "incidentLocation": "Colorado Springs, Colorado, U.S.",
+      "releaseDate": "6/12/26",
+      "release": "release_3",
+      "redacted": true,
+      "imageAlt": "FBI document with redacted text about a UAP sighting.",
+      "imageVirin": "260508-O-D0360-1097",
+      "asset": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/documents/FBI-UAP-D001_FD-302_Unresolved-UAP-Report_ColoradoSprings_2022.pdf"
+      },
+      "thumbnail": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/thumbnails/FBI-UAP-D001_FD-302_Unresolved-UAP-Report_ColoradoSprings_2022.jpg"
+      }
+    },
+    {
+      "id": "pdf-fbi-uap-d004-fd-1057-02-northeastern-united-states-2024",
+      "type": "PDF",
+      "title": "FBI-UAP-D004, FD-1057-02, Northeastern United States, 2024",
+      "agency": "FBI",
+      "description": "This document is an FBI FD-1057, a form the Federal Bureau of Investigation (FBI) uses to record investigative activity. This FD-1057 documents the FBI’s contact with a U.S. person in October 2024, during which FBI special agents collected video footage and gathered information regarding the circumstances surrounding its capture. The U.S. person captured the video footage in the same general location as the incidents described in documents. \n\nThe subject matter described in files FBI-UAP-D004 through FBI-UAP-D008 and depicted in the video footage FBI-UAP-PR001 through FBI-UAP-PR003 corresponds to reports originating from the same general area in the northeastern United States.",
+      "incidentDate": "October, 2024",
+      "incidentLocation": "Northeastern United States",
+      "releaseDate": "6/12/26",
+      "release": "release_3",
+      "redacted": true,
+      "imageAlt": "FBI document with redacted text about orbs.",
+      "imageVirin": "260508-O-D0360-1100",
+      "asset": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/documents/FBI-UAP-D004_FD-1057-02_Northeastern-US_2024.pdf"
+      },
+      "thumbnail": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/thumbnails/FBI-UAP-D004_FD-1057-02_Northeastern-US_2024.jpg"
+      }
+    },
+    {
+      "id": "pdf-fbi-uap-d005-fd-1057-04-northeastern-united-states-2024",
+      "type": "PDF",
+      "title": "FBI-UAP-D005, FD-1057-04, Northeastern United States, 2024",
+      "agency": "FBI",
+      "description": "This document is an FBI FD-1057, a form the Federal Bureau of Investigation (FBI) uses to record investigative activity. This FD-1057 documents an October 2024 interview with a US person regarding several incidents potentially involving unidentified anomalous phenomena in the northeastern United States over the previous three years. \n\nThe subject matter described in files FBI-UAP-D004 through FBI-UAP-D008 and depicted in the video footage FBI-UAP-PR001 through FBI-UAP-PR003 corresponds to reports originating from the same general area in the northeastern United States.",
+      "incidentDate": "October, 2024",
+      "incidentLocation": "Northeastern United States",
+      "releaseDate": "6/12/26",
+      "release": "release_3",
+      "redacted": true,
+      "imageAlt": "FBI document with redacted text about a UAP interview.",
+      "imageVirin": "260508-O-D0360-1101",
+      "asset": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/documents/FBI-UAP-D005_FD-1057-04_Northeastern-US_2024.pdf"
+      },
+      "thumbnail": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/thumbnails/FBI-UAP-D005_FD-1057-04_Northeastern-US_2024.jpg"
+      }
+    },
+    {
+      "id": "pdf-fbi-uap-d006-fd-1057-05-northeastern-united-states-2024",
+      "type": "PDF",
+      "title": "FBI-UAP-D006, FD-1057-05, Northeastern United States, 2024",
+      "agency": "FBI",
+      "description": "This document is an FBI FD-1057, a form the Federal Bureau of Investigation (FBI) uses to record investigative activity. This FD-1057 documents a November 2024 site survey of a location where a U.S. person reported observing unidentified anomalous phenomena multiple times over the previous three years. \n\nThe subject matter described in files FBI-UAP-D004 through FBI-UAP-D008 and depicted in the video footage FBI-UAP-PR001 through FBI-UAP-PR003 corresponds to reports originating from the same general area in the northeastern United States.",
+      "incidentDate": "November, 2024",
+      "incidentLocation": "Northeastern United States",
+      "releaseDate": "6/12/26",
+      "release": "release_3",
+      "redacted": true,
+      "imageAlt": "FBI document with redacted text listing photo enclosures.",
+      "imageVirin": "260508-O-D0360-1102",
+      "asset": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/documents/FBI-UAP-D006_FD-1057-05_Northeastern-US_2024.pdf"
+      },
+      "thumbnail": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/thumbnails/FBI-UAP-D006_FD-1057-05_Northeastern-US_2024.jpg"
+      }
+    },
+    {
+      "id": "pdf-fbi-uap-d007-fd-1057-06-northeastern-united-states-2024",
+      "type": "PDF",
+      "title": "FBI-UAP-D007, FD-1057-06, Northeastern United States, 2024",
+      "agency": "FBI",
+      "description": "This document is an FBI FD-1057, a form the Federal Bureau of Investigation (FBI) uses to record investigative activity. This FBI FD-1057 documents first-hand observations made by two FBI special agents’ during the course of an ongoing investigation in November 2024. \n\nThe subject matter described in files FBI-UAP-D004 through FBI-UAP-D008 and depicted in the video footage FBI-UAP-PR001 through FBI-UAP-PR003 corresponds to reports originating from the same general area in the northeastern United States.",
+      "incidentDate": "November, 2024",
+      "incidentLocation": "Northeastern United States",
+      "releaseDate": "6/12/26",
+      "release": "release_3",
+      "redacted": true,
+      "imageAlt": "FBI document with redacted text listing photo enclosures.",
+      "imageVirin": "260508-O-D0360-1103",
+      "asset": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/documents/FBI-UAP-D007_FD-1057-06_Northeastern-US_2024.pdf"
+      },
+      "thumbnail": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/thumbnails/FBI-UAP-D007_FD-1057-06_Northeastern-US_2024.jpg"
+      }
+    },
+    {
+      "id": "pdf-fbi-uap-d008-fd-1057-07-northeastern-united-states-2024",
+      "type": "PDF",
+      "title": "FBI-UAP-D008, FD-1057-07, Northeastern United States, 2024",
+      "agency": "FBI",
+      "description": "This document is an FBI FD-1057, a form the Federal Bureau of Investigation (FBI) uses to record investigative activity. This FBI FD-1057 documents a December 2024 site survey of a location where two FBI special agents had previously observed unidentified anomalous phenomena. \n\n The subject matter described in files FBI-UAP-D004 through FBI-UAP-D008 and depicted in the video footage FBI-UAP-PR001 through FBI-UAP-PR003 corresponds to reports originating from the same general area in the northeastern United States.",
+      "incidentDate": "December, 2024",
+      "incidentLocation": "Northeastern United States",
+      "releaseDate": "6/12/26",
+      "release": "release_3",
+      "redacted": true,
+      "imageAlt": "FBI document with redacted text about a site survey.",
+      "imageVirin": "260508-O-D0360-1104",
+      "asset": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/documents/FBI-UAP-D008_FD-1057-07_Northeastern-US_2024.pdf"
+      },
+      "thumbnail": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/thumbnails/FBI-UAP-D008_FD-1057-07_Northeastern-US_2024.jpg"
+      }
+    },
+    {
+      "id": "pdf-fbi-uap-d012-newark-field-office-1952-1967",
+      "type": "PDF",
+      "title": "FBI-UAP-D012, Newark Field Office, 1952-1967",
+      "agency": "FBI",
+      "description": "This file details a special inquiry by the Federal Bureau of Investigation’s Newark Field Office of various reported sightings of unidentified flying objects (UFOs) in and near New Jersey between August 1952 and January 1967. These files include memoranda and correspondence between the FBI and the U.S. Air Force regarding UFO sightings, as well as public correspondence concerning various UFO-focused groups.",
+      "incidentDate": "August 1952-1967",
+      "incidentLocation": "New Jersey, United States",
+      "releaseDate": "6/12/26",
+      "release": "release_3",
+      "redacted": false,
+      "imageAlt": "FBI investigation file cover.",
+      "imageVirin": "260508-O-D0360-1109",
+      "asset": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/documents/FBI-UAP-D012_Newark-Field-Office_1952-1967.pdf"
+      },
+      "thumbnail": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/thumbnails/FBI-UAP-D012_Newark-Field-Office_1952-1967.jpg"
+      }
+    },
+    {
+      "id": "pdf-fbi-uap-d013-washington-state-ufo-investigation-1952-1960",
+      "type": "PDF",
+      "title": "FBI-UAP-D013, Washington State ‘UFO’ Investigation, 1952-1960",
+      "agency": "FBI",
+      "description": "This file details an investigation of various sightings of Unidentified Flying Objects (UFOs) in Washington state between July 1952 and August 1960. This file includes memoranda and correspondence between the Federal Bureau of Investigation and the U.S. Air Force regarding UFO sightings.",
+      "incidentDate": "July 1952-1960",
+      "incidentLocation": "Washington State, United States",
+      "releaseDate": "6/12/26",
+      "release": "release_3",
+      "redacted": false,
+      "imageAlt": "FBI file cover with handwritten notes.",
+      "imageVirin": "260508-O-D0360-1108",
+      "asset": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/documents/FBI-UAP-D013_WA-UFO-Investigation_1952-1960.pdf"
+      },
+      "thumbnail": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/thumbnails/FBI-UAP-D013_WA-UFO-Investigation_1952-1960.jpg"
+      }
+    },
+    {
+      "id": "img-fbi-uap-d014-digital-rendering-narrative-statement-1-1-western-united-states-eve",
+      "type": "IMG",
+      "title": "FBI-UAP-D014, Digital Rendering, Narrative Statement 1-1, Western United States Event, 2023",
+      "agency": "FBI",
+      "description": "This image is an artistic interpretation of a reported incident near a sensitive national security site in the western United States involving unidentified anomalous phenomena (UAP) over a period of two days in October 2023. This image is based upon a first-hand description provided by a federal law enforcement special agent, as described in DOW-UAP-D079. The Federal Bureau of Investigation prepared this digital rendering at the request of the Department of War in 2026.",
+      "incidentDate": "October, 2023",
+      "incidentLocation": "Westen United States",
+      "releaseDate": "6/12/26",
+      "release": "release_3",
+      "redacted": false,
+      "imageAlt": "Rendering of a road at night with an object in the sky.",
+      "imageVirin": "260508-O-D0360-1110",
+      "asset": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/documents/FBI-UAP-D014_Digital-Rendering_Incident-1-1_Western-US-Event_2023.jpg"
+      },
+      "thumbnail": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/thumbnails/FBI-UAP-D014_Digital-Rendering_Incident-1-1_Western-US-Event_2023.jpg"
+      }
+    },
+    {
+      "id": "img-fbi-uap-d015-digital-rendering-narrative-statement-1-2-western-united-states-eve",
+      "type": "IMG",
+      "title": "FBI-UAP-D015, Digital Rendering, Narrative Statement 1-2, Western United States Event, 2023",
+      "agency": "FBI",
+      "description": "This image is an artistic interpretation of a reported incident near a sensitive national security site in the western United States involving unidentified anomalous phenomena (UAP) over a period of two days in October 2023. This image is based upon a first-hand description provided by a federal law enforcement special agent, as described in DOW-UAP-D079. The Federal Bureau of Investigation prepared this digital rendering at the request of the Department of War in 2026.",
+      "incidentDate": "October, 2023",
+      "incidentLocation": "Western United States",
+      "releaseDate": "6/12/26",
+      "release": "release_3",
+      "redacted": false,
+      "imageAlt": "Rendering of a road at night with an object in the sky.",
+      "imageVirin": "260508-O-D0360-1111",
+      "asset": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/documents/FBI-UAP-D015_Digital-Rendering_Incident-1-2_Western-US-Event_2023.jpg"
+      },
+      "thumbnail": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/thumbnails/FBI-UAP-D015_Digital-Rendering_Incident-1-2_Western-US-Event_2023.jpg"
+      }
+    },
+    {
+      "id": "img-fbi-uap-d016-digital-rendering-narrative-statement-2-1-western-united-states-eve",
+      "type": "IMG",
+      "title": "FBI-UAP-D016, Digital Rendering, Narrative Statement 2-1, Western United States Event, 2023",
+      "agency": "FBI",
+      "description": "This image is an artistic interpretation of a reported incident near a sensitive national security site in the western United States involving unidentified anomalous phenomena (UAP) over a period of two days in October 2023. This image is based upon a first-hand description provided by a federal law enforcement special agent, as described in DOW-UAP-D080. The Federal Bureau of Investigation prepared this digital rendering at the request of the Department of War in 2026.",
+      "incidentDate": "October, 2023",
+      "incidentLocation": "Western United States",
+      "releaseDate": "6/12/26",
+      "release": "release_3",
+      "redacted": false,
+      "imageAlt": "Rendering of two figures watching an object in the sky.",
+      "imageVirin": "260508-O-D0360-1112",
+      "asset": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/documents/FBI-UAP-D016_Digital-Rendering_Incident-2-1_Western-US-Event_2023.jpg"
+      },
+      "thumbnail": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/thumbnails/FBI-UAP-D016_Digital-Rendering_Incident-2-1_Western-US-Event_2023.jpg"
+      }
+    },
+    {
+      "id": "img-fbi-uap-d017-digital-rendering-narrative-statement-2-2-western-united-states-eve",
+      "type": "IMG",
+      "title": "FBI-UAP-D017, Digital Rendering, Narrative Statement 2-2, Western United States Event, 2023",
+      "agency": "FBI",
+      "description": "This image is an artistic interpretation of a reported incident near a sensitive national security site in the western United States involving unidentified anomalous phenomena (UAP) over a period of two days in October 2023. This image is based upon a first-hand description provided by a federal law enforcement special agent, as described in DOW-UAP-D080. The Federal Bureau of Investigation prepared this digital rendering at the request of the Department of War in 2026.",
+      "incidentDate": "October, 2023",
+      "incidentLocation": "Western United States",
+      "releaseDate": "6/12/26",
+      "release": "release_3",
+      "redacted": false,
+      "imageAlt": "Rendering of two figures watching an object in the sky.",
+      "imageVirin": "260508-O-D0360-1113",
+      "asset": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/documents/FBI-UAP-D017_Digital-Rendering_Incident-2-2_Western-US-Event_2023.jpg"
+      },
+      "thumbnail": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/thumbnails/FBI-UAP-D017_Digital-Rendering_Incident-2-2_Western-US-Event_2023.jpg"
+      }
+    },
+    {
+      "id": "img-fbi-uap-d018-digital-rendering-narrative-statement-2-3-western-united-states-eve",
+      "type": "IMG",
+      "title": "FBI-UAP-D018, Digital Rendering, Narrative Statement 2-3, Western United States Event, 2023",
+      "agency": "FBI",
+      "description": "This image is an artistic interpretation of a reported incident near a sensitive national security site in the western United States involving unidentified anomalous phenomena (UAP) over a period of two days in October 2023. This image is based upon a first-hand description provided by a federal law enforcement special agent, as described in DOW-UAP-D080. The Federal Bureau of Investigation prepared this digital rendering at the request of the Department of War in 2026.",
+      "incidentDate": "October, 2023",
+      "incidentLocation": "Western United States",
+      "releaseDate": "6/12/26",
+      "release": "release_3",
+      "redacted": false,
+      "imageAlt": "Rendering of two figures watching an object in the sky.",
+      "imageVirin": "260508-O-D0360-1114",
+      "asset": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/documents/FBI-UAP-D018_Digital-Rendering_Incident-2-3_Western-US-Event_2023.jpg"
+      },
+      "thumbnail": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/thumbnails/FBI-UAP-D018_Digital-Rendering_Incident-2-3_Western-US-Event_2023.jpg"
+      }
+    },
+    {
+      "id": "img-fbi-uap-d019-digital-rendering-narrative-statement-2-4-western-united-states-eve",
+      "type": "IMG",
+      "title": "FBI-UAP-D019, Digital Rendering, Narrative Statement 2-4, Western United States Event, 2023",
+      "agency": "FBI",
+      "description": "This image is an artistic interpretation of a reported incident near a sensitive national security site in the western United States involving unidentified anomalous phenomena (UAP) over a period of two days in October 2023. This image is based upon a first-hand description provided by a federal law enforcement special agent, as described in DOW-UAP-D080. The Federal Bureau of Investigation prepared this digital rendering at the request of the Department of War in 2026.",
+      "incidentDate": "October, 2023",
+      "incidentLocation": "Western United States",
+      "releaseDate": "6/12/26",
+      "release": "release_3",
+      "redacted": false,
+      "imageAlt": "Rendering of two figures watching objects in the sky.",
+      "imageVirin": "260508-O-D0360-1115",
+      "asset": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/documents/FBI-UAP-D019_Digital-Rendering_Incident-2-4_Western-US-Event_2023.jpg"
+      },
+      "thumbnail": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/thumbnails/FBI-UAP-D019_Digital-Rendering_Incident-2-4_Western-US-Event_2023.jpg"
+      }
+    },
+    {
+      "id": "img-fbi-uap-d020-digital-rendering-narrative-statement-2-5-western-united-states-eve",
+      "type": "IMG",
+      "title": "FBI-UAP-D020, Digital Rendering, Narrative Statement 2-5, Western United States Event, 2023",
+      "agency": "FBI",
+      "description": "This image is an artistic interpretation of a reported incident near a sensitive national security site in the western United States involving unidentified anomalous phenomena (UAP) over a period of two days in October 2023. This image is based upon a first-hand description provided by a federal law enforcement special agent, as described in DOW-UAP-D080. The Federal Bureau of Investigation prepared this digital rendering at the request of the Department of War in 2026.",
+      "incidentDate": "October, 2023",
+      "incidentLocation": "Western United States",
+      "releaseDate": "6/12/26",
+      "release": "release_3",
+      "redacted": false,
+      "imageAlt": "Rendering of two figures watching objects in the sky.",
+      "imageVirin": "260508-O-D0360-1116",
+      "asset": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/documents/FBI-UAP-D020_Digital-Rendering_Incident-2-5_Western-US-Event_2023.jpg"
+      },
+      "thumbnail": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/thumbnails/FBI-UAP-D020_Digital-Rendering_Incident-2-5_Western-US-Event_2023.jpg"
+      }
+    },
+    {
+      "id": "img-fbi-uap-d021-digital-rendering-narrative-statement-1-3-western-united-states-eve",
+      "type": "IMG",
+      "title": "FBI-UAP-D021, Digital Rendering, Narrative Statement 1-3, Western United States Event, 2023",
+      "agency": "FBI",
+      "description": "This image is an artistic interpretation of a reported incident near a sensitive national security site in the western United States involving unidentified anomalous phenomena (UAP) over a period of two days in October 2023. This image is based upon a first-hand description provided by a federal law enforcement special agent, as described in DOW-UAP-D079. The Federal Bureau of Investigation prepared this digital rendering at the request of the Department of War in 2026.",
+      "incidentDate": "October, 2023",
+      "incidentLocation": "Western United States",
+      "releaseDate": "6/12/26",
+      "release": "release_3",
+      "redacted": false,
+      "imageAlt": "Rendering of a road at night with an object over a hill.",
+      "imageVirin": "260508-O-D0360-1117",
+      "asset": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/documents/FBI-UAP-D021_Digital-Rendering_Incident-1-3_Western-US-Event_2023.jpg"
+      },
+      "thumbnail": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/thumbnails/FBI-UAP-D021_Digital-Rendering_Incident-1-3_Western-US-Event_2023.jpg"
+      }
+    },
+    {
+      "id": "img-fbi-uap-d022-digital-rendering-narrative-statement-2-6-western-united-states-eve",
+      "type": "IMG",
+      "title": "FBI-UAP-D022, Digital Rendering, Narrative Statement 2-6, Western United States Event, 2026",
+      "agency": "FBI",
+      "description": "This image is an artistic interpretation of a reported incident near a sensitive national security site in the western United States involving unidentified anomalous phenomena (UAP) over a period of two days in October 2023. This image is based upon a first-hand description provided by a federal law enforcement special agent, as described in DOW-UAP-D080. The Federal Bureau of Investigation prepared this digital rendering at the request of the Department of War in 2026.",
+      "incidentDate": "October, 2023",
+      "incidentLocation": "Western United States",
+      "releaseDate": "6/12/26",
+      "release": "release_3",
+      "redacted": false,
+      "imageAlt": "Rendering of people in a car watching an object on a road.",
+      "imageVirin": "260508-O-D0360-1118",
+      "asset": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/documents/FBI-UAP-D022_Digital-Rendering_Incident-2-6_Western-US-Event_2023.jpg"
+      },
+      "thumbnail": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/thumbnails/FBI-UAP-D022_Digital-Rendering_Incident-2-6_Western-US-Event_2023.jpg"
+      }
+    },
+    {
+      "id": "img-fbi-uap-d023-digital-rendering-narrative-statement-2-7-western-united-states-eve",
+      "type": "IMG",
+      "title": "FBI-UAP-D023, Digital Rendering, Narrative Statement 2-7, Western United States Event, 2023",
+      "agency": "FBI",
+      "description": "This image is an artistic interpretation of a reported incident near a sensitive national security site in the western United States involving unidentified anomalous phenomena (UAP) over a period of two days in October 2023. This image is based upon a first-hand description provided by a federal law enforcement special agent, as described in DOW-UAP-D080. The Federal Bureau of Investigation prepared this digital rendering at the request of the Department of War in 2026.",
+      "incidentDate": "October, 2023",
+      "incidentLocation": "Western United States",
+      "releaseDate": "6/12/26",
+      "release": "release_3",
+      "redacted": false,
+      "imageAlt": "Rendering of figures watching objects over a landscape.",
+      "imageVirin": "260508-O-D0360-1118",
+      "asset": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/documents/FBI-UAP-D023_Digital-Rendering_Incident-2-7_Western-US-Event_2023.jpg"
+      },
+      "thumbnail": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/thumbnails/FBI-UAP-D023_Digital-Rendering_Incident-2-7_Western-US-Event_2023.jpg"
+      }
+    },
+    {
+      "id": "dvids-1010263",
+      "type": "VID",
+      "title": "FBI-UAP-PR001, “Triangle Orbs,” Northeastern United States, 2021",
+      "agency": "FBI",
+      "description": "In November 2021, at approximately 0500 local time in the northeastern United States, an  eyewitness observed a bright light source near the horizon at an estimated distance of  2,000 feet. The light source initially appeared as a single intense luminous object before resolving into multiple lights exhibiting erratic rotational motion relative to one another. The object slowly moved laterally from left to right during the encounter. The eyewitness captured the video with a hand-held iPhone 12 Pro, resulting in unintended camera movement. The location was well known to the eyewitness and is sparsely populated.  \n \nThe description above is derived from statements provided to the Federal Bureau of Investigation (FBI) by the eyewitness to the event. The FBI assesses the individual who reported this event as highly credible. The subject matter described in files FBI-UAP-D004 through FBI-UAP-D008 and depicted in the video footage FBI-UAP-PR001 through FBI-UAP-PR003 corresponds to reports originating from the same general area in the northeastern United States.",
+      "incidentDate": "November, 2021",
+      "incidentLocation": "Northeastern United States",
+      "releaseDate": "6/12/26",
+      "release": "release_3",
+      "redacted": false,
+      "asset": {
+        "url": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764142/DOD_111764142.mp4"
+      },
+      "thumbnail": {
+        "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2606/1010263/DOD_111764142.0000001/122x92_q95.jpg"
+      },
+      "dvidsId": "1010263",
+      "dvids": {
+        "id": "video:1010263",
+        "title": "FBI-UAP-PR001_Triangle-Orbs_2021",
+        "description": "\"In November 2021, at approximately 0500 local time in the northeastern United States, an  eyewitness observed a bright light source near the horizon at an estimated distance of  2,000 feet. The light source initially appeared as a single intense luminous object before resolving into multiple lights exhibiting erratic rotational motion relative to one another. The object slowly moved laterally from left to right during the encounter. The eyewitness captured the video with a hand-held iPhone 12 Pro, resulting in unintended camera movement. The location was well known to the eyewitness and is sparsely populated.  \r\n \r\nThe description above is derived from statements provided to the Federal Bureau of Investigation (FBI) by the eyewitness to the event. The FBI assesses the individual who reported this event as highly credible. The subject matter described in files FBI-UAP-D004 through FBI-UAP-D008 and depicted in the video footage FBI-UAP-PR001 through FBI-UAP-PR003 corresponds to reports originating from the same general area in the northeastern United States. \"",
+        "date_published": "2026-06-12T07:00:14-04:00",
+        "date": "2021-11-01T00:00:00-04:00",
+        "duration": 162,
+        "files": [
+          {
+            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764142/DOD_111764142.mp4",
+            "width": 1920,
+            "height": 1080,
+            "size": 81753315,
+            "bitrate": 0,
+            "type": "video/mp4"
+          },
+          {
+            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764142/DOD_111764142-1920x1080-9000k.mp4",
+            "width": 1920,
+            "height": 1080,
+            "size": 100957993,
+            "bitrate": 0,
+            "type": "video/mp4"
+          },
+          {
+            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764142/DOD_111764142-1920x1080-6000k.mp4",
+            "width": 1920,
+            "height": 1080,
+            "size": 77406290,
+            "bitrate": 0,
+            "type": "video/mp4"
+          },
+          {
+            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764142/DOD_111764142-1280x720-3000k.mp4",
+            "width": 1280,
+            "height": 720,
+            "size": 24865355,
+            "bitrate": 0,
+            "type": "video/mp4"
+          },
+          {
+            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764142/DOD_111764142-1024x576-2000k.mp4",
+            "width": 1024,
+            "height": 576,
+            "size": 12521963,
+            "bitrate": 0,
+            "type": "video/mp4"
+          },
+          {
+            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764142/DOD_111764142-512x288-1000k.mp4",
+            "width": 512,
+            "height": 288,
+            "size": 5180090,
+            "bitrate": 0,
+            "type": "video/mp4"
+          },
+          {
+            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764142/DOD_111764142-256x144-1000k.mp4",
+            "width": 256,
+            "height": 144,
+            "size": 2627284,
+            "bitrate": 0,
+            "type": "video/mp4"
+          }
+        ],
+        "thumbnail": {
+          "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2606/1010263/DOD_111764142.0000001/122x92_q95.jpg",
+          "width": 122,
+          "height": 92
+        },
+        "image": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2606/1010263/DOD_111764142.0000001/2000w_q95.jpg",
+        "hls_url": "https://api.dvidshub.net/hls/video/1010263.m3u8?api_key=key-68bb60d16b35e"
+      }
+    },
+    {
+      "id": "dvids-1010264",
+      "type": "VID",
+      "title": "FBI-UAP-PR002, “Red Orb Rotation,” Northeastern United States, 2022",
+      "agency": "FBI",
+      "description": "In March 2022, at approximately 1920 local time in the northeastern United States, an eyewitness observed two bright red luminous light sources hovering near the horizon at an estimated distance of 2,500 feet. Both luminous objects maintained generally stationary positions throughout the encounter. The lower light source appeared to rotate slowly relative to the upper light source, moving from an apparent 6 o’clock position to slightly beyond the apparent 9 o’clock position. The eyewitness did not hear any sounds from the light sources. The eyewitness captured this video using an iPhone 12 Pro at a location well known to them, which is sparsely populated.  \n\n The description above is derived from statements provided to the Federal Bureau of Investigation (FBI) by an eyewitness to the event. The FBI assesses the individual who reported this event as highly credible. The subject matter described in files FBI-UAP-D004 through FBI-UAP-D008 and depicted in the video footage FBI-UAP-PR001 through FBI-UAP-PR003 corresponds to reports originating from the same general area in the northeastern United States.",
+      "incidentDate": "March, 2022",
+      "incidentLocation": "Northeastern United States",
+      "releaseDate": "6/12/26",
+      "release": "release_3",
+      "redacted": false,
+      "asset": {
+        "url": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764148/DOD_111764148.mp4"
+      },
+      "thumbnail": {
+        "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2606/1010264/DOD_111764148.0000001/122x92_q95.jpg"
+      },
+      "dvidsId": "1010264",
+      "dvids": {
+        "id": "video:1010264",
+        "title": "FBI-UAP-PR002, “Red Orb Rotation,” Northeastern United States, 2022",
+        "description": "\"In March 2022, at approximately 1920 local time in the northeastern United States, an eyewitness observed two bright red luminous light sources hovering near the horizon at an estimated distance of 2,500 feet. Both luminous objects maintained generally stationary positions throughout the encounter. The lower light source appeared to rotate slowly relative to the upper light source, moving from an apparent 6 o’clock position to slightly beyond the apparent 9 o’clock position. The eyewitness did not hear any sounds from the light sources. The eyewitness captured this video using an iPhone 12 Pro at a location well known to them, which is sparsely populated.  \r\n\r\n The description above is derived from statements provided to the Federal Bureau of Investigation (FBI) by an eyewitness to the event. The FBI assesses the individual who reported this event as highly credible. The subject matter described in files FBI-UAP-D004 through FBI-UAP-D008 and depicted in the video footage FBI-UAP-PR001 through FBI-UAP-PR003 corresponds to reports originating from the same general area in the northeastern United States. \"",
+        "date_published": "2026-06-12T07:00:15-04:00",
+        "date": "2022-03-01T00:00:00-05:00",
+        "duration": 162,
+        "files": [
+          {
+            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764148/DOD_111764148.mp4",
+            "width": 1920,
+            "height": 1080,
+            "size": 143314278,
+            "bitrate": 0,
+            "type": "video/mp4"
+          },
+          {
+            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764148/DOD_111764148-1920x1080-9000k.mp4",
+            "width": 1920,
+            "height": 1080,
+            "size": 158586764,
+            "bitrate": 0,
+            "type": "video/mp4"
+          },
+          {
+            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764148/DOD_111764148-1920x1080-6000k.mp4",
+            "width": 1920,
+            "height": 1080,
+            "size": 102787018,
+            "bitrate": 0,
+            "type": "video/mp4"
+          },
+          {
+            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764148/DOD_111764148-1280x720-3000k.mp4",
+            "width": 1280,
+            "height": 720,
+            "size": 51696893,
+            "bitrate": 0,
+            "type": "video/mp4"
+          },
+          {
+            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764148/DOD_111764148-1024x576-2000k.mp4",
+            "width": 1024,
+            "height": 576,
+            "size": 31873967,
+            "bitrate": 0,
+            "type": "video/mp4"
+          },
+          {
+            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764148/DOD_111764148-512x288-1000k.mp4",
+            "width": 512,
+            "height": 288,
+            "size": 17481378,
+            "bitrate": 0,
+            "type": "video/mp4"
+          },
+          {
+            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764148/DOD_111764148-256x144-1000k.mp4",
+            "width": 256,
+            "height": 144,
+            "size": 7288093,
+            "bitrate": 0,
+            "type": "video/mp4"
+          }
+        ],
+        "thumbnail": {
+          "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2606/1010264/DOD_111764148.0000001/122x92_q95.jpg",
+          "width": 122,
+          "height": 92
+        },
+        "image": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2606/1010264/DOD_111764148.0000001/2000w_q95.jpg",
+        "hls_url": "https://api.dvidshub.net/hls/video/1010264.m3u8?api_key=key-68bb60d16b35e",
+        "closed_captions": {
+          "srt": "https://api.dvidshub.net/closed-captions/get?asset_id=video:1010264&format=srt&api_key=key-68bb60d16b35e",
+          "webvtt": "https://api.dvidshub.net/closed-captions/get?asset_id=video:1010264&format=webvtt&api_key=key-68bb60d16b35e"
+        }
+      }
+    },
+    {
+      "id": "dvids-1010272",
+      "type": "VID",
+      "title": "FBI-UAP-PR005, Digital Recreation, Narrative Statement 3-1, Western United States Event, 2023",
+      "agency": "FBI",
+      "description": "This video is an artistic interpretation of a reported incident near a sensitive national security site in the western United States involving unidentified anomalous phenomena (UAP) over a period of two days in October 2023. This digital recreation is based upon a first-hand description provided by a federal law enforcement special agent, as described in DOW-UAP-D081. The Federal Bureau of Investigation prepared this digital recreation at the request of the Department of War in 2026",
+      "incidentDate": "October, 2023",
+      "incidentLocation": "Western United States",
+      "releaseDate": "6/12/26",
+      "release": "release_3",
+      "redacted": false,
+      "asset": {
+        "url": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764189/DOD_111764189.mp4"
+      },
+      "thumbnail": {
+        "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2606/1010272/DOD_111764189.0000001/122x92_q95.jpg"
+      },
+      "dvidsId": "1010272",
+      "dvids": {
+        "id": "video:1010272",
+        "title": "FBI-UAP-PR005, Digital Recreation, Narrative Statement 3-1, Western United States Event, 2023",
+        "description": "This video is an artistic interpretation of a reported incident near a sensitive national security site in the western United States involving unidentified anomalous phenomena (UAP) over a period of two days in 2023. This digital recreation is based upon a first-hand description provided by a federal law enforcement special agent. The Federal Bureau of Investigation prepared this digital recreation at the request of the Department of War in 2026.",
+        "date_published": "2026-06-12T07:00:17-04:00",
+        "date": "2023-01-01T00:00:00-05:00",
+        "duration": 53,
+        "files": [
+          {
+            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764189/DOD_111764189.mp4",
+            "width": 1920,
+            "height": 1080,
+            "size": 2780975,
+            "bitrate": 0,
+            "type": "video/mp4"
+          },
+          {
+            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764189/DOD_111764189-1920x1080-9000k.mp4",
+            "width": 1920,
+            "height": 1080,
+            "size": 5668557,
+            "bitrate": 0,
+            "type": "video/mp4"
+          },
+          {
+            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764189/DOD_111764189-1920x1080-6000k.mp4",
+            "width": 1920,
+            "height": 1080,
+            "size": 4126509,
+            "bitrate": 0,
+            "type": "video/mp4"
+          },
+          {
+            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764189/DOD_111764189-1280x720-3000k.mp4",
+            "width": 1280,
+            "height": 720,
+            "size": 2432157,
+            "bitrate": 0,
+            "type": "video/mp4"
+          },
+          {
+            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764189/DOD_111764189-1024x576-2000k.mp4",
+            "width": 1024,
+            "height": 576,
+            "size": 1827799,
+            "bitrate": 0,
+            "type": "video/mp4"
+          },
+          {
+            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764189/DOD_111764189-512x288-1000k.mp4",
+            "width": 512,
+            "height": 288,
+            "size": 1482288,
+            "bitrate": 0,
+            "type": "video/mp4"
+          },
+          {
+            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764189/DOD_111764189-256x144-1000k.mp4",
+            "width": 256,
+            "height": 144,
+            "size": 1085637,
+            "bitrate": 0,
+            "type": "video/mp4"
+          }
+        ],
+        "thumbnail": {
+          "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2606/1010272/DOD_111764189.0000001/122x92_q95.jpg",
+          "width": 122,
+          "height": 92
+        },
+        "image": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2606/1010272/DOD_111764189.0000001/2000w_q95.jpg",
+        "hls_url": "https://api.dvidshub.net/hls/video/1010272.m3u8?api_key=key-68bb60d16b35e"
+      }
+    },
+    {
+      "id": "dvids-1010276",
+      "type": "VID",
+      "title": "FBI-UAP-PR006, Digital Recreation, Narrative Statement 3-2, Western United States Event, 2023",
+      "agency": "FBI",
+      "description": "This video is an artistic interpretation of a reported incident near a sensitive national security site in the western United States involving unidentified anomalous phenomena (UAP) over a period of two days in October 2023. This digital recreation is based upon a first-hand description provided by a federal law enforcement special agent, as described in DOW-UAP-D081. The Federal Bureau of Investigation prepared this digital recreation at the request of the Department of War in 2026",
+      "incidentDate": "October, 2023",
+      "incidentLocation": "Western United States",
+      "releaseDate": "6/12/26",
+      "release": "release_3",
+      "redacted": false,
+      "asset": {
+        "url": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764213/DOD_111764213.mp4"
+      },
+      "thumbnail": {
+        "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2606/1010276/DOD_111764213.0000001/122x92_q95.jpg"
+      },
+      "dvidsId": "1010276",
+      "dvids": {
+        "id": "video:1010276",
+        "title": "FBI-UAP-PR006, Digital Recreation, Narrative Statement 3-2, Western United States Event, 2023",
+        "description": "This video is an artistic interpretation of a reported incident near a sensitive national security site in the western United States involving unidentified anomalous phenomena (UAP) over a period of two days in 2023. This digital recreation is based upon a first-hand description provided by a federal law enforcement special agent. The Federal Bureau of Investigation prepared this digital recreation at the request of the Department of War in 2026.",
+        "date_published": "2026-06-12T07:00:17-04:00",
+        "date": "2023-01-01T00:00:00-05:00",
+        "duration": 21,
+        "files": [
+          {
+            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764213/DOD_111764213.mp4",
+            "width": 1920,
+            "height": 1080,
+            "size": 3648480,
+            "bitrate": 0,
+            "type": "video/mp4"
+          },
+          {
+            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764213/DOD_111764213-1920x1080-9000k.mp4",
+            "width": 1920,
+            "height": 1080,
+            "size": 4027867,
+            "bitrate": 0,
+            "type": "video/mp4"
+          },
+          {
+            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764213/DOD_111764213-1920x1080-6000k.mp4",
+            "width": 1920,
+            "height": 1080,
+            "size": 2565067,
+            "bitrate": 0,
+            "type": "video/mp4"
+          },
+          {
+            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764213/DOD_111764213-1280x720-3000k.mp4",
+            "width": 1280,
+            "height": 720,
+            "size": 1432206,
+            "bitrate": 0,
+            "type": "video/mp4"
+          },
+          {
+            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764213/DOD_111764213-1024x576-2000k.mp4",
+            "width": 1024,
+            "height": 576,
+            "size": 1085070,
+            "bitrate": 0,
+            "type": "video/mp4"
+          },
+          {
+            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764213/DOD_111764213-512x288-1000k.mp4",
+            "width": 512,
+            "height": 288,
+            "size": 618882,
+            "bitrate": 0,
+            "type": "video/mp4"
+          },
+          {
+            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764213/DOD_111764213-256x144-1000k.mp4",
+            "width": 256,
+            "height": 144,
+            "size": 425477,
+            "bitrate": 0,
+            "type": "video/mp4"
+          }
+        ],
+        "thumbnail": {
+          "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2606/1010276/DOD_111764213.0000001/122x92_q95.jpg",
+          "width": 122,
+          "height": 92
+        },
+        "image": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2606/1010276/DOD_111764213.0000001/2000w_q95.jpg",
+        "hls_url": "https://api.dvidshub.net/hls/video/1010276.m3u8?api_key=key-68bb60d16b35e"
+      }
+    },
+    {
       "id": "pdf-nasa-uap-d001-apollo-12-transcript-1969",
       "type": "PDF",
       "title": "NASA-UAP-D001, Apollo 12 Transcript, 1969",
@@ -10600,9 +12128,9 @@
       }
     },
     {
-      "id": "pdf-nasa-uap-d007-skylab-techincal-crew-debriefing-1973",
+      "id": "pdf-nasa-uap-d007-skylab-technical-crew-debriefing-1973",
       "type": "PDF",
-      "title": "NASA-UAP-D007, Skylab Techincal Crew Debriefing 1973",
+      "title": "NASA-UAP-D007, Skylab Technical Crew Debriefing 1973",
       "agency": "NASA",
       "description": "Launched on May 14, 1973, Skylab was the United States’ first laboratory in space. From 1973 to 1974, the station was visited by three crews. This document contains excerpts from all three crews to visit the station. In the first excerpt taken from Skylab 1/2 [first crew] Technical Debriefing from June 30, 1973, highlights crew observations of light flashes. The second excerpt taken from Skylab 1/3 Technical Crew Debriefing from October 4, 1973, highlights two observations—a satellite in similar orbit and another object with a “reddish hue to it.” The final excerpt taken from the Skylab 1/4 Technical Crew Debriefing from February 22, 1974, highlights an observation of flashing lights outside Skylab.\n•\tSkylab 2 crew observation: \no\tPage 23-20. [Science Pilot for Skylab 2, Joesph Kerwin] “We saw light flashes. I think all of us saw them. I saw them most often when I was in the sack at night with my eyes closed but awake naturally. They tended to wax and wane in frequency.”\n•\tSkylab 3 crew observations: \no\tPage 7-4. [Science Pilot for Skylab 3, Owen Garriott] “We saw that satellite about a week before splashdown. That was one of the most unusual things that we saw and I guess Jack [Lousma] noticed it looking out the window. This bright reddish object was out there and we tracked it for about 5 or 10 minutes. It was obviously a satellite in a very similar orbit to our own.”\no\tPage 20-1. [Science Pilot for Skylab 3, Owen Garriott] “Jack [Lousma] first noticed this rather large red star out the wardroom window. Upon close examination, it was much brighter than Jupiter or any of the other planets. It had a reddish hue to it, even though it was well above the horizon.”\n•\tSkylab 4 crew observation \no\tPage 7-8. [Commander for Skylab 4, Gerald P. Carr] “One other area of unusual events that we reported on the dump tapes was that on occasion we saw some lights flashing outside with very a definite motion relative to ours. We presumed that they were other pieces of Skylab, or possibly other satellites.”",
       "incidentDate": "1973",
@@ -10617,6 +12145,102 @@
       },
       "thumbnail": {
         "url": "www.war.gov/medialink/ufo/release_1/thumbnail/nasa-uap-d7-skylab-technical-crew-debriefing-1973.jpg"
+      }
+    },
+    {
+      "id": "dvids-1007870",
+      "type": "AUD",
+      "title": "NASA-UAP-D008, Apollo 12 Medical Debriefing - Tape 12, 1969",
+      "agency": "NASA",
+      "description": "During a medical debriefing of the crew of the Apollo 12 mission, Commander Charles “Pete” Conrad, Command Module Pilot Richard “Dick” F. Gordon, and Lunar Module Pilot Alan L. Bean describe their observations of instances of light flashes or “streaks of lights.” The astronauts each reported that these experiences occurred in the dark as they tried to sleep.\nThe NASA medical team considered whether similar phenomena reported by Apollo 11 Lunar Module Pilot Buzz Aldrin had been attributable to exposure of the retina by cosmic rays. NASA later determined that the phenomena reported by the Apollo 12 flight crew were internal to the astronauts’ vision rather than external light sources.",
+      "incidentDate": "1969",
+      "incidentLocation": "Texas",
+      "releaseDate": "5/22/26",
+      "release": "release_2",
+      "redacted": false,
+      "asset": {
+        "url": "d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111721693/DOD_111721693.mp4"
+      },
+      "thumbnail": {
+        "url": "d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007870/DOD_111721693.0000001/720w_q95.jpg"
+      },
+      "dvidsId": "1007870",
+      "dvids": {
+        "id": "video:1007870",
+        "title": "NASA-UAP-D008, Apollo 12 Medical Debriefing - Tape 12, 1969",
+        "description": "During a medical debriefing of the crew of the Apollo 12 mission, Commander Charles “Pete” Conrad, Command Module Pilot Richard “Dick” F. Gordon, and Lunar Module Pilot Alan L. Bean describe their observations of instances of light flashes or “streaks of lights.” The astronauts each reported that these experiences occurred in the dark as they tried to sleep.\r\nThe NASA medical team considered whether similar phenomena reported by Apollo 11 Lunar Module Pilot Buzz Aldrin had been attributable to exposure of the retina by cosmic rays. NASA later determined that the phenomena reported by the Apollo 12 flight crew were internal to the astronauts’ vision rather than external light sources.",
+        "date_published": "2026-05-22T07:30:20-04:00",
+        "date": "1969-12-31T00:00:00-05:00",
+        "duration": 470,
+        "files": [
+          {
+            "src": "d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111721693/DOD_111721693.mp4",
+            "width": 1920,
+            "height": 1080,
+            "size": 157246201,
+            "bitrate": 0,
+            "type": "video/mp4"
+          },
+          {
+            "src": "d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111721693/DOD_111721693-1920x1080-9000k.mp4",
+            "width": 1920,
+            "height": 1080,
+            "size": 158294418,
+            "bitrate": 0,
+            "type": "video/mp4"
+          },
+          {
+            "src": "d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111721693/DOD_111721693-1920x1080-6000k.mp4",
+            "width": 1920,
+            "height": 1080,
+            "size": 126924337,
+            "bitrate": 0,
+            "type": "video/mp4"
+          },
+          {
+            "src": "d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111721693/DOD_111721693-1280x720-3000k.mp4",
+            "width": 1280,
+            "height": 720,
+            "size": 85418965,
+            "bitrate": 0,
+            "type": "video/mp4"
+          },
+          {
+            "src": "d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111721693/DOD_111721693-1024x576-2000k.mp4",
+            "width": 1024,
+            "height": 576,
+            "size": 61225240,
+            "bitrate": 0,
+            "type": "video/mp4"
+          },
+          {
+            "src": "d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111721693/DOD_111721693-512x288-1000k.mp4",
+            "width": 512,
+            "height": 288,
+            "size": 32244524,
+            "bitrate": 0,
+            "type": "video/mp4"
+          },
+          {
+            "src": "d34w7g4gy10iej.cloudfront.net/video/2605/DOD_111721693/DOD_111721693-256x144-1000k.mp4",
+            "width": 256,
+            "height": 144,
+            "size": 15127966,
+            "bitrate": 0,
+            "type": "video/mp4"
+          }
+        ],
+        "thumbnail": {
+          "url": "d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007870/DOD_111721693.0000001/720w_q95.jpg",
+          "width": 720,
+          "height": 0
+        },
+        "image": "d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2605/1007870/DOD_111721693.0000001/2000w_q95.jpg",
+        "hls_url": "https://api.dvidshub.net/hls/video/1007870.m3u8?api_key=key-68bb60d16b35e",
+        "closed_captions": {
+          "srt": "https://api.dvidshub.net/closed-captions/get?asset_id=video:1007870&format=srt&api_key=key-68bb60d16b35e",
+          "webvtt": "https://api.dvidshub.net/closed-captions/get?asset_id=video:1007870&format=webvtt&api_key=key-68bb60d16b35e"
+        }
       }
     },
     {
@@ -11196,6 +12820,454 @@
       }
     },
     {
+      "id": "pdf-nasa-uap-d015-astronaut-scientific-debriefings-1962-1963",
+      "type": "PDF",
+      "title": "NASA-UAP-D015, Astronaut Scientific Debriefings, 1962-1963",
+      "agency": "NASA",
+      "description": "This file contains memoranda, correspondence, reports, and other materials relating to contemporary scientific interest in investigating the nature of luminous phenomena reported by astronauts John Glenn and Walter Schirra during spaceflight. This collection includes transcripts from NASA interviews and debriefings with both astronauts regarding those observations. It also contains details relating to scientific observations of atmospheric phenomena, including brief descriptions of luminous particles, experiences while aboard spacecraft, and circa 1955 theoretical analysis of meteoric particles entering the atmosphere. Pages 34-35, 55-56, 57-63, 64-113, and 122-127 feature content relevant to the PURSUE initiative.",
+      "incidentDate": "1962-1963",
+      "incidentLocation": "",
+      "releaseDate": "6/12/26",
+      "release": "release_3",
+      "redacted": false,
+      "imageAlt": "Folder with handwriting.",
+      "imageVirin": "260508-O-D0360-1120",
+      "asset": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/documents/NASA-UAP-D015_Astronaut-Scientific-Debriefings_1962-1963.pdf"
+      },
+      "thumbnail": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/thumbnails/NASA-UAP-D015_Astronaut-Scientific-Debriefings_1962-1963.jpg"
+      }
+    },
+    {
+      "id": "pdf-nasa-uap-d016-preliminary-gemini-4-crew-debriefing-part-i-1965",
+      "type": "PDF",
+      "title": "NASA-UAP-D016, Preliminary Gemini 4 Crew Debriefing, Part I, 1965",
+      "agency": "NASA",
+      "description": "This document is a preliminary transcript (Part I) derived from voice recordings of the Gemini 4 flight crew debriefing taken aboard the recovery ship, USS Wasp, on June 9, 1965. Astronaut Ed White recounts seeing “sparkles” during the flight.",
+      "incidentDate": "6/9/65",
+      "incidentLocation": "North Atlantic Ocean",
+      "releaseDate": "6/12/26",
+      "release": "release_3",
+      "redacted": false,
+      "imageAlt": "Document titled \"GT-4 FLIGHT CREW DEBRIEFING TRANSCRIPT PART I\".",
+      "imageVirin": "260508-O-D0360-1121",
+      "asset": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/documents/NASA-UAP-D016_Preliminary-Gemini-4-Crew-Debriefing_Part1_1965.pdf"
+      },
+      "thumbnail": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/thumbnails/NASA-UAP-D016_Preliminary-Gemini-4-Crew-Debriefing_Part1_1965.jpg"
+      }
+    },
+    {
+      "id": "pdf-nasa-uap-d017-preliminary-gemini-4-crew-debriefing-part-ii-1965",
+      "type": "PDF",
+      "title": "NASA-UAP-D017, Preliminary Gemini 4 Crew Debriefing, Part II, 1965",
+      "agency": "NASA",
+      "description": "This document is a preliminary transcript (Part II) derived from voice recordings of the Gemini 4 flight crew debriefing taken aboard the recovery ship, USS Wasp, on June 9, 1965. Part II of this document contains the “Visual Sightings” section of the debriefing (pages 196-224), where astronauts James McDivitt and Edward White describe their observations while aboard the spacecraft.",
+      "incidentDate": "6/9/65",
+      "incidentLocation": "North Atlantic Ocean",
+      "releaseDate": "6/12/26",
+      "release": "release_3",
+      "redacted": false,
+      "imageAlt": "Document titled \"GT-4 FLIGHT CREW DEBRIEFING TRANSCRIPT PART II\".",
+      "imageVirin": "260508-O-D0360-1122",
+      "asset": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/documents/NASA-UAP-D017_Preliminary-Gemini-4-Crew-Debriefing_Part2_1965.pdf"
+      },
+      "thumbnail": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/thumbnails/NASA-UAP-D017_Preliminary-Gemini-4-Crew-Debriefing_Part2_1965.jpg"
+      }
+    },
+    {
+      "id": "pdf-nasa-uap-d018-gemini-4-experiment-debriefing-1967",
+      "type": "PDF",
+      "title": "NASA-UAP-D018, Gemini 4 Experiment Debriefing, 1967",
+      "agency": "NASA",
+      "description": "Gemini IV was the second crewed mission of the Gemini series. Astronauts James McDivitt and Edward White successfully completed the four-day flight between June 3 and June 7, 1965. The mission included the first American spacewalk. This collection of documents contains a transcription of the astronauts recounting their observations of bright particles outside the spacecraft, dated circa June 25, 1967, on pages 78-81, and page 101.",
+      "incidentDate": "June 3-7, 1965",
+      "incidentLocation": "Low Earth Orbit",
+      "releaseDate": "6/12/26",
+      "release": "release_3",
+      "redacted": false,
+      "imageAlt": "Routing slip with notes about Gemini 4.",
+      "imageVirin": "260508-O-D0360-1123",
+      "asset": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/documents/NASA-UAP-D018_Gemini-4_Experiment-Debriefing_1967.pdf"
+      },
+      "thumbnail": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/thumbnails/NASA-UAP-D018_Gemini-4_Experiment-Debriefing_1967.jpg"
+      }
+    },
+    {
+      "id": "pdf-nasa-uap-d019-gemini-5-technical-debriefing-part-i-1965",
+      "type": "PDF",
+      "title": "NASA-UAP-D019, Gemini 5 Technical Debriefing, Part I, 1965",
+      "agency": "NASA",
+      "description": "This document is a preliminary transcript (Part I) derived from voice recordings of the Gemini 5 flight crew technical debriefing. NASA conducted this debriefing between August 30, 1965, and September 2, 1965, at the Crew Quarters, Cape Kennedy, Florida.",
+      "incidentDate": "August 2 - September 2, 1965",
+      "incidentLocation": "Cape Kennedy, Florida",
+      "releaseDate": "6/12/26",
+      "release": "release_3",
+      "redacted": false,
+      "imageAlt": "Document titled \"GEMINI V TECHNICAL DEBRIEFING Part 1\".",
+      "imageVirin": "260508-O-D0360-1124",
+      "asset": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/documents/NASA-UAP-D019_Gemini-5-Technical-Debriefing_Part1_1965.pdf"
+      },
+      "thumbnail": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/thumbnails/NASA-UAP-D019_Gemini-5-Technical-Debriefing_Part1_1965.jpg"
+      }
+    },
+    {
+      "id": "pdf-nasa-uap-d020-gemini-5-technical-debriefing-part-ii-1965",
+      "type": "PDF",
+      "title": "NASA-UAP-D020, Gemini 5 Technical Debriefing, Part II, 1965",
+      "agency": "NASA",
+      "description": "This document is a preliminary transcript (Part II) derived from voice recordings of the Gemini 5 flight crew technical debriefing. NASA conducted this debriefing between August 30, 1965, and September 2, 1965, at the Crew Quarters, Cape Kennedy, Florida. Astronauts L. Gordon Cooper and Charles “Pete” Conrad described observing debris and “snow” and “all sorts of glittering pieces of this, that and the other thing” in the “Visual Sightings” section of the document (pages 157-220).",
+      "incidentDate": "August 30 - September 2, 1965",
+      "incidentLocation": "Cape Kennedy, Florida",
+      "releaseDate": "6/12/26",
+      "release": "release_3",
+      "redacted": false,
+      "imageAlt": "Document titled \"GEMINI V Technical Debriefing Part II\".",
+      "imageVirin": "260508-O-D0360-1125",
+      "asset": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/documents/NASA-UAP-D020_Gemini-5-Technical-Debriefing_Part2_1965.pdf"
+      },
+      "thumbnail": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/thumbnails/NASA-UAP-D020_Gemini-5-Technical-Debriefing_Part2_1965.jpg"
+      }
+    },
+    {
+      "id": "pdf-nasa-uap-d021-gemini-7-technical-debriefing-1965",
+      "type": "PDF",
+      "title": "NASA-UAP-D021, Gemini 7 Technical Debriefing, 1965",
+      "agency": "NASA",
+      "description": "This document is a preliminary transcript derived from voice recordings of the Gemini 7 flight crew debriefing conducted December 19-21, 1965, at the Crew Quarters, Cape Kennedy, Florida. Lights and flashes are mentioned and there is discussion about having proper illumination for vehicle docking. Borman and Lovell discuss celestial and terrestrial observational anomalies and note sightings of Mercury, meteors, aurora, and lightning. They also discuss not being able to see any stars once the Sun comes up.",
+      "incidentDate": "December 19-21, 1965",
+      "incidentLocation": "Cape Kennedy, Florida",
+      "releaseDate": "6/12/26",
+      "release": "release_3",
+      "redacted": false,
+      "imageAlt": "Document titled \"GEMINI VII TECHNICAL DEBRIEFING\".",
+      "imageVirin": "260508-O-D0360-1126",
+      "asset": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/documents/NASA-UAP-D021_Gemini-7-Technical-Debriefing_1965.pdf"
+      },
+      "thumbnail": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/thumbnails/NASA-UAP-D021_Gemini-7-Technical-Debriefing_1965.jpg"
+      }
+    },
+    {
+      "id": "pdf-nasa-uap-d022-gemini-9-debriefing-1966",
+      "type": "PDF",
+      "title": "NASA-UAP-D022, Gemini 9 Debriefing, 1966",
+      "agency": "NASA",
+      "description": "Gemini IX (renamed Gemini IX-A) was the seventh crewed flight of the Gemini series, launched on June 3, 1966. The mission’s primary objectives included a spacewalk and multiple scientific and medical experiments. This document, dated June 16, 1966, is a transcript of a NASA debriefing of astronauts Thomas Stafford and Eugene Cernan. Pages 2-5 of this document contain the astronauts’ accounts of their observations of “flashing lights” and “sparkles” during the mission.",
+      "incidentDate": "June 3-6, 1966",
+      "incidentLocation": "Low Earth Orbit",
+      "releaseDate": "6/12/26",
+      "release": "release_3",
+      "redacted": false,
+      "imageAlt": "Routing slip with notes about Gemini IX.",
+      "imageVirin": "260508-O-D0360-1127",
+      "asset": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/documents/NASA-UAP-D022_Gemini-9-Debriefing_1966.pdf"
+      },
+      "thumbnail": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/thumbnails/NASA-UAP-D022_Gemini-9-Debriefing_1966.jpg"
+      }
+    },
+    {
+      "id": "dvids-1010337",
+      "type": "AUD",
+      "title": "NASA-UAP-D023, Interview Excerpt with Astronaut Gordon Cooper, 1962",
+      "agency": "NASA",
+      "description": "In November 1962, journalist Walter Cronkite interviewed astronaut Gordon Cooper. In this excerpt from that interview, Cronkite asks Cooper about his views regarding the nature of unidentified flying objects, having previously expressed an interest in the subject. Cooper opines that “a large number of exceptionally well-qualified people have seen objects” without a “logical explanation” and speculates on the existence of other planets with “a livable atmosphere” and that maybe there are “some type of human life” out there. Interview was conducted in November 1962.",
+      "incidentDate": "November, 1962",
+      "incidentLocation": "",
+      "releaseDate": "6/12/26",
+      "release": "release_3",
+      "redacted": false,
+      "asset": {
+        "url": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764959/DOD_111764959.mp4"
+      },
+      "thumbnail": {
+        "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2606/1010337/DOD_111764959.0000001/122x92_q95.jpg"
+      },
+      "dvidsId": "1010337",
+      "dvids": {
+        "id": "video:1010337",
+        "title": "NASA-UAP-D023, Interview Excerpt with Astronaut Gordon Cooper, 1962",
+        "description": "In November 1962, journalist Walter Cronkite interviewed astronaut Gordon Cooper. In this excerpt from that interview, Cronkite asks Cooper about his views regarding the nature of unidentified flying objects, having previously expressed an interest in the subject. Cooper opines that “a large number of exceptionally well-qualified people have seen objects” without a “logical explanation” and speculates on the existence of other planets with “a livable atmosphere” and that maybe there are “some type of human life” out there. Interview was conducted in November 1962.",
+        "date_published": "2026-06-11T08:36:41-04:00",
+        "date": "1962-11-01T00:00:00-05:00",
+        "duration": 123,
+        "files": [
+          {
+            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764959/DOD_111764959.mp4",
+            "width": 1920,
+            "height": 1080,
+            "size": 71480976,
+            "bitrate": 0,
+            "type": "video/mp4"
+          },
+          {
+            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764959/DOD_111764959-1920x1080-9000k.mp4",
+            "width": 1920,
+            "height": 1080,
+            "size": 72024798,
+            "bitrate": 0,
+            "type": "video/mp4"
+          },
+          {
+            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764959/DOD_111764959-1920x1080-6000k.mp4",
+            "width": 1920,
+            "height": 1080,
+            "size": 56587428,
+            "bitrate": 0,
+            "type": "video/mp4"
+          },
+          {
+            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764959/DOD_111764959-1280x720-3000k.mp4",
+            "width": 1280,
+            "height": 720,
+            "size": 36024156,
+            "bitrate": 0,
+            "type": "video/mp4"
+          },
+          {
+            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764959/DOD_111764959-1024x576-2000k.mp4",
+            "width": 1024,
+            "height": 576,
+            "size": 26342833,
+            "bitrate": 0,
+            "type": "video/mp4"
+          },
+          {
+            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764959/DOD_111764959-512x288-1000k.mp4",
+            "width": 512,
+            "height": 288,
+            "size": 14446989,
+            "bitrate": 0,
+            "type": "video/mp4"
+          },
+          {
+            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764959/DOD_111764959-256x144-1000k.mp4",
+            "width": 256,
+            "height": 144,
+            "size": 7820226,
+            "bitrate": 0,
+            "type": "video/mp4"
+          }
+        ],
+        "thumbnail": {
+          "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2606/1010337/DOD_111764959.0000001/122x92_q95.jpg",
+          "width": 122,
+          "height": 92
+        },
+        "image": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2606/1010337/DOD_111764959.0000001/2000w_q95.jpg",
+        "hls_url": "https://api.dvidshub.net/hls/video/1010337.m3u8?api_key=key-68bb60d16b35e",
+        "closed_captions": {
+          "srt": "https://api.dvidshub.net/closed-captions/get?asset_id=video:1010337&format=srt&api_key=key-68bb60d16b35e",
+          "webvtt": "https://api.dvidshub.net/closed-captions/get?asset_id=video:1010337&format=webvtt&api_key=key-68bb60d16b35e"
+        }
+      }
+    },
+    {
+      "id": "dvids-1010319",
+      "type": "AUD",
+      "title": "NASA-UAP-D024, “Apollo 16 Scientific Debriefing”",
+      "agency": "NASA",
+      "description": "This debriefing includes presentations from principal investigators of various Apollo experiments. The principal investigators describe preliminary results of their work to educate the Apollo crews about what they’ve obtained from Apollo 16 to help prepare for Apollo 17. They also describe anomalies, such as a “flash” that was observed that had not yet been reported. The flash is mentioned beginning at 25:15.",
+      "incidentDate": "",
+      "incidentLocation": "Houston, Texas",
+      "releaseDate": "6/12/26",
+      "release": "release_3",
+      "redacted": false,
+      "asset": {
+        "url": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764796/DOD_111764796.mp4"
+      },
+      "thumbnail": {
+        "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2606/1010319/DOD_111764796.0000001/122x92_q95.jpg"
+      },
+      "dvidsId": "1010319",
+      "dvids": {
+        "id": "video:1010319",
+        "title": "NASA-UAP-D024, “Apollo 16 Scientific Debriefing”",
+        "description": "This debriefing includes presentations from principal investigators of various Apollo experiments. The principal investigators describe preliminary results of their work to educate the Apollo crews about what they’ve obtained from Apollo 16 to help prepare for Apollo 17. They also describe anomalies, such as a “flash” that was observed that had not yet been reported. The flash is mentioned beginning at 25:15.",
+        "date_published": "2026-06-12T07:00:18-04:00",
+        "date": "1972-05-01T00:00:00-04:00",
+        "duration": 5792,
+        "files": [
+          {
+            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764796/DOD_111764796.mp4",
+            "width": 1920,
+            "height": 1080,
+            "size": 3203453083,
+            "bitrate": 0,
+            "type": "video/mp4"
+          },
+          {
+            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764796/DOD_111764796-1920x1080-9000k.mp4",
+            "width": 1920,
+            "height": 1080,
+            "size": 3212901468,
+            "bitrate": 0,
+            "type": "video/mp4"
+          },
+          {
+            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764796/DOD_111764796-1920x1080-6000k.mp4",
+            "width": 1920,
+            "height": 1080,
+            "size": 2555763376,
+            "bitrate": 0,
+            "type": "video/mp4"
+          },
+          {
+            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764796/DOD_111764796-1280x720-3000k.mp4",
+            "width": 1280,
+            "height": 720,
+            "size": 1626126948,
+            "bitrate": 0,
+            "type": "video/mp4"
+          },
+          {
+            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764796/DOD_111764796-1024x576-2000k.mp4",
+            "width": 1024,
+            "height": 576,
+            "size": 1204605913,
+            "bitrate": 0,
+            "type": "video/mp4"
+          },
+          {
+            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764796/DOD_111764796-512x288-1000k.mp4",
+            "width": 512,
+            "height": 288,
+            "size": 658961577,
+            "bitrate": 0,
+            "type": "video/mp4"
+          },
+          {
+            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764796/DOD_111764796-256x144-1000k.mp4",
+            "width": 256,
+            "height": 144,
+            "size": 355052151,
+            "bitrate": 0,
+            "type": "video/mp4"
+          }
+        ],
+        "thumbnail": {
+          "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2606/1010319/DOD_111764796.0000001/122x92_q95.jpg",
+          "width": 122,
+          "height": 92
+        },
+        "image": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2606/1010319/DOD_111764796.0000001/2000w_q95.jpg",
+        "hls_url": "https://api.dvidshub.net/hls/video/1010319.m3u8?api_key=key-68bb60d16b35e",
+        "closed_captions": {
+          "srt": "https://api.dvidshub.net/closed-captions/get?asset_id=video:1010319&format=srt&api_key=key-68bb60d16b35e",
+          "webvtt": "https://api.dvidshub.net/closed-captions/get?asset_id=video:1010319&format=webvtt&api_key=key-68bb60d16b35e"
+        }
+      }
+    },
+    {
+      "id": "dvids-1010336",
+      "type": "AUD",
+      "title": "NASA-UAP-D025, “Apollo 16 Scientific Debriefing”",
+      "agency": "NASA",
+      "description": "At 32:41, the speaker makes an off-handed comment, “Could be an alien starbase or something, I don’t know” when discussing correlations between experimental data sets.",
+      "incidentDate": "",
+      "incidentLocation": "Houston, Texas",
+      "releaseDate": "6/12/26",
+      "release": "release_3",
+      "redacted": false,
+      "asset": {
+        "url": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764902/DOD_111764902.mp4"
+      },
+      "thumbnail": {
+        "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2606/1010336/DOD_111764902.0000001/122x92_q95.jpg"
+      },
+      "dvidsId": "1010336",
+      "dvids": {
+        "id": "video:1010336",
+        "title": "NASA-UAP-D025, “Apollo 16 Scientific Debriefing”",
+        "description": "At 32:41, the speaker makes an off-handed comment, “Could be an alien starbase or something, I don’t know” when discussing correlations between experimental data sets.",
+        "date_published": "2026-06-11T08:37:30-04:00",
+        "date": "1972-05-01T00:00:00-04:00",
+        "duration": 3341,
+        "files": [
+          {
+            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764902/DOD_111764902.mp4",
+            "width": 1920,
+            "height": 1080,
+            "size": 1276092482,
+            "bitrate": 0,
+            "type": "video/mp4"
+          },
+          {
+            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764902/DOD_111764902-1920x1080-9000k.mp4",
+            "width": 1920,
+            "height": 1080,
+            "size": 1281077153,
+            "bitrate": 0,
+            "type": "video/mp4"
+          },
+          {
+            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764902/DOD_111764902-1920x1080-6000k.mp4",
+            "width": 1920,
+            "height": 1080,
+            "size": 1037385093,
+            "bitrate": 0,
+            "type": "video/mp4"
+          },
+          {
+            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764902/DOD_111764902-1280x720-3000k.mp4",
+            "width": 1280,
+            "height": 720,
+            "size": 696073050,
+            "bitrate": 0,
+            "type": "video/mp4"
+          },
+          {
+            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764902/DOD_111764902-1024x576-2000k.mp4",
+            "width": 1024,
+            "height": 576,
+            "size": 552617533,
+            "bitrate": 0,
+            "type": "video/mp4"
+          },
+          {
+            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764902/DOD_111764902-512x288-1000k.mp4",
+            "width": 512,
+            "height": 288,
+            "size": 300061011,
+            "bitrate": 0,
+            "type": "video/mp4"
+          },
+          {
+            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764902/DOD_111764902-256x144-1000k.mp4",
+            "width": 256,
+            "height": 144,
+            "size": 153456125,
+            "bitrate": 0,
+            "type": "video/mp4"
+          }
+        ],
+        "thumbnail": {
+          "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2606/1010336/DOD_111764902.0000001/122x92_q95.jpg",
+          "width": 122,
+          "height": 92
+        },
+        "image": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2606/1010336/DOD_111764902.0000001/2000w_q95.jpg",
+        "hls_url": "https://api.dvidshub.net/hls/video/1010336.m3u8?api_key=key-68bb60d16b35e",
+        "closed_captions": {
+          "srt": "https://api.dvidshub.net/closed-captions/get?asset_id=video:1010336&format=srt&api_key=key-68bb60d16b35e",
+          "webvtt": "https://api.dvidshub.net/closed-captions/get?asset_id=video:1010336&format=webvtt&api_key=key-68bb60d16b35e"
+        }
+      }
+    },
+    {
       "id": "img-nasa-uap-vm001-apollo-12-1969",
       "type": "IMG",
       "title": "NASA-UAP-VM001, Apollo 12, 1969",
@@ -11316,6 +13388,26 @@
       }
     },
     {
+      "id": "pdf-odni-uap-d001-usper-narrative-senior-usic-official",
+      "type": "PDF",
+      "title": "ODNI-UAP-D001, USPER Narrative, Senior USIC Official",
+      "agency": "Office of the Director of National Intelligence",
+      "description": "This document is a first-hand account written by a currently serving (May 2026) senior U.S. intelligence official. The official was part of a team investigating reports of unusual noises and sightings of unidentified anomalous phenomena in and near a sensitive U.S. military facility in late 2025. From the official’s vantage point as a helicopter passenger, the official recounts encountering unidentified “glowing orbs” both at close range and at a distance. The account describes an apparent high-speed object moving low to the ground, which appeared to split in two and accelerate away in two different directions. It also describes numerous higher-altitude “orbs,” some of which the official assessed to be in close proximity to the helicopter. This account is accompanied by infrared imagery taken during the same exercise by other federal officials from the ground, originally released on war.gov/UFO on May 8, 2026.\n\nMay 26, 2026, correction: The document originally posted to the PURSUE collection of UAP-related records on May 22, 2026, under the name “ODNI-UAP-D001, USPER Narrative, Senior USIC Official,” contained a typographic error in the second paragraph, describing a helicopter flight profile as “map-of-the-earth.” The correct military aviation term for this profile is “nap-of-the-earth.” This document has been updated to reflect this correction.",
+      "incidentDate": "2025",
+      "incidentLocation": "Western United States",
+      "releaseDate": "5/22/26",
+      "release": "release_2",
+      "redacted": false,
+      "imageAlt": "A first-hand narrative describing a UAP incident.",
+      "imageVirin": "260508-O-D0360-1074",
+      "asset": {
+        "url": "www.war.gov/medialink/ufo/052226/release_02/documents/ODNI-UAP-D001_USPER_Narrative_Senior_USIC.pdf"
+      },
+      "thumbnail": {
+        "url": "www.war.gov/medialink/ufo/052226/release_02/thumbnails/ODNI-UAP-D001_USPER_Narrative_Senior_USIC.jpg"
+      }
+    },
+    {
       "id": "pdf-state-department-uap-cable-001-papua-new-guinea-january-28-1985",
       "type": "PDF",
       "title": "State Department UAP Cable 001, Papua New Guinea, January 28, 1985",
@@ -11413,6 +13505,26 @@
       },
       "thumbnail": {
         "url": "www.war.gov/medialink/ufo/release_1/thumbnail/059uap00013.jpg"
+      }
+    },
+    {
+      "id": "pdf-usg-uap-d001-congressional-white-house-ufo-related-constituent-correspondence-19",
+      "type": "PDF",
+      "title": "USG-UAP-D001, Congressional, White House, UFO-related Constituent Correspondence, 1998",
+      "agency": "U.S. Government",
+      "description": "This collection of documents, primarily from 1998, contains draft and final correspondence from the White House and the offices of members of Congress responding to constituent inquiries about Unidentified Flying Objects, or “UFOs.” These inquiries cover a diverse range of topics, including alleged UFO sightings by NASA astronauts, questions regarding the authenticity of photos collected during U.S. missions to Mars, alleged improper withholding of information by the U.S. Government, questions regarding the appropriateness of “UFO-related” governmental spending, and calls for congressional hearings regarding the nature and existence of “UFOs.” The official responses consistently state that, circa 1998, the U.S. Government is not aware of evidence supporting the existence of extraterrestrial technology, and that NASA does not actively investigate “UFOs.” The collection includes references to materials of both confirmed and unconfirmed authenticity, as provided by constituents, as well as references to historical, scientific literature addressing specific “UFO” sighting claims.",
+      "incidentDate": "1998",
+      "incidentLocation": "",
+      "releaseDate": "6/12/26",
+      "release": "release_3",
+      "redacted": true,
+      "imageAlt": "Folder with label \"Aeronautics:UFO\".",
+      "imageVirin": "260508-O-D0360-1128",
+      "asset": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/documents/USG-UAP-D001_Congress-WhiteHouse-UFO-Correspondence_1998.pdf"
+      },
+      "thumbnail": {
+        "url": "www.war.gov/medialink/ufo/061226/release_03/thumbnails/USG-UAP-D001_Congress-WhiteHouse-UFO-Correspondence_1998.jpg"
       }
     },
     {

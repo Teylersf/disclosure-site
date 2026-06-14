@@ -127,7 +127,10 @@ async function main() {
     if (!title) continue;
     const type = classifyType(row["Type"] ?? "");
     const releaseDate = (row["Release Date"] ?? "").trim();
-    const release = releaseDate === "5/22/26" ? "release_2" : "release_1";
+    const release =
+      releaseDate === "6/12/26" ? "release_3" :
+      releaseDate === "5/22/26" ? "release_2" :
+      "release_1";
     const dvidsId = (row["DVIDS Video ID"] ?? "").trim() || undefined;
     const assetKey = csvUrlToKey(row["PDF | Image Link"]);
     const thumbKey = csvUrlToKey(row["Modal Image"]);

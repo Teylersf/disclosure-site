@@ -6,7 +6,7 @@ import { absoluteUrl } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Search the PURSUE 2026 UAP archive",
   description:
-    "Full-text search across all 222 declassified records from the U.S. Department of War PURSUE 2026 UAP file release. Filter by type (PDF, video, audio, image), agency, release date, and location.",
+    "Full-text search across all 294 declassified records from the U.S. Department of War PURSUE 2026 UAP file releases (May 8, May 22, June 12). Filter by type (PDF, video, audio, image), agency, release date, and location.",
   keywords: [
     "PURSUE 2026 search",
     "search declassified UFO files",
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/search" },
   openGraph: {
     title: "Search the PURSUE 2026 UAP archive",
-    description: "Full-text search across 222 declassified records.",
+    description: "Full-text search across 294 declassified records across three releases.",
     url: absoluteUrl("/search"),
   },
 };

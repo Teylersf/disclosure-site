@@ -2,6 +2,8 @@
 
 Source: offline mirror of `https://www.war.gov/UFO/` at `../www.war.gov/`, `../api.dvidshub.net/`, `../d34w7g4gy10iej.cloudfront.net/`, `../d1ldvf68ux039x.cloudfront.net/` (relative to this repo). Findings are things present in the released files / metadata that the official catalog UI does not surface. Every claim below is verifiable from files in the mirror — provenance paths and line numbers are included so the site can deep-link to evidence.
 
+**Current scope:** three releases — Release 1 (May 8, 2026, 158 records), Release 2 (May 22, 2026, 64 records), Release 3 (June 12, 2026, 72 records). Total 294 records. Findings 1-13 below cover R1+R2. Findings 14-22 cover R3. See "Tradecraft shift in Release 3" for a meta-finding about how the DoW changed their workflow between R2 and R3.
+
 ## How to use this doc
 
 Each finding has a stable `id` (use it as a slug/anchor), a one-line `claim`, full `evidence`, exact `sources`, and a `suggested_ui` block. The intended pattern is one canonical detail page per finding plus an index. Treat the catalog the site already has as the primary record set; treat these findings as a *secondary* "what they didn't tell you" layer that links *back* to the primary records.
@@ -227,6 +229,161 @@ Minor things in `../www.war.gov/UFO/index.html`:
 
 ---
 
+## RELEASE 3 (June 12, 2026) — Tier 1
+
+The third tranche centers on three things: a historic CIA Cold War UFO file dump (CIA-UAP-002 through CIA-UAP-019, 18 files), an FBI multi-witness "Northeastern Orb" cluster (FBI-UAP-D004 through D010 plus PR001-PR004), and a heavily-cross-referenced "Western US Event" cluster (DOW-UAP-D077 through D083, FBI-UAP-D014 through D023, FBI-UAP-PR005/PR006, ICA-UAP-D001). The metadata is *meaningfully cleaner* than Releases 1-2 — see Finding 22.
+
+### Finding 14 — `apollo16-alien-starbase-timecode`
+
+**Claim:** AARO's own DVIDS description of NASA-UAP-D025 — "Apollo 16 Scientific Debriefing" — points to a specific timestamp where an Apollo scientist on tape says "Could be an alien starbase or something, I don't know." The catalog UI shows the title but not the description; you have to dig into DVIDS JSON to see why this file was even pulled.
+
+**Evidence:** [api.dvidshub.net/asset/video-1010336.json](../api.dvidshub.net/asset/video-1010336.json), `results.description`:
+
+> *"At 32:41, the speaker makes an off-handed comment, 'Could be an alien starbase or something, I don't know' when discussing correlations between experimental data sets."*
+
+That's literally the entire reason this file was declassified. The DVIDS record has no further context — no name of the speaker, no surrounding transcript, just the timecode pointer.
+
+**Sources:**
+- `../api.dvidshub.net/asset/video-1010336.json` (`results.description`)
+- Catalog row: `NASA-UAP-D025, "Apollo 16 Scientific Debriefing"` in `../www.war.gov/Portals/1/Interactive/2026/UFO/uap-data.csv`
+
+**Suggested UI:** dedicated detail page leading with the quote in pull-quote format, with an embedded audio player jumped to `?t=1961` (32:41). High share-quotient — this is the most viral-friendly item in any of the three releases.
+
+---
+
+### Finding 15 — `gordon-cooper-cronkite-1962`
+
+**Claim:** NASA-UAP-D023 is a previously-unsurfaced **1962 Walter Cronkite interview with astronaut Gordon Cooper** discussing his views on UFOs. The catalog only shows the title; DVIDS metadata reveals the context.
+
+**Evidence:** [api.dvidshub.net/asset/video-1010337.json](../api.dvidshub.net/asset/video-1010337.json), `results.description`:
+
+> *"In November 1962, journalist Walter Cronkite interviewed astronaut Gordon Cooper. In this excerpt from that interview, Cronkite asks Cooper about his views regarding the nature of unidentified flying objects, having previously expressed an interest in the subject. Cooper opines that 'a large number…'"*
+
+VIRIN: `621101-D-D0360-5375` confirms the November 1962 date. Cooper was Mercury 9 / Gemini 5 — and later well-known for being publicly open about UFOs.
+
+**Sources:**
+- `../api.dvidshub.net/asset/video-1010337.json`
+- Catalog: `NASA-UAP-D023, Interview Excerpt with Astronaut Gordon Cooper, 1962`
+
+**Suggested UI:** detail page paired with Finding 14 as "the two NASA audio items in Release 3." Background context is well-documented; this gives readers historical depth without speculation.
+
+---
+
+### Finding 16 — `colorado-springs-potato`
+
+**Claim:** AARO's own analysis of the 2022 Colorado Springs UAP incident (ICA-UAP-D001) characterises the observed object as resembling **"an angular, non-symmetrical potato"** and resolves it (with low confidence) as **sunlight backscattering off snow** on the mountains illuminating the underside of low-altitude clouds. This is one of the very few cases in any of the three releases where AARO offers an actual explanation — most are "unresolved."
+
+**Evidence:**
+- Slideshow caption (live page): *"An AARO IC partner assessed, with low confidence, that the reported phenomenon, which observers characterized as resembling an 'angular, non-symmetrical potato,' was attributable to sunlight backscattering, where sunlight reflecting from mountain snow cover illuminated the underside of low-altitude clouds."*
+- Source carousel button in `../www.war.gov/UFO/index.html` (the live release-3 carousel entry for ICA-UAP-D001)
+- Companion documents: FBI-UAP-D002 (FD-1057 witness form) and FBI-UAP-D003 (digital rendering of the witness's description). Three documents about the same incident.
+
+**Suggested UI:** "AARO's verdict on Colorado Springs" detail page. Show the three companion docs side-by-side. The "potato" line is the headline.
+
+---
+
+### Finding 17 — `western-us-event-cluster`
+
+**Claim:** The single largest cluster of records in Release 3 — 21 documents — all describe one event called the "Western US Event," reportedly involving sensitive national security infrastructure and a federal employee witness. Until you cross-index, the catalog presents these as 21 separate entries; structurally they're one incident with seven first-hand narratives and twelve commissioned digital renderings of two separate incidents within the event.
+
+**Evidence (cluster composition):**
+- **Mission analysis:** DOW-UAP-D077 "Unresolved Case Analysis Update", DOW-UAP-D078 "Notional Map"
+- **Narratives 1-5:** DoW-UAP-D079 through D083 (`Narrative-1` through `Narrative-5_Western-US-Event`)
+- **FBI digital renderings of Incident 1:** FBI-UAP-D014 (1-1), D015 (1-2), D021 (1-3)
+- **FBI digital renderings of Incident 2:** FBI-UAP-D016 (2-1) through D023 (2-7) — seven sub-images
+- **FBI video reconstructions:** FBI-UAP-PR005 and FBI-UAP-PR006 (`Digital Recreation, Narrative Statement 3-1` and `3-2`) — see [api.dvidshub.net/asset/video-1010272.json](../api.dvidshub.net/asset/video-1010272.json) and [video-1010276.json](../api.dvidshub.net/asset/video-1010276.json) — described as *"artistic interpretation of a reported incident near a sensitive national security site in the western United States involving unidentified anomalous phenomena (UAP) over a period of two days in 2023…based upon a first-hand description provided by a federal…"*
+- All paths under `../www.war.gov/medialink/ufo/061226/release_03/documents/`
+
+**Cross-release callback:** Release 1 also included a file called `western_us_event_slides_5.08.2026.pdf` (in `../www.war.gov/medialink/ufo/release_1/`) — so the Western US Event was teased in Release 1's slide deck, then expanded in Release 3 with the actual underlying narratives and renderings.
+
+**Suggested UI:** "Western US Event" hub page — timeline of the two days, list of all 21+1 cross-release documents, embed of the two FBI digital recreation videos. This is the single most structurally significant content unit in the entire mirror; it deserves its own URL slug.
+
+---
+
+### Finding 18 — `kardashev-sakharov-on-ufos`
+
+**Claim:** Release 3 includes a CIA-archived **speculative paper jointly authored by Nikolai Kardashev** (creator of the Kardashev Scale of civilization energy use) **and Andrei Sakharov** (Soviet H-bomb physicist, 1975 Nobel Peace laureate) on the subject of UFOs.
+
+**Evidence:**
+- Catalog filename: `CIA-UAP-008_SPECULATIVE_PAPER_BY_N_KARDASHEV_AND_A_SAKHAROV.pdf`
+- File at `../www.war.gov/medialink/ufo/061226/release_03/documents/CIA-UAP-008_SPECULATIVE_PAPER_BY_N_KARDASHEV_AND_A_SAKHAROV.pdf`
+- Catalog `Agency: CIA`, `Release Date: 6/12/26`
+
+**Suggested UI:** detail page that explains who Kardashev and Sakharov are for readers unfamiliar (the names are why this matters). Cross-link to CIA-UAP-010 ("Report on Conversations with Soviet Scientists on Subject of Unidentified Flying Objects in the USSR") — same CIA Cold War Soviet-science-vs-UFO arc.
+
+---
+
+### Finding 19 — `cia-uap-003-u2-oxcart-720mb`
+
+**Claim:** The largest single PDF in any release is **CIA-UAP-003 — "The Central Intelligence Agency and Overhead Reconnaissance: The U-2 and OXCART Programs 1954-1974,"** at ~720 MB. This is the CIA's own internal history of the U-2 and SR-71 — historically significant because it's the document that admits many Cold War UFO sightings were actually U-2/A-12 overflights at altitudes other aircraft couldn't reach. Its inclusion under PURSUE is the official acknowledgement of that overlap.
+
+**Evidence:**
+- Catalog row: `CIA-UAP-003-THE_CENTRAL_INTELLIGENCE_AGENCY_AND_OVERHEAD_RECONNAISSANCE-THE_U-2_AND_OXCART_PROGRAMS_1954-1974.pdf`
+- File at `../www.war.gov/medialink/ufo/061226/release_03/documents/CIA-UAP-003-THE_CENTRAL_INTELLIGENCE_AGENCY_AND_OVERHEAD_RECONNAISSANCE-THE_U-2_AND_OXCART_PROGRAMS_1954-1974.pdf`
+- ≈ 720 MB on disk
+
+**Suggested UI:** "the largest file in the release" detail card. Don't embed — link to the cloudfront URL or a Linode mirror; the file is too large to inline. Briefly explain *why* the CIA itself reclassified this as a UAP document.
+
+---
+
+### Finding 20 — `harare-airport-zimbabwe-2008`
+
+**Claim:** Featured on the live carousel: **CIA-UAP-017** is "a never before released July 2008 report on a UFO sighting at the Harare International Airport" (Zimbabwe). The catalog title is the bland "Placement on High Alert Due to Perceived Aggressive Foreign Posturing" — the slideshow caption is what tells you it's a Zimbabwe airport UFO file.
+
+**Evidence:**
+- Carousel button in `../www.war.gov/UFO/index.html` (release-3 rotator, button index 0): `data-lightbox-sentence="A never before released July 2008 report on a UFO sighting at the Harare International Airport."`
+- File: `../www.war.gov/medialink/ufo/061226/release_03/documents/CIA-UAP-017_Placement_on_High_Alert_Due_to_Perceived_Aggressive_Foreign_Posturing.pdf`
+- Slideshow image: `../www.war.gov/Portals/1/Interactive/2026/UFO/061226/Rotator/CIA-UAP-017_Placement_on_High_Alert_Due_to_Perceived_Aggressive_Foreign_Posturing.jpg` with alt text "A document with routing information and the topic 'ZIMBABWE'."
+
+**Suggested UI:** detail page. The interesting frame here is the *gap* between the catalog title (innocuous bureaucratese) and the slideshow caption (specific airport + country + year). Without the caption, no one searching for "Harare UFO 2008" would find this file.
+
+---
+
+### Finding 21 — `cia-uap-005-literal-space-in-path`
+
+**Claim:** The catalog's URL for CIA-UAP-005 contains a **literal space character** between two underscores: `CIA-UAP-005-German_scientists_ article_on_flying_discs.pdf`. Standard fetch tools that don't URL-encode spaces as `%20` get a 404. This is a manifest-side typo, not a file-content thing — but it makes the file harder to discover.
+
+**Evidence:** Live manifest [uap-data.csv](../www.war.gov/Portals/1/Interactive/2026/UFO/uap-data.csv) references `CIA-UAP-005-German_scientists_ article_on_flying_discs.pdf` (with the embedded space). Direct fetch tests show:
+- `…German_scientists_%20article_on_flying_discs.pdf` → **200 OK** (1,107,431 bytes)
+- `…German_scientists_article_on_flying_discs.pdf` (no space) → 404
+- `…German_Scientists_Article_on_Flying_Discs.pdf` (Title Case) → 404
+- The actual filename includes a literal space; only `%20`-encoded URLs resolve.
+
+**Sources:**
+- `../www.war.gov/Portals/1/Interactive/2026/UFO/uap-data.csv` (CIA-UAP-005 row)
+- `../www.war.gov/medialink/ufo/061226/release_03/documents/CIA-UAP-005-German_scientists_ article_on_flying_discs.pdf`
+
+**Suggested UI:** mention in the "minor errors in the official catalog" sidebar alongside Finding 7 (Skylab typo). Same pattern that affected Release 1's `18_100754_ general 1946-7_vol_2.pdf` — recurring filename hygiene issue.
+
+---
+
+### Finding 22 — `tradecraft-cleanup-in-release-3` *(meta-finding)*
+
+**Claim:** Compared to Releases 1-2, the Department of War scrubbed Release 3 metadata noticeably more carefully. None of the Tier-1 metadata leaks that defined Releases 1-2 (PDF title/location mismatches, named individuals on video credits, placeholder VIRINs, city-level locations, scanner-fingerprint variety) recur in Release 3.
+
+**Evidence — what changed:**
+
+| Indicator | Releases 1-2 | Release 3 |
+|---|---|---|
+| PDFs with embedded `/Title` that disagrees with catalog title | 35+ (incl. the D20 country/year swap, Cable 2 Tajikistan, D-series → PR-series relabels) | **0** |
+| Distinct PDF `/Creator` values (scanner/tool fingerprints) | 13 (HP 9100C, ScanSnap SV600, PaperStream 5.1, LuraDocument, Photoshop, Acrobat, PowerPoint, Word, PScript5.dll, PaperStream Capture, Aspose, PFU PDF Engine, macOS Quartz) | **3** (Microsoft Word, PaperStream ClickScan 1.4.0.3, empty) |
+| Distinct PDF `/Producer` values | 10 (incl. `macOS Version 26.4 Quartz PDFContext AppendMode 1.1`, `Aspose Pty Ltd.`, `Adobe Photoshop`, `PFUPDF Engine 1.3.10` + `1.3.80`) | **2** (Acrobat Paper Capture Plug-in, empty) |
+| Videos with city-level location (vs only country or "Undisclosed") | 1 of 85 (PR073 Columbus OH — see Finding 3) | **0 of 9** |
+| Videos with named credit (vs `"Courtesy"`) | 1 of 85 (Edward Pajak — Finding 3) | **0 of 9** |
+| Videos with non-AARO VIRIN unit code (vs `D0360`) | 1 of 85 (PR073's `XX999` placeholder — Finding 3) | **0 of 9** |
+| Orphan PDFs on disk not referenced by live manifest | several (D20 rename leak, bracketed-vs-unbracketed dupes, leading-space filenames) | **0** |
+
+**Caveats:**
+- Manifest-side typos still happen (CIA-UAP-005 literal-space path — Finding 21).
+- Catalog still occasionally hides interesting context in slideshow captions but not in titles (Harare 2008 — Finding 20).
+- Some structural cluster framing (the Western US Event spanning 21 documents) is still left for the reader to reconstruct — see Finding 17.
+
+**Sources:** comparison done by running `analyze_release3.py` (in `C:/Users/theri/AppData/Local/Temp/`) over Release 3 vs prior Tier-1 findings. Raw input: all 52 release-3 PDFs in `../www.war.gov/medialink/ufo/061226/release_03/documents/` and all 9 release-3 DVIDS JSONs in `../api.dvidshub.net/asset/video-1010{263,264,267,269,272,276,319,336,337}.json`.
+
+**Suggested UI:** dedicated page presented as a "what they fixed" report — frame it as the most interesting finding *about* the process, not about any one document. The interesting story here is that someone in the DoW publishing pipeline is paying attention to scrutiny. This finding only exists *because* the prior findings existed, which gives the site a credible reason to keep covering future releases.
+
+---
+
 ## Things I checked and ruled out
 
 So the site doesn't end up republishing these as "finds":
@@ -248,6 +405,10 @@ If the site agent wants to re-verify any claim before publishing, the relevant o
 - `pdf_meta2.py` — dumps unique `/Title`, `/Creator`, `/Producer`, `/Author` across all PDFs
 - `title_diff.py` — finds PDFs whose embedded title doesn't match the catalog title
 - `dvids_scan.py` and `dvids_dig.py` — DVIDS JSON aggregation
+- `analyze_release3.py` — release-3-scoped PDF metadata diff
+- `dvids_rel3.py` — release-3-scoped DVIDS analysis
+- `rel3_orphans2.py` — case-insensitive disk-vs-catalog reconciliation
+- `mirror_release3.mjs` — the fetcher used to download Release 3 (uses the same Chrome 131 header set as `disclosure-site/scripts/probe-release3.ts`)
 
 ## SEO notes for the agent
 
@@ -256,6 +417,13 @@ The high-intent search queries this content can win against are narrow and long-
 - "PURSUE UAP Columbus Ohio Edward Pajak"
 - "DOW-UAP D to PR relabel" / "PURSUE document crosswalk"
 - "war.gov UFO PDF metadata"
+- "Apollo 16 alien starbase 32:41" / "NASA-UAP-D025"
+- "Gordon Cooper Cronkite 1962 UFO interview" / "NASA-UAP-D023"
+- "Colorado Springs angular non-symmetrical potato AARO"
+- "Western US Event UAP narratives Western US"
+- "Kardashev Sakharov UFO CIA paper"
+- "CIA U-2 OXCART PURSUE UAP-003"
+- "Harare International Airport UFO 2008 CIA"
 
 Each finding should be its own indexable detail page with: distinctive `<title>`, unique meta description quoting the discrepancy, `<h1>` matching the slug, the underlying file linked with `rel="noopener"` and the file extension/size shown. Findings index page should set `<meta name="robots" content="index,follow">`. Don't fabricate dates — use the actual catalog `Release Date` from `uap-data.csv` for any "as of" timestamps.
 

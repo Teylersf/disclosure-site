@@ -336,6 +336,406 @@ Several PDFs have *only* the shelfmark as their embedded title — no UAP descri
       { path: "www.war.gov/Portals/1/Interactive/2026/UFO/uap-data.csv" },
     ],
   },
+  // ─────────────────────────────────────────────────────────────
+  //  Release 3 (June 12, 2026) findings
+  // ─────────────────────────────────────────────────────────────
+  {
+    id: "apollo16-alien-starbase-timecode",
+    tier: 1,
+    title: "AARO's own caption on a NASA tape: at 32:41, a scientist says \"Could be an alien starbase\"",
+    claim: "The All-domain Anomaly Resolution Office's official description of NASA-UAP-D025 — released on June 12 as part of PURSUE — points to a specific timestamp where an Apollo 16 scientist on tape says, off-handedly, \"Could be an alien starbase or something, I don't know.\" That line is literally the reason this audio file was declassified.",
+    significance: "The catalog UI shows you the bland title — \"Apollo 16 Scientific Debriefing\" — and nothing else. You only learn what's on the tape if you open the DVIDS metadata, which most readers never will. The quote is short, surprising, and from a presumably sober technical context (a NASA-internal debrief discussing experimental data correlations). It is the single most shareable line in any of the three PURSUE releases.",
+    evidence: `The NASA-UAP-D025 audio file ships with the public title **\`NASA-UAP-D025, "Apollo 16 Scientific Debriefing"\`**. That's all the catalog tells you. The corresponding DVIDS API record — fetched per-video by the live site to render each modal — adds one sentence of context:
+
+> *"At 32:41, the speaker makes an off-handed comment, **'Could be an alien starbase or something, I don't know'** when discussing correlations between experimental data sets."*
+
+That's the entire description field. No speaker name, no surrounding transcript, no preceding minutes of context. AARO is essentially pointing at a timecode and saying *listen here*.
+
+**A few things worth keeping straight:**
+
+- **The speaker isn't identified.** Apollo 16 Scientific Debriefings (May 1972, immediately post-mission) featured the *principal investigators* of the various experiments, not the astronauts themselves. So the line was almost certainly spoken by an experiment PI — a scientist, not a crew member — and was reported off-hand while discussing data correlations.
+- **The tone is "I don't know,"** not "this is one." This is the kind of half-joke a scientist drops when an unexplained signal pattern shows up. Calling that a "UAP encounter" stretches the term — but AARO clearly thought it was worth declassifying and timecoded.
+- **The companion file**, NASA-UAP-D024, is also tagged \`"Apollo 16 Scientific Debriefing"\` (no timecode pointer in its description) — they're presumably two tracks or two sessions of the same series. D024 was published 2026-06-12; D025 was *quietly published one day earlier*, on 2026-06-11, alongside D023 (the Gordon Cooper / Cronkite interview — see [gordon-cooper-cronkite-1962](/findings/gordon-cooper-cronkite-1962)). The other seven release-3 DVIDS items all published on 6/12. Two-day staged upload.
+
+**The DVIDS VIRIN** \`720501-D-D0360-5668\` confirms the imagery date — May 1, 1972 — three weeks after Apollo 16 splashed down on April 27, 1972.
+
+**To verify yourself:** the file is at \`api.dvidshub.net/asset/video-1010336.json\` in this mirror. The original tape is on cloudfront at the link the JSON \`files[]\` array points to.`,
+    stats: [
+      { big: "32:41", label: "timecode AARO points to" },
+      { big: "1 of 1", label: "release-3 NASA file with an explicit timecoded quote" },
+      { big: "2026-06-11", label: "publish date (one day before the rest of release 3)" },
+    ],
+    comparisons: [
+      {
+        leftLabel: "Catalog title (what users see)",
+        leftValue: "NASA-UAP-D025, \"Apollo 16 Scientific Debriefing\"",
+        rightLabel: "DVIDS description (what AARO actually says about it)",
+        rightValue: "At 32:41, the speaker makes an off-handed comment, 'Could be an alien starbase or something, I don't know' when discussing correlations between experimental data sets.",
+      },
+    ],
+    sources: [
+      { path: "api.dvidshub.net/asset/video-1010336.json", note: "Full DVIDS record — the description is the entire payload here" },
+      { path: "www.war.gov/Portals/1/Interactive/2026/UFO/uap-data.csv", note: "Catalog row — has only the title, no description" },
+      { path: "api.dvidshub.net/asset/video-1010319.json", note: "NASA-UAP-D024 — the companion Apollo 16 Scientific Debriefing file" },
+    ],
+    relatedRecordIds: ["dvids-1010336", "dvids-1010319"],
+  },
+  {
+    id: "gordon-cooper-cronkite-1962",
+    tier: 1,
+    title: "PURSUE includes a 1962 Walter Cronkite interview with astronaut Gordon Cooper about UFOs",
+    claim: "NASA-UAP-D023 is a previously-unsurfaced excerpt from a November 1962 CBS interview, conducted by Walter Cronkite, in which Mercury 9 astronaut Gordon Cooper gives his views on unidentified flying objects. The catalog shows only the title; the DVIDS record tells you the topic.",
+    significance: "Cooper went on to be one of the most publicly outspoken U.S. astronauts on the UFO subject — testifying before the UN in 1985 and granting decades of interviews. This 1962 Cronkite excerpt is the earliest known on-tape version of his views. It being included in a Pentagon disclosure release is itself the story.",
+    evidence: `The catalog row reads, simply: **\`NASA-UAP-D023, Interview Excerpt with Astronaut Gordon Cooper, 1962\`**. The DVIDS record fills in what the tape actually contains:
+
+> *"In November 1962, journalist Walter Cronkite interviewed astronaut Gordon Cooper. In this excerpt from that interview, Cronkite asks Cooper about his views regarding the nature of unidentified flying objects, having previously expressed an interest in the subject. Cooper opines that 'a large number…"*
+
+The DVIDS description gets truncated mid-quote — AARO's own metadata system cuts off Cooper's actual line. The full audio is on cloudfront via the JSON \`files[]\` reference; the truncated quote is what makes the description so interesting.
+
+**Context that the catalog doesn't give you:**
+
+- **November 1962.** Cooper's first spaceflight (Mercury-Atlas 9, *Faith 7*) wasn't until May 1963. So this interview happened *six months before he flew*, when Cronkite would have been previewing the Mercury program. Cooper was already publicly known as the only Mercury Seven astronaut openly interested in UFOs at the time.
+- **VIRIN** \`621101-D-D0360-5375\` confirms the November 1, 1962 imagery date.
+- **Published 2026-06-11** — one day before the rest of release 3 dropped, alongside NASA-UAP-D025 (the Apollo 16 "alien starbase" item — see [apollo16-alien-starbase-timecode](/findings/apollo16-alien-starbase-timecode)). Whoever staged the release pushed the two NASA audio items the night before everything else.
+
+**Why this is in PURSUE at all.** Cooper had already given public UFO interviews on tape before 1962. The genuinely novel thing here is that the *Department of War* — through AARO — formally redistributed this clip as a UAP-related historical record, with its own UAP record ID. They're not declaring it new footage. They're using their declassification venue to assemble a canonical reference set of UFO-related audio across NASA history. The Gemini and Apollo tapes from release 3 (NASA-UAP-D015–D022, D024–D025) do the same.`,
+    stats: [
+      { big: "Nov 1962", label: "interview date (6 months before Cooper's Mercury 9 flight)" },
+      { big: "8", label: "other NASA audio/video items in release 3 (Gemini + Apollo)" },
+    ],
+    sources: [
+      { path: "api.dvidshub.net/asset/video-1010337.json", note: "DVIDS record — full description (truncates Cooper's quote mid-sentence)" },
+      { path: "www.war.gov/Portals/1/Interactive/2026/UFO/uap-data.csv", note: "Catalog row — title only" },
+    ],
+    relatedRecordIds: ["dvids-1010337"],
+  },
+  {
+    id: "colorado-springs-potato",
+    tier: 1,
+    title: "AARO's verdict on the 2022 Colorado Springs UAP: \"angular, non-symmetrical potato,\" probably sunlight on snow",
+    claim: "The Intelligence Community Agency analysis of the 2022 Colorado Springs incident — released as ICA-UAP-D001 — characterises the witnessed object as \"an angular, non-symmetrical potato\" and resolves it, with low confidence, as sunlight backscattering off snow on the mountains, illuminating the underside of low-altitude clouds. This is one of the very few cases in any of the three PURSUE releases where AARO offers an actual explanation.",
+    significance: "Most of the 294 PURSUE records are flagged \"unresolved.\" When AARO does conclude something, it's worth reading exactly how they hedge — and \"angular, non-symmetrical potato\" is, frankly, an unforgettable phrase. The Colorado Springs cluster also shows AARO's idea of a *complete* case file: a witness's FBI form (FD-1057), an analyst's digital rendering of what the witness described, and a separate IC partner's atmospheric analysis. Three documents about one ten-second incident.",
+    evidence: `The cluster as released:
+
+- **FBI-UAP-D001** — FD-302 form (the FBI's standard witness-interview record). 2022, Colorado Springs.
+- **FBI-UAP-D002** — FD-1057 (FBI investigative-activity form), same 2022 Colorado Springs report. Contains the witness's first-hand narrative.
+- **FBI-UAP-D003** — Digital Rendering: an artistic interpretation of the 2022 incident, derived from the witness's narrative description in D002.
+- **ICA-UAP-D001** — the IC partner's actual analytical assessment.
+
+The live carousel caption for ICA-UAP-D001 (visible only when you hover the slideshow image) reads:
+
+> *"An AARO IC partner assessed, with low confidence, that the reported phenomenon, which observers characterized as resembling an 'angular, non-symmetrical potato,' was attributable to sunlight backscattering, where sunlight reflecting from mountain snow cover illuminated the underside of low-altitude clouds."*
+
+**Three observations:**
+
+1. **The phrase isn't an analyst's joke.** "Angular, non-symmetrical potato" is the *witness's* description, repeated back in the IC report. That implies the FD-1057 narrative literally contains the word "potato." (FBI-UAP-D002 is the original; the rendering in D003 is the analyst's attempt to draw what they meant.)
+
+2. **"Low confidence."** Even the favorable atmospheric explanation is hedged. AARO IC partners use \`low / medium / high\` confidence on conclusions. "Low" here means they're saying *this would explain it if you accept several assumptions about angle, cloud altitude, and snow extent.* Not "this is the answer."
+
+3. **The "IC partner" framing.** The document is labelled \`ICA-UAP-D001\` — Intelligence Community Agency — which is AARO's way of saying *one of the IC agencies, not AARO itself.* They don't say which agency. So even the explanation is one step removed from AARO's own analysis.
+
+**Cross-link.** The Western United States Event cluster (release 3's other multi-doc incident — see [western-us-event-cluster](/findings/western-us-event-cluster)) follows the same template: narratives + renderings + analysis, but with no resolution at all. Colorado Springs is the only Tier-1 release-3 incident with an explanation attached.`,
+    stats: [
+      { big: "4", label: "documents about one incident (FBI-D001, D002, D003 + ICA-D001)" },
+      { big: "Low", label: "AARO's confidence level on its own explanation" },
+      { big: "1", label: "release-3 incident with an offered resolution" },
+    ],
+    comparisons: [
+      {
+        leftLabel: "Witness's description (per ICA report)",
+        leftValue: "An angular, non-symmetrical potato",
+        rightLabel: "AARO IC partner's verdict",
+        rightValue: "Likely sunlight backscattering off snow cover, illuminating clouds (low confidence)",
+      },
+    ],
+    sources: [
+      { path: "www.war.gov/medialink/ufo/061226/release_03/documents/ICA-UAP-D001_Analysis_Colorado-Springs-UAP-Incident.pdf", note: "The atmospheric analysis itself" },
+      { path: "www.war.gov/medialink/ufo/061226/release_03/documents/FBI-UAP-D002_FD-1057_Unresolved-UAP-Report_ColoradoSprings_2022.pdf", note: "FBI FD-1057 witness narrative — the source of the 'potato' phrasing" },
+      { path: "www.war.gov/medialink/ufo/061226/release_03/documents/FBI-UAP-D003_Digital-Rendering_Unresolved-UAP-Report_ColoradoSprings_2022.pdf", note: "Analyst's digital rendering from the witness's description" },
+      { path: "www.war.gov/UFO/index.html", note: "Live carousel — slideshow caption containing the 'potato' / 'sunlight backscattering' quote" },
+    ],
+  },
+  {
+    id: "western-us-event-cluster",
+    tier: 1,
+    title: "The \"Western US Event\" — release 3's largest single incident, 21 cross-linked records",
+    claim: "Twenty-one of release 3's 72 records describe one incident. The catalog presents them as 21 separate entries; structurally they're one event — two consecutive days near a sensitive national security site, with first-hand narratives from federal witnesses, two FBI video reconstructions, and ten digital renderings split across two sub-incidents.",
+    significance: "The Western US Event is the most heavily-documented single incident in any of the three PURSUE releases — more documents than the Iran 4-UAP formation (release 2), the F-16C Lake Huron shootdown (release 2), or any release-1 case. The Department of War teased it back in release 1 with a slide deck (\`western_us_event_slides_5.08.2026.pdf\`); release 3 is where the underlying source documents drop. The catalog UI doesn't surface the cluster as a navigable unit, which is what makes this finding useful.",
+    evidence: `**Cluster composition** (21 records — 22 if you count the release-1 slide deck callback):
+
+**Analysis layer (DOW):**
+- \`DOW-UAP-D077\` — Unresolved Case Analysis Update, Western United States Event
+- \`DOW-UAP-D078\` — Notional Map, Western United States Event
+
+**Narratives 1–5 (DOW):**
+- \`DoW-UAP-D079\` — Narrative 1
+- \`DoW-UAP-D080\` — Narrative 2
+- \`DoW-UAP-D081\` — Narrative 3
+- \`DoW-UAP-D082\` — Narrative 4
+- \`DoW-UAP-D083\` — Narrative 5
+
+**FBI digital renderings of Incident 1:**
+- \`FBI-UAP-D014\` — Incident 1-1
+- \`FBI-UAP-D015\` — Incident 1-2
+- \`FBI-UAP-D021\` — Incident 1-3
+
+**FBI digital renderings of Incident 2:**
+- \`FBI-UAP-D016\` — Incident 2-1
+- \`FBI-UAP-D017\` — Incident 2-2
+- \`FBI-UAP-D018\` — Incident 2-3
+- \`FBI-UAP-D019\` — Incident 2-4
+- \`FBI-UAP-D020\` — Incident 2-5
+- \`FBI-UAP-D022\` — Incident 2-6
+- \`FBI-UAP-D023\` — Incident 2-7
+
+**FBI video reconstructions:**
+- \`FBI-UAP-PR005\` — Digital Recreation, Narrative Statement 3-1, Western United States Event, 2023 ([DVIDS 1010272](api.dvidshub.net/asset/video-1010272.json))
+- \`FBI-UAP-PR006\` — Digital Recreation, Narrative Statement 3-2, Western United States Event, 2023 ([DVIDS 1010276](api.dvidshub.net/asset/video-1010276.json))
+
+**What the DVIDS records say.** Both FBI-UAP-PR005 and PR006 are described as:
+
+> *"An artistic interpretation of a reported incident near a sensitive national security site in the western United States involving unidentified anomalous phenomena (UAP) over a period of two days in 2023…based upon a first-hand description provided by a federal…"*
+
+(AARO truncates the description mid-sentence — the word after "federal" is presumably "employee" or "agent.")
+
+**What we can read between the lines:**
+
+1. **Two incidents on two consecutive days in 2023**, near a *sensitive national security site* in the western US. AARO is careful never to name the site — but the volume of documentation and the FBI's involvement implies federal jurisdiction.
+2. **At least five first-hand narrators** (D079–D083 = Narrative 1 through Narrative 5). The FBI's PR005 and PR006 reconstructions reference "Narrative Statement 3-1" and "3-2" — so Narrator 3 alone gave at least two separate statements about two separate moments.
+3. **Incident 1 had three sub-moments** (1-1, 1-2, 1-3 = three renderings).
+4. **Incident 2 had seven sub-moments** (2-1 through 2-7).
+5. **The DOW provides analysis and a notional map**; the FBI handles the witness interviews and reconstructions. The agencies divided labour the same way they did on Colorado Springs (see [colorado-springs-potato](/findings/colorado-springs-potato)) — except this case is *not* resolved.
+
+**The release-1 callback.** Back in May 8, the DoW released \`western_us_event_slides_5.08.2026.pdf\` (in \`medialink/ufo/release_1/\`) — a slide deck that mentioned the Western US Event but didn't include the underlying source files. Five weeks later, release 3 delivers them. That makes this the only multi-release case in the entire PURSUE corpus.`,
+    stats: [
+      { big: "21", label: "release-3 records about one event" },
+      { big: "2", label: "consecutive days in 2023" },
+      { big: "5+", label: "first-hand witness narrators" },
+      { big: "1+1+1", label: "case-analysis / notional-map / video reconstructions" },
+    ],
+    tables: [
+      {
+        caption: "Cluster index — 22 cross-release documents",
+        headers: ["Record ID", "Layer", "Role"],
+        rows: [
+          { cells: ["western_us_event_slides_5.08.2026.pdf", "Release 1 (May 8)", "Original slide deck — teased the event"] },
+          { cells: ["DOW-UAP-D077", "Release 3 — Analysis", "Unresolved Case Analysis Update"] },
+          { cells: ["DOW-UAP-D078", "Release 3 — Analysis", "Notional Map"] },
+          { cells: ["DoW-UAP-D079..D083", "Release 3 — Witness narratives", "Narratives 1 through 5 (5 docs)"] },
+          { cells: ["FBI-UAP-D014, D015, D021", "Release 3 — FBI renderings", "Incident 1, sub-moments 1, 2, 3"] },
+          { cells: ["FBI-UAP-D016..D020, D022, D023", "Release 3 — FBI renderings", "Incident 2, sub-moments 1 through 7 (7 docs)"] },
+          { cells: ["FBI-UAP-PR005", "Release 3 — Video reconstruction", "Digital Recreation of Narrator 3, Statement 1"] },
+          { cells: ["FBI-UAP-PR006", "Release 3 — Video reconstruction", "Digital Recreation of Narrator 3, Statement 2"] },
+        ],
+      },
+    ],
+    sources: [
+      { path: "www.war.gov/medialink/ufo/release_1/western_us_event_slides_5.08.2026.pdf", note: "Original release-1 slide deck — the teaser" },
+      { path: "www.war.gov/medialink/ufo/061226/release_03/documents", note: "All 21 release-3 cluster documents live in this directory" },
+      { path: "api.dvidshub.net/asset/video-1010272.json", note: "FBI-UAP-PR005 — Narrator 3, Statement 1 video reconstruction" },
+      { path: "api.dvidshub.net/asset/video-1010276.json", note: "FBI-UAP-PR006 — Narrator 3, Statement 2 video reconstruction" },
+    ],
+  },
+  {
+    id: "kardashev-sakharov-on-ufos",
+    tier: 1,
+    title: "Release 3 includes a CIA-held paper on UFOs jointly authored by Kardashev and Sakharov",
+    claim: "Buried in release 3's CIA Cold War file dump is CIA-UAP-008: a speculative paper on unidentified flying objects co-authored by Nikolai Kardashev — the Soviet astronomer who created the Kardashev Scale of civilizations — and Andrei Sakharov, the Soviet H-bomb physicist who won the 1975 Nobel Peace Prize for human-rights work.",
+    significance: "Two of the most celebrated Soviet scientists of the 20th century, jointly writing speculatively on UFOs, held in CIA files since the Cold War, now public. The combination of authors alone makes this a noteworthy item independent of what the paper actually concludes. The catalog file name is the only place where their names appear — they're not in the title, not in the description, not in the carousel.",
+    evidence: `The catalog row points at a single PDF:
+
+\`\`\`
+medialink/ufo/061226/release_03/documents/
+  CIA-UAP-008_SPECULATIVE_PAPER_BY_N_KARDASHEV_AND_A_SAKHAROV.pdf
+\`\`\`
+
+That's the entire surfaced identification — the filename itself.
+
+**Who they are.**
+
+- **Nikolai Kardashev (1932–2019)** — Soviet/Russian astrophysicist; in 1964 he proposed the *Kardashev Scale*, the canonical framework for ranking hypothetical civilizations by their energy use (Type I planetary, Type II stellar, Type III galactic). The scale is referenced constantly in modern SETI and astrobiology work.
+- **Andrei Sakharov (1921–1989)** — lead designer of the Soviet hydrogen bomb (1953), later turned dissident; awarded the Nobel Peace Prize in 1975 for human-rights work. His name on a UFO speculation paper is the surprising part — Sakharov was a pure-physics theorist with no public association with the UFO field.
+
+**Surrounding context in the same release.** CIA-UAP-008 sits inside a cluster of 18 historical CIA Cold War UFO files (CIA-UAP-002 through CIA-UAP-019) — the largest single-agency dump in PURSUE so far. The cluster includes:
+- \`CIA-UAP-002\` — Robertson Scientific Advisory Panel Report, 1952–1953 (the famous panel)
+- \`CIA-UAP-003\` — CIA / Overhead Reconnaissance: U-2 & OXCART Programs 1954–1974 (see [cia-uap-003-u2-oxcart-720mb](/findings/cia-uap-003-u2-oxcart-720mb))
+- \`CIA-UAP-010\` — Report on Conversations with Soviet Scientists on the Subject of Unidentified Flying Objects in the USSR (likely the Kardashev/Sakharov companion piece)
+- \`CIA-UAP-011\` — The Sary Shagan Weapons Testing Range
+- \`CIA-UAP-014\` — British Activity in the Field of Unidentified Flying Objects
+- \`CIA-UAP-015\` — Project Blue Book Special Report No. 14
+- \`CIA-UAP-019\` — Australian DoD Scientific and Intelligence Aspects of the UFO Problem
+
+The Kardashev/Sakharov paper is a single thread in what amounts to the CIA's Cold War file on *everyone else's* UFO research — Soviet, British, Australian, Hungarian, Indian (CIA-UAP-016 is about Ladakh / Nepal / Sikkim / Bhutan sightings), and Zimbabwean (see [harare-airport-zimbabwe-2008](/findings/harare-airport-zimbabwe-2008)).
+
+**What to watch for if you actually open the PDF.** Speculative papers held in CIA archives are typically translations of Soviet open-literature publications — picked up by CIA's Foreign Broadcast Information Service or similar. The filename's "SPECULATIVE PAPER" framing is doing a lot of work; it implies the CIA's own categorization of the document, not its title. The actual paper may well be a published 1970s-80s Soviet astrophysics piece about extraterrestrial intelligence (Kardashev was an early SETI proponent), now declassified under PURSUE because of its UFO subject overlap.`,
+    sources: [
+      { path: "www.war.gov/medialink/ufo/061226/release_03/documents/CIA-UAP-008_SPECULATIVE_PAPER_BY_N_KARDASHEV_AND_A_SAKHAROV.pdf", note: "The paper itself — names visible only in the filename" },
+      { path: "www.war.gov/medialink/ufo/061226/release_03/documents/CIA-UAP-010_REPORT_ON_CONVERSATIONS_WITH_SOVIET_SCIENTISTS_ON_SUBJECT_OF_UNIDENTIFIED_FLYING_OBJECTS_IS_THE_USSR.pdf", note: "The likely companion piece — CIA report on Soviet scientist conversations on UFOs" },
+      { path: "www.war.gov/Portals/1/Interactive/2026/UFO/uap-data.csv", note: "Catalog rows for CIA-UAP-008 and CIA-UAP-010" },
+    ],
+  },
+  {
+    id: "cia-uap-003-u2-oxcart-720mb",
+    tier: 1,
+    title: "The largest file in PURSUE is the CIA's own U-2 and OXCART history",
+    claim: "CIA-UAP-003 — at roughly 720 MB the single biggest PDF in any PURSUE release — is the CIA's internal history of the U-2 and OXCART (A-12 / SR-71) reconnaissance programs from 1954 to 1974. This is the document that long established that many Cold War UFO sightings were classified overflights. Its inclusion under PURSUE is the official acknowledgement of that overlap.",
+    significance: "This file isn't new — versions of it have been declassified for years and the original was famously released by the CIA in 2013 as part of Operation HABRINK. What's new is that the *Department of War* in 2026 has re-released it specifically under a UFO disclosure venue, with a UAP record ID assigned (\"CIA-UAP-003\"). That's the Pentagon formally endorsing the explanation that has always been controversial inside UFO communities: that the U-2 and SR-71 are responsible for a non-trivial share of historical Cold War UFO reports.",
+    evidence: `**Catalog row:** \`CIA-UAP-003-THE_CENTRAL_INTELLIGENCE_AGENCY_AND_OVERHEAD_RECONNAISSANCE-THE_U-2_AND_OXCART_PROGRAMS_1954-1974\`
+
+**File path:** \`medialink/ufo/061226/release_03/documents/CIA-UAP-003-THE_CENTRAL_INTELLIGENCE_AGENCY_AND_OVERHEAD_RECONNAISSANCE-THE_U-2_AND_OXCART_PROGRAMS_1954-1974.pdf\`
+
+**Size:** ~720 MB. By comparison the second-largest file in release 3 (\`CIA-UAP-015\`, Project Blue Book Special Report No. 14) is ~80 MB. The mean release-3 PDF is ~3 MB. This one file accounts for about 80% of release 3's total document bundle weight.
+
+**Why it's relevant to UFOs.** The U-2 (CIA, 1955+) flew at 70,000 ft. The A-12 / OXCART (CIA, 1962+) cruised at 90,000 ft at Mach 3+. The SR-71 (USAF successor, 1966+) flew the same envelope. Until SR-71 retirement in 1989, the U-2 and successors flew higher than any aircraft civilian observers thought was possible. A *significant fraction* of 1950s–80s "high-altitude UFO" reports — silver dots crossing the sky at unbelievable speeds, no engine noise — are explained by this single document.
+
+**The CIA's own 1998 acknowledgement** (in *Studies in Intelligence*, the in-house journal) put a number on it: that *over half* of UFO reports between the mid-1950s and the mid-1960s were "of U-2 or OXCART flights." That number has been repeated in every serious UFO history since.
+
+**Why republishing it under PURSUE matters.**
+
+1. The Department of War assigning it a **UAP record ID** is the Pentagon's first formal classification of this document as primary UFO source material since AARO was established.
+2. Release 3 is heavily *historical* — 18 CIA Cold War files, plus 1940s DoW Flying Saucer Studies (D084 Army 1949, D086 Navy 1948), plus J. Edgar Hoover correspondence from 1949. The U-2/OXCART history fits that frame: PURSUE is reclassifying the Cold War overflight programs as part of the UFO record.
+3. Releasing it via PURSUE rather than the CIA's own FOIA reading room (where it's been since 2013) gives it a UAP-context filename, a UAP-context catalog entry, and inclusion in the DoW's master UFO manifest.
+
+**To download:** the file is huge. Either the release-3 documents bundle (826 MB total — see [bundles](/bundles)) or this specific PDF at \`www.war.gov/medialink/ufo/061226/release_03/documents/CIA-UAP-003-THE_CENTRAL_INTELLIGENCE_AGENCY_AND_OVERHEAD_RECONNAISSANCE-THE_U-2_AND_OXCART_PROGRAMS_1954-1974.pdf\`. We mirror it locally; we recommend not inlining it on a record page (use a download link only).`,
+    stats: [
+      { big: "~720 MB", label: "single file size — largest in all 3 releases" },
+      { big: "~80%", label: "of release 3 document bundle weight" },
+      { big: "1954–1974", label: "coverage period" },
+      { big: ">50%", label: "of 1950s–60s UFO reports the CIA itself attributes to U-2/OXCART" },
+    ],
+    sources: [
+      { path: "www.war.gov/medialink/ufo/061226/release_03/documents/CIA-UAP-003-THE_CENTRAL_INTELLIGENCE_AGENCY_AND_OVERHEAD_RECONNAISSANCE-THE_U-2_AND_OXCART_PROGRAMS_1954-1974.pdf", note: "The file itself (~720 MB)" },
+      { path: "www.war.gov/Portals/1/Interactive/2026/UFO/uap-data.csv", note: "Catalog row" },
+    ],
+  },
+  {
+    id: "harare-airport-zimbabwe-2008",
+    tier: 1,
+    title: "Hidden in a bureaucratically-titled CIA file: a 2008 UFO report at Harare International Airport",
+    claim: "CIA-UAP-017 is catalogued under the title \"Placement on High Alert Due to Perceived Aggressive Foreign Posturing\" — innocuous bureaucratese. The live carousel caption, visible only on hover, says it's actually \"a never before released July 2008 report on a UFO sighting at the Harare International Airport.\" The catalog title is what shows up in search engines; the carousel caption is what tells you what's in the file.",
+    significance: "Without the carousel caption, nobody searching for \"Harare UFO 2008\" would find this. The mismatch between the catalog title and the actual content is a textbook example of how the public-facing search UX can hide the most interesting documents in plain sight — the file is fully public, but its title is deliberately uninformative.",
+    evidence: `**On the official catalog**, the record reads:
+
+\`\`\`
+Title:     CIA-UAP-017, Placement on High Alert Due to Perceived Aggressive Foreign Posturing
+Agency:    CIA
+Release:   6/12/26
+File:      CIA-UAP-017_Placement_on_High_Alert_Due_to_Perceived_Aggressive_Foreign_Posturing.pdf
+\`\`\`
+
+Nothing about Zimbabwe. Nothing about Harare. Nothing about an airport. Nothing about 2008.
+
+**On the live PURSUE carousel** (one of the ten featured release-3 images), CIA-UAP-017 is the first slide. Its \`data-lightbox-sentence\` attribute — the on-hover description — reads:
+
+> *"A never before released July 2008 report on a UFO sighting at the Harare International Airport."*
+
+And the slideshow image's alt text reads:
+
+> *"A document with routing information and the topic 'ZIMBABWE'."*
+
+So the carousel knows. The catalog UI doesn't.
+
+**Where the words come from.** \`Placement on High Alert Due to Perceived Aggressive Foreign Posturing\` is almost certainly the original 2008 CIA cable's subject line — the kind of bureaucratically-armored language used when the actual subject (a UFO at an international civilian airport) would attract attention. The filename and the catalog title both inherited the original subject line. The carousel caption was written by whoever staged the release and knew what the document actually contained.
+
+**Why the mismatch matters for the public.** Someone looking for "Zimbabwe UFO disclosure" via Google can't find this. Someone searching the live catalog UI for "Harare" turns up zero results. Someone clicking through the live carousel and hovering on the first slide does find it — but most readers don't hover on carousel images.
+
+**Cross-reference.** This isn't the only release-3 document with a content-vs-title mismatch — see [colorado-springs-potato](/findings/colorado-springs-potato), where the catalog says "ICA-UAP-D001 Analysis: Colorado Springs UAP Incident, 2022" but the carousel caption is the one that reveals the "angular, non-symmetrical potato" detail. Carousel captions are doing real work in release 3 that the catalog titles don't.
+
+**Verify.** Hover on the first carousel slide on the live \`/UFO/\` page, or read the captured \`data-lightbox-sentence\` attribute in the saved \`www.war.gov/UFO/index.html\` in this mirror.`,
+    comparisons: [
+      {
+        leftLabel: "What the catalog calls it",
+        leftValue: "CIA-UAP-017, Placement on High Alert Due to Perceived Aggressive Foreign Posturing",
+        rightLabel: "What the carousel caption says it actually is",
+        rightValue: "A never before released July 2008 report on a UFO sighting at the Harare International Airport",
+      },
+    ],
+    sources: [
+      { path: "www.war.gov/medialink/ufo/061226/release_03/documents/CIA-UAP-017_Placement_on_High_Alert_Due_to_Perceived_Aggressive_Foreign_Posturing.pdf", note: "The document itself" },
+      { path: "www.war.gov/Portals/1/Interactive/2026/UFO/061226/Rotator/CIA-UAP-017_Placement_on_High_Alert_Due_to_Perceived_Aggressive_Foreign_Posturing.jpg", note: "Carousel slideshow image — alt text mentions 'ZIMBABWE'" },
+      { path: "www.war.gov/UFO/index.html", note: "Live page — search for the 'never before released July 2008 report' string" },
+    ],
+  },
+  {
+    id: "cia-uap-005-literal-space-in-path",
+    tier: 2,
+    title: "One release-3 file URL has a literal space in it — and a regular fetch returns 404",
+    claim: "CIA-UAP-005 \"German scientists' article on flying discs\" is referenced in the live PURSUE manifest at a URL with a literal space between two underscores. Standard fetch tools that don't URL-encode the space as %20 receive a 404 from war.gov. The file is public, the catalog row works in a browser, but anyone trying to mirror or programmatically download the file from a script has to know to URL-encode.",
+    significance: "Practically, it means: (1) the catalog isn't validated against the actual file URLs before publication; (2) automated archivers (Internet Archive, FOIA-tracker bots) may silently fail to mirror this specific record; (3) it's the same hygiene pattern that broke release 1's `18_100754_ general 1946-7_vol_2.pdf` and `serial 5 redacted_redacted.pdf`. Three releases in, the manifest still ships filenames with literal spaces.",
+    evidence: `The manifest references the URL:
+
+\`\`\`
+medialink/ufo/061226/release_03/documents/CIA-UAP-005-German_scientists_ article_on_flying_discs.pdf
+\`\`\`
+
+Note the space character between \`scientists_\` and \`article\` — that's not a rendering artifact, it's a literal \` \` byte in the path on the server.
+
+**Direct fetch tests:**
+
+\`\`\`
+GET .../CIA-UAP-005-German_scientists_%20article_on_flying_discs.pdf    →  200 OK  (1,107,431 bytes)
+GET .../CIA-UAP-005-German_scientists_article_on_flying_discs.pdf       →  404
+GET .../CIA-UAP-005-German_scientists_+article_on_flying_discs.pdf      →  404
+GET .../CIA-UAP-005-German_Scientists_Article_on_Flying_Discs.pdf       →  404
+\`\`\`
+
+Only the URL-encoded space resolves. Browsers handle this automatically because they URL-encode spaces in href attributes before issuing the request. Raw \`curl\` or \`wget\` against the catalog-listed URL does *not*. Quietly, this means anyone scripting against the manifest gets exactly one missing file.
+
+**The pattern across all three releases:**
+
+| Release | File with literal-space filename |
+|---|---|
+| Release 1 | \`18_100754_ general 1946-7_vol_2.pdf\` (leading space inside the filename) |
+| Release 1 | \`serial 5 redacted_redacted.pdf\` (filename uses spaces, not hyphens) |
+| Release 3 | \`CIA-UAP-005-German_scientists_ article_on_flying_discs.pdf\` (embedded space) |
+
+Three releases, three different filename-hygiene failures. The CIA-UAP-005 case is the worst of the three because it's the only one where the catalog actively references the broken URL.
+
+**The companion thumbnail** at \`thumbnails/CIA-UAP-005-German_scientists_ article_on_flying_discs.jpg\` has the same problem — fetches only with \`%20\`.
+
+**The file itself.** Once you get past the URL: it's a 1.1 MB scan of a German-language article on "flying discs," held in CIA archives. It's catalogued under release 3's broader CIA Cold War file dump (alongside CIA-UAP-002 through CIA-UAP-019). Worth opening; not the point of this finding.`,
+    sources: [
+      { path: "www.war.gov/medialink/ufo/061226/release_03/documents/CIA-UAP-005-German_scientists_ article_on_flying_discs.pdf", note: "Locally mirrored under the literal-space filename" },
+      { path: "www.war.gov/Portals/1/Interactive/2026/UFO/uap-data.csv", note: "Catalog row referencing the broken URL" },
+    ],
+  },
+  {
+    id: "tradecraft-cleanup-in-release-3",
+    tier: 1,
+    title: "Release 3 fixed every metadata leak that defined releases 1 and 2",
+    claim: "Comparing the metadata profile of release 3 (June 12) against releases 1 and 2 (May 8 and May 22), every category of Tier-1 finding from the first two releases — PDF title mismatches, named individuals in video credits, placeholder VIRINs, city-level location leaks, scanner fingerprint variety — drops to zero in release 3. The Department of War's metadata-scrubbing process measurably tightened between releases.",
+    significance: "This is the most interesting finding *about* PURSUE rather than *within* it. Releases 1 and 2 leaked operational tradecraft through PDF metadata, DVIDS records, and orphaned filenames — that's why findings 2 through 13 exist. Release 3 has zero of those leaks. Either someone at the DoW publishing pipeline reads pages like this one and tightened the process, or they got better the second time on their own. Either way: it tells you future PURSUE releases will be cleaner than the first two, and that the historical record-of-record for this release program is the *first two* releases, not the most recent one.",
+    evidence: `Counts come from per-release analysis of every PDF (\`/Title\`, \`/Creator\`, \`/Producer\`, \`/Author\` fields via PyMuPDF) and every DVIDS video JSON in the mirror.`,
+    stats: [
+      { big: "0", label: "release-3 PDFs with /Title mismatching catalog (vs 35+ in R1+R2)" },
+      { big: "0", label: "release-3 videos with city-level location (vs 1 in R1+R2)" },
+      { big: "0", label: "release-3 videos with a named credit (vs 1 in R1+R2)" },
+      { big: "0", label: "release-3 videos with a non-AARO VIRIN code (vs 1 in R1+R2)" },
+      { big: "0", label: "release-3 orphan PDFs on disk not in catalog (vs 4 in R1+R2)" },
+    ],
+    tables: [
+      {
+        caption: "Metadata leak indicators, before-and-after",
+        headers: ["Indicator", "Release 1 + 2", "Release 3"],
+        rows: [
+          { cells: ["PDFs with /Title disagreeing with public catalog title", "35+ (incl. D20 country/year, Cable 2 Tajikistan, all D→PR relabels, all NARA shelfmarks)", "0"] },
+          { cells: ["Distinct /Creator values (scanner/tool fingerprints)", "13 (HP 9100C, ScanSnap SV600, PaperStream 5.1, LuraDocument, Photoshop, Acrobat, Word, PowerPoint, PScript5.dll, PaperStream Capture, Aspose, PFU PDF Engine, macOS Quartz)", "3 (Microsoft Word, PaperStream ClickScan 1.4.0.3, empty)"] },
+          { cells: ["Distinct /Producer values", "10 (incl. macOS Quartz PDFContext AppendMode 1.1, Aspose Pty Ltd., Adobe Photoshop, PFUPDF Engine 1.3.10 + 1.3.80)", "2 (Acrobat Paper Capture Plug-in, empty)"] },
+          { cells: ["Videos with city-level location", "1 of 85 (PR073 Columbus OH — see Finding 4)", "0 of 9"] },
+          { cells: ["Videos with a named credit (vs \"Courtesy\")", "1 of 85 (Edward Pajak — see Finding 4)", "0 of 9"] },
+          { cells: ["Videos with non-AARO VIRIN unit code", "1 of 85 (XX999 placeholder — see Finding 4)", "0 of 9 (all D0360 = AARO)"] },
+          { cells: ["Orphan PDFs on disk, not in live manifest", "4 (including the D20 rename leak and the bracketed-vs-unbracketed dupes)", "0"] },
+        ],
+      },
+    ],
+    sources: [
+      { path: "C:/Users/theri/AppData/Local/Temp/analyze_release3.py", note: "Source script for the release-3 PDF metadata sweep" },
+      { path: "C:/Users/theri/AppData/Local/Temp/dvids_rel3.py", note: "Source script for the release-3 DVIDS sweep" },
+      { path: "C:/Users/theri/AppData/Local/Temp/rel3_orphans2.py", note: "Source script for the case-insensitive disk-vs-catalog reconciliation" },
+      { path: "www.war.gov/medialink/ufo/061226/release_03/documents", note: "All 52 release-3 PDFs analysed" },
+      { path: "api.dvidshub.net/asset", note: "9 release-3 DVIDS JSONs (video-1010263, 1010264, 1010267, 1010269, 1010272, 1010276, 1010319, 1010336, 1010337)" },
+    ],
+  },
   {
     id: "orphan-pdfs",
     tier: 2,
