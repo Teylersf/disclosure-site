@@ -70,7 +70,10 @@ async function loadDvidsMeta(dvidsId: string): Promise<DvidsMeta | undefined> {
       date: r.date,
       duration: r.duration,
       files: (r.files ?? []).map((f: { src: string; width: number; height: number; size: number; bitrate?: number; type: string }) => ({
-        src: f.src.replace(/^\.\.\/\.\.\//, ""),
+        // R1/R2 DVIDS JSON stores src as "../../d34w7g4gy10iej.cloudfront.net/...".
+        // R3 DVIDS JSON stores it as "https://d34w7g4gy10iej.cloudfront.net/..." (unrewritten).
+        // Strip either prefix so the manifest key is the bare host+path the asset helper expects.
+        src: f.src.replace(/^\.\.\/\.\.\//, "").replace(/^https?:\/\//, ""),
         width: f.width,
         height: f.height,
         size: f.size,
@@ -78,9 +81,13 @@ async function loadDvidsMeta(dvidsId: string): Promise<DvidsMeta | undefined> {
         type: f.type,
       })),
       thumbnail: r.thumbnail
-        ? { url: String(r.thumbnail.url).replace(/^\.\.\/\.\.\//, ""), width: r.thumbnail.width, height: r.thumbnail.height }
+        ? {
+            url: String(r.thumbnail.url).replace(/^\.\.\/\.\.\//, "").replace(/^https?:\/\//, ""),
+            width: r.thumbnail.width,
+            height: r.thumbnail.height,
+          }
         : undefined,
-      image: r.image ? String(r.image).replace(/^\.\.\/\.\.\//, "") : undefined,
+      image: r.image ? String(r.image).replace(/^\.\.\/\.\.\//, "").replace(/^https?:\/\//, "") : undefined,
       hls_url: r.hls_url,
       closed_captions: r.closed_caption_urls
         ? { srt: r.closed_caption_urls.srt, webvtt: r.closed_caption_urls.webvtt }

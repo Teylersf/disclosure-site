@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-14T22:05:48.278Z",
+  "generatedAt": "2026-06-14T23:11:57.051Z",
   "totalCount": 294,
   "byType": {
     "PDF": 175,
@@ -194,10 +194,10 @@
       "release": "release_3",
       "redacted": false,
       "asset": {
-        "url": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764159/DOD_111764159.mp4"
+        "url": "d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764159/DOD_111764159.mp4"
       },
       "thumbnail": {
-        "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2606/1010267/DOD_111764159.0000001/122x92_q95.jpg"
+        "url": "d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2606/1010267/DOD_111764159.0000001/122x92_q95.jpg"
       },
       "dvidsId": "1010267",
       "dvids": {
@@ -209,7 +209,7 @@
         "duration": 265,
         "files": [
           {
-            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764159/DOD_111764159.mp4",
+            "src": "d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764159/DOD_111764159.mp4",
             "width": 1080,
             "height": 1920,
             "size": 296462678,
@@ -217,7 +217,7 @@
             "type": "video/mp4"
           },
           {
-            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764159/DOD_111764159-1920x1080-9000k.mp4",
+            "src": "d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764159/DOD_111764159-1920x1080-9000k.mp4",
             "width": 1920,
             "height": 1080,
             "size": 123247302,
@@ -225,7 +225,7 @@
             "type": "video/mp4"
           },
           {
-            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764159/DOD_111764159-1920x1080-6000k.mp4",
+            "src": "d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764159/DOD_111764159-1920x1080-6000k.mp4",
             "width": 1920,
             "height": 1080,
             "size": 95287556,
@@ -233,7 +233,7 @@
             "type": "video/mp4"
           },
           {
-            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764159/DOD_111764159-1280x720-3000k.mp4",
+            "src": "d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764159/DOD_111764159-1280x720-3000k.mp4",
             "width": 1280,
             "height": 720,
             "size": 41701322,
@@ -241,7 +241,7 @@
             "type": "video/mp4"
           },
           {
-            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764159/DOD_111764159-1024x576-2000k.mp4",
+            "src": "d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764159/DOD_111764159-1024x576-2000k.mp4",
             "width": 1024,
             "height": 576,
             "size": 32129865,
@@ -249,7 +249,7 @@
             "type": "video/mp4"
           },
           {
-            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764159/DOD_111764159-512x288-1000k.mp4",
+            "src": "d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764159/DOD_111764159-512x288-1000k.mp4",
             "width": 512,
             "height": 288,
             "size": 16671699,
@@ -257,7 +257,7 @@
             "type": "video/mp4"
           },
           {
-            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764159/DOD_111764159-256x144-1000k.mp4",
+            "src": "d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764159/DOD_111764159-256x144-1000k.mp4",
             "width": 256,
             "height": 144,
             "size": 6216550,
@@ -266,11 +266,11 @@
           }
         ],
         "thumbnail": {
-          "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2606/1010267/DOD_111764159.0000001/122x92_q95.jpg",
+          "url": "d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2606/1010267/DOD_111764159.0000001/122x92_q95.jpg",
           "width": 122,
           "height": 92
         },
-        "image": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2606/1010267/DOD_111764159.0000001/2000w_q95.jpg",
+        "image": "d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2606/1010267/DOD_111764159.0000001/2000w_q95.jpg",
         "hls_url": "https://api.dvidshub.net/hls/video/1010267.m3u8?api_key=key-68bb60d16b35e"
       }
     },
@@ -286,10 +286,10 @@
       "release": "release_3",
       "redacted": false,
       "asset": {
-        "url": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764177/DOD_111764177.mp4"
+        "url": "d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764177/DOD_111764177.mp4"
       },
       "thumbnail": {
-        "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2606/1010269/DOD_111764177.0000001/122x92_q95.jpg"
+        "url": "d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2606/1010269/DOD_111764177.0000001/122x92_q95.jpg"
       },
       "dvidsId": "1010269",
       "dvids": {
@@ -301,7 +301,7 @@
         "duration": 49,
         "files": [
           {
-            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764177/DOD_111764177.mp4",
+            "src": "d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764177/DOD_111764177.mp4",
             "width": 720,
             "height": 1280,
             "size": 25863205,
@@ -309,7 +309,7 @@
             "type": "video/mp4"
           },
           {
-            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764177/DOD_111764177-1920x1080-9000k.mp4",
+            "src": "d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764177/DOD_111764177-1920x1080-9000k.mp4",
             "width": 1920,
             "height": 1080,
             "size": 21072448,
@@ -317,7 +317,7 @@
             "type": "video/mp4"
           },
           {
-            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764177/DOD_111764177-1920x1080-6000k.mp4",
+            "src": "d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764177/DOD_111764177-1920x1080-6000k.mp4",
             "width": 1920,
             "height": 1080,
             "size": 16118698,
@@ -325,7 +325,7 @@
             "type": "video/mp4"
           },
           {
-            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764177/DOD_111764177-1280x720-3000k.mp4",
+            "src": "d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764177/DOD_111764177-1280x720-3000k.mp4",
             "width": 1280,
             "height": 720,
             "size": 8674942,
@@ -333,7 +333,7 @@
             "type": "video/mp4"
           },
           {
-            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764177/DOD_111764177-1024x576-2000k.mp4",
+            "src": "d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764177/DOD_111764177-1024x576-2000k.mp4",
             "width": 1024,
             "height": 576,
             "size": 5833086,
@@ -341,7 +341,7 @@
             "type": "video/mp4"
           },
           {
-            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764177/DOD_111764177-512x288-1000k.mp4",
+            "src": "d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764177/DOD_111764177-512x288-1000k.mp4",
             "width": 512,
             "height": 288,
             "size": 2677364,
@@ -349,7 +349,7 @@
             "type": "video/mp4"
           },
           {
-            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764177/DOD_111764177-256x144-1000k.mp4",
+            "src": "d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764177/DOD_111764177-256x144-1000k.mp4",
             "width": 256,
             "height": 144,
             "size": 1170039,
@@ -358,11 +358,11 @@
           }
         ],
         "thumbnail": {
-          "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2606/1010269/DOD_111764177.0000001/122x92_q95.jpg",
+          "url": "d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2606/1010269/DOD_111764177.0000001/122x92_q95.jpg",
           "width": 122,
           "height": 92
         },
-        "image": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2606/1010269/DOD_111764177.0000001/2000w_q95.jpg",
+        "image": "d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2606/1010269/DOD_111764177.0000001/2000w_q95.jpg",
         "hls_url": "https://api.dvidshub.net/hls/video/1010269.m3u8?api_key=key-68bb60d16b35e"
       }
     },
@@ -11550,10 +11550,10 @@
       "release": "release_3",
       "redacted": false,
       "asset": {
-        "url": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764142/DOD_111764142.mp4"
+        "url": "d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764142/DOD_111764142.mp4"
       },
       "thumbnail": {
-        "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2606/1010263/DOD_111764142.0000001/122x92_q95.jpg"
+        "url": "d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2606/1010263/DOD_111764142.0000001/122x92_q95.jpg"
       },
       "dvidsId": "1010263",
       "dvids": {
@@ -11565,7 +11565,7 @@
         "duration": 162,
         "files": [
           {
-            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764142/DOD_111764142.mp4",
+            "src": "d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764142/DOD_111764142.mp4",
             "width": 1920,
             "height": 1080,
             "size": 81753315,
@@ -11573,7 +11573,7 @@
             "type": "video/mp4"
           },
           {
-            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764142/DOD_111764142-1920x1080-9000k.mp4",
+            "src": "d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764142/DOD_111764142-1920x1080-9000k.mp4",
             "width": 1920,
             "height": 1080,
             "size": 100957993,
@@ -11581,7 +11581,7 @@
             "type": "video/mp4"
           },
           {
-            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764142/DOD_111764142-1920x1080-6000k.mp4",
+            "src": "d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764142/DOD_111764142-1920x1080-6000k.mp4",
             "width": 1920,
             "height": 1080,
             "size": 77406290,
@@ -11589,7 +11589,7 @@
             "type": "video/mp4"
           },
           {
-            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764142/DOD_111764142-1280x720-3000k.mp4",
+            "src": "d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764142/DOD_111764142-1280x720-3000k.mp4",
             "width": 1280,
             "height": 720,
             "size": 24865355,
@@ -11597,7 +11597,7 @@
             "type": "video/mp4"
           },
           {
-            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764142/DOD_111764142-1024x576-2000k.mp4",
+            "src": "d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764142/DOD_111764142-1024x576-2000k.mp4",
             "width": 1024,
             "height": 576,
             "size": 12521963,
@@ -11605,7 +11605,7 @@
             "type": "video/mp4"
           },
           {
-            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764142/DOD_111764142-512x288-1000k.mp4",
+            "src": "d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764142/DOD_111764142-512x288-1000k.mp4",
             "width": 512,
             "height": 288,
             "size": 5180090,
@@ -11613,7 +11613,7 @@
             "type": "video/mp4"
           },
           {
-            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764142/DOD_111764142-256x144-1000k.mp4",
+            "src": "d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764142/DOD_111764142-256x144-1000k.mp4",
             "width": 256,
             "height": 144,
             "size": 2627284,
@@ -11622,11 +11622,11 @@
           }
         ],
         "thumbnail": {
-          "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2606/1010263/DOD_111764142.0000001/122x92_q95.jpg",
+          "url": "d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2606/1010263/DOD_111764142.0000001/122x92_q95.jpg",
           "width": 122,
           "height": 92
         },
-        "image": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2606/1010263/DOD_111764142.0000001/2000w_q95.jpg",
+        "image": "d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2606/1010263/DOD_111764142.0000001/2000w_q95.jpg",
         "hls_url": "https://api.dvidshub.net/hls/video/1010263.m3u8?api_key=key-68bb60d16b35e"
       }
     },
@@ -11642,10 +11642,10 @@
       "release": "release_3",
       "redacted": false,
       "asset": {
-        "url": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764148/DOD_111764148.mp4"
+        "url": "d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764148/DOD_111764148.mp4"
       },
       "thumbnail": {
-        "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2606/1010264/DOD_111764148.0000001/122x92_q95.jpg"
+        "url": "d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2606/1010264/DOD_111764148.0000001/122x92_q95.jpg"
       },
       "dvidsId": "1010264",
       "dvids": {
@@ -11657,7 +11657,7 @@
         "duration": 162,
         "files": [
           {
-            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764148/DOD_111764148.mp4",
+            "src": "d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764148/DOD_111764148.mp4",
             "width": 1920,
             "height": 1080,
             "size": 143314278,
@@ -11665,7 +11665,7 @@
             "type": "video/mp4"
           },
           {
-            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764148/DOD_111764148-1920x1080-9000k.mp4",
+            "src": "d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764148/DOD_111764148-1920x1080-9000k.mp4",
             "width": 1920,
             "height": 1080,
             "size": 158586764,
@@ -11673,7 +11673,7 @@
             "type": "video/mp4"
           },
           {
-            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764148/DOD_111764148-1920x1080-6000k.mp4",
+            "src": "d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764148/DOD_111764148-1920x1080-6000k.mp4",
             "width": 1920,
             "height": 1080,
             "size": 102787018,
@@ -11681,7 +11681,7 @@
             "type": "video/mp4"
           },
           {
-            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764148/DOD_111764148-1280x720-3000k.mp4",
+            "src": "d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764148/DOD_111764148-1280x720-3000k.mp4",
             "width": 1280,
             "height": 720,
             "size": 51696893,
@@ -11689,7 +11689,7 @@
             "type": "video/mp4"
           },
           {
-            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764148/DOD_111764148-1024x576-2000k.mp4",
+            "src": "d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764148/DOD_111764148-1024x576-2000k.mp4",
             "width": 1024,
             "height": 576,
             "size": 31873967,
@@ -11697,7 +11697,7 @@
             "type": "video/mp4"
           },
           {
-            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764148/DOD_111764148-512x288-1000k.mp4",
+            "src": "d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764148/DOD_111764148-512x288-1000k.mp4",
             "width": 512,
             "height": 288,
             "size": 17481378,
@@ -11705,7 +11705,7 @@
             "type": "video/mp4"
           },
           {
-            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764148/DOD_111764148-256x144-1000k.mp4",
+            "src": "d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764148/DOD_111764148-256x144-1000k.mp4",
             "width": 256,
             "height": 144,
             "size": 7288093,
@@ -11714,11 +11714,11 @@
           }
         ],
         "thumbnail": {
-          "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2606/1010264/DOD_111764148.0000001/122x92_q95.jpg",
+          "url": "d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2606/1010264/DOD_111764148.0000001/122x92_q95.jpg",
           "width": 122,
           "height": 92
         },
-        "image": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2606/1010264/DOD_111764148.0000001/2000w_q95.jpg",
+        "image": "d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2606/1010264/DOD_111764148.0000001/2000w_q95.jpg",
         "hls_url": "https://api.dvidshub.net/hls/video/1010264.m3u8?api_key=key-68bb60d16b35e",
         "closed_captions": {
           "srt": "https://api.dvidshub.net/closed-captions/get?asset_id=video:1010264&format=srt&api_key=key-68bb60d16b35e",
@@ -11738,10 +11738,10 @@
       "release": "release_3",
       "redacted": false,
       "asset": {
-        "url": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764189/DOD_111764189.mp4"
+        "url": "d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764189/DOD_111764189.mp4"
       },
       "thumbnail": {
-        "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2606/1010272/DOD_111764189.0000001/122x92_q95.jpg"
+        "url": "d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2606/1010272/DOD_111764189.0000001/122x92_q95.jpg"
       },
       "dvidsId": "1010272",
       "dvids": {
@@ -11753,7 +11753,7 @@
         "duration": 53,
         "files": [
           {
-            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764189/DOD_111764189.mp4",
+            "src": "d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764189/DOD_111764189.mp4",
             "width": 1920,
             "height": 1080,
             "size": 2780975,
@@ -11761,7 +11761,7 @@
             "type": "video/mp4"
           },
           {
-            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764189/DOD_111764189-1920x1080-9000k.mp4",
+            "src": "d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764189/DOD_111764189-1920x1080-9000k.mp4",
             "width": 1920,
             "height": 1080,
             "size": 5668557,
@@ -11769,7 +11769,7 @@
             "type": "video/mp4"
           },
           {
-            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764189/DOD_111764189-1920x1080-6000k.mp4",
+            "src": "d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764189/DOD_111764189-1920x1080-6000k.mp4",
             "width": 1920,
             "height": 1080,
             "size": 4126509,
@@ -11777,7 +11777,7 @@
             "type": "video/mp4"
           },
           {
-            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764189/DOD_111764189-1280x720-3000k.mp4",
+            "src": "d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764189/DOD_111764189-1280x720-3000k.mp4",
             "width": 1280,
             "height": 720,
             "size": 2432157,
@@ -11785,7 +11785,7 @@
             "type": "video/mp4"
           },
           {
-            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764189/DOD_111764189-1024x576-2000k.mp4",
+            "src": "d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764189/DOD_111764189-1024x576-2000k.mp4",
             "width": 1024,
             "height": 576,
             "size": 1827799,
@@ -11793,7 +11793,7 @@
             "type": "video/mp4"
           },
           {
-            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764189/DOD_111764189-512x288-1000k.mp4",
+            "src": "d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764189/DOD_111764189-512x288-1000k.mp4",
             "width": 512,
             "height": 288,
             "size": 1482288,
@@ -11801,7 +11801,7 @@
             "type": "video/mp4"
           },
           {
-            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764189/DOD_111764189-256x144-1000k.mp4",
+            "src": "d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764189/DOD_111764189-256x144-1000k.mp4",
             "width": 256,
             "height": 144,
             "size": 1085637,
@@ -11810,11 +11810,11 @@
           }
         ],
         "thumbnail": {
-          "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2606/1010272/DOD_111764189.0000001/122x92_q95.jpg",
+          "url": "d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2606/1010272/DOD_111764189.0000001/122x92_q95.jpg",
           "width": 122,
           "height": 92
         },
-        "image": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2606/1010272/DOD_111764189.0000001/2000w_q95.jpg",
+        "image": "d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2606/1010272/DOD_111764189.0000001/2000w_q95.jpg",
         "hls_url": "https://api.dvidshub.net/hls/video/1010272.m3u8?api_key=key-68bb60d16b35e"
       }
     },
@@ -11830,10 +11830,10 @@
       "release": "release_3",
       "redacted": false,
       "asset": {
-        "url": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764213/DOD_111764213.mp4"
+        "url": "d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764213/DOD_111764213.mp4"
       },
       "thumbnail": {
-        "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2606/1010276/DOD_111764213.0000001/122x92_q95.jpg"
+        "url": "d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2606/1010276/DOD_111764213.0000001/122x92_q95.jpg"
       },
       "dvidsId": "1010276",
       "dvids": {
@@ -11845,7 +11845,7 @@
         "duration": 21,
         "files": [
           {
-            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764213/DOD_111764213.mp4",
+            "src": "d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764213/DOD_111764213.mp4",
             "width": 1920,
             "height": 1080,
             "size": 3648480,
@@ -11853,7 +11853,7 @@
             "type": "video/mp4"
           },
           {
-            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764213/DOD_111764213-1920x1080-9000k.mp4",
+            "src": "d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764213/DOD_111764213-1920x1080-9000k.mp4",
             "width": 1920,
             "height": 1080,
             "size": 4027867,
@@ -11861,7 +11861,7 @@
             "type": "video/mp4"
           },
           {
-            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764213/DOD_111764213-1920x1080-6000k.mp4",
+            "src": "d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764213/DOD_111764213-1920x1080-6000k.mp4",
             "width": 1920,
             "height": 1080,
             "size": 2565067,
@@ -11869,7 +11869,7 @@
             "type": "video/mp4"
           },
           {
-            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764213/DOD_111764213-1280x720-3000k.mp4",
+            "src": "d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764213/DOD_111764213-1280x720-3000k.mp4",
             "width": 1280,
             "height": 720,
             "size": 1432206,
@@ -11877,7 +11877,7 @@
             "type": "video/mp4"
           },
           {
-            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764213/DOD_111764213-1024x576-2000k.mp4",
+            "src": "d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764213/DOD_111764213-1024x576-2000k.mp4",
             "width": 1024,
             "height": 576,
             "size": 1085070,
@@ -11885,7 +11885,7 @@
             "type": "video/mp4"
           },
           {
-            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764213/DOD_111764213-512x288-1000k.mp4",
+            "src": "d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764213/DOD_111764213-512x288-1000k.mp4",
             "width": 512,
             "height": 288,
             "size": 618882,
@@ -11893,7 +11893,7 @@
             "type": "video/mp4"
           },
           {
-            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764213/DOD_111764213-256x144-1000k.mp4",
+            "src": "d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764213/DOD_111764213-256x144-1000k.mp4",
             "width": 256,
             "height": 144,
             "size": 425477,
@@ -11902,11 +11902,11 @@
           }
         ],
         "thumbnail": {
-          "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2606/1010276/DOD_111764213.0000001/122x92_q95.jpg",
+          "url": "d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2606/1010276/DOD_111764213.0000001/122x92_q95.jpg",
           "width": 122,
           "height": 92
         },
-        "image": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2606/1010276/DOD_111764213.0000001/2000w_q95.jpg",
+        "image": "d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2606/1010276/DOD_111764213.0000001/2000w_q95.jpg",
         "hls_url": "https://api.dvidshub.net/hls/video/1010276.m3u8?api_key=key-68bb60d16b35e"
       }
     },
@@ -12991,10 +12991,10 @@
       "release": "release_3",
       "redacted": false,
       "asset": {
-        "url": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764959/DOD_111764959.mp4"
+        "url": "d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764959/DOD_111764959.mp4"
       },
       "thumbnail": {
-        "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2606/1010337/DOD_111764959.0000001/122x92_q95.jpg"
+        "url": "d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2606/1010337/DOD_111764959.0000001/122x92_q95.jpg"
       },
       "dvidsId": "1010337",
       "dvids": {
@@ -13006,7 +13006,7 @@
         "duration": 123,
         "files": [
           {
-            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764959/DOD_111764959.mp4",
+            "src": "d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764959/DOD_111764959.mp4",
             "width": 1920,
             "height": 1080,
             "size": 71480976,
@@ -13014,7 +13014,7 @@
             "type": "video/mp4"
           },
           {
-            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764959/DOD_111764959-1920x1080-9000k.mp4",
+            "src": "d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764959/DOD_111764959-1920x1080-9000k.mp4",
             "width": 1920,
             "height": 1080,
             "size": 72024798,
@@ -13022,7 +13022,7 @@
             "type": "video/mp4"
           },
           {
-            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764959/DOD_111764959-1920x1080-6000k.mp4",
+            "src": "d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764959/DOD_111764959-1920x1080-6000k.mp4",
             "width": 1920,
             "height": 1080,
             "size": 56587428,
@@ -13030,7 +13030,7 @@
             "type": "video/mp4"
           },
           {
-            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764959/DOD_111764959-1280x720-3000k.mp4",
+            "src": "d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764959/DOD_111764959-1280x720-3000k.mp4",
             "width": 1280,
             "height": 720,
             "size": 36024156,
@@ -13038,7 +13038,7 @@
             "type": "video/mp4"
           },
           {
-            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764959/DOD_111764959-1024x576-2000k.mp4",
+            "src": "d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764959/DOD_111764959-1024x576-2000k.mp4",
             "width": 1024,
             "height": 576,
             "size": 26342833,
@@ -13046,7 +13046,7 @@
             "type": "video/mp4"
           },
           {
-            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764959/DOD_111764959-512x288-1000k.mp4",
+            "src": "d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764959/DOD_111764959-512x288-1000k.mp4",
             "width": 512,
             "height": 288,
             "size": 14446989,
@@ -13054,7 +13054,7 @@
             "type": "video/mp4"
           },
           {
-            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764959/DOD_111764959-256x144-1000k.mp4",
+            "src": "d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764959/DOD_111764959-256x144-1000k.mp4",
             "width": 256,
             "height": 144,
             "size": 7820226,
@@ -13063,11 +13063,11 @@
           }
         ],
         "thumbnail": {
-          "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2606/1010337/DOD_111764959.0000001/122x92_q95.jpg",
+          "url": "d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2606/1010337/DOD_111764959.0000001/122x92_q95.jpg",
           "width": 122,
           "height": 92
         },
-        "image": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2606/1010337/DOD_111764959.0000001/2000w_q95.jpg",
+        "image": "d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2606/1010337/DOD_111764959.0000001/2000w_q95.jpg",
         "hls_url": "https://api.dvidshub.net/hls/video/1010337.m3u8?api_key=key-68bb60d16b35e",
         "closed_captions": {
           "srt": "https://api.dvidshub.net/closed-captions/get?asset_id=video:1010337&format=srt&api_key=key-68bb60d16b35e",
@@ -13087,10 +13087,10 @@
       "release": "release_3",
       "redacted": false,
       "asset": {
-        "url": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764796/DOD_111764796.mp4"
+        "url": "d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764796/DOD_111764796.mp4"
       },
       "thumbnail": {
-        "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2606/1010319/DOD_111764796.0000001/122x92_q95.jpg"
+        "url": "d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2606/1010319/DOD_111764796.0000001/122x92_q95.jpg"
       },
       "dvidsId": "1010319",
       "dvids": {
@@ -13102,7 +13102,7 @@
         "duration": 5792,
         "files": [
           {
-            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764796/DOD_111764796.mp4",
+            "src": "d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764796/DOD_111764796.mp4",
             "width": 1920,
             "height": 1080,
             "size": 3203453083,
@@ -13110,7 +13110,7 @@
             "type": "video/mp4"
           },
           {
-            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764796/DOD_111764796-1920x1080-9000k.mp4",
+            "src": "d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764796/DOD_111764796-1920x1080-9000k.mp4",
             "width": 1920,
             "height": 1080,
             "size": 3212901468,
@@ -13118,7 +13118,7 @@
             "type": "video/mp4"
           },
           {
-            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764796/DOD_111764796-1920x1080-6000k.mp4",
+            "src": "d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764796/DOD_111764796-1920x1080-6000k.mp4",
             "width": 1920,
             "height": 1080,
             "size": 2555763376,
@@ -13126,7 +13126,7 @@
             "type": "video/mp4"
           },
           {
-            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764796/DOD_111764796-1280x720-3000k.mp4",
+            "src": "d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764796/DOD_111764796-1280x720-3000k.mp4",
             "width": 1280,
             "height": 720,
             "size": 1626126948,
@@ -13134,7 +13134,7 @@
             "type": "video/mp4"
           },
           {
-            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764796/DOD_111764796-1024x576-2000k.mp4",
+            "src": "d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764796/DOD_111764796-1024x576-2000k.mp4",
             "width": 1024,
             "height": 576,
             "size": 1204605913,
@@ -13142,7 +13142,7 @@
             "type": "video/mp4"
           },
           {
-            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764796/DOD_111764796-512x288-1000k.mp4",
+            "src": "d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764796/DOD_111764796-512x288-1000k.mp4",
             "width": 512,
             "height": 288,
             "size": 658961577,
@@ -13150,7 +13150,7 @@
             "type": "video/mp4"
           },
           {
-            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764796/DOD_111764796-256x144-1000k.mp4",
+            "src": "d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764796/DOD_111764796-256x144-1000k.mp4",
             "width": 256,
             "height": 144,
             "size": 355052151,
@@ -13159,11 +13159,11 @@
           }
         ],
         "thumbnail": {
-          "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2606/1010319/DOD_111764796.0000001/122x92_q95.jpg",
+          "url": "d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2606/1010319/DOD_111764796.0000001/122x92_q95.jpg",
           "width": 122,
           "height": 92
         },
-        "image": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2606/1010319/DOD_111764796.0000001/2000w_q95.jpg",
+        "image": "d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2606/1010319/DOD_111764796.0000001/2000w_q95.jpg",
         "hls_url": "https://api.dvidshub.net/hls/video/1010319.m3u8?api_key=key-68bb60d16b35e",
         "closed_captions": {
           "srt": "https://api.dvidshub.net/closed-captions/get?asset_id=video:1010319&format=srt&api_key=key-68bb60d16b35e",
@@ -13183,10 +13183,10 @@
       "release": "release_3",
       "redacted": false,
       "asset": {
-        "url": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764902/DOD_111764902.mp4"
+        "url": "d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764902/DOD_111764902.mp4"
       },
       "thumbnail": {
-        "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2606/1010336/DOD_111764902.0000001/122x92_q95.jpg"
+        "url": "d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2606/1010336/DOD_111764902.0000001/122x92_q95.jpg"
       },
       "dvidsId": "1010336",
       "dvids": {
@@ -13198,7 +13198,7 @@
         "duration": 3341,
         "files": [
           {
-            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764902/DOD_111764902.mp4",
+            "src": "d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764902/DOD_111764902.mp4",
             "width": 1920,
             "height": 1080,
             "size": 1276092482,
@@ -13206,7 +13206,7 @@
             "type": "video/mp4"
           },
           {
-            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764902/DOD_111764902-1920x1080-9000k.mp4",
+            "src": "d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764902/DOD_111764902-1920x1080-9000k.mp4",
             "width": 1920,
             "height": 1080,
             "size": 1281077153,
@@ -13214,7 +13214,7 @@
             "type": "video/mp4"
           },
           {
-            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764902/DOD_111764902-1920x1080-6000k.mp4",
+            "src": "d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764902/DOD_111764902-1920x1080-6000k.mp4",
             "width": 1920,
             "height": 1080,
             "size": 1037385093,
@@ -13222,7 +13222,7 @@
             "type": "video/mp4"
           },
           {
-            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764902/DOD_111764902-1280x720-3000k.mp4",
+            "src": "d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764902/DOD_111764902-1280x720-3000k.mp4",
             "width": 1280,
             "height": 720,
             "size": 696073050,
@@ -13230,7 +13230,7 @@
             "type": "video/mp4"
           },
           {
-            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764902/DOD_111764902-1024x576-2000k.mp4",
+            "src": "d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764902/DOD_111764902-1024x576-2000k.mp4",
             "width": 1024,
             "height": 576,
             "size": 552617533,
@@ -13238,7 +13238,7 @@
             "type": "video/mp4"
           },
           {
-            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764902/DOD_111764902-512x288-1000k.mp4",
+            "src": "d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764902/DOD_111764902-512x288-1000k.mp4",
             "width": 512,
             "height": 288,
             "size": 300061011,
@@ -13246,7 +13246,7 @@
             "type": "video/mp4"
           },
           {
-            "src": "https://d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764902/DOD_111764902-256x144-1000k.mp4",
+            "src": "d34w7g4gy10iej.cloudfront.net/video/2606/DOD_111764902/DOD_111764902-256x144-1000k.mp4",
             "width": 256,
             "height": 144,
             "size": 153456125,
@@ -13255,11 +13255,11 @@
           }
         ],
         "thumbnail": {
-          "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2606/1010336/DOD_111764902.0000001/122x92_q95.jpg",
+          "url": "d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2606/1010336/DOD_111764902.0000001/122x92_q95.jpg",
           "width": 122,
           "height": 92
         },
-        "image": "https://d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2606/1010336/DOD_111764902.0000001/2000w_q95.jpg",
+        "image": "d1ldvf68ux039x.cloudfront.net/thumbs/frames/video/2606/1010336/DOD_111764902.0000001/2000w_q95.jpg",
         "hls_url": "https://api.dvidshub.net/hls/video/1010336.m3u8?api_key=key-68bb60d16b35e",
         "closed_captions": {
           "srt": "https://api.dvidshub.net/closed-captions/get?asset_id=video:1010336&format=srt&api_key=key-68bb60d16b35e",
