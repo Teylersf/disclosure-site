@@ -738,6 +738,64 @@ So the carousel knows. The catalog UI doesn't.
     ],
   },
   {
+    id: "chile-germany-flying-discs-1950",
+    tier: 1,
+    title: "The CIA's 1950 file on a German flying-saucer article — published in a German-language magazine in Chile",
+    claim: "CIA-UAP-005 is a Central Intelligence Agency Information Report dated 31 July 1950 covering a German-language article titled \"The Mystery of the Flying Discs, a contribution to its possible explanation,\" submitted for publication in Condor — a German-language magazine published in Santiago, Chile. The CIA acquired it in Chile, classified its information as \"prior to mid-1950,\" and marked the entire dossier UNEVALUATED INFORMATION.",
+    significance: "This is one of the most evocative documents in the entire PURSUE release. It places a German-speaking community in postwar Chile actively writing and circulating UFO theories in 1950 — five years after the war, three years after Kenneth Arnold coined the term \"flying saucer,\" and at the peak of Project Paperclip-era U.S. surveillance of German scientists who emigrated to South America. The CIA noticed. The Department of War declassified it 76 years later — and nearly buried it, because the catalog URL has a literal space in the filename that breaks normal fetching (see [cia-uap-005-literal-space-in-path](/findings/cia-uap-005-literal-space-in-path)).",
+    evidence: `**Catalog row:** \`CIA-UAP-005-German_scientists_ article_on_flying_discs.pdf\` — note the literal space inside the underscore-joined name. The filename hygiene issue is documented separately at [cia-uap-005-literal-space-in-path](/findings/cia-uap-005-literal-space-in-path); this finding is about what's *in* the file.
+
+**Document format.** A 4-page CIA Information Report. Page 1 is the CIA cover sheet (OCR'd, readable). Pages 2-4 are image-only scans of the actual translated article (no OCR, not directly searchable).
+
+**Cover-sheet fields decoded** (OCR is imperfect — text is from page 1 of the live PDF):
+
+| Field | Value |
+|---|---|
+| Originator | Central Intelligence Agency |
+| Report No. | SO DD-27U3 *(OCR partial — likely SO 00-27143 or similar CIA Information Report serial)* |
+| Country | **Chile / Germany** |
+| Date distributed | **31 July 1950** |
+| Date of information | Prior to mid-1950 |
+| Place acquired | **Chile, Santiago** |
+| Source grading | "Documentary" |
+| Content grading | "UNEVALUATED INFORMATION" |
+| Subject | **German Scientist's Article on "Flying Discs"** |
+
+**The lede paragraph (recovered from page-1 OCR, lightly cleaned):**
+
+> *"Attached for your information is a copy, in translation, of [an article] submitted to Mr. Edward L— for publication in **Condor**, a German-language magazine published in Chile. The article is entitled **'The Mystery of the Flying Discs, a contribution to its possible explanation.'**"*
+
+**Why this combination of facts matters:**
+
+1. **The location.** Santiago, Chile, in 1950, hosted a sizeable German-speaking community — postwar émigrés, pre-war settlers, and a non-trivial number of Wehrmacht- and SS-adjacent figures who fled Europe via the ratlines. The CIA paid close attention to that community. A document about *flying saucers* being written by a "German scientist" for a *Chilean German-language magazine* slots directly into that surveillance frame.
+
+2. **The publication.** *Condor* was a real German-language periodical in Chile in this era (not to be confused with the Lufthansa subsidiary or the Andean bird). German-language publishing in 1950s South America was a community institution for both legitimate diaspora life and, in some cases, fascist-aligned figures regrouping postwar.
+
+3. **The timing.** July 1950 — three years after Kenneth Arnold's June 1947 sighting kicked off the modern UFO era, two years after Project Sign (the U.S. Air Force's first UFO study), and the same year the CIA was actively standing up Project Bluebook's predecessor work. The CIA was *not* yet involved in U.S. UFO policy publicly; this report shows them quietly collecting on the foreign-language side from day one.
+
+4. **The framing.** The article isn't anti-UFO debunking — its German title translates as *"The Mystery of the Flying Discs, a contribution to its possible explanation."* This is a German scientist (per the CIA's framing) attempting to *explain* the discs to a Chilean-German audience. What the explanation is, we don't fully know — pages 2-4 are scanned images of the translated text and were not OCR'd by the DoW's pipeline.
+
+5. **The "unevaluated" stamp.** CIA Information Reports were raw collection feeds — not analysis, not conclusion. "Unevaluated" means the CIA collected it, translated it, distributed it within the IC, and explicitly declined to vouch for whether the content was accurate. Useful as a tradecraft signal — they thought it was worth circulating without taking a position.
+
+**What's still hidden.** The DoW's release pipeline OCR'd page 1 (the cover sheet) but not pages 2-4 (the translated article itself). So the substance of the *Condor* article — the German scientist's actual theory of flying discs — sits in image form in this declassified PDF and is searchable only by the people who download it and OCR it themselves. The catalog gives no hint about the content; the literal-space URL bug (see linked finding) makes it harder to find than every other R3 record.
+
+**Provenance.** This file is part of the 18-document CIA Cold War UFO cluster (CIA-UAP-002 through CIA-UAP-019) added in Release 3 on 2026-06-12. The cluster also includes the Robertson Panel (002), the U-2/OXCART history (003 — see [cia-uap-003-u2-oxcart-720mb](/findings/cia-uap-003-u2-oxcart-720mb)), the Kardashev–Sakharov paper (008 — see [kardashev-sakharov-on-ufos](/findings/kardashev-sakharov-on-ufos)), and reports on UFO activity from Hungary (009 — Budapest), the USSR (010), and Zimbabwe (017 — Harare; see [harare-airport-zimbabwe-2008](/findings/harare-airport-zimbabwe-2008)). The Chile-Germany report is the earliest-dated of the 18, predating the others by years.
+
+**To download.** Catalog URL is \`https://www.war.gov/medialink/ufo/061226/release_03/documents/CIA-UAP-005-German_scientists_ article_on_flying_discs.pdf\` — fetch with \`%20\` URL-encoded (a literal space 404s; see linked finding).`,
+    stats: [
+      { big: "31 Jul 1950", label: "CIA distribution date" },
+      { big: "Santiago", label: "Where CIA acquired the document" },
+      { big: "Condor", label: "The German-language Chilean magazine it was intended for" },
+      { big: "1 of 4", label: "pages that the DoW pipeline OCR'd (cover sheet only)" },
+      { big: "1 of 18", label: "CIA Cold War files in the Release-3 cluster" },
+    ],
+    sources: [
+      { path: "www.war.gov/medialink/ufo/061226/release_03/documents/CIA-UAP-005-German_scientists_ article_on_flying_discs.pdf", note: "The PDF itself — page 1 is OCR'd cover sheet; pages 2-4 are image-only translation" },
+      { path: "www.war.gov/Portals/1/Interactive/2026/UFO/uap-data.csv", note: "Catalog row for CIA-UAP-005" },
+      { path: "www.war.gov/medialink/ufo/061226/release_03/thumbnails/CIA-UAP-005-German_scientists_ article_on_flying_discs.jpg", note: "Thumbnail" },
+    ],
+  },
+  {
     id: "cia-uap-005-literal-space-in-path",
     tier: 2,
     title: "One release-3 file URL has a literal space in it — and a regular fetch returns 404",
