@@ -2,7 +2,48 @@
 
 Source: offline mirror of `https://www.war.gov/UFO/` at `../www.war.gov/`, `../api.dvidshub.net/`, `../d34w7g4gy10iej.cloudfront.net/`, `../d1ldvf68ux039x.cloudfront.net/` (relative to this repo). Findings are things present in the released files / metadata that the official catalog UI does not surface. Every claim below is verifiable from files in the mirror — provenance paths and line numbers are included so the site can deep-link to evidence.
 
-**Current scope:** three releases — Release 1 (May 8, 2026, 158 records), Release 2 (May 22, 2026, 64 records), Release 3 (June 12, 2026, 72 records). Total 294 records. Findings 1-13 below cover R1+R2. Findings 14-22 cover R3. See "Tradecraft shift in Release 3" for a meta-finding about how the DoW changed their workflow between R2 and R3.
+**Current scope:** three releases — Release 1 (May 8, 2026, 158 records), Release 2 (May 22, 2026, 64 records), Release 3 (June 12, 2026, 72 records). Total 294 records. Findings 1-13 below cover R1+R2. Findings 14-22 cover R3. See "Tradecraft shift in Release 3" for a meta-finding about how the DoW changed their workflow between R2 and R3. **Plus Finding 23** — added 2026-06-15 — documenting the first post-Release-3 silent change.
+
+---
+
+## POST-RELEASE-3 MONITORING (2026-06-15)
+
+### Finding 23 — `june-15-silent-ocr-republish`
+
+**Claim:** Between 2026-06-14 and 2026-06-15, one PDF in the Release-1 manifest was silently replaced. The new version is 27% smaller (1,598,931 B → 1,169,464 B) but adds 12,845 characters of OCR-extracted text. The document is a 1963 NASA-to-State-Department memo whose subject line reads "Thoughts on the Space Alien Race Question." No correction note in the catalog.
+
+**Method.** Re-fetched live `uap-data.csv` and `UFO/index.html` on 2026-06-15. The CSV is byte-identical to yesterday's snapshot. The HTML differs only in ASP.NET session tokens, DVIDS live-badge UUIDs, and a daily-rolling DVIDS Live Events config date window — no PURSUE content changes. HEAD-checked the live `Content-Length` of every one of the 390 PDF/image URLs the manifest references against the local mirror's `stat()` size: **389 unchanged, 1 changed.**
+
+**The change.**
+
+| | Yesterday (in mirror) | Today (live war.gov) |
+|---|---|---|
+| MD5 | `6039f96c52e566b69f3a3d774b7653fa` | `6d2e59fabb32472409d7daec609916e0` |
+| Size | 1,598,931 B | 1,169,464 B |
+| `/Producer` | empty | `Adobe Acrobat (32-bit) 26 Paper Capture Plug-in` |
+| `/ModDate` | 2026-05-07 14:46 | 2026-05-11 14:58 |
+| Extractable text | **0 characters** | **12,845 characters** |
+| Catalog correction note | n/a | **none** |
+
+Pages (6) and embedded-image count (6) unchanged. The change is: OCR text layer added via Acrobat's Paper Capture Plug-in, file re-saved at smaller size.
+
+**Accidental before-snapshot.** Yesterday's `orphan-pdfs` finding documented that two byte-identical copies of this PDF were served — the catalogued one with brackets in the filename and a no-bracket orphan duplicate. As of 2026-06-15, the catalogued copy was replaced but the orphan twin was not. The orphan still holds md5 `6039f96c…` — i.e. the pre-change file. Either an oversight or the cleanest possible chain-of-custody.
+
+**Why it matters.** The recovered text reveals the document's actual content. It is a 1963 memo from the Executive Office of the President / NASA to Mr. Robert F. Packard at the State Department's Office of International Scientific Affairs, seriously discussing the policy question of *"what to do if an alien intelligence is discovered in space"*, referencing BNSP Task I (Basic National Security Policy) deliberations. Until 2026-06-15 you could only see it as scanned images; now it is searchable. The DoW pushed this change without any public note.
+
+**Sources:**
+- Local pre-change snapshot: `archive/2026-06-14/www.war.gov/medialink/ufo/release_1/59_214434_sp_16_[7.18.1963].pdf` (md5 `6039f96c…`)
+- Current live PDF: `https://www.war.gov/medialink/ufo/release_1/59_214434_sp_16_[7.18.1963].pdf` (md5 `6d2e59fa…`)
+- Orphan twin (still pre-change): `https://www.war.gov/medialink/ufo/release_1/59_214434_sp_16_7.18.1963.pdf` (md5 `6039f96c…`)
+- Catalog row: `uap-data.csv` — no correction note added.
+
+**Suggested UI:** dedicated detail page; this is high-quality content that justifies its own URL. Lead with the subject line ("Thoughts on the Space Alien Race Question"). Show the before-vs-after side by side. Cross-link [may-27-silent-republish](/findings/may-27-silent-republish) (the previous wave) and [orphan-pdfs](/findings/orphan-pdfs) (the twin's new significance).
+
+### Other things I checked and ruled out for today
+
+- No release 4. Probed 12 predictable URL patterns (`uap-release004.csv`, `medialink/ufo/061926/`, `medialink/ufo/062626/`, `bundle/Release_4.zip`, cloudfront `uap061926.zip`, etc.) — all 404.
+- No new press release on `/News/Releases/Tag/uap/` — the article listing is byte-identical to yesterday.
+- No additional silent file changes — only the single PDF flagged above.
 
 ## How to use this doc
 

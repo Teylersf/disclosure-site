@@ -337,6 +337,87 @@ Several PDFs have *only* the shelfmark as their embedded title — no UAP descri
     ],
   },
   // ─────────────────────────────────────────────────────────────
+  //  Post-Release-3 silent change (detected 2026-06-15)
+  // ─────────────────────────────────────────────────────────────
+  {
+    id: "june-15-silent-ocr-republish",
+    tier: 1,
+    title: "DoW silently re-published a 1963 NASA memo about alien-contact policy — with newly-added OCR",
+    claim: "Between June 14 and June 15, 2026, one PDF in the May 8 release was silently replaced. The new version shrinks from 1,598,931 to 1,169,464 bytes (−27%) but gains 12,845 characters of OCR-extracted text — making the document fully searchable for the first time. The document is a 1963 NASA-to-State-Department memo whose subject line reads, verbatim: \"Thoughts on the Space Alien Race Question.\" No correction note appears in the public catalog.",
+    significance: "This is the second confirmed silent republish in the PURSUE program (after the 69-file May 25→27 wave documented in finding #1) — and the first since release 3 dropped on June 12. The newly-OCR'd content matters: the document is a serious 1963 memo from someone in the Executive Office of the President / NASA to Mr. Robert F. Packard at the State Department's Office of International Scientific Affairs, discussing what U.S. policy should be \"if an alien intelligence is discovered in space.\" It references \"BNSP Task I\" (Basic National Security Policy) deliberations. Until June 15 you could only see this as scanned images; now Google can index it. The change was pushed without acknowledgement.",
+    evidence: `**File:** \`release_1/59_214434_sp_16_[7.18.1963].pdf\`. The catalog title is the raw NARA shelfmark — Record Group 59 (State Department), shelf-mark 214434, document SP 16 dated July 18, 1963.
+
+**Method.** Re-fetched the live war.gov \`uap-data.csv\` on 2026-06-15. CSV byte-identical to the 2026-06-14 snapshot — no record adds, removals, or text changes. Re-fetched the live \`UFO/index.html\` — also unchanged in any meaningful way (only the ASP.NET \`__VIEWSTATE\` token, the DVIDS live-badge UUID, and the daily-rolling DVIDS Live Events config date window changed). HEAD-checked every one of the 390 PDF/image URLs the manifest references against the local mirror's stat()'d byte size. **389 unchanged. 1 changed.**
+
+**The change:**
+
+| | Yesterday (in this mirror) | Today (live war.gov) |
+|---|---|---|
+| Size | 1,598,931 bytes | 1,169,464 bytes |
+| MD5 | \`6039f96c52e566b69f3a3d774b7653fa\` | \`6d2e59fabb32472409d7daec609916e0\` |
+| PDF \`/Producer\` | (empty — image-only scan) | \`Adobe Acrobat (32-bit) 26 Paper Capture Plug-in\` |
+| PDF \`/ModDate\` | \`2026-05-07 14:46:32\` | \`2026-05-11 14:58:22\` |
+| Pages | 6 | 6 |
+| Embedded images | 6 | 6 |
+| Extractable text | **0 characters** | **12,845 characters** |
+| Catalog correction note | n/a | **none** |
+
+So the page count and image count didn't change — what changed is that the PDF gained a text layer via Acrobat's Paper Capture Plug-in (OCR), and the file was re-saved with more aggressive compression elsewhere. The file's own \`/ModDate\` says it was prepared on **2026-05-11** — four days before this mirror's first capture on 2026-05-15 of the original — meaning the OCR'd version sat staged somewhere for over a month before being pushed live on or about 2026-06-15.
+
+**The accidental before-snapshot.** Yesterday's \`orphan-pdfs\` finding documented that two byte-identical copies of this document live on the server — \`release_1/59_214434_sp_16_[7.18.1963].pdf\` (bracketed, in the manifest) and \`release_1/59_214434_sp_16_7.18.1963.pdf\` (no brackets, not in the manifest). The two were md5-identical: \`6039f96c…\`. **As of today, the orphan no-bracket version is still md5 \`6039f96c…\` — i.e. it still holds the pre-change file.** The DoW updated the catalogued copy but didn't touch its un-catalogued twin. That twin is now an accidental chain-of-custody preservation of the original — you can verify the diff yourself by fetching both URLs.
+
+**Why the content matters.** The recovered OCR text on page 1 begins:
+
+> *"EXECUTIVE OFFICE OF THE PRESIDENT*
+> *NATIONAL AERONAUTICS and SPACE*
+> *WASHINGTON*
+> *MEMORANDUM FOR ... 18, 1963*
+> *Mr. Robert F. Packard*
+> *Office of International Scientific Affairs*
+> *Department of State*
+> ***SUBJECT: Thoughts on the Space Alien Race Question***
+>
+> *During recent discussions the question has occasionally, though rarely, arisen that perhaps we should consider the policy question of what to do if an alien intelligence is discovered in space. Some discussion of this occurred, as you will recall, during deliberations on BNSP Task I. This memo contains some miscellaneous thoughts on the question."*
+
+The remainder of the 6-page memo seriously surveys the era's scientific consensus on extraterrestrial life, contemporary stellar-formation theory, and the policy implications of "running across an alien intelligent race in our solar system." It dismisses "flying saucer advocates" but acknowledges the discussion was had at the BNSP (Basic National Security Policy) level. This is a substantive Cold War-era U.S. government policy memo about contact contingency — released in image-only form in May, made searchable in June without a public note.
+
+**Where to verify yourself:**
+- Pre-change PDF: locally at \`archive/2026-06-14/www.war.gov/medialink/ufo/release_1/59_214434_sp_16_[7.18.1963].pdf\` (md5 \`6039f96c…\`); also live at \`https://www.war.gov/medialink/ufo/release_1/59_214434_sp_16_7.18.1963.pdf\` (the orphan twin)
+- Current live: \`https://www.war.gov/medialink/ufo/release_1/59_214434_sp_16_[7.18.1963].pdf\` (md5 \`6d2e59fa…\`)
+- Pattern context: see [may-27-silent-republish](/findings/may-27-silent-republish) and [orphan-pdfs](/findings/orphan-pdfs)`,
+    stats: [
+      { big: "1 of 390", label: "file silently replaced in 24 hours" },
+      { big: "−27%", label: "size delta (re-OCR + recompression)" },
+      { big: "12,845", label: "OCR text characters added (was 0)" },
+      { big: "0", label: "correction notes in the public catalog" },
+    ],
+    comparisons: [
+      {
+        leftLabel: "Yesterday (2026-06-14)",
+        leftValue: "1,598,931 B · md5 6039f96c52e566b69f3a3d774b7653fa · 0 chars text · /Producer empty",
+        rightLabel: "Today (2026-06-15)",
+        rightValue: "1,169,464 B · md5 6d2e59fabb32472409d7daec609916e0 · 12,845 chars text · /Producer Adobe Acrobat 26 Paper Capture",
+      },
+      {
+        leftLabel: "Manifest-referenced URL (changed)",
+        leftValue: "https://www.war.gov/medialink/ufo/release_1/59_214434_sp_16_[7.18.1963].pdf",
+        rightLabel: "Orphan twin (still holds pre-change file)",
+        rightValue: "https://www.war.gov/medialink/ufo/release_1/59_214434_sp_16_7.18.1963.pdf",
+      },
+    ],
+    hashes: [
+      { label: "BEFORE — orphan twin and archive snapshot", hash: "md5: 6039f96c52e566b69f3a3d774b7653fa" },
+      { label: "AFTER — current live (in manifest)", hash: "md5: 6d2e59fabb32472409d7daec609916e0" },
+    ],
+    sources: [
+      { path: "archive/2026-06-14/www.war.gov/medialink/ufo/release_1/59_214434_sp_16_[7.18.1963].pdf", note: "Local pre-change snapshot (md5 6039f96c…)" },
+      { path: "www.war.gov/medialink/ufo/release_1/59_214434_sp_16_[7.18.1963].pdf", note: "Current live (md5 6d2e59fa…, OCR'd, smaller)" },
+      { path: "www.war.gov/medialink/ufo/release_1/59_214434_sp_16_7.18.1963.pdf", note: "Orphan twin — still byte-identical to the pre-change version" },
+      { path: "https://www.war.gov/Portals/1/Interactive/2026/UFO/uap-data.csv", note: "Catalog row for the changed file — no correction note added" },
+    ],
+  },
+
+  // ─────────────────────────────────────────────────────────────
   //  Release 3 (June 12, 2026) findings
   // ─────────────────────────────────────────────────────────────
   {
@@ -741,11 +822,11 @@ Three releases, three different filename-hygiene failures. The CIA-UAP-005 case 
     tier: 2,
     title: "Orphan PDFs still served at predictable URLs",
     claim: "Four PDFs are present on the public server but no longer referenced by the live manifest. Earlier versions remain quietly accessible.",
-    significance: "The pattern — that the Department of War still serves earlier versions of files at predictable URLs — is itself the finding.",
+    significance: "The pattern — that the Department of War still serves earlier versions of files at predictable URLs — is itself the finding. **Update 2026-06-15:** one of these orphans (the no-bracket SP 16 [7.18.1963]) just turned out to be the only existing pre-change snapshot of a file the DoW silently OCR'd and republished overnight. See [june-15-silent-ocr-republish](/findings/june-15-silent-ocr-republish).",
     evidence: `Files present on disk but not referenced by the current \`uap-data.csv\`:
 
 • **\`dow-uap-d20-mission-report-southern-united-states-2023.pdf\`** — byte-identical to the Iraq version (see Finding 1, *d20-location-swap*).
-• **\`59_214434_sp_16_7.18.1963.pdf\`** — byte-identical to the bracketed version that *is* referenced (md5 \`6039f96c52e566b69f3a3d774b7653fa\`).
+• **\`59_214434_sp_16_7.18.1963.pdf\`** — was byte-identical to the bracketed version that *is* referenced (md5 \`6039f96c52e566b69f3a3d774b7653fa\`). On 2026-06-15 the catalogued bracketed version was silently replaced with an OCR'd, smaller version (new md5 \`6d2e59fa…\`). The orphan twin was *not* touched — it still holds the pre-change file at md5 \`6039f96c…\`, making it the only public chain-of-custody record of the pre-OCR version.
 • **\`serial 5 redacted_redacted.pdf\`** (with a literal space in the filename).
 • **\`18_100754_ general 1946-7_vol_2.pdf\`** (leading space inside the filename).`,
     sources: [
