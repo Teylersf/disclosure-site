@@ -1,0 +1,24 @@
+{
+  "source": "sentinel-2-l2a",
+  "aoi_id": "white-sands-nm",
+  "aoi_name": "White Sands, New Mexico",
+  "date": "2026-06-14",
+  "datetime_utc": "2026-06-14T18:05:12.225000Z",
+  "stac_id": "S2C_13SBR_20260614_0_L2A",
+  "cloud_cover_percent": 23.282288,
+  "platform": "sentinel-2c",
+  "bbox": [
+    -108.192941,
+    31.507755,
+    -107.003555,
+    32.521038
+  ],
+  "assets": {
+    "preview": {
+      "file": "sentinel2-preview.jpg",
+      "source_url": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/13/S/BR/2026/6/S2C_13SBR_20260614_0_L2A/preview.jpg",
+      "size_bytes": 32214
+    },
+    "visual_cog_url": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/13/S/BR/2026/6/S2C_13SBR_20260614_0_L2A/TCI.tif"
+  }
+}
