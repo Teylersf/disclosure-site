@@ -1,0 +1,24 @@
+{
+  "source": "sentinel-2-l2a",
+  "aoi_id": "papua-new-guinea",
+  "aoi_name": "Papua New Guinea",
+  "date": "2026-06-17",
+  "datetime_utc": "2026-06-17T00:59:08.510000Z",
+  "stac_id": "S2A_54MYT_20260617_1_L2A",
+  "cloud_cover_percent": 19.973892,
+  "platform": "sentinel-2a",
+  "bbox": [
+    142.807651,
+    -7.321195,
+    143.220906,
+    -6.327759
+  ],
+  "assets": {
+    "preview": {
+      "file": "sentinel2-preview.jpg",
+      "source_url": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/54/M/YT/2026/6/S2A_54MYT_20260617_1_L2A/preview.jpg",
+      "size_bytes": 18494
+    },
+    "visual_cog_url": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/54/M/YT/2026/6/S2A_54MYT_20260617_1_L2A/TCI.tif"
+  }
+}
