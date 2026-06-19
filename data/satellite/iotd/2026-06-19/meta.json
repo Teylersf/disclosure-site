@@ -1,0 +1,13 @@
+{
+  "source": "nasa-eo-iotd",
+  "date": "2026-06-19",
+  "title": "Tropical Storm Arthur",
+  "link": "https://science.nasa.gov/earth/earth-observatory/tropical-storm-arthur/",
+  "description": "The first named storm of the 2026 Atlantic hurricane season brought intense rainfall and the threat of flash flooding to the U.S. Gulf Coast. The post Tropical Storm Arthur appeared first on NASA Science.",
+  "pubDate": "Fri, 19 Jun 2026 04:00:00 +0000",
+  "image": {
+    "file": "image.jpg",
+    "source_url": "https://assets.science.nasa.gov/dynamicimage/assets/science/esd/eo/images/iotd/2026/tropical-storm-arthur/stormarthur_tmo_20260617.jpg",
+    "size_bytes": 378879
+  }
+}
