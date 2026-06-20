@@ -1,0 +1,24 @@
+{
+  "source": "sentinel-2-l2a",
+  "aoi_id": "syria",
+  "aoi_name": "Syria",
+  "date": "2026-06-19",
+  "datetime_utc": "2026-06-19T08:11:01.701000Z",
+  "stac_id": "S2A_37SDT_20260619_0_L2A",
+  "cloud_cover_percent": 0,
+  "platform": "sentinel-2a",
+  "bbox": [
+    38.877087,
+    33.35131,
+    39.104194,
+    34.197796
+  ],
+  "assets": {
+    "preview": {
+      "file": "sentinel2-preview.jpg",
+      "source_url": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/37/S/DT/2026/6/S2A_37SDT_20260619_0_L2A/preview.jpg",
+      "size_bytes": 4528
+    },
+    "visual_cog_url": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/37/S/DT/2026/6/S2A_37SDT_20260619_0_L2A/TCI.tif"
+  }
+}
