@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-24T13:04:37.679Z",
+  "generatedAt": "2026-06-25T13:04:18.038Z",
   "aois": [
     {
       "id": "sandia-base-nm",
@@ -162,6 +162,14 @@
     }
   ],
   "iotd": [
+    {
+      "date": "2026-06-25",
+      "title": "A Turquoise Tint for the Black Sea",
+      "link": "https://science.nasa.gov/earth/earth-observatory/a-turquoise-tint-for-the-black-sea/",
+      "description": "Phytoplankton added a milky blue hue to the waters of the Black Sea and nearby waterways in spring and summer 2026. The post A Turquoise Tint for the Black Sea appeared first on NASA Science.",
+      "image_url": "https://disclosure.us-east-1.linodeobjects.com/satellite/iotd/2026-06-25/image.jpg",
+      "size_bytes": 754438
+    },
     {
       "date": "2026-06-24",
       "title": "Playing the Moon Game",
@@ -373,6 +381,11 @@
   ],
   "global": [
     {
+      "date": "2026-06-24",
+      "url": "https://disclosure.us-east-1.linodeobjects.com/satellite/gibs-global/2026-06-24/viirs-noaa20-truecolor.jpg",
+      "size_bytes": 548012
+    },
+    {
       "date": "2026-06-23",
       "url": "https://disclosure.us-east-1.linodeobjects.com/satellite/gibs-global/2026-06-23/viirs-noaa20-truecolor.jpg",
       "size_bytes": 570520
@@ -504,6 +517,78 @@
     }
   ],
   "incidentDays": [
+    {
+      "aoi_id": "columbus-oh",
+      "date": "2026-06-24",
+      "captures": [
+        {
+          "source": "VIIRS NOAA-20 True Color",
+          "layer": "VIIRS_NOAA20_CorrectedReflectance_TrueColor",
+          "file": "viirs-noaa20-truecolor.jpg",
+          "url": "https://disclosure.us-east-1.linodeobjects.com/satellite/incidents/columbus-oh/2026-06-24/viirs-noaa20-truecolor.jpg",
+          "size_bytes": 163803,
+          "resolution_m": 375
+        },
+        {
+          "source": "VIIRS Suomi NPP True Color",
+          "layer": "VIIRS_SNPP_CorrectedReflectance_TrueColor",
+          "file": "viirs-snpp-truecolor.jpg",
+          "url": "https://disclosure.us-east-1.linodeobjects.com/satellite/incidents/columbus-oh/2026-06-24/viirs-snpp-truecolor.jpg",
+          "size_bytes": 140136,
+          "resolution_m": 375
+        },
+        {
+          "source": "MODIS Terra True Color",
+          "layer": "MODIS_Terra_CorrectedReflectance_TrueColor",
+          "file": "modis-terra-truecolor.jpg",
+          "url": "https://disclosure.us-east-1.linodeobjects.com/satellite/incidents/columbus-oh/2026-06-24/modis-terra-truecolor.jpg",
+          "size_bytes": 132685,
+          "resolution_m": 250
+        },
+        {
+          "source": "MODIS Aqua True Color",
+          "layer": "MODIS_Aqua_CorrectedReflectance_TrueColor",
+          "file": "modis-aqua-truecolor.jpg",
+          "url": "https://disclosure.us-east-1.linodeobjects.com/satellite/incidents/columbus-oh/2026-06-24/modis-aqua-truecolor.jpg",
+          "size_bytes": 219542,
+          "resolution_m": 250
+        },
+        {
+          "source": "VIIRS NOAA-20 Active Fires",
+          "layer": "VIIRS_NOAA20_Thermal_Anomalies_375m_Day",
+          "file": "viirs-noaa20-fires.jpg",
+          "url": "https://disclosure.us-east-1.linodeobjects.com/satellite/incidents/columbus-oh/2026-06-24/viirs-noaa20-fires.jpg",
+          "size_bytes": 6428,
+          "resolution_m": 375
+        },
+        {
+          "source": "MODIS Terra Thermal Anomalies",
+          "layer": "MODIS_Terra_Thermal_Anomalies_All",
+          "file": "modis-terra-thermal.jpg",
+          "url": "https://disclosure.us-east-1.linodeobjects.com/satellite/incidents/columbus-oh/2026-06-24/modis-terra-thermal.jpg",
+          "size_bytes": 6543,
+          "resolution_m": 1000
+        },
+        {
+          "source": "MODIS Aqua Cloud-Top Temperature",
+          "layer": "MODIS_Aqua_Cloud_Top_Temp_Day",
+          "file": "modis-aqua-cloudtop-temp.jpg",
+          "url": "https://disclosure.us-east-1.linodeobjects.com/satellite/incidents/columbus-oh/2026-06-24/modis-aqua-cloudtop-temp.jpg",
+          "size_bytes": 36792,
+          "resolution_m": 1000
+        },
+        {
+          "source": "Sentinel-2 (sentinel-2c)",
+          "file": "sentinel2-preview.jpg",
+          "url": "https://disclosure.us-east-1.linodeobjects.com/satellite/incidents/columbus-oh/2026-06-24/sentinel2-preview.jpg",
+          "size_bytes": 32899,
+          "resolution_m": 10,
+          "datetime_utc": "2026-06-24T16:22:34.289000Z",
+          "cloud_cover_percent": 10.425666,
+          "platform": "sentinel-2c"
+        }
+      ]
+    },
     {
       "aoi_id": "columbus-oh",
       "date": "2026-06-23",
@@ -2159,6 +2244,68 @@
           "datetime_utc": "2026-05-28T16:32:28.083000Z",
           "cloud_cover_percent": 12.051463,
           "platform": "sentinel-2c"
+        }
+      ]
+    },
+    {
+      "aoi_id": "eglin-afb",
+      "date": "2026-06-24",
+      "captures": [
+        {
+          "source": "VIIRS NOAA-20 True Color",
+          "layer": "VIIRS_NOAA20_CorrectedReflectance_TrueColor",
+          "file": "viirs-noaa20-truecolor.jpg",
+          "url": "https://disclosure.us-east-1.linodeobjects.com/satellite/incidents/eglin-afb/2026-06-24/viirs-noaa20-truecolor.jpg",
+          "size_bytes": 53671,
+          "resolution_m": 375
+        },
+        {
+          "source": "VIIRS Suomi NPP True Color",
+          "layer": "VIIRS_SNPP_CorrectedReflectance_TrueColor",
+          "file": "viirs-snpp-truecolor.jpg",
+          "url": "https://disclosure.us-east-1.linodeobjects.com/satellite/incidents/eglin-afb/2026-06-24/viirs-snpp-truecolor.jpg",
+          "size_bytes": 66505,
+          "resolution_m": 375
+        },
+        {
+          "source": "MODIS Terra True Color",
+          "layer": "MODIS_Terra_CorrectedReflectance_TrueColor",
+          "file": "modis-terra-truecolor.jpg",
+          "url": "https://disclosure.us-east-1.linodeobjects.com/satellite/incidents/eglin-afb/2026-06-24/modis-terra-truecolor.jpg",
+          "size_bytes": 63799,
+          "resolution_m": 250
+        },
+        {
+          "source": "MODIS Aqua True Color",
+          "layer": "MODIS_Aqua_CorrectedReflectance_TrueColor",
+          "file": "modis-aqua-truecolor.jpg",
+          "url": "https://disclosure.us-east-1.linodeobjects.com/satellite/incidents/eglin-afb/2026-06-24/modis-aqua-truecolor.jpg",
+          "size_bytes": 71782,
+          "resolution_m": 250
+        },
+        {
+          "source": "VIIRS NOAA-20 Active Fires",
+          "layer": "VIIRS_NOAA20_Thermal_Anomalies_375m_Day",
+          "file": "viirs-noaa20-fires.jpg",
+          "url": "https://disclosure.us-east-1.linodeobjects.com/satellite/incidents/eglin-afb/2026-06-24/viirs-noaa20-fires.jpg",
+          "size_bytes": 6550,
+          "resolution_m": 375
+        },
+        {
+          "source": "MODIS Terra Thermal Anomalies",
+          "layer": "MODIS_Terra_Thermal_Anomalies_All",
+          "file": "modis-terra-thermal.jpg",
+          "url": "https://disclosure.us-east-1.linodeobjects.com/satellite/incidents/eglin-afb/2026-06-24/modis-terra-thermal.jpg",
+          "size_bytes": 6428,
+          "resolution_m": 1000
+        },
+        {
+          "source": "MODIS Aqua Cloud-Top Temperature",
+          "layer": "MODIS_Aqua_Cloud_Top_Temp_Day",
+          "file": "modis-aqua-cloudtop-temp.jpg",
+          "url": "https://disclosure.us-east-1.linodeobjects.com/satellite/incidents/eglin-afb/2026-06-24/modis-aqua-cloudtop-temp.jpg",
+          "size_bytes": 20888,
+          "resolution_m": 1000
         }
       ]
     },
@@ -3827,6 +3974,84 @@
           "datetime_utc": "2026-05-18T16:35:10.733000Z",
           "cloud_cover_percent": 17.509153,
           "platform": "sentinel-2c"
+        }
+      ]
+    },
+    {
+      "aoi_id": "iran-tehran",
+      "date": "2026-06-25",
+      "captures": [
+        {
+          "source": "Sentinel-2 (sentinel-2c)",
+          "file": "sentinel2-preview.jpg",
+          "url": "https://disclosure.us-east-1.linodeobjects.com/satellite/incidents/iran-tehran/2026-06-25/sentinel2-preview.jpg",
+          "size_bytes": 30284,
+          "resolution_m": 10,
+          "datetime_utc": "2026-06-25T07:30:06.963000Z",
+          "cloud_cover_percent": 0.000321,
+          "platform": "sentinel-2c"
+        }
+      ]
+    },
+    {
+      "aoi_id": "iran-tehran",
+      "date": "2026-06-24",
+      "captures": [
+        {
+          "source": "VIIRS NOAA-20 True Color",
+          "layer": "VIIRS_NOAA20_CorrectedReflectance_TrueColor",
+          "file": "viirs-noaa20-truecolor.jpg",
+          "url": "https://disclosure.us-east-1.linodeobjects.com/satellite/incidents/iran-tehran/2026-06-24/viirs-noaa20-truecolor.jpg",
+          "size_bytes": 80357,
+          "resolution_m": 375
+        },
+        {
+          "source": "VIIRS Suomi NPP True Color",
+          "layer": "VIIRS_SNPP_CorrectedReflectance_TrueColor",
+          "file": "viirs-snpp-truecolor.jpg",
+          "url": "https://disclosure.us-east-1.linodeobjects.com/satellite/incidents/iran-tehran/2026-06-24/viirs-snpp-truecolor.jpg",
+          "size_bytes": 89957,
+          "resolution_m": 375
+        },
+        {
+          "source": "MODIS Terra True Color",
+          "layer": "MODIS_Terra_CorrectedReflectance_TrueColor",
+          "file": "modis-terra-truecolor.jpg",
+          "url": "https://disclosure.us-east-1.linodeobjects.com/satellite/incidents/iran-tehran/2026-06-24/modis-terra-truecolor.jpg",
+          "size_bytes": 104441,
+          "resolution_m": 250
+        },
+        {
+          "source": "MODIS Aqua True Color",
+          "layer": "MODIS_Aqua_CorrectedReflectance_TrueColor",
+          "file": "modis-aqua-truecolor.jpg",
+          "url": "https://disclosure.us-east-1.linodeobjects.com/satellite/incidents/iran-tehran/2026-06-24/modis-aqua-truecolor.jpg",
+          "size_bytes": 83446,
+          "resolution_m": 250
+        },
+        {
+          "source": "VIIRS NOAA-20 Active Fires",
+          "layer": "VIIRS_NOAA20_Thermal_Anomalies_375m_Day",
+          "file": "viirs-noaa20-fires.jpg",
+          "url": "https://disclosure.us-east-1.linodeobjects.com/satellite/incidents/iran-tehran/2026-06-24/viirs-noaa20-fires.jpg",
+          "size_bytes": 6428,
+          "resolution_m": 375
+        },
+        {
+          "source": "MODIS Terra Thermal Anomalies",
+          "layer": "MODIS_Terra_Thermal_Anomalies_All",
+          "file": "modis-terra-thermal.jpg",
+          "url": "https://disclosure.us-east-1.linodeobjects.com/satellite/incidents/iran-tehran/2026-06-24/modis-terra-thermal.jpg",
+          "size_bytes": 6428,
+          "resolution_m": 1000
+        },
+        {
+          "source": "MODIS Aqua Cloud-Top Temperature",
+          "layer": "MODIS_Aqua_Cloud_Top_Temp_Day",
+          "file": "modis-aqua-cloudtop-temp.jpg",
+          "url": "https://disclosure.us-east-1.linodeobjects.com/satellite/incidents/iran-tehran/2026-06-24/modis-aqua-cloudtop-temp.jpg",
+          "size_bytes": 31854,
+          "resolution_m": 1000
         }
       ]
     },
@@ -5592,6 +5817,62 @@
       "aoi_id": "iraq",
       "date": "2026-06-24",
       "captures": [
+        {
+          "source": "VIIRS NOAA-20 True Color",
+          "layer": "VIIRS_NOAA20_CorrectedReflectance_TrueColor",
+          "file": "viirs-noaa20-truecolor.jpg",
+          "url": "https://disclosure.us-east-1.linodeobjects.com/satellite/incidents/iraq/2026-06-24/viirs-noaa20-truecolor.jpg",
+          "size_bytes": 64528,
+          "resolution_m": 375
+        },
+        {
+          "source": "VIIRS Suomi NPP True Color",
+          "layer": "VIIRS_SNPP_CorrectedReflectance_TrueColor",
+          "file": "viirs-snpp-truecolor.jpg",
+          "url": "https://disclosure.us-east-1.linodeobjects.com/satellite/incidents/iraq/2026-06-24/viirs-snpp-truecolor.jpg",
+          "size_bytes": 59975,
+          "resolution_m": 375
+        },
+        {
+          "source": "MODIS Terra True Color",
+          "layer": "MODIS_Terra_CorrectedReflectance_TrueColor",
+          "file": "modis-terra-truecolor.jpg",
+          "url": "https://disclosure.us-east-1.linodeobjects.com/satellite/incidents/iraq/2026-06-24/modis-terra-truecolor.jpg",
+          "size_bytes": 55387,
+          "resolution_m": 250
+        },
+        {
+          "source": "MODIS Aqua True Color",
+          "layer": "MODIS_Aqua_CorrectedReflectance_TrueColor",
+          "file": "modis-aqua-truecolor.jpg",
+          "url": "https://disclosure.us-east-1.linodeobjects.com/satellite/incidents/iraq/2026-06-24/modis-aqua-truecolor.jpg",
+          "size_bytes": 115781,
+          "resolution_m": 250
+        },
+        {
+          "source": "VIIRS NOAA-20 Active Fires",
+          "layer": "VIIRS_NOAA20_Thermal_Anomalies_375m_Day",
+          "file": "viirs-noaa20-fires.jpg",
+          "url": "https://disclosure.us-east-1.linodeobjects.com/satellite/incidents/iraq/2026-06-24/viirs-noaa20-fires.jpg",
+          "size_bytes": 6428,
+          "resolution_m": 375
+        },
+        {
+          "source": "MODIS Terra Thermal Anomalies",
+          "layer": "MODIS_Terra_Thermal_Anomalies_All",
+          "file": "modis-terra-thermal.jpg",
+          "url": "https://disclosure.us-east-1.linodeobjects.com/satellite/incidents/iraq/2026-06-24/modis-terra-thermal.jpg",
+          "size_bytes": 6649,
+          "resolution_m": 1000
+        },
+        {
+          "source": "MODIS Aqua Cloud-Top Temperature",
+          "layer": "MODIS_Aqua_Cloud_Top_Temp_Day",
+          "file": "modis-aqua-cloudtop-temp.jpg",
+          "url": "https://disclosure.us-east-1.linodeobjects.com/satellite/incidents/iraq/2026-06-24/modis-aqua-cloudtop-temp.jpg",
+          "size_bytes": 6428,
+          "resolution_m": 1000
+        },
         {
           "source": "Sentinel-2 (sentinel-2c)",
           "file": "sentinel2-preview.jpg",
@@ -7364,6 +7645,84 @@
     },
     {
       "aoi_id": "kazakhstan",
+      "date": "2026-06-25",
+      "captures": [
+        {
+          "source": "Sentinel-2 (sentinel-2b)",
+          "file": "sentinel2-preview.jpg",
+          "url": "https://disclosure.us-east-1.linodeobjects.com/satellite/incidents/kazakhstan/2026-06-25/sentinel2-preview.jpg",
+          "size_bytes": 41239,
+          "resolution_m": 10,
+          "datetime_utc": "2026-06-25T06:35:56.517000Z",
+          "cloud_cover_percent": 21.608323,
+          "platform": "sentinel-2b"
+        }
+      ]
+    },
+    {
+      "aoi_id": "kazakhstan",
+      "date": "2026-06-24",
+      "captures": [
+        {
+          "source": "VIIRS NOAA-20 True Color",
+          "layer": "VIIRS_NOAA20_CorrectedReflectance_TrueColor",
+          "file": "viirs-noaa20-truecolor.jpg",
+          "url": "https://disclosure.us-east-1.linodeobjects.com/satellite/incidents/kazakhstan/2026-06-24/viirs-noaa20-truecolor.jpg",
+          "size_bytes": 154449,
+          "resolution_m": 375
+        },
+        {
+          "source": "VIIRS Suomi NPP True Color",
+          "layer": "VIIRS_SNPP_CorrectedReflectance_TrueColor",
+          "file": "viirs-snpp-truecolor.jpg",
+          "url": "https://disclosure.us-east-1.linodeobjects.com/satellite/incidents/kazakhstan/2026-06-24/viirs-snpp-truecolor.jpg",
+          "size_bytes": 149739,
+          "resolution_m": 375
+        },
+        {
+          "source": "MODIS Terra True Color",
+          "layer": "MODIS_Terra_CorrectedReflectance_TrueColor",
+          "file": "modis-terra-truecolor.jpg",
+          "url": "https://disclosure.us-east-1.linodeobjects.com/satellite/incidents/kazakhstan/2026-06-24/modis-terra-truecolor.jpg",
+          "size_bytes": 156908,
+          "resolution_m": 250
+        },
+        {
+          "source": "MODIS Aqua True Color",
+          "layer": "MODIS_Aqua_CorrectedReflectance_TrueColor",
+          "file": "modis-aqua-truecolor.jpg",
+          "url": "https://disclosure.us-east-1.linodeobjects.com/satellite/incidents/kazakhstan/2026-06-24/modis-aqua-truecolor.jpg",
+          "size_bytes": 6428,
+          "resolution_m": 250
+        },
+        {
+          "source": "VIIRS NOAA-20 Active Fires",
+          "layer": "VIIRS_NOAA20_Thermal_Anomalies_375m_Day",
+          "file": "viirs-noaa20-fires.jpg",
+          "url": "https://disclosure.us-east-1.linodeobjects.com/satellite/incidents/kazakhstan/2026-06-24/viirs-noaa20-fires.jpg",
+          "size_bytes": 6482,
+          "resolution_m": 375
+        },
+        {
+          "source": "MODIS Terra Thermal Anomalies",
+          "layer": "MODIS_Terra_Thermal_Anomalies_All",
+          "file": "modis-terra-thermal.jpg",
+          "url": "https://disclosure.us-east-1.linodeobjects.com/satellite/incidents/kazakhstan/2026-06-24/modis-terra-thermal.jpg",
+          "size_bytes": 6428,
+          "resolution_m": 1000
+        },
+        {
+          "source": "MODIS Aqua Cloud-Top Temperature",
+          "layer": "MODIS_Aqua_Cloud_Top_Temp_Day",
+          "file": "modis-aqua-cloudtop-temp.jpg",
+          "url": "https://disclosure.us-east-1.linodeobjects.com/satellite/incidents/kazakhstan/2026-06-24/modis-aqua-cloudtop-temp.jpg",
+          "size_bytes": 6428,
+          "resolution_m": 1000
+        }
+      ]
+    },
+    {
+      "aoi_id": "kazakhstan",
       "date": "2026-06-23",
       "captures": [
         {
@@ -9061,6 +9420,68 @@
           "datetime_utc": "2026-05-29T06:46:07.946000Z",
           "cloud_cover_percent": 5.927711,
           "platform": "sentinel-2b"
+        }
+      ]
+    },
+    {
+      "aoi_id": "lake-huron",
+      "date": "2026-06-24",
+      "captures": [
+        {
+          "source": "VIIRS NOAA-20 True Color",
+          "layer": "VIIRS_NOAA20_CorrectedReflectance_TrueColor",
+          "file": "viirs-noaa20-truecolor.jpg",
+          "url": "https://disclosure.us-east-1.linodeobjects.com/satellite/incidents/lake-huron/2026-06-24/viirs-noaa20-truecolor.jpg",
+          "size_bytes": 41616,
+          "resolution_m": 375
+        },
+        {
+          "source": "VIIRS Suomi NPP True Color",
+          "layer": "VIIRS_SNPP_CorrectedReflectance_TrueColor",
+          "file": "viirs-snpp-truecolor.jpg",
+          "url": "https://disclosure.us-east-1.linodeobjects.com/satellite/incidents/lake-huron/2026-06-24/viirs-snpp-truecolor.jpg",
+          "size_bytes": 33172,
+          "resolution_m": 375
+        },
+        {
+          "source": "MODIS Terra True Color",
+          "layer": "MODIS_Terra_CorrectedReflectance_TrueColor",
+          "file": "modis-terra-truecolor.jpg",
+          "url": "https://disclosure.us-east-1.linodeobjects.com/satellite/incidents/lake-huron/2026-06-24/modis-terra-truecolor.jpg",
+          "size_bytes": 72378,
+          "resolution_m": 250
+        },
+        {
+          "source": "MODIS Aqua True Color",
+          "layer": "MODIS_Aqua_CorrectedReflectance_TrueColor",
+          "file": "modis-aqua-truecolor.jpg",
+          "url": "https://disclosure.us-east-1.linodeobjects.com/satellite/incidents/lake-huron/2026-06-24/modis-aqua-truecolor.jpg",
+          "size_bytes": 104050,
+          "resolution_m": 250
+        },
+        {
+          "source": "VIIRS NOAA-20 Active Fires",
+          "layer": "VIIRS_NOAA20_Thermal_Anomalies_375m_Day",
+          "file": "viirs-noaa20-fires.jpg",
+          "url": "https://disclosure.us-east-1.linodeobjects.com/satellite/incidents/lake-huron/2026-06-24/viirs-noaa20-fires.jpg",
+          "size_bytes": 6428,
+          "resolution_m": 375
+        },
+        {
+          "source": "MODIS Terra Thermal Anomalies",
+          "layer": "MODIS_Terra_Thermal_Anomalies_All",
+          "file": "modis-terra-thermal.jpg",
+          "url": "https://disclosure.us-east-1.linodeobjects.com/satellite/incidents/lake-huron/2026-06-24/modis-terra-thermal.jpg",
+          "size_bytes": 6428,
+          "resolution_m": 1000
+        },
+        {
+          "source": "MODIS Aqua Cloud-Top Temperature",
+          "layer": "MODIS_Aqua_Cloud_Top_Temp_Day",
+          "file": "modis-aqua-cloudtop-temp.jpg",
+          "url": "https://disclosure.us-east-1.linodeobjects.com/satellite/incidents/lake-huron/2026-06-24/modis-aqua-cloudtop-temp.jpg",
+          "size_bytes": 51612,
+          "resolution_m": 1000
         }
       ]
     },
@@ -10804,6 +11225,68 @@
     },
     {
       "aoi_id": "papua-new-guinea",
+      "date": "2026-06-24",
+      "captures": [
+        {
+          "source": "VIIRS NOAA-20 True Color",
+          "layer": "VIIRS_NOAA20_CorrectedReflectance_TrueColor",
+          "file": "viirs-noaa20-truecolor.jpg",
+          "url": "https://disclosure.us-east-1.linodeobjects.com/satellite/incidents/papua-new-guinea/2026-06-24/viirs-noaa20-truecolor.jpg",
+          "size_bytes": 87185,
+          "resolution_m": 375
+        },
+        {
+          "source": "VIIRS Suomi NPP True Color",
+          "layer": "VIIRS_SNPP_CorrectedReflectance_TrueColor",
+          "file": "viirs-snpp-truecolor.jpg",
+          "url": "https://disclosure.us-east-1.linodeobjects.com/satellite/incidents/papua-new-guinea/2026-06-24/viirs-snpp-truecolor.jpg",
+          "size_bytes": 114929,
+          "resolution_m": 375
+        },
+        {
+          "source": "MODIS Terra True Color",
+          "layer": "MODIS_Terra_CorrectedReflectance_TrueColor",
+          "file": "modis-terra-truecolor.jpg",
+          "url": "https://disclosure.us-east-1.linodeobjects.com/satellite/incidents/papua-new-guinea/2026-06-24/modis-terra-truecolor.jpg",
+          "size_bytes": 153263,
+          "resolution_m": 250
+        },
+        {
+          "source": "MODIS Aqua True Color",
+          "layer": "MODIS_Aqua_CorrectedReflectance_TrueColor",
+          "file": "modis-aqua-truecolor.jpg",
+          "url": "https://disclosure.us-east-1.linodeobjects.com/satellite/incidents/papua-new-guinea/2026-06-24/modis-aqua-truecolor.jpg",
+          "size_bytes": 97841,
+          "resolution_m": 250
+        },
+        {
+          "source": "VIIRS NOAA-20 Active Fires",
+          "layer": "VIIRS_NOAA20_Thermal_Anomalies_375m_Day",
+          "file": "viirs-noaa20-fires.jpg",
+          "url": "https://disclosure.us-east-1.linodeobjects.com/satellite/incidents/papua-new-guinea/2026-06-24/viirs-noaa20-fires.jpg",
+          "size_bytes": 6428,
+          "resolution_m": 375
+        },
+        {
+          "source": "MODIS Terra Thermal Anomalies",
+          "layer": "MODIS_Terra_Thermal_Anomalies_All",
+          "file": "modis-terra-thermal.jpg",
+          "url": "https://disclosure.us-east-1.linodeobjects.com/satellite/incidents/papua-new-guinea/2026-06-24/modis-terra-thermal.jpg",
+          "size_bytes": 6428,
+          "resolution_m": 1000
+        },
+        {
+          "source": "MODIS Aqua Cloud-Top Temperature",
+          "layer": "MODIS_Aqua_Cloud_Top_Temp_Day",
+          "file": "modis-aqua-cloudtop-temp.jpg",
+          "url": "https://disclosure.us-east-1.linodeobjects.com/satellite/incidents/papua-new-guinea/2026-06-24/modis-aqua-cloudtop-temp.jpg",
+          "size_bytes": 55514,
+          "resolution_m": 1000
+        }
+      ]
+    },
+    {
+      "aoi_id": "papua-new-guinea",
       "date": "2026-06-23",
       "captures": [
         {
@@ -12504,6 +12987,62 @@
       "aoi_id": "persian-gulf",
       "date": "2026-06-24",
       "captures": [
+        {
+          "source": "VIIRS NOAA-20 True Color",
+          "layer": "VIIRS_NOAA20_CorrectedReflectance_TrueColor",
+          "file": "viirs-noaa20-truecolor.jpg",
+          "url": "https://disclosure.us-east-1.linodeobjects.com/satellite/incidents/persian-gulf/2026-06-24/viirs-noaa20-truecolor.jpg",
+          "size_bytes": 31229,
+          "resolution_m": 375
+        },
+        {
+          "source": "VIIRS Suomi NPP True Color",
+          "layer": "VIIRS_SNPP_CorrectedReflectance_TrueColor",
+          "file": "viirs-snpp-truecolor.jpg",
+          "url": "https://disclosure.us-east-1.linodeobjects.com/satellite/incidents/persian-gulf/2026-06-24/viirs-snpp-truecolor.jpg",
+          "size_bytes": 24320,
+          "resolution_m": 375
+        },
+        {
+          "source": "MODIS Terra True Color",
+          "layer": "MODIS_Terra_CorrectedReflectance_TrueColor",
+          "file": "modis-terra-truecolor.jpg",
+          "url": "https://disclosure.us-east-1.linodeobjects.com/satellite/incidents/persian-gulf/2026-06-24/modis-terra-truecolor.jpg",
+          "size_bytes": 79237,
+          "resolution_m": 250
+        },
+        {
+          "source": "MODIS Aqua True Color",
+          "layer": "MODIS_Aqua_CorrectedReflectance_TrueColor",
+          "file": "modis-aqua-truecolor.jpg",
+          "url": "https://disclosure.us-east-1.linodeobjects.com/satellite/incidents/persian-gulf/2026-06-24/modis-aqua-truecolor.jpg",
+          "size_bytes": 22479,
+          "resolution_m": 250
+        },
+        {
+          "source": "VIIRS NOAA-20 Active Fires",
+          "layer": "VIIRS_NOAA20_Thermal_Anomalies_375m_Day",
+          "file": "viirs-noaa20-fires.jpg",
+          "url": "https://disclosure.us-east-1.linodeobjects.com/satellite/incidents/persian-gulf/2026-06-24/viirs-noaa20-fires.jpg",
+          "size_bytes": 6529,
+          "resolution_m": 375
+        },
+        {
+          "source": "MODIS Terra Thermal Anomalies",
+          "layer": "MODIS_Terra_Thermal_Anomalies_All",
+          "file": "modis-terra-thermal.jpg",
+          "url": "https://disclosure.us-east-1.linodeobjects.com/satellite/incidents/persian-gulf/2026-06-24/modis-terra-thermal.jpg",
+          "size_bytes": 6428,
+          "resolution_m": 1000
+        },
+        {
+          "source": "MODIS Aqua Cloud-Top Temperature",
+          "layer": "MODIS_Aqua_Cloud_Top_Temp_Day",
+          "file": "modis-aqua-cloudtop-temp.jpg",
+          "url": "https://disclosure.us-east-1.linodeobjects.com/satellite/incidents/persian-gulf/2026-06-24/modis-aqua-cloudtop-temp.jpg",
+          "size_bytes": 7316,
+          "resolution_m": 1000
+        },
         {
           "source": "Sentinel-2 (sentinel-2b)",
           "file": "sentinel2-preview.jpg",
@@ -14256,6 +14795,68 @@
     },
     {
       "aoi_id": "sandia-base-nm",
+      "date": "2026-06-24",
+      "captures": [
+        {
+          "source": "VIIRS NOAA-20 True Color",
+          "layer": "VIIRS_NOAA20_CorrectedReflectance_TrueColor",
+          "file": "viirs-noaa20-truecolor.jpg",
+          "url": "https://disclosure.us-east-1.linodeobjects.com/satellite/incidents/sandia-base-nm/2026-06-24/viirs-noaa20-truecolor.jpg",
+          "size_bytes": 81924,
+          "resolution_m": 375
+        },
+        {
+          "source": "VIIRS Suomi NPP True Color",
+          "layer": "VIIRS_SNPP_CorrectedReflectance_TrueColor",
+          "file": "viirs-snpp-truecolor.jpg",
+          "url": "https://disclosure.us-east-1.linodeobjects.com/satellite/incidents/sandia-base-nm/2026-06-24/viirs-snpp-truecolor.jpg",
+          "size_bytes": 70819,
+          "resolution_m": 375
+        },
+        {
+          "source": "MODIS Terra True Color",
+          "layer": "MODIS_Terra_CorrectedReflectance_TrueColor",
+          "file": "modis-terra-truecolor.jpg",
+          "url": "https://disclosure.us-east-1.linodeobjects.com/satellite/incidents/sandia-base-nm/2026-06-24/modis-terra-truecolor.jpg",
+          "size_bytes": 6428,
+          "resolution_m": 250
+        },
+        {
+          "source": "MODIS Aqua True Color",
+          "layer": "MODIS_Aqua_CorrectedReflectance_TrueColor",
+          "file": "modis-aqua-truecolor.jpg",
+          "url": "https://disclosure.us-east-1.linodeobjects.com/satellite/incidents/sandia-base-nm/2026-06-24/modis-aqua-truecolor.jpg",
+          "size_bytes": 94305,
+          "resolution_m": 250
+        },
+        {
+          "source": "VIIRS NOAA-20 Active Fires",
+          "layer": "VIIRS_NOAA20_Thermal_Anomalies_375m_Day",
+          "file": "viirs-noaa20-fires.jpg",
+          "url": "https://disclosure.us-east-1.linodeobjects.com/satellite/incidents/sandia-base-nm/2026-06-24/viirs-noaa20-fires.jpg",
+          "size_bytes": 6428,
+          "resolution_m": 375
+        },
+        {
+          "source": "MODIS Terra Thermal Anomalies",
+          "layer": "MODIS_Terra_Thermal_Anomalies_All",
+          "file": "modis-terra-thermal.jpg",
+          "url": "https://disclosure.us-east-1.linodeobjects.com/satellite/incidents/sandia-base-nm/2026-06-24/modis-terra-thermal.jpg",
+          "size_bytes": 6428,
+          "resolution_m": 1000
+        },
+        {
+          "source": "MODIS Aqua Cloud-Top Temperature",
+          "layer": "MODIS_Aqua_Cloud_Top_Temp_Day",
+          "file": "modis-aqua-cloudtop-temp.jpg",
+          "url": "https://disclosure.us-east-1.linodeobjects.com/satellite/incidents/sandia-base-nm/2026-06-24/modis-aqua-cloudtop-temp.jpg",
+          "size_bytes": 34573,
+          "resolution_m": 1000
+        }
+      ]
+    },
+    {
+      "aoi_id": "sandia-base-nm",
       "date": "2026-06-23",
       "captures": [
         {
@@ -15994,6 +16595,68 @@
     },
     {
       "aoi_id": "strait-of-hormuz",
+      "date": "2026-06-24",
+      "captures": [
+        {
+          "source": "VIIRS NOAA-20 True Color",
+          "layer": "VIIRS_NOAA20_CorrectedReflectance_TrueColor",
+          "file": "viirs-noaa20-truecolor.jpg",
+          "url": "https://disclosure.us-east-1.linodeobjects.com/satellite/incidents/strait-of-hormuz/2026-06-24/viirs-noaa20-truecolor.jpg",
+          "size_bytes": 30023,
+          "resolution_m": 375
+        },
+        {
+          "source": "VIIRS Suomi NPP True Color",
+          "layer": "VIIRS_SNPP_CorrectedReflectance_TrueColor",
+          "file": "viirs-snpp-truecolor.jpg",
+          "url": "https://disclosure.us-east-1.linodeobjects.com/satellite/incidents/strait-of-hormuz/2026-06-24/viirs-snpp-truecolor.jpg",
+          "size_bytes": 33845,
+          "resolution_m": 375
+        },
+        {
+          "source": "MODIS Terra True Color",
+          "layer": "MODIS_Terra_CorrectedReflectance_TrueColor",
+          "file": "modis-terra-truecolor.jpg",
+          "url": "https://disclosure.us-east-1.linodeobjects.com/satellite/incidents/strait-of-hormuz/2026-06-24/modis-terra-truecolor.jpg",
+          "size_bytes": 79858,
+          "resolution_m": 250
+        },
+        {
+          "source": "MODIS Aqua True Color",
+          "layer": "MODIS_Aqua_CorrectedReflectance_TrueColor",
+          "file": "modis-aqua-truecolor.jpg",
+          "url": "https://disclosure.us-east-1.linodeobjects.com/satellite/incidents/strait-of-hormuz/2026-06-24/modis-aqua-truecolor.jpg",
+          "size_bytes": 25071,
+          "resolution_m": 250
+        },
+        {
+          "source": "VIIRS NOAA-20 Active Fires",
+          "layer": "VIIRS_NOAA20_Thermal_Anomalies_375m_Day",
+          "file": "viirs-noaa20-fires.jpg",
+          "url": "https://disclosure.us-east-1.linodeobjects.com/satellite/incidents/strait-of-hormuz/2026-06-24/viirs-noaa20-fires.jpg",
+          "size_bytes": 6428,
+          "resolution_m": 375
+        },
+        {
+          "source": "MODIS Terra Thermal Anomalies",
+          "layer": "MODIS_Terra_Thermal_Anomalies_All",
+          "file": "modis-terra-thermal.jpg",
+          "url": "https://disclosure.us-east-1.linodeobjects.com/satellite/incidents/strait-of-hormuz/2026-06-24/modis-terra-thermal.jpg",
+          "size_bytes": 6428,
+          "resolution_m": 1000
+        },
+        {
+          "source": "MODIS Aqua Cloud-Top Temperature",
+          "layer": "MODIS_Aqua_Cloud_Top_Temp_Day",
+          "file": "modis-aqua-cloudtop-temp.jpg",
+          "url": "https://disclosure.us-east-1.linodeobjects.com/satellite/incidents/strait-of-hormuz/2026-06-24/modis-aqua-cloudtop-temp.jpg",
+          "size_bytes": 12657,
+          "resolution_m": 1000
+        }
+      ]
+    },
+    {
+      "aoi_id": "strait-of-hormuz",
       "date": "2026-06-23",
       "captures": [
         {
@@ -17671,6 +18334,84 @@
           "datetime_utc": "2026-05-29T07:02:43.285000Z",
           "cloud_cover_percent": 0.323745,
           "platform": "sentinel-2a"
+        }
+      ]
+    },
+    {
+      "aoi_id": "syria",
+      "date": "2026-06-25",
+      "captures": [
+        {
+          "source": "Sentinel-2 (sentinel-2b)",
+          "file": "sentinel2-preview.jpg",
+          "url": "https://disclosure.us-east-1.linodeobjects.com/satellite/incidents/syria/2026-06-25/sentinel2-preview.jpg",
+          "size_bytes": 10666,
+          "resolution_m": 10,
+          "datetime_utc": "2026-06-25T08:20:44.443000Z",
+          "cloud_cover_percent": 0.027168,
+          "platform": "sentinel-2b"
+        }
+      ]
+    },
+    {
+      "aoi_id": "syria",
+      "date": "2026-06-24",
+      "captures": [
+        {
+          "source": "VIIRS NOAA-20 True Color",
+          "layer": "VIIRS_NOAA20_CorrectedReflectance_TrueColor",
+          "file": "viirs-noaa20-truecolor.jpg",
+          "url": "https://disclosure.us-east-1.linodeobjects.com/satellite/incidents/syria/2026-06-24/viirs-noaa20-truecolor.jpg",
+          "size_bytes": 45976,
+          "resolution_m": 375
+        },
+        {
+          "source": "VIIRS Suomi NPP True Color",
+          "layer": "VIIRS_SNPP_CorrectedReflectance_TrueColor",
+          "file": "viirs-snpp-truecolor.jpg",
+          "url": "https://disclosure.us-east-1.linodeobjects.com/satellite/incidents/syria/2026-06-24/viirs-snpp-truecolor.jpg",
+          "size_bytes": 38819,
+          "resolution_m": 375
+        },
+        {
+          "source": "MODIS Terra True Color",
+          "layer": "MODIS_Terra_CorrectedReflectance_TrueColor",
+          "file": "modis-terra-truecolor.jpg",
+          "url": "https://disclosure.us-east-1.linodeobjects.com/satellite/incidents/syria/2026-06-24/modis-terra-truecolor.jpg",
+          "size_bytes": 70647,
+          "resolution_m": 250
+        },
+        {
+          "source": "MODIS Aqua True Color",
+          "layer": "MODIS_Aqua_CorrectedReflectance_TrueColor",
+          "file": "modis-aqua-truecolor.jpg",
+          "url": "https://disclosure.us-east-1.linodeobjects.com/satellite/incidents/syria/2026-06-24/modis-aqua-truecolor.jpg",
+          "size_bytes": 68335,
+          "resolution_m": 250
+        },
+        {
+          "source": "VIIRS NOAA-20 Active Fires",
+          "layer": "VIIRS_NOAA20_Thermal_Anomalies_375m_Day",
+          "file": "viirs-noaa20-fires.jpg",
+          "url": "https://disclosure.us-east-1.linodeobjects.com/satellite/incidents/syria/2026-06-24/viirs-noaa20-fires.jpg",
+          "size_bytes": 6765,
+          "resolution_m": 375
+        },
+        {
+          "source": "MODIS Terra Thermal Anomalies",
+          "layer": "MODIS_Terra_Thermal_Anomalies_All",
+          "file": "modis-terra-thermal.jpg",
+          "url": "https://disclosure.us-east-1.linodeobjects.com/satellite/incidents/syria/2026-06-24/modis-terra-thermal.jpg",
+          "size_bytes": 6428,
+          "resolution_m": 1000
+        },
+        {
+          "source": "MODIS Aqua Cloud-Top Temperature",
+          "layer": "MODIS_Aqua_Cloud_Top_Temp_Day",
+          "file": "modis-aqua-cloudtop-temp.jpg",
+          "url": "https://disclosure.us-east-1.linodeobjects.com/satellite/incidents/syria/2026-06-24/modis-aqua-cloudtop-temp.jpg",
+          "size_bytes": 7216,
+          "resolution_m": 1000
         }
       ]
     },
@@ -19463,6 +20204,78 @@
           "datetime_utc": "2026-05-29T08:30:37.536000Z",
           "cloud_cover_percent": 18.912201,
           "platform": "sentinel-2b"
+        }
+      ]
+    },
+    {
+      "aoi_id": "white-sands-nm",
+      "date": "2026-06-24",
+      "captures": [
+        {
+          "source": "VIIRS NOAA-20 True Color",
+          "layer": "VIIRS_NOAA20_CorrectedReflectance_TrueColor",
+          "file": "viirs-noaa20-truecolor.jpg",
+          "url": "https://disclosure.us-east-1.linodeobjects.com/satellite/incidents/white-sands-nm/2026-06-24/viirs-noaa20-truecolor.jpg",
+          "size_bytes": 50794,
+          "resolution_m": 375
+        },
+        {
+          "source": "VIIRS Suomi NPP True Color",
+          "layer": "VIIRS_SNPP_CorrectedReflectance_TrueColor",
+          "file": "viirs-snpp-truecolor.jpg",
+          "url": "https://disclosure.us-east-1.linodeobjects.com/satellite/incidents/white-sands-nm/2026-06-24/viirs-snpp-truecolor.jpg",
+          "size_bytes": 50076,
+          "resolution_m": 375
+        },
+        {
+          "source": "MODIS Terra True Color",
+          "layer": "MODIS_Terra_CorrectedReflectance_TrueColor",
+          "file": "modis-terra-truecolor.jpg",
+          "url": "https://disclosure.us-east-1.linodeobjects.com/satellite/incidents/white-sands-nm/2026-06-24/modis-terra-truecolor.jpg",
+          "size_bytes": 6428,
+          "resolution_m": 250
+        },
+        {
+          "source": "MODIS Aqua True Color",
+          "layer": "MODIS_Aqua_CorrectedReflectance_TrueColor",
+          "file": "modis-aqua-truecolor.jpg",
+          "url": "https://disclosure.us-east-1.linodeobjects.com/satellite/incidents/white-sands-nm/2026-06-24/modis-aqua-truecolor.jpg",
+          "size_bytes": 119119,
+          "resolution_m": 250
+        },
+        {
+          "source": "VIIRS NOAA-20 Active Fires",
+          "layer": "VIIRS_NOAA20_Thermal_Anomalies_375m_Day",
+          "file": "viirs-noaa20-fires.jpg",
+          "url": "https://disclosure.us-east-1.linodeobjects.com/satellite/incidents/white-sands-nm/2026-06-24/viirs-noaa20-fires.jpg",
+          "size_bytes": 6428,
+          "resolution_m": 375
+        },
+        {
+          "source": "MODIS Terra Thermal Anomalies",
+          "layer": "MODIS_Terra_Thermal_Anomalies_All",
+          "file": "modis-terra-thermal.jpg",
+          "url": "https://disclosure.us-east-1.linodeobjects.com/satellite/incidents/white-sands-nm/2026-06-24/modis-terra-thermal.jpg",
+          "size_bytes": 6428,
+          "resolution_m": 1000
+        },
+        {
+          "source": "MODIS Aqua Cloud-Top Temperature",
+          "layer": "MODIS_Aqua_Cloud_Top_Temp_Day",
+          "file": "modis-aqua-cloudtop-temp.jpg",
+          "url": "https://disclosure.us-east-1.linodeobjects.com/satellite/incidents/white-sands-nm/2026-06-24/modis-aqua-cloudtop-temp.jpg",
+          "size_bytes": 28174,
+          "resolution_m": 1000
+        },
+        {
+          "source": "Sentinel-2 (sentinel-2c)",
+          "file": "sentinel2-preview.jpg",
+          "url": "https://disclosure.us-east-1.linodeobjects.com/satellite/incidents/white-sands-nm/2026-06-24/sentinel2-preview.jpg",
+          "size_bytes": 28725,
+          "resolution_m": 10,
+          "datetime_utc": "2026-06-24T18:05:11.858000Z",
+          "cloud_cover_percent": 19.29539,
+          "platform": "sentinel-2c"
         }
       ]
     },
