@@ -1,0 +1,24 @@
+{
+  "source": "sentinel-2-l2a",
+  "aoi_id": "strait-of-hormuz",
+  "aoi_name": "Strait of Hormuz",
+  "date": "2026-06-26",
+  "datetime_utc": "2026-06-26T07:02:25.933000Z",
+  "stac_id": "S2C_40RCP_20260626_0_L2A",
+  "cloud_cover_percent": 0.098045,
+  "platform": "sentinel-2c",
+  "bbox": [
+    54.998308,
+    25.215089,
+    56.104502,
+    26.217085
+  ],
+  "assets": {
+    "preview": {
+      "file": "sentinel2-preview.jpg",
+      "source_url": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/40/R/CP/2026/6/S2C_40RCP_20260626_0_L2A/preview.jpg",
+      "size_bytes": 22221
+    },
+    "visual_cog_url": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/40/R/CP/2026/6/S2C_40RCP_20260626_0_L2A/TCI.tif"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "source": "sentinel-2-l2a",
+  "aoi_id": "iran-tehran",
+  "aoi_name": "Iran (Tehran region)",
+  "date": "2026-06-27",
+  "datetime_utc": "2026-06-27T07:20:04.060000Z",
+  "stac_id": "S2B_39SWU_20260627_0_L2A",
+  "cloud_cover_percent": 7.90636,
+  "platform": "sentinel-2b",
+  "bbox": [
+    51.712165,
+    34.247133,
+    52.206496,
+    35.239074
+  ],
+  "assets": {
+    "preview": {
+      "file": "sentinel2-preview.jpg",
+      "source_url": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/39/S/WU/2026/6/S2B_39SWU_20260627_0_L2A/preview.jpg",
+      "size_bytes": 10610
+    },
+    "visual_cog_url": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/39/S/WU/2026/6/S2B_39SWU_20260627_0_L2A/TCI.tif"
+  }
+}
