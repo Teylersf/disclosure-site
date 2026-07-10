@@ -24,7 +24,7 @@ export default async function Home() {
             The full PURSUE archive,<br/>searchable, viewable, playable.
           </h1>
           <p className="text-[var(--muted)] mt-6 max-w-3xl text-lg leading-relaxed">
-            Every record from the U.S. Department of War&apos;s three 2026 UAP releases — {m.totalCount} documents,
+            Every record from the U.S. Department of War&apos;s four 2026 UAP releases — {m.totalCount} documents,
             videos, audio recordings, and photographs from FBI, CIA, NASA, ODNI, DoE, ICA, and the All-domain
             Anomaly Resolution Office. Mirrored locally, indexed, and ready to explore.
           </p>
@@ -45,32 +45,32 @@ export default async function Home() {
         </div>
       </section>
 
-      {/* Featured article — Chile/Germany 1950 CIA flying-discs report */}
+      {/* Featured article — R4: STS-80 Space Shuttle UFO images 1996 */}
       <section className="border-b border-[var(--border)] relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-0 right-1/4 w-[600px] h-[400px] rounded-full bg-[var(--pdf)] opacity-[0.05] blur-3xl" />
+          <div className="absolute top-0 right-1/4 w-[600px] h-[400px] rounded-full bg-[var(--img)] opacity-[0.06] blur-3xl" />
         </div>
         <div className="max-w-[1600px] mx-auto px-6 py-14 relative">
-          <div className="flex items-center gap-2 text-[11px] uppercase tracking-[0.4em] text-[var(--pdf)] mb-6">
-            <FileSearch size={14}/> Featured · Declassified · CIA Information Report · 1950
+          <div className="flex items-center gap-2 text-[11px] uppercase tracking-[0.4em] text-[var(--gold)] mb-6">
+            <AlertTriangle size={14}/> Featured · Just released · Fourth PURSUE tranche · July 10, 2026
           </div>
           <div className="grid lg:grid-cols-[1fr_1.4fr] gap-8 items-stretch">
             {/* Cover / thumbnail */}
             <Link
-              href="/findings/chile-germany-flying-discs-1950"
+              href="/findings/sts80-space-shuttle-1996"
               className="card block relative overflow-hidden group"
-              aria-label="Open the full finding on CIA-UAP-005"
+              aria-label="Open the full finding on STS-80 Space Shuttle UFO images"
             >
               <div className="aspect-[4/5] bg-[var(--bg-0)] relative">
                 <img
-                  src={assetUrl("www.war.gov/medialink/ufo/061226/release_03/thumbnails/CIA-UAP-005-German_scientists_ article_on_flying_discs.jpg")}
-                  alt="Cover of CIA Information Report SO DD-27U3, 31 July 1950, subject: German scientist's article on Flying Discs"
+                  src={assetUrl("www.war.gov/Portals/1/Interactive/2026/UFO/071026/Slideshow/NASA-UAP-D030_STS-80-Unidentified-Object-Image1_1996.jpg")}
+                  alt="NASA STS-80 Space Shuttle Columbia unidentified-object image 1, November 1996"
                   className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.02]"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
                 <div className="absolute bottom-4 left-4 right-4">
-                  <div className="text-[10px] uppercase tracking-widest text-[var(--gold)] mb-1">CIA-UAP-005</div>
-                  <div className="text-sm text-white font-mono">SO DD-27U3 · 31 Jul 1950 · Chile / Germany</div>
+                  <div className="text-[10px] uppercase tracking-widest text-[var(--gold)] mb-1">NASA-UAP-D030 / D031 / D032</div>
+                  <div className="text-sm text-white font-mono">STS-80 · Columbia · Nov 1996 · 3 primary-source images</div>
                 </div>
               </div>
             </Link>
@@ -78,61 +78,57 @@ export default async function Home() {
             {/* Editorial copy */}
             <div className="flex flex-col">
               <h2 className="text-3xl md:text-5xl font-bold leading-[1.08] text-[var(--text)]">
-                The CIA was watching a German flying-saucer magazine
+                The STS-80 Space Shuttle UFO frames just got
                 <br/>
-                <span className="gradient-text">in 1950s Chile.</span>
+                <span className="gradient-text">their primary-source release.</span>
               </h2>
               <p className="text-[var(--muted)] mt-5 text-lg leading-relaxed max-w-3xl">
-                Buried in the June 12 release — and nearly hidden by a literal space character in
-                its URL — is a four-page CIA Information Report dated <strong className="text-[var(--text)]">31 July 1950</strong>.
-                Its subject: a German scientist&apos;s article titled
-                <em> &ldquo;The Mystery of the Flying Discs, a contribution to its possible explanation,&rdquo;</em>
-                submitted for publication in <strong className="text-[var(--text)]">Condor</strong>, a German-language magazine printed in
-                <strong className="text-[var(--text)]"> Santiago, Chile</strong>. The CIA acquired it on the ground in Chile, stamped the file
-                <span className="font-mono text-[var(--gold)]"> UNEVALUATED INFORMATION</span>, and sat on it for 76 years.
+                For thirty years, every version of the <strong className="text-[var(--text)]">STS-80</strong> images —
+                the three unidentified objects filmed from Space Shuttle Columbia during its 17-day
+                November 1996 mission — has been a compressed video-still or a grainy re-encode.
+                On <strong className="text-[var(--text)]">July 10, 2026</strong>, PURSUE&apos;s fourth tranche released the
+                three frames as high-resolution NASA source files with their own catalog IDs:
+                <span className="font-mono text-[var(--gold)]"> NASA-UAP-D030</span>,
+                <span className="font-mono text-[var(--gold)]"> D031</span>, and
+                <span className="font-mono text-[var(--gold)]"> D032</span>.
+                First primary-source release. Ever.
               </p>
 
               {/* Quote pull */}
               <blockquote className="mt-6 border-l-2 border-[var(--gold)] pl-5 py-2 text-[var(--text)] text-base italic max-w-3xl">
-                &ldquo;Attached for your information is a copy, in translation, of [an article] submitted to
-                Mr. Edward L&mdash; for publication in <strong>Condor</strong>, a German-language magazine published in Chile.
-                The article is entitled <strong>&lsquo;The Mystery of the Flying Discs, a contribution to its possible
-                explanation.&rsquo;</strong>&rdquo;
+                Columbia&apos;s cameras were rolling to log the Wake Shield Facility and ORFEUS-SPAS II
+                telescope operations. During fixed-attitude station-keeping — hours of the Shuttle
+                held perfectly still relative to the sun — <strong>three objects</strong> moved through the frame
+                in ways not attributable to on-board debris.
                 <footer className="not-italic text-[11px] uppercase tracking-widest text-[var(--muted)] mt-2">
-                  — Page 1, CIA cover sheet (OCR)
+                  — Context on the STS-80 case
                 </footer>
               </blockquote>
 
               {/* Quick facts */}
               <div className="mt-7 grid grid-cols-2 sm:grid-cols-4 gap-3">
-                <FactCell label="Distributed" value="31 Jul 1950" />
-                <FactCell label="Acquired in" value="Santiago, Chile" />
-                <FactCell label="Source grade" value="Documentary" />
-                <FactCell label="Content grade" value="Unevaluated" />
+                <FactCell label="Mission" value="STS-80 Columbia" />
+                <FactCell label="Launched" value="Nov 19, 1996" />
+                <FactCell label="Duration" value="17 days" />
+                <FactCell label="Images" value="3 (D030/D031/D032)" />
               </div>
 
               <p className="text-[var(--muted)] mt-7 max-w-3xl leading-relaxed">
-                Three years after Kenneth Arnold&apos;s 1947 sighting kicked off the modern UFO era — and
-                with Project Paperclip-adjacent German émigrés actively regrouping in South America —
-                the CIA quietly catalogued what a German &ldquo;scientist&rdquo; was telling the German-speaking
-                community of Chile about flying discs. The DoW pipeline OCR&apos;d the cover sheet. It did
-                not OCR pages 2&ndash;4 &mdash; where the actual translated article lives.
+                The July 10 release added <strong className="text-[var(--text)]">40 records</strong> — bringing the PURSUE archive
+                to 334. Also included: Apollo 14 and 17 medical debriefings on the &ldquo;light flash phenomena,&rdquo;
+                the 1948 <em>Project Sign Progress Report</em>, 1955 CIA memoranda on unconventional
+                aircraft, and eight previously-undisclosed videos from the 2019&ndash;2020 East&nbsp;Coast UAP wave.
               </p>
 
               <div className="mt-7 flex flex-wrap gap-3">
-                <Link href="/findings/chile-germany-flying-discs-1950" className="btn btn-gold inline-flex">
+                <Link href="/findings/sts80-space-shuttle-1996" className="btn btn-gold inline-flex">
                   <ArrowRight size={14}/> Read the full finding
                 </Link>
-                <a
-                  href={assetUrl("www.war.gov/medialink/ufo/061226/release_03/documents/CIA-UAP-005-German_scientists_ article_on_flying_discs.pdf")}
-                  className="btn inline-flex"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  <FileText size={14}/> Open the original PDF
-                </a>
-                <Link href="/findings/cia-uap-005-literal-space-in-path" className="btn inline-flex">
-                  <Globe2 size={14}/> Also: the URL bug that hides it
+                <Link href="/findings/east-coast-2020-cluster" className="btn inline-flex">
+                  <FileText size={14}/> East Coast wave (8 new videos)
+                </Link>
+                <Link href="/findings/apollo-light-flash-tapes" className="btn inline-flex">
+                  <Globe2 size={14}/> Apollo 14 &amp; 17 debriefings
                 </Link>
               </div>
             </div>
@@ -263,7 +259,7 @@ export default async function Home() {
         <div className="flex items-baseline justify-between mb-6">
           <h2 className="text-2xl font-semibold tracking-tight">Explore the archive</h2>
           <span className="text-sm text-[var(--muted)]">
-            {m.byRelease["5/8/26"]} from 5/8 · {m.byRelease["5/22/26"]} from 5/22 · {m.byRelease["6/12/26"]} from 6/12
+            {m.byRelease["5/8/26"]} from 5/8 · {m.byRelease["5/22/26"]} from 5/22 · {m.byRelease["6/12/26"]} from 6/12 · {m.byRelease["7/10/26"]} from 7/10
           </span>
         </div>
         <RecordsExplorer records={m.records} agencies={m.agencies} />

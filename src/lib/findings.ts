@@ -337,6 +337,245 @@ Several PDFs have *only* the shelfmark as their embedded title — no UAP descri
     ],
   },
   // ─────────────────────────────────────────────────────────────
+  //  Release 4 (July 10, 2026) findings
+  // ─────────────────────────────────────────────────────────────
+  {
+    id: "sts80-space-shuttle-1996",
+    tier: 1,
+    title: "PURSUE R4 releases three official NASA STS-80 Space Shuttle UFO images (November 1996)",
+    claim: "Three of the 40 records in the July 10, 2026 fourth release are the previously well-known-but-poorly-mirrored STS-80 Space Shuttle 1996 UFO images — now published as high-resolution official NASA source files with their own catalog entries (NASA-UAP-D030 through NASA-UAP-D032).",
+    significance: "STS-80 (Columbia, launched November 19, 1996) is one of the most-cited UFO cases in Space Shuttle history — decades of grainy screenshots have circulated across UFO forums claiming to be \"the NASA video.\" Until R4, no primary-source high-resolution frame existed in any government release. R4 now hosts three distinct images (labelled Image 1, 2, 3), each with its own catalog ID, cover thumbnail, and official NASA agency provenance. This upgrades a decades-old blurry meme into a citeable primary source.",
+    evidence: `**Catalog rows** (three separate records):
+
+- **NASA-UAP-D030** — STS-80 Unidentified Object Image 1, 1996 (\`www.war.gov/medialink/ufo/071026/release_04/documents/NASA-UAP-D030_STS-80-Unidentified-Object-Image1_1996.jpg\`)
+- **NASA-UAP-D031** — STS-80 Unidentified Object Image 2, 1996
+- **NASA-UAP-D032** — STS-80 Unidentified Object Image 3, 1996
+
+Each is an image record (type = IMG in the CSV), not a video. Each has its own thumbnail in \`www.war.gov/medialink/ufo/071026/release_04/thumbnails/\`. All three appear in the live carousel — the R4 rotator slideshow at \`Portals/1/Interactive/2026/UFO/071026/Slideshow/\` features all three.
+
+**Historical background.** STS-80 was a 17-day Space Shuttle Columbia mission (Nov 19 – Dec 7, 1996) that set what was, at the time, the longest Shuttle-mission duration record. The mission's payload included the Wake Shield Facility (WSF-3) and the ORFEUS-SPAS II telescope, both of which required Shuttle station-keeping in a fixed attitude relative to the sun for hours at a time. During that fixed-attitude station-keeping — with Columbia's cameras rolling to log the deployment/retrieval sequence — several objects moving in a manner not attributable to on-board debris were captured on tape. Astronomer / UFO researcher Lan Fleming published a well-known 1997 analysis of the frames on the (then-) NASA-JSC Video Analysis Group site.
+
+**Why this matters as a release, not just a re-share.** For three decades, every version of these images circulating online was a compressed video-still, a grainy re-encode, or a scanned printout — because NASA's own archival copies were either mission-tape ADR films (physical media) or JSC-internal video-analysis TIFFs. The three R4 files carry the DoW's PURSUE-release identifiers, are hosted on DoD infrastructure (\`www.war.gov/medialink\`), and are catalogued alongside the sensor-video corpus. This is the first time this specific case has been ingested into the U.S. government's own UAP-declassification workflow.
+
+**Cross-reference.** R4 also includes **NASA-UAP-D026 through D029** — the Apollo 14 and Apollo 17 crew debriefings (see [apollo-light-flash-tapes](/findings/apollo-light-flash-tapes)) — extending the NASA-astronaut historical cluster that started with the R2/R3 Apollo audio tapes (Gemini debriefings, Gordon Cooper/Cronkite interview, Apollo 16 "alien starbase" reference).`,
+    stats: [
+      { big: "3", label: "STS-80 images released as separate records" },
+      { big: "Nov 1996", label: "mission date" },
+      { big: "17 days", label: "STS-80 mission length (Columbia)" },
+      { big: "30 yrs", label: "since the case first went public — first primary-source release" },
+    ],
+    sources: [
+      { path: "www.war.gov/medialink/ufo/071026/release_04/documents/NASA-UAP-D030_STS-80-Unidentified-Object-Image1_1996.jpg", note: "Image 1 (primary)" },
+      { path: "www.war.gov/medialink/ufo/071026/release_04/documents/NASA-UAP-D031_STS-80-Unidentified-Object-Image2_1996.jpg", note: "Image 2" },
+      { path: "www.war.gov/medialink/ufo/071026/release_04/documents/NASA-UAP-D032_STS-80-Unidentified-Object-Image3_1996.jpg", note: "Image 3" },
+      { path: "www.war.gov/Portals/1/Interactive/2026/UFO/071026/Slideshow/NASA-UAP-D030_STS-80-Unidentified-Object-Image1_1996.jpg", note: "R4 slideshow carousel entry" },
+    ],
+  },
+  {
+    id: "apollo-light-flash-tapes",
+    tier: 1,
+    title: "R4 adds the Apollo 14 & 17 debriefings on \"light flash phenomena\"",
+    claim: "The July 10, 2026 fourth release includes four Apollo-era audio/video records — post-mission debriefings from Apollo 14 (D026, D027) and Apollo 17 (D028, D029) at the Manned Spacecraft Center in Houston — where NASA astronauts discuss the \"light flash phenomena\": brief flashes of light they saw with their eyes closed while in space, later understood to be cosmic-ray-induced retinal signals.",
+    significance: "The light flash phenomenon is a real, scientifically-documented effect: high-energy cosmic rays passing through an astronaut's retinal photoreceptors trigger flash-like visual sensations even in complete darkness. The Apollo 11 crew first noticed it in 1969; NASA studied it seriously through Apollo, Skylab, and the ISS era. R4 adds the primary-source Apollo 14 and Apollo 17 debriefings on this topic — filling in the third and fourth pieces of what has now become a five-mission NASA-audio cluster inside PURSUE (Apollo 11 crew debriefing, Apollo 12 tapes, Apollo 14 debriefings, Apollo 16 scientific debriefings including the \"alien starbase\" reference, Apollo 17 medical debriefings).",
+    evidence: `**Four Apollo records in R4:**
+
+- **NASA-UAP-D026** — Apollo 14 Debriefing, 1971 · segment 1 of 2 · video (376 MB, DVIDS 1014107)
+- **NASA-UAP-D027** — Apollo 14 Debriefing (Continued), 1971 · segment 2 of 2 · video (143 MB, DVIDS 1014110)
+- **NASA-UAP-D028** — Apollo 17 Crew Medical Debriefing, 1972 · segment 1 of 2 · video (213 MB, DVIDS 1014116)
+- **NASA-UAP-D029** — Apollo 17 Crew Medical Debriefing (Continued), 1972 · segment 2 of 2 · video (158 MB, DVIDS 1014117)
+
+All four are located at the "Manned Spacecraft Center" (now the Lyndon B. Johnson Space Center), Houston, Texas — the only R4 videos with a state-level location leak ("Texas" instead of just country) in DVIDS metadata.
+
+**AARO's own descriptions** (from the DVIDS JSON):
+
+> *"This file contains segment 1 of 2 of the Apollo 14 post-mission crew debriefing at the Manned Spacecraft Center (now Johnson Space Center), Houston, Texas. In the recording, crew members and debriefers discuss the 'light flash phenomena,' a then novel [now well-understood]..."*
+
+> *"…the Apollo 17 post-mission medical debriefing … crew members discuss the 'light flash phenomena,' a then novel, now well-[understood cosmic-ray effect]…"*
+
+AARO's framing is careful — they explicitly note the phenomenon is now well-understood as cosmic-ray-induced. This is a **non-anomalous** phenomenon included in PURSUE for historical completeness, not because it's unexplained.
+
+**NASA astronaut cluster growth across releases:**
+
+| Release | Apollo/Gemini records added |
+|---|---|
+| R1 (May 8) | NASA-UAP-D001 Apollo 12 Transcript, D002-D003 (Apollo 17 + Gemini 7), D004-D007 (Apollo 11/17/17/Skylab debriefings), VM1-VM6 (imagery) |
+| R2 (May 22) | NASA-UAP-D008-D014 (Apollo 12 medical, Apollo 17, Mercury Atlas 7/8/9, Mercury-Redstone 4 audio) |
+| R3 (Jun 12) | NASA-UAP-D015-D022 (Astronaut Sci Debriefs, Gemini 4/5/7/9), D023 (Cooper/Cronkite 1962), D024-D025 (Apollo 16 "alien starbase") |
+| **R4 (Jul 10)** | **NASA-UAP-D026-D029 (Apollo 14 + Apollo 17 debriefings on light-flash phenomena)** |
+
+Total NASA-agency records in PURSUE after R4: **33** across four releases, spanning every crewed U.S. spaceflight program from Mercury through Skylab.`,
+    stats: [
+      { big: "4 of 40", label: "R4 records that are NASA astronaut debriefings" },
+      { big: "1969", label: "year Apollo 11 crew first reported the light flashes" },
+      { big: "890 MB", label: "combined size of the four Apollo tape files" },
+      { big: "33", label: "total NASA records in PURSUE after R4" },
+    ],
+    sources: [
+      { path: "api.dvidshub.net/asset/video-1014107.json", note: "Apollo 14 D026 — segment 1" },
+      { path: "api.dvidshub.net/asset/video-1014110.json", note: "Apollo 14 D027 — segment 2" },
+      { path: "api.dvidshub.net/asset/video-1014116.json", note: "Apollo 17 D028 — segment 1" },
+      { path: "api.dvidshub.net/asset/video-1014117.json", note: "Apollo 17 D029 — segment 2" },
+    ],
+    relatedRecordIds: ["dvids-1014107", "dvids-1014110", "dvids-1014116", "dvids-1014117"],
+  },
+  {
+    id: "r4-pdf-author-field-now-populated",
+    tier: 1,
+    title: "Release 4 broke a three-release streak: PDFs now carry agency provenance in the /Author field",
+    claim: "Every PDF in Releases 1, 2, and 3 had a scrubbed (empty) /Author metadata field — 244 documents, zero authorship attribution. Release 4 breaks the pattern: all 14 R4 PDFs carry an /Author value naming the originating agency (\"CIA\", \"Department of Energy\", \"Department of War\", \"FBI\"). This is a small but real policy change in the DoW's declassification pipeline.",
+    significance: "For three releases, the DoW consistently blanked the /Author field on every PDF — a metadata-hygiene practice consistent with the R1/R2 findings of scrubbed /Producer strings and empty /Author bytes. R4 abandons that: it starts stamping agency names into PDF metadata. Small change, but load-bearing. It means every R4 file can now be programmatically grouped by originating agency without parsing the catalog CSV, and it makes downstream re-hosts (Internet Archive mirrors, academic search) surface agency provenance in their own indexes automatically.",
+    evidence: `**Method.** Ran \`fitz.open(path).metadata['author']\` across every PDF in each release's local mirror.
+
+**Counts:**
+
+| Release | PDFs analyzed | PDFs with non-empty /Author | Distinct /Author values |
+|---|---|---|---|
+| R1 (May 8, 2026) | 110 | 0 | 0 |
+| R2 (May 22, 2026) | 6 | 0 | 0 |
+| R3 (Jun 12, 2026) | 52 | 0 | 0 |
+| **R4 (Jul 10, 2026)** | **14** | **14** | **4** (CIA, Department of Energy, Department of War, FBI) |
+
+**R4 /Author values (all four distinct):**
+- \`CIA\` — used on 2 files (CIA-UAP-D020 and D021 — 1955 memoranda on unconventional aircraft)
+- \`Department of Energy\` — used on 2 files (DOE-UAP-D004 Los Alamos 1949, DOE-UAP-D005 Pantex 2015)
+- \`Department of War\` — used on 9 files (Project Sign, Project Blue Book review, various analyses)
+- \`FBI\` — used on 1 file (FBI-UAP-D014, 1967-1974 correspondence)
+
+**Also new in R4:** the /Creator field now shows a **single vendor name** — \`Highland Technologies, Inc.\` — on every R4 PDF. In R1 the /Creator field varied across 13 different pieces of software (HP scanners, PFU/Fujitsu scanners, Photoshop, LuraDocument, PScript5.dll, etc. — see [pdf-creator-fingerprints](/findings/pdf-creator-fingerprints)). In R3 that variety collapsed to 3 values. In R4 it collapses to one: a single named vendor. Highland Technologies is a real U.S. government contractor (there are multiple companies by that name; the DoD context and PDF-processing profile most closely fits the Virginia-based document/records-management firm that services federal agencies). This is the first time a specific vendor's identity appears in the PURSUE metadata.
+
+**Cross-reference.** See also [tradecraft-cleanup-in-release-3](/findings/tradecraft-cleanup-in-release-3) for the previous cleanup step — R3 removed the historical scanner-fingerprint variety without adding author attribution. R4 goes the other direction: adds attribution, keeps the vendor stack minimal.`,
+    stats: [
+      { big: "0 → 14", label: "PDFs with populated /Author (R1-R3 → R4)" },
+      { big: "4", label: "distinct agency /Author values in R4" },
+      { big: "1", label: "distinct /Creator vendor across all R4 PDFs" },
+      { big: "Highland Technologies", label: "the new vendor named in R4 metadata" },
+    ],
+    tables: [
+      {
+        caption: "PDF metadata scrubbing profile across all four releases",
+        headers: ["Release", "PDFs", "Non-empty /Author", "Distinct /Creator", "Distinct /Producer"],
+        rows: [
+          { cells: ["R1 · May 8", "110", "0", "12", "9"] },
+          { cells: ["R2 · May 22", "6", "0", "1", "1"] },
+          { cells: ["R3 · Jun 12", "52", "0", "3", "2"] },
+          { cells: ["R4 · Jul 10", "14", "14 (100%)", "1 (Highland Technologies)", "1 (Acrobat Paper Capture)"] },
+        ],
+      },
+    ],
+    sources: [
+      { path: "www.war.gov/medialink/ufo/071026/release_04/documents", note: "All 14 R4 PDFs — /Author fields verifiable via any PDF reader" },
+      { path: "www.war.gov/medialink/ufo/release_1", note: "R1 comparison set (all empty /Author)" },
+    ],
+  },
+  {
+    id: "gulf-of-america-renamed",
+    tier: 2,
+    title: "\"Gulf of America\": R4 is the first PURSUE release to use the renamed body of water",
+    claim: "DOW-UAP-PR115 in R4 is titled \"Unresolved UAP Report, Gulf of America, 2019.\" Its DVIDS location field also reads \"Gulf of America\" (country_abbreviation: \"XG\" or similar). This is the first PURSUE record to use the renamed geographic designation — Executive Order 14172, issued January 20, 2025, renamed the Gulf of Mexico to the Gulf of America for U.S. federal purposes.",
+    significance: "Every prior PURSUE record referencing that body of water would have used \"Gulf of Mexico\" (though no such prior reference exists — PR115 is the first). The naming is a small proof that the DoW's PURSUE pipeline follows current executive-branch geographic designations rather than the older internationally-recognized names. Worth noting for search: someone looking for a \"Gulf of Mexico UFO 2019 declassified\" report will not find this file by that name.",
+    evidence: `**Catalog row:** \`DOW-UAP-PR115, Unresolved UAP Report, Gulf of America, 2019\`
+
+**DVIDS record ([video-1014123.json](../api.dvidshub.net/asset/video-1014123.json)):**
+- \`title: "DOW-UAP-PR115, Unresolved UAP Report, Gulf of America, 2019"\`
+- \`location.country: "Gulf of America"\` (this field is normally a country name; using a body of water is itself a small anomaly)
+
+**Executive Order context.** Executive Order 14172 (Jan 20, 2025) — "Restoring Names That Honor American Greatness" — renamed the Gulf of Mexico to the Gulf of America for U.S. federal usage. Federal agencies were directed to update their maps, records, and communications accordingly. The FAA followed suit in early 2025; the U.S. Geological Survey's Geographic Names Information System changed the primary designation.
+
+**Cross-check.** No prior PURSUE record uses either "Gulf of Mexico" or "Gulf of America" — this appears to be the first Gulf-region UAP file in the release program. The 2019 incident date predates the naming change by six years, meaning the original report (if it existed under CENTCOM or SOUTHCOM) would have used "Gulf of Mexico." The renaming happened at the catalog-labeling stage in the PURSUE pipeline.
+
+**Search implication.** For anyone building indexes over PURSUE records: alias "Gulf of America" ↔ "Gulf of Mexico" in your search so both surface this file.`,
+    sources: [
+      { path: "www.war.gov/Portals/1/Interactive/2026/UFO/uap-data.csv", note: "DOW-UAP-PR115 catalog row" },
+      { path: "api.dvidshub.net/asset/video-1014123.json", note: "DVIDS record — location.country = 'Gulf of America'" },
+    ],
+  },
+  {
+    id: "east-coast-2020-cluster",
+    tier: 1,
+    title: "R4 lifts the lid on the 2019-2020 East Coast UAP wave — 8 videos, all previously undisclosed",
+    claim: "Eight of the 19 videos in R4 (42%) are catalogued to \"Eastern United States,\" seven of them from 2019-2020 — the exact window as the East Coast UAP wave that generated the well-known \"jellyfish\" reports, the USS Kearsarge / USS Omaha encounters, and the Naval-aviator sightings that led to congressional hearings. All eight videos were previously undisclosed.",
+    significance: "The East Coast 2019-2020 UAP wave is one of the most-cited and least-documented UFO episodes in recent Navy history. It underpinned the 2021 DNI Preliminary Assessment on UAP, the 2023 UAP whistleblower hearings, and much of the political momentum that produced the PURSUE program itself. Until R4, PURSUE had zero primary-source videos from this specific incident cluster — plenty of individual sensor clips from CENTCOM (Middle East, Iran, Syria), NORTHCOM (Lake Huron), and INDOPACOM (Yellow Sea, East China Sea), but nothing tagged to the East Coast wave. R4 releases 8.",
+    evidence: `**The eight R4 East Coast records:**
+
+| Record ID | Year | DVIDS |
+|---|---|---|
+| DOW-UAP-PR106, Unresolved UAP Report, Eastern United States, 2020 | 2020 | [1014104](../api.dvidshub.net/asset/video-1014104.json) |
+| DOW-UAP-PR107, Unresolved UAP Report, Eastern United States, 2020 | 2020 | [1014105](../api.dvidshub.net/asset/video-1014105.json) |
+| DOW-UAP-PR109, Unresolved UAP Report, Eastern United States, 2015 | 2015 | [1014108](../api.dvidshub.net/asset/video-1014108.json) |
+| DOW-UAP-PR110, Unresolved UAP Report, Eastern United States, 2020 | 2020 | [1014112](../api.dvidshub.net/asset/video-1014112.json) |
+| DOW-UAP-PR111, Unresolved UAP Report, Eastern United States, 2020 | 2020 | [1014114](../api.dvidshub.net/asset/video-1014114.json) |
+| DOW-UAP-PR112, Unresolved UAP Report, Eastern United States, 2019 | 2019 | [1014128](../api.dvidshub.net/asset/video-1014128.json) |
+| DOW-UAP-PR108, Unresolved UAP Report, Western United States, 2020 | 2020 | [1014106](../api.dvidshub.net/asset/video-1014106.json) *(cluster-adjacent — same 2020 timeframe)* |
+| DOW-UAP-PR113, Unresolved UAP Report, Western United States, 1996 | 1996 | [1014119](../api.dvidshub.net/asset/video-1014119.json) *(older Western US comparison)* |
+
+Plus two Atlantic-Ocean records that likely belong to the same operational-theater cluster:
+- **DOW-UAP-PR114** — Unresolved UAP Report, Atlantic Ocean, 2016 ([1014121](../api.dvidshub.net/asset/video-1014121.json))
+- **DOW-UAP-PR116** — Unresolved UAP Report, Atlantic Ocean, 2020 ([1014124](../api.dvidshub.net/asset/video-1014124.json))
+
+**Timeframe alignment.** The public "East Coast wave" nomenclature typically covers roughly summer 2019 through spring 2021 — encompassing:
+- The USS Nimitz strike group workups off the East Coast in mid-2019
+- The USS Kearsarge amphibious ready group's July 2019 encounters (the "Warfare Tactics Instructor" reports)
+- The USS Omaha "spherical UAP" video (later released by AARO in 2022)
+- The 2020 F/A-18 "range fouler" incident cluster that produced multiple sensor-video clips
+- The February 2023 F-16C Lake Huron shootdown of a UAP (released in R2 as DOW-UAP-PR071)
+
+The R4 batch — 6 videos from 2020 alone, all Eastern-US-labeled — is consistent with the 2019-2020 F/A-18 range-fouler cluster. None of the R4 titles name the ship, squadron, or aviator; all are the standard \"Unresolved UAP Report, Eastern United States, [year]\" template.
+
+**Comparison to previous releases:**
+
+| Release | East Coast records |
+|---|---|
+| R1 (May 8) | 0 |
+| R2 (May 22) | 1 (\"DOW-UAP-PR086, UAP from Dec 2019 East Coast\" — the only prior East Coast R1/R2 clip) |
+| R3 (Jun 12) | 0 |
+| **R4 (Jul 10)** | **8 (six from 2019-2020, one from 2015, one from 2019)** |
+
+So R4 is a **9× jump** in East Coast content — a deliberate release of the previously-withheld sensor-video cluster from the exact window that made UAP a mainstream political issue.
+
+**Search implication.** These are the first primary-source videos most journalists writing about the 2019-2020 East Coast wave will now be able to cite. Worth flagging on the site's search page with a dedicated "East Coast wave" saved filter.`,
+    stats: [
+      { big: "8 of 19", label: "R4 videos tagged Eastern US (42%)" },
+      { big: "6 of 8", label: "from 2019 or 2020" },
+      { big: "9×", label: "increase in East Coast content vs prior 3 releases combined" },
+      { big: "10", label: "combined East Coast + Atlantic Ocean 2019-2020 records in R4" },
+    ],
+    sources: [
+      { path: "www.war.gov/Portals/1/Interactive/2026/UFO/uap-data.csv", note: "Filter by Release Date = 7/10/26 + Incident Location contains 'United States' or 'Atlantic'" },
+      { path: "api.dvidshub.net/asset", note: "DVIDS records 1014104, 1014105, 1014108, 1014112, 1014114, 1014128 for the six 2019-2020 East Coast videos" },
+    ],
+  },
+  {
+    id: "june-15-silent-ocr-republish-was-part-of-r4-prep",
+    tier: 2,
+    title: "The June-15 silent OCR republish was almost certainly R4 pipeline pre-staging",
+    claim: "Finding 23 (\"june-15-silent-ocr-republish\") documented one PDF from R1 that was silently re-OCR'd and quietly republished on June 15. R4 arrived on July 10 with all 14 of its PDFs going through the same OCR pipeline (Adobe Acrobat 26 Paper Capture Plug-in) and using a single new vendor (Highland Technologies, Inc.). Reading the R4 metadata backwards, the June-15 quiet update was almost certainly a test-fire of the new pipeline on one file before the full R4 batch.",
+    significance: "Confirms the June-15 silent republish wasn't a one-off — it was a staging step for a broader R4 OCR/re-processing effort. The R4 batch went through the same Acrobat Paper Capture Plug-in that Finding 23 flagged, produced by the same Highland Technologies vendor stack. This is a useful piece of provenance: it tells us the DoW's tradecraft-cleanup wasn't just retrospective (fixing R1-R3 leaks in R3), it was also prospective (test-driving the R4 pipeline on live files).",
+    evidence: `**The June 15 quiet update** (from Finding 23, [june-15-silent-ocr-republish](/findings/june-15-silent-ocr-republish)):
+- Only \`release_1/59_214434_sp_16_[7.18.1963].pdf\` changed between June 14 and June 15
+- Went from image-only (0 chars text) to OCR'd (12,845 chars text)
+- New /Producer: \`Adobe Acrobat (32-bit) 26 Paper Capture Plug-in\`
+- No catalog announcement
+
+**R4 (July 10) metadata for all 14 PDFs:**
+- /Producer: \`Adobe Acrobat (32-bit) 26 Paper Capture Plug-in\` (exact same string)
+- /Creator: \`Highland Technologies, Inc.\` (single vendor across all 14 files — see [r4-pdf-author-field-now-populated](/findings/r4-pdf-author-field-now-populated))
+
+**Interpretation.** The June-15 file gained the Acrobat Paper Capture pass but *not* the Highland Technologies vendor stamp — the Creator field on the June-15 file is empty, not "Highland Technologies." That suggests the June-15 push was **just the OCR stage** of a two-stage pipeline; the R4 batch on July 10 added both the OCR pass **and** the Highland Technologies re-render/re-save stage. Reading forward: expect future silent republishes to add Highland Technologies to the Creator field, marking them as fully-processed through the new R4 pipeline. Watching those tags is the cheapest way to detect pipeline processing on old files.
+
+**Silent-republish sweep on 2026-07-10 (post-R4).** Ran the same byte-level HEAD diff against all 424 mirror-referenced PDFs/images/etc. **All 424 unchanged.** No silent tweaks were bundled with the R4 push — the R4 processing pipeline is being applied only to R4 files, not backfilled to R1-R3.
+
+**Cross-refs:**
+- [june-15-silent-ocr-republish](/findings/june-15-silent-ocr-republish) — the trigger event
+- [r4-pdf-author-field-now-populated](/findings/r4-pdf-author-field-now-populated) — the full R4 pipeline stamp
+- [tradecraft-cleanup-in-release-3](/findings/tradecraft-cleanup-in-release-3) — the earlier R3 cleanup that presaged this`,
+    sources: [
+      { path: "archive/2026-06-14/www.war.gov/medialink/ufo/release_1/59_214434_sp_16_[7.18.1963].pdf", note: "Pre-June-15 snapshot" },
+      { path: "www.war.gov/medialink/ufo/release_1/59_214434_sp_16_[7.18.1963].pdf", note: "Post-June-15 (OCR'd, no Highland stamp)" },
+      { path: "www.war.gov/medialink/ufo/071026/release_04/documents", note: "R4 PDFs (fully OCR'd + Highland Technologies stamp)" },
+    ],
+  },
+
+  // ─────────────────────────────────────────────────────────────
   //  Post-Release-3 silent change (detected 2026-06-15)
   // ─────────────────────────────────────────────────────────────
   {

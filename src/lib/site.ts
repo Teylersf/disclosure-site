@@ -10,10 +10,10 @@ export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://pursue.rep
 export const SITE_NAME = "Disclosure — PURSUE 2026 UAP Archive";
 
 export const SITE_DESCRIPTION =
-  "Searchable archive of every record released by the U.S. Department of War PURSUE program — 294 declassified UAP / UFO documents, sensor videos, NASA Apollo audio, and FBI photographs across three 2026 releases (May 8, May 22, June 12), plus 22 independent findings the official catalog doesn't surface.";
+  "Searchable archive of every record released by the U.S. Department of War PURSUE program — 334 declassified UAP / UFO documents, sensor videos, NASA Apollo/Space-Shuttle imagery, and FBI photographs across four 2026 releases (May 8, May 22, June 12, July 10), plus 29 independent findings the official catalog doesn't surface — including the STS-80 Space Shuttle 1996 UFO images and the 2019-2020 East Coast wave.";
 
 export const SITE_SHORT_DESCRIPTION =
-  "The complete PURSUE 2026 UAP archive — 294 records across 3 releases, 22 findings, TV mode.";
+  "The complete PURSUE 2026 UAP archive — 334 records across 4 releases, 29 findings, TV mode.";
 
 export const SITE_KEYWORDS = [
   // primary subjects
@@ -29,7 +29,9 @@ export const SITE_KEYWORDS = [
   "May 8 2026 UFO release",
   "May 22 2026 UFO release",
   "June 12 2026 UFO release",
+  "July 10 2026 UFO release",
   "Release 03 PURSUE",
+  "Release 04 PURSUE",
   "war.gov UFO",
   "war.gov UAP",
   // agencies
@@ -63,6 +65,17 @@ export const SITE_KEYWORDS = [
   "Robertson Panel CIA-UAP-002",
   "Western US Event Western US Event",
   "DoW PURSUE tradecraft cleanup release 3",
+  // release 4 finding-specific
+  "STS-80 Space Shuttle UFO images 1996",
+  "NASA-UAP-D030 D031 D032 STS-80 Columbia",
+  "Apollo 14 light flash phenomena debriefing",
+  "Apollo 17 medical debriefing UAP",
+  "East Coast UAP wave 2019 2020",
+  "Gulf of America UAP 2019",
+  "Project Sign 1948 progress report",
+  "Project Blue Book 1955 CIA memoranda",
+  "Highland Technologies PURSUE PDF vendor",
+  "PURSUE release 4 July 10 2026",
   // viewer features
   "UAP search",
   "UAP TV mode",

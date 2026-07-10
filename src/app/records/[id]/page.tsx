@@ -79,7 +79,7 @@ export default async function RecordPage({ params }: { params: Promise<{ id: str
   const prev = idx > 0 ? m.records[idx - 1] : null;
   const next = idx < m.records.length - 1 ? m.records[idx + 1] : null;
 
-  const isNew = record.release === "release_3";
+  const isNew = record.release === "release_4";
   const findings = findingsForRecord(id);
 
   // JSON-LD structured data

@@ -4,15 +4,17 @@ import { assetUrl } from "@/lib/asset-url";
 import { absoluteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Download bundles — PURSUE 2026 UAP files (14 GB total across 3 releases)",
+  title: "Download bundles — PURSUE 2026 UAP files (all 4 releases)",
   description:
-    "Download every official Department of War PURSUE 2026 release bundle as one-shot ZIP files — Release 1 (1.22 GB), Release 2 combined (5.64 GB), Release 2 documents only (70 MB), Release 1 videos (1.33 GB), Release 3 documents (826 MB), and Release 3 videos (4.6 GB).",
+    "Download every official Department of War PURSUE 2026 release bundle as one-shot ZIP files — Release 1 (1.22 GB), Release 2 combined (5.64 GB), Release 2 documents only (70 MB), Release 1 videos (1.33 GB), Release 3 documents (826 MB), Release 3 videos (4.6 GB), Release 4 documents, and Release 4 videos.",
   keywords: [
     "PURSUE 2026 download",
     "war.gov UFO zip",
     "uap052226.zip",
     "uap_videos_061226.zip",
     "release_03_documents.zip",
+    "release_04_documents_071026.zip",
+    "uap_release04_videos_071026.zip",
     "uapvideos.zip",
     "Release_1.zip UFO",
     "Pentagon UAP bulk download",
@@ -20,12 +22,26 @@ export const metadata: Metadata = {
   alternates: { canonical: "/bundles" },
   openGraph: {
     title: "Download the full PURSUE 2026 bundles",
-    description: "Every official Department of War ZIP bundle across all three releases — ~14 GB of declassified UAP files.",
+    description: "Every official Department of War ZIP bundle across all four releases — declassified UAP files including STS-80 Space Shuttle images and the East Coast 2019-2020 wave.",
     url: absoluteUrl("/bundles"),
   },
 };
 
 const BUNDLES = [
+  {
+    name: "Release 4 videos",
+    key: "d34w7g4gy10iej.cloudfront.net/release_04/uap_release04_videos_071026.zip",
+    size: "~2 GB",
+    desc: "All 19 videos and 4 audio recordings from the July 10, 2026 release — includes eight previously-undisclosed 2019-2020 East Coast wave sensor clips, four Apollo 14/17 medical debriefings on the \"light flash phenomena,\" plus fresh Yellow Sea / East China Sea / South China Sea CENTCOM-adjacent footage.",
+    date: "2026-07-10",
+  },
+  {
+    name: "Release 4 documents",
+    key: "www.war.gov/medialink/ufo/071026/release_04/release_04_documents_071026.zip",
+    size: "~250 MB",
+    desc: "All 14 PDFs and 3 images from the July 10, 2026 release — includes the three NASA STS-80 Space Shuttle Columbia UFO images (Nov 1996), the 1948 Project Sign Progress Report, 1955 CIA memoranda on Unconventional Aircraft Sightings, the 1949 Los Alamos Conference on Aerial Phenomena, and DoW analyses of Flying Object Incidents in the US from 1948-1949.",
+    date: "2026-07-10",
+  },
   {
     name: "Release 3 videos",
     key: "d34w7g4gy10iej.cloudfront.net/release_03/uap_videos_061226.zip",

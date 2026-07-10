@@ -2,7 +2,7 @@
 
 Source: offline mirror of `https://www.war.gov/UFO/` at `../www.war.gov/`, `../api.dvidshub.net/`, `../d34w7g4gy10iej.cloudfront.net/`, `../d1ldvf68ux039x.cloudfront.net/` (relative to this repo). Findings are things present in the released files / metadata that the official catalog UI does not surface. Every claim below is verifiable from files in the mirror — provenance paths and line numbers are included so the site can deep-link to evidence.
 
-**Current scope:** three releases — Release 1 (May 8, 2026, 158 records), Release 2 (May 22, 2026, 64 records), Release 3 (June 12, 2026, 72 records). Total 294 records. Findings 1-13 below cover R1+R2. Findings 14-22 cover R3. See "Tradecraft shift in Release 3" for a meta-finding about how the DoW changed their workflow between R2 and R3. **Plus Finding 23** — added 2026-06-15 — documenting the first post-Release-3 silent change.
+**Current scope:** four releases — Release 1 (May 8, 2026, 158 records), Release 2 (May 22, 2026, 64 records), Release 3 (June 12, 2026, 72 records), Release 4 (July 10, 2026, 40 records). Total 334 records. Findings 1-13 below cover R1+R2. Findings 14-22 cover R3. Finding 23 documents the post-R3 silent OCR republish (June 15). **Findings 24-29** (below the R3 block) cover R4 highlights: the STS-80 Space Shuttle 1996 images, the Apollo 14/17 light-flash tapes, the /Author-metadata policy change, "Gulf of America" naming, the East Coast 2019-2020 wave cluster, and the retroactive R4-pipeline explanation for the June-15 silent change.
 
 ---
 
