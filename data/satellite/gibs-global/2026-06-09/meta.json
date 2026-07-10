@@ -1,9 +1,0 @@
-{
-  "source": "nasa-gibs",
-  "kind": "global-true-color",
-  "date": "2026-06-09",
-  "layer": "VIIRS_NOAA20_CorrectedReflectance_TrueColor",
-  "width": 2048,
-  "height": 1024,
-  "size_bytes": 565280
-}

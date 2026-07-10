@@ -1,9 +1,9 @@
 "use client";
 
 /**
- * Top navigation: 6 sections, click-to-open dropdowns, mobile drawer.
+ * Top navigation: 5 sections, click-to-open dropdowns, mobile drawer.
  *
- *   Home  · Findings · Archive ▾ · Missions · Satellite ▾ · Social · Tools ▾
+ *   Home  · Findings · Archive ▾ · Missions · Social · Tools ▾
  *
  * On mobile (<md) the entire nav collapses behind a hamburger that opens a
  * full-height side drawer with the same items stacked and grouped.
@@ -13,8 +13,8 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
-  Home, AlertTriangle, FolderArchive, Rocket, Satellite, AtSign, Wrench,
-  Search, Clock, Archive as ArchiveIcon, Map as MapIcon, Camera, MapPin,
+  Home, AlertTriangle, FolderArchive, Rocket, AtSign, Wrench,
+  Search, Clock, Archive as ArchiveIcon,
   Cpu, Tv, ChevronDown, Menu, X,
 } from "lucide-react";
 
@@ -47,15 +47,6 @@ const NAV: NavSection[] = [
     ],
   },
   { id: "missions", label: "Missions", icon: <Rocket size={14}/>, href: "/missions" },
-  {
-    id: "satellite", label: "Satellite", icon: <Satellite size={14}/>,
-    items: [
-      { href: "/satellite/live",  label: "Live frames (every 30 min)", icon: <Satellite size={14}/>, sub: "GOES + Himawari full-disc captures, time-lapse, scrub today's frames" },
-      { href: "/satellite",       label: "Archive landing",            icon: <Satellite size={14}/>, sub: "Overview of every source we mirror" },
-      { href: "/satellite/map",   label: "Interactive map",            icon: <MapIcon size={14}/>,   sub: "30+ NASA GIBS layers · time slider · share-by-URL" },
-      { href: "/satellite/iotd",  label: "Image of the Day",           icon: <Camera size={14}/>,    sub: "NASA Earth Observatory IOTD mirror" },
-    ],
-  },
   { id: "social", label: "@WH", icon: <AtSign size={14}/>, href: "/whitehouse-uap" },
   {
     id: "tools", label: "Tools", icon: <Wrench size={14}/>,
