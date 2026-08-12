@@ -2,7 +2,31 @@
 
 Source: offline mirror of `https://www.war.gov/UFO/` at `../www.war.gov/`, `../api.dvidshub.net/`, `../d34w7g4gy10iej.cloudfront.net/`, `../d1ldvf68ux039x.cloudfront.net/` (relative to this repo). Findings are things present in the released files / metadata that the official catalog UI does not surface. Every claim below is verifiable from files in the mirror — provenance paths and line numbers are included so the site can deep-link to evidence.
 
-**Current scope:** four releases — Release 1 (May 8, 2026, 158 records), Release 2 (May 22, 2026, 64 records), Release 3 (June 12, 2026, 72 records), Release 4 (July 10, 2026, 40 records). Total 334 records. Findings 1-13 below cover R1+R2. Findings 14-22 cover R3. Finding 23 documents the post-R3 silent OCR republish (June 15). **Findings 24-29** (below the R3 block) cover R4 highlights: the STS-80 Space Shuttle 1996 images, the Apollo 14/17 light-flash tapes, the /Author-metadata policy change, "Gulf of America" naming, the East Coast 2019-2020 wave cluster, and the retroactive R4-pipeline explanation for the June-15 silent change.
+**Current scope:** five releases — Release 1 (May 8, 2026, 158 records), Release 2 (May 22, 2026, 64 records), Release 3 (June 12, 2026, 72 records), Release 4 (July 10, 2026, 40 records), and Release 5 (August 7, 2026, 41 records). Total 375 records. Findings 1-13 below cover R1+R2. Findings 14-22 cover R3. Finding 23 documents the post-R3 silent OCR republish (June 15). **Findings 24-29** cover R4 highlights. Release 5 adds three source-grounded findings in the published app: the linked Gulf of Oman set, the altered-before-reporting Pacific group, and the release's PDF production metadata.
+
+---
+
+## RELEASE 05 CAPTURE (2026-08-07)
+
+The release was mirrored from the official PURSUE page, combined `uap-data.csv`, Release 05 document and video bundles, carousel images, the official release announcement, and the 16 DVIDS records with their primary media and previews. The immutable capture is `../archive/2026-08-07/`; the full extraction is `../archive/2026-08-07/release-05-metadata.json`. The combined manifest captured on 2026-08-12 has SHA-256 `5f5698f132245115dd9d4a5197d2748847f281e466d8b660de036aa3c4b678c7`.
+
+### Finding — `gulf-of-oman-six-part-set`
+
+**Claim:** DOW-UAP-D101 and PR117 through PR122 are one linked 2021 Gulf of Oman set, not six independent observations. The release's reciprocal pairing fields connect the report and every clip; the DVIDS descriptions identify the videos as contemporaneous secondary recordings of an AC-130J sensor display. PR121 and PR122 explicitly overlap in content.
+
+**Sources:** `uap-data.csv` Release 05 rows for D101 and PR117-PR122; `../api.dvidshub.net/asset/video-1017793.json`, `1017795.json`, `1017798.json`, `1017800.json`, `1017802.json`, and `1017803.json`; full inventory in `../archive/2026-08-07/release-05-metadata.json`.
+
+### Finding — `pacific-2019-altered-source`
+
+**Claim:** PR123 through PR127 are a reciprocal five-record Pacific Ocean 2019 cluster. Every DVIDS description says the media had been digitally altered before reporting to AARO and is presented as received. PR123, PR124, and PR125 further identify the footage as a secondary hand-held recording.
+
+**Sources:** `uap-data.csv` Release 05 rows for PR123-PR127; `../api.dvidshub.net/asset/video-1017805.json`, `1017806.json`, `1017788.json`, `1017790.json`, and `1017791.json`.
+
+### Finding — `release5-pdf-production-mix`
+
+**Claim:** All 22 Release 05 PDFs have a populated `/Author`, but the production fields are not uniform: 21 have `/Producer` `Adobe Acrobat (32-bit) 26 Paper Capture Plug-in`; FBI-UAP-D041 has no producer; CIA-UAP-D022 and D023 list `Highland Technologies, Inc.` as creator; and FBI-UAP-D027 lists `Adobe Acrobat 23.6` as creator.
+
+**Sources:** `../archive/2026-08-07/release-05-metadata.json`, generated from all 22 mirrored Release 05 PDFs.
 
 ---
 

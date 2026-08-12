@@ -19,6 +19,7 @@ export default async function Image() {
   const r2 = m.byRelease["5/22/26"];
   const r3 = m.byRelease["6/12/26"];
   const r4 = m.byRelease["7/10/26"];
+  const r5 = m.byRelease["8/7/26"];
 
   return new ImageResponse(
     (
@@ -73,7 +74,7 @@ export default async function Image() {
             <Stat n={FINDINGS.length} l="findings" c="#ffd166" />
           </div>
           <div style={{ display: "flex", marginTop: 24, fontSize: 18, color: "#8c95b5" }}>
-            {`Mirror of the U.S. Department of War 2026 UAP releases · ${r1} from 5/8 · ${r2} from 5/22 · ${r3} from 6/12 · ${r4} from 7/10`}
+            {`Mirror of the U.S. Department of War 2026 UAP releases · ${r1} from 5/8 · ${r2} from 5/22 · ${r3} from 6/12 · ${r4} from 7/10 · ${r5} from 8/7`}
           </div>
         </div>
       </div>

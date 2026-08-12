@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Tv, Search, FileText, Film, ImageIcon, Music, AlertTriangle, ArrowRight, Cpu, Eye, Ruler, Layers, Camera, Activity, Pin, MousePointer2, FileSearch, Globe2 } from "lucide-react";
+import { Tv, Search, FileText, Film, ImageIcon, Music, AlertTriangle, ArrowRight, Cpu, Eye, Ruler, Layers, Camera, Activity, Pin, MousePointer2, Globe2 } from "lucide-react";
 import RecordsExplorer from "@/components/RecordsExplorer";
 import { getManifest } from "@/lib/manifest";
 import { FINDINGS, TIER1 } from "@/lib/findings";
@@ -24,8 +24,8 @@ export default async function Home() {
             The full PURSUE archive,<br/>searchable, viewable, playable.
           </h1>
           <p className="text-[var(--muted)] mt-6 max-w-3xl text-lg leading-relaxed">
-            Every record from the U.S. Department of War&apos;s four 2026 UAP releases — {m.totalCount} documents,
-            videos, audio recordings, and photographs from FBI, CIA, NASA, ODNI, DoE, ICA, and the All-domain
+            Every record from the U.S. Department of War&apos;s five 2026 UAP releases — {m.totalCount} documents,
+            videos, audio recordings, and photographs from FBI, CIA, NASA, ODNI, DoE, State, EOP, ICA, and the All-domain
             Anomaly Resolution Office. Mirrored locally, indexed, and ready to explore.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
@@ -45,32 +45,32 @@ export default async function Home() {
         </div>
       </section>
 
-      {/* Featured article — R4: STS-80 Space Shuttle UFO images 1996 */}
+      {/* Featured article — R5: linked Gulf of Oman video set */}
       <section className="border-b border-[var(--border)] relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-0 right-1/4 w-[600px] h-[400px] rounded-full bg-[var(--img)] opacity-[0.06] blur-3xl" />
         </div>
         <div className="max-w-[1600px] mx-auto px-6 py-14 relative">
           <div className="flex items-center gap-2 text-[11px] uppercase tracking-[0.4em] text-[var(--gold)] mb-6">
-            <AlertTriangle size={14}/> Featured · Just released · Fourth PURSUE tranche · July 10, 2026
+            <AlertTriangle size={14}/> Featured · Just released · Fifth PURSUE tranche · August 7, 2026
           </div>
           <div className="grid lg:grid-cols-[1fr_1.4fr] gap-8 items-stretch">
             {/* Cover / thumbnail */}
             <Link
-              href="/findings/sts80-space-shuttle-1996"
+              href="/findings/gulf-of-oman-six-part-set"
               className="card block relative overflow-hidden group"
-              aria-label="Open the full finding on STS-80 Space Shuttle UFO images"
+              aria-label="Open the full finding on the linked Gulf of Oman video set"
             >
               <div className="aspect-[4/5] bg-[var(--bg-0)] relative">
                 <img
-                  src={assetUrl("www.war.gov/Portals/1/Interactive/2026/UFO/071026/Slideshow/NASA-UAP-D030_STS-80-Unidentified-Object-Image1_1996.jpg")}
-                  alt="NASA STS-80 Space Shuttle Columbia unidentified-object image 1, November 1996"
+                  src={assetUrl("www.war.gov/medialink/ufo/release_05/Aug_07/thumbnails/DOW-UAP-D101_IIR_Unresolved-UAP-Report-Gulf-of-Oman_2021.jpg")}
+                  alt="Cover thumbnail for the Release 05 Gulf of Oman Intelligence Information Report"
                   className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.02]"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
                 <div className="absolute bottom-4 left-4 right-4">
-                  <div className="text-[10px] uppercase tracking-widest text-[var(--gold)] mb-1">NASA-UAP-D030 / D031 / D032</div>
-                  <div className="text-sm text-white font-mono">STS-80 · Columbia · Nov 1996 · 3 primary-source images</div>
+                  <div className="text-[10px] uppercase tracking-widest text-[var(--gold)] mb-1">DOW-UAP-D101 / PR117–PR122</div>
+                  <div className="text-sm text-white font-mono">Gulf of Oman · Sep 2021 · 1 report + 6 linked clips</div>
                 </div>
               </div>
             </Link>
@@ -78,57 +78,52 @@ export default async function Home() {
             {/* Editorial copy */}
             <div className="flex flex-col">
               <h2 className="text-3xl md:text-5xl font-bold leading-[1.08] text-[var(--text)]">
-                The STS-80 Space Shuttle UFO frames just got
+                Release 05&apos;s Gulf of Oman videos are
                 <br/>
-                <span className="gradient-text">their primary-source release.</span>
+                <span className="gradient-text">one linked evidence set, not six isolated files.</span>
               </h2>
               <p className="text-[var(--muted)] mt-5 text-lg leading-relaxed max-w-3xl">
-                For thirty years, every version of the <strong className="text-[var(--text)]">STS-80</strong> images —
-                the three unidentified objects filmed from Space Shuttle Columbia during its 17-day
-                November 1996 mission — has been a compressed video-still or a grainy re-encode.
-                On <strong className="text-[var(--text)]">July 10, 2026</strong>, PURSUE&apos;s fourth tranche released the
-                three frames as high-resolution NASA source files with their own catalog IDs:
-                <span className="font-mono text-[var(--gold)]"> NASA-UAP-D030</span>,
-                <span className="font-mono text-[var(--gold)]"> D031</span>, and
-                <span className="font-mono text-[var(--gold)]"> D032</span>.
-                First primary-source release. Ever.
+                The August 7 catalog ties one Intelligence Information Report —
+                <span className="font-mono text-[var(--gold)]"> DOW-UAP-D101</span> — directly to six clips,
+                <span className="font-mono text-[var(--gold)]"> PR117–PR122</span>. Their DVIDS descriptions say
+                the clips were captured contemporaneously as secondary recordings of an AC-130J sensor display;
+                PR121 and PR122 explicitly overlap. The catalog presents six playable records, but the source metadata
+                supplies the shared provenance.
               </p>
 
               {/* Quote pull */}
               <blockquote className="mt-6 border-l-2 border-[var(--gold)] pl-5 py-2 text-[var(--text)] text-base italic max-w-3xl">
-                Columbia&apos;s cameras were rolling to log the Wake Shield Facility and ORFEUS-SPAS II
-                telescope operations. During fixed-attitude station-keeping — hours of the Shuttle
-                held perfectly still relative to the sun — <strong>three objects</strong> moved through the frame
-                in ways not attributable to on-board debris.
+                “This footage does not represent native primary sensor data, and the secondary recording method
+                introduces limitations in fidelity, resolution, and overall visual quality.”
                 <footer className="not-italic text-[11px] uppercase tracking-widest text-[var(--muted)] mt-2">
-                  — Context on the STS-80 case
+                  — DVIDS description for the linked Gulf of Oman set
                 </footer>
               </blockquote>
 
               {/* Quick facts */}
               <div className="mt-7 grid grid-cols-2 sm:grid-cols-4 gap-3">
-                <FactCell label="Mission" value="STS-80 Columbia" />
-                <FactCell label="Launched" value="Nov 19, 1996" />
-                <FactCell label="Duration" value="17 days" />
-                <FactCell label="Images" value="3 (D030/D031/D032)" />
+                <FactCell label="Release" value="Aug 7, 2026" />
+                <FactCell label="Linked clips" value="6 (PR117–PR122)" />
+                <FactCell label="Incident" value="Sep 8, 2021" />
+                <FactCell label="Source" value="Secondary capture" />
               </div>
 
               <p className="text-[var(--muted)] mt-7 max-w-3xl leading-relaxed">
-                The July 10 release added <strong className="text-[var(--text)]">40 records</strong> — bringing the PURSUE archive
-                to 334. Also included: Apollo 14 and 17 medical debriefings on the &ldquo;light flash phenomena,&rdquo;
-                the 1948 <em>Project Sign Progress Report</em>, 1955 CIA memoranda on unconventional
-                aircraft, and eight previously-undisclosed videos from the 2019&ndash;2020 East&nbsp;Coast UAP wave.
+                Release 05 adds <strong className="text-[var(--text)]">41 records</strong> — bringing the PURSUE archive
+                to 375. It includes 22 PDFs, three FBI image records, and 16 videos: a five-part Pacific Ocean 2019
+                group, four Middle East clips, FBI&apos;s 2026 &ldquo;Slow-moving Objects&rdquo; reconstruction, historical DoW files,
+                CIA Puerto Rico briefing material, and State Department Bahia correspondence.
               </p>
 
               <div className="mt-7 flex flex-wrap gap-3">
-                <Link href="/findings/sts80-space-shuttle-1996" className="btn btn-gold inline-flex">
-                  <ArrowRight size={14}/> Read the full finding
+                <Link href="/findings/gulf-of-oman-six-part-set" className="btn btn-gold inline-flex">
+                  <ArrowRight size={14}/> Read the linked-set finding
                 </Link>
-                <Link href="/findings/east-coast-2020-cluster" className="btn inline-flex">
-                  <FileText size={14}/> East Coast wave (8 new videos)
+                <Link href="/findings/pacific-2019-altered-source" className="btn inline-flex">
+                  <FileText size={14}/> Pacific 2019 provenance
                 </Link>
-                <Link href="/findings/apollo-light-flash-tapes" className="btn inline-flex">
-                  <Globe2 size={14}/> Apollo 14 &amp; 17 debriefings
+                <Link href="/bundles" className="btn inline-flex">
+                  <Globe2 size={14}/> Release 05 bundles
                 </Link>
               </div>
             </div>
@@ -259,7 +254,7 @@ export default async function Home() {
         <div className="flex items-baseline justify-between mb-6">
           <h2 className="text-2xl font-semibold tracking-tight">Explore the archive</h2>
           <span className="text-sm text-[var(--muted)]">
-            {m.byRelease["5/8/26"]} from 5/8 · {m.byRelease["5/22/26"]} from 5/22 · {m.byRelease["6/12/26"]} from 6/12 · {m.byRelease["7/10/26"]} from 7/10
+            {m.byRelease["5/8/26"]} from 5/8 · {m.byRelease["5/22/26"]} from 5/22 · {m.byRelease["6/12/26"]} from 6/12 · {m.byRelease["7/10/26"]} from 7/10 · {m.byRelease["8/7/26"]} from 8/7
           </span>
         </div>
         <RecordsExplorer records={m.records} agencies={m.agencies} />

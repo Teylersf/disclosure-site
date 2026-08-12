@@ -22,6 +22,7 @@ const TYPES: { value: RecordType | ""; label: string }[] = [
 
 const RELEASES: { value: string; label: string }[] = [
   { value: "", label: "All releases" },
+  { value: "8/7/26", label: "Release 5 (8/7/26)" },
   { value: "7/10/26", label: "Release 4 (7/10/26)" },
   { value: "6/12/26", label: "Release 3 (6/12/26)" },
   { value: "5/22/26", label: "Release 2 (5/22/26)" },
@@ -53,7 +54,7 @@ export default function RecordsExplorer({ records, agencies, initialQuery = "" }
       if (type && r.type !== type) return false;
       if (release && r.releaseDate !== release) return false;
       if (agency && r.agency !== agency) return false;
-      if (onlyNew && r.release !== "release_4") return false;
+      if (onlyNew && r.release !== "release_5") return false;
       if (!needle) return true;
       const hay = `${r.title} ${r.description} ${r.agency} ${r.incidentLocation}`.toLowerCase();
       return hay.includes(needle);
@@ -96,7 +97,7 @@ export default function RecordsExplorer({ records, agencies, initialQuery = "" }
             type="button"
             onClick={() => setOnlyNew(!onlyNew)}
             className={`btn ${onlyNew ? "btn-gold" : ""} justify-center`}
-            title="Only show 7/10 release"
+            title="Only show the latest release"
           >
             <Sparkles size={14}/> New
           </button>
@@ -132,7 +133,7 @@ export default function RecordsExplorer({ records, agencies, initialQuery = "" }
 
 function RecordCard({ record }: { record: UapRecord }) {
   const thumb = assetUrl(record.thumbnail?.url);
-  const isNew = record.release === "release_4";
+  const isNew = record.release === "release_5";
   return (
     <Link href={`/records/${record.id}`} className="card block">
       <div className="aspect-video bg-[var(--bg-0)] relative overflow-hidden">
@@ -160,7 +161,7 @@ function RecordCard({ record }: { record: UapRecord }) {
 
 function RecordRow({ record }: { record: UapRecord }) {
   const thumb = assetUrl(record.thumbnail?.url);
-  const isNew = record.release === "release_4";
+  const isNew = record.release === "release_5";
   return (
     <Link href={`/records/${record.id}`} className="card flex items-stretch gap-3 p-2 pr-4">
       <div className="w-[120px] h-[80px] flex-shrink-0 bg-[var(--bg-0)] rounded overflow-hidden relative">

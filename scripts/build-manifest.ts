@@ -135,6 +135,7 @@ async function main() {
     const type = classifyType(row["Type"] ?? "");
     const releaseDate = (row["Release Date"] ?? "").trim();
     const release =
+      releaseDate === "8/7/26" ? "release_5" :
       releaseDate === "7/10/26" ? "release_4" :
       releaseDate === "6/12/26" ? "release_3" :
       releaseDate === "5/22/26" ? "release_2" :

@@ -15,6 +15,8 @@
     "upload:dry": "tsx scripts/upload-linode.ts --dry",
     "upload:whitehouse-uap": "tsx scripts/upload-whitehouse-uap.ts",
     "fetch:war-csv": "tsx scripts/fetch-war-csv.ts",
+    "mirror:war-release": "tsx scripts/mirror-war-release.ts",
+    "audit:pursue-assets": "tsx scripts/audit-pursue-assets.ts",
     "auto-publish": "tsx scripts/auto-publish.ts",
     "setup-cors": "tsx scripts/setup-linode-cors.ts",
     "prebuild": "tsx scripts/build-manifest.ts && tsx scripts/build-tothemoon-manifest.ts && tsx scripts/build-whitehouse-uap-manifest.ts"

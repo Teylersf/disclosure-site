@@ -1453,6 +1453,76 @@ The Quizzes route itself is currently fronted by Akamai edge filtering for non-b
       { path: "https://www.war.gov/", note: "Homepage CTA button linking to Quizzes" },
     ],
   },
+  {
+    id: "gulf-of-oman-six-part-set",
+    tier: 1,
+    title: "Release 05's six Gulf of Oman clips are one linked 2021 evidence set",
+    claim: "The Release 05 catalog explicitly pairs DOW-UAP-D101 with PR117 through PR122. DVIDS describes the six clips as contemporaneous secondary recordings of the same AC-130J sensor display; PR121 and PR122 also explicitly overlap in content.",
+    significance: "The catalog presents six separate playable records. The pairing and DVIDS descriptions show they should be evaluated as a linked set, with the same source limitations, rather than as six independent observations.",
+    evidence: `**The link is in the release metadata.** DOW-UAP-D101's **Video Pairing** field names PR117, PR118, PR119, PR120, PR121, and PR122. Each of those six rows names the other five.
+
+**Source limitation.** The DVIDS descriptions for PR117–PR122 say the footage is a secondary capture recorded from an AC-130J sensor display, not native primary-sensor data. They say the clips were captured contemporaneously. PR121's description says it significantly overlaps with PR122; PR122 says the same in reverse.
+
+**What the associated report adds.** DOW-UAP-D101 is an Intelligence Information Report for the September 8, 2021 Gulf of Oman event. It is the catalog's documentary anchor for the six clips.`,
+    stats: [
+      { big: "6", label: "linked video records (PR117–PR122)" },
+      { big: "1", label: "paired Intelligence Information Report" },
+      { big: "2", label: "clips with explicit overlap notices" },
+    ],
+    sources: [
+      { path: "www.war.gov/Portals/1/Interactive/2026/UFO/uap-data.csv", note: "Release Date 8/7/26; D101 and PR117–PR122 pairing fields" },
+      { path: "www.war.gov/medialink/ufo/release_05/Aug_07/documents/DOW-UAP-D101_IIR_Unresolved-UAP-Report-Gulf-of-Oman_2021.pdf", note: "Linked Intelligence Information Report" },
+      { path: "api.dvidshub.net/asset/video-1017793.json", note: "PR117 DVIDS metadata" },
+      { path: "api.dvidshub.net/asset/video-1017802.json", note: "PR121 DVIDS metadata and PR122 overlap note" },
+      { path: "api.dvidshub.net/asset/video-1017803.json", note: "PR122 DVIDS metadata and PR121 overlap note" },
+    ],
+    relatedRecordIds: ["dvids-1017793", "dvids-1017795", "dvids-1017798", "dvids-1017800", "dvids-1017802", "dvids-1017803"],
+  },
+  {
+    id: "pacific-2019-altered-source",
+    tier: 1,
+    title: "Five linked 2019 Pacific clips carry an explicit alteration disclaimer",
+    claim: "PR123 through PR127 are one paired Pacific Ocean group, and each release description says the media was digitally altered before being reported to AARO and is presented as received.",
+    significance: "This is a direct provenance constraint from the publisher, not an inference from the imagery. Any frame-level analysis needs to distinguish the released file from native sensor data and from the state of the media before it reached AARO.",
+    evidence: `The Release 05 **Video Pairing** field links PR123, PR124, PR125, PR126, and PR127 in a reciprocal five-record cluster. Their DVIDS descriptions state that the footage was digitally altered before reporting to AARO and is presented as received.
+
+The descriptions for PR123, PR124, and PR125 additionally call the footage a secondary capture recorded from a hand-held device. The catalog identifies all five records as Pacific Ocean incidents from 2019.`,
+    stats: [
+      { big: "5", label: "linked Pacific Ocean records" },
+      { big: "5", label: "publisher alteration disclaimers" },
+      { big: "2019", label: "catalogued incident year" },
+    ],
+    sources: [
+      { path: "www.war.gov/Portals/1/Interactive/2026/UFO/uap-data.csv", note: "Release Date 8/7/26; PR123–PR127 pairing fields" },
+      { path: "api.dvidshub.net/asset/video-1017805.json", note: "PR123 DVIDS metadata" },
+      { path: "api.dvidshub.net/asset/video-1017791.json", note: "PR127 DVIDS metadata" },
+    ],
+    relatedRecordIds: ["dvids-1017805", "dvids-1017806", "dvids-1017788", "dvids-1017790", "dvids-1017791"],
+  },
+  {
+    id: "release5-pdf-production-mix",
+    tier: 2,
+    title: "Release 05's PDF metadata records a mixed production pipeline",
+    claim: "All 22 Release 05 PDFs have a populated /Author field, but their PDF producer and creator values are not uniform: 21 use Adobe Acrobat (32-bit) 26 Paper Capture Plug-in, one has no /Producer, two CIA PDFs name Highland Technologies, and one FBI PDF names Adobe Acrobat 23.6 as /Creator.",
+    significance: "The catalog does not expose PDF production metadata. These fields preserve a small but useful provenance map of how the tranche was prepared, including the exceptional FBI rendering and the two CIA files with a vendor creator stamp.",
+    evidence: `The complete metadata inventory is preserved in \`archive/2026-08-07/release-05-metadata.json\`.
+
+**Producer:** 21 PDFs report \`Adobe Acrobat (32-bit) 26 Paper Capture Plug-in\`; FBI-UAP-D041 has no /Producer.
+
+**Creator:** CIA-UAP-D022 and CIA-UAP-D023 report \`Highland Technologies, Inc.\`; FBI-UAP-D027 reports \`Adobe Acrobat 23.6\`; the other 19 PDFs have no /Creator.
+
+**Author:** every PDF has a non-empty author value — DOW (4), FBI (13), CIA (2), Department of State (2), and EOP (1).`,
+    stats: [
+      { big: "22 of 22", label: "PDFs with a non-empty author field" },
+      { big: "21", label: "Paper Capture producer stamps" },
+      { big: "3", label: "non-empty creator fields" },
+    ],
+    sources: [
+      { path: "archive/2026-08-07/release-05-metadata.json", note: "Full locally generated PDF metadata inventory" },
+      { path: "www.war.gov/medialink/ufo/release_05/Aug_07/documents/CIA-UAP-D022_Unidentified-Flying-Object-Reported-near-Puerto-Rico_1965.pdf", note: "Highland Technologies creator field" },
+      { path: "www.war.gov/medialink/ufo/release_05/Aug_07/documents/FBI-UAP-D027_Digital-Rendering_Dark-Translucent-Triangle_2023.pdf", note: "Adobe Acrobat 23.6 creator field" },
+    ],
+  },
 ];
 
 export const TIER1 = FINDINGS.filter((f) => f.tier === 1);

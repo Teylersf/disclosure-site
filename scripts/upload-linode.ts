@@ -11,6 +11,7 @@
  * Optional:
  *   LINODE_PREFIX         path prefix inside the bucket (default: empty)
  *   UPLOAD_CONCURRENCY    parallel uploads (default: 8)
+ *   UPLOAD_PREFIXES       comma-separated mirror-key prefixes to sync; omit for all
  *   DRY_RUN               set to "1" to list what would upload without sending
  *
  * Usage:
@@ -56,6 +57,10 @@ const SECRET_KEY = required("LINODE_SECRET_KEY");
 const PREFIX = (process.env.LINODE_PREFIX ?? "").replace(/^\/+|\/+$/g, "");
 const CONCURRENCY = Math.max(1, Number(process.env.UPLOAD_CONCURRENCY ?? 8));
 const DRY = process.env.DRY_RUN === "1" || process.argv.includes("--dry");
+const PREFIX_FILTERS = (process.env.UPLOAD_PREFIXES ?? "")
+  .split(",")
+  .map((value) => value.trim().replace(/^\/+/, ""))
+  .filter(Boolean);
 
 function required(name: string): string {
   const v = process.env[name];
@@ -177,10 +182,17 @@ async function main() {
   console.log(`Endpoint:   ${ENDPOINT}`);
   console.log(`Bucket:     ${BUCKET}${PREFIX ? `/${PREFIX}` : ""}`);
   console.log(`Concurrency: ${CONCURRENCY}${DRY ? " · DRY RUN" : ""}`);
+  if (PREFIX_FILTERS.length) console.log(`Prefixes:    ${PREFIX_FILTERS.join(", ")}`);
 
   // Collect files
   const files: { path: string; key: string; size: number }[] = [];
   for (const host of ALLOWED_HOSTS) {
+    // A targeted sync does not need to even traverse unrelated host trees.
+    // This matters for the archival tree, which intentionally contains every
+    // immutable historical snapshot and can be much larger than the live set.
+    if (PREFIX_FILTERS.length && !PREFIX_FILTERS.some((prefix) => prefix.startsWith(`${host}/`))) {
+      continue;
+    }
     const hostDir = path.join(MIRROR_ROOT, host);
     try {
       await fs.access(hostDir);
@@ -191,6 +203,7 @@ async function main() {
       const rel = path.relative(MIRROR_ROOT, full).split(path.sep).join("/");
       // Skip user's waifu2x upscale artifacts
       if (rel.includes("_SplitFrames_W2xEX") || rel.endsWith(".W2xEX") || rel.endsWith("_waifu2x_2x_mp4.mkv")) continue;
+      if (PREFIX_FILTERS.length && !PREFIX_FILTERS.some((prefix) => rel.startsWith(prefix))) continue;
       const key = PREFIX ? `${PREFIX}/${rel}` : rel;
       const s = await stat(full);
       files.push({ path: full, key, size: s.size });

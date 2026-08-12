@@ -4,9 +4,9 @@ import { assetUrl } from "@/lib/asset-url";
 import { absoluteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Download bundles — PURSUE 2026 UAP files (all 4 releases)",
+  title: "Download bundles — PURSUE 2026 UAP files (all 5 releases)",
   description:
-    "Download every official Department of War PURSUE 2026 release bundle as one-shot ZIP files — Release 1 (1.22 GB), Release 2 combined (5.64 GB), Release 2 documents only (70 MB), Release 1 videos (1.33 GB), Release 3 documents (826 MB), Release 3 videos (4.6 GB), Release 4 documents, and Release 4 videos.",
+    "Download every official Department of War PURSUE 2026 release bundle as one-shot ZIP files — Release 1 through Release 5, including the August 7 documents and videos.",
   keywords: [
     "PURSUE 2026 download",
     "war.gov UFO zip",
@@ -22,12 +22,26 @@ export const metadata: Metadata = {
   alternates: { canonical: "/bundles" },
   openGraph: {
     title: "Download the full PURSUE 2026 bundles",
-    description: "Every official Department of War ZIP bundle across all four releases — declassified UAP files including STS-80 Space Shuttle images and the East Coast 2019-2020 wave.",
+    description: "Every official Department of War ZIP bundle across all five releases — declassified UAP files including Release 05's Gulf of Oman and Pacific Ocean video groups.",
     url: absoluteUrl("/bundles"),
   },
 };
 
 const BUNDLES = [
+  {
+    name: "Release 5 videos",
+    key: "d34w7g4gy10iej.cloudfront.net/release_05/uap_videos_080726.zip",
+    size: "513 MB",
+    desc: "All 16 videos from the August 7, 2026 release — linked Gulf of Oman 2021 and Pacific Ocean 2019 groups, four Middle East clips, and an FBI reconstruction.",
+    date: "2026-08-07",
+  },
+  {
+    name: "Release 5 documents",
+    key: "www.war.gov/medialink/ufo/release_05/Aug_07/release_05_Aug_07_documents.zip",
+    size: "130 MB",
+    desc: "All 22 PDFs and 3 images from the August 7, 2026 release — CIA Puerto Rico briefing material, State Department Bahia cables, historical DoW reports, and FBI records with digital renderings.",
+    date: "2026-08-07",
+  },
   {
     name: "Release 4 videos",
     key: "d34w7g4gy10iej.cloudfront.net/release_04/uap_release04_videos_071026.zip",

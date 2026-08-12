@@ -9,11 +9,9 @@ export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://pursue.rep
 
 export const SITE_NAME = "Disclosure — PURSUE 2026 UAP Archive";
 
-export const SITE_DESCRIPTION =
-  "Searchable archive of every record released by the U.S. Department of War PURSUE program — 334 declassified UAP / UFO documents, sensor videos, NASA Apollo/Space-Shuttle imagery, and FBI photographs across four 2026 releases (May 8, May 22, June 12, July 10), plus 29 independent findings the official catalog doesn't surface — including the STS-80 Space Shuttle 1996 UFO images and the 2019-2020 East Coast wave.";
+export const SITE_DESCRIPTION = "Searchable archive of every record released by the U.S. Department of War PURSUE program — 375 declassified UAP / UFO documents, sensor videos, NASA Apollo/Space-Shuttle imagery, and FBI records across five 2026 releases (May 8, May 22, June 12, July 10, August 7), with independent metadata analysis and preserved source copies.";
 
-export const SITE_SHORT_DESCRIPTION =
-  "The complete PURSUE 2026 UAP archive — 334 records across 4 releases, 29 findings, TV mode.";
+export const SITE_SHORT_DESCRIPTION = "The complete PURSUE 2026 UAP archive — 375 records across 5 releases, findings, TV mode.";
 
 export const SITE_KEYWORDS = [
   // primary subjects
@@ -30,8 +28,10 @@ export const SITE_KEYWORDS = [
   "May 22 2026 UFO release",
   "June 12 2026 UFO release",
   "July 10 2026 UFO release",
+  "August 7 2026 UFO release",
   "Release 03 PURSUE",
   "Release 04 PURSUE",
+  "Release 05 PURSUE",
   "war.gov UFO",
   "war.gov UAP",
   // agencies
@@ -76,6 +76,9 @@ export const SITE_KEYWORDS = [
   "Project Blue Book 1955 CIA memoranda",
   "Highland Technologies PURSUE PDF vendor",
   "PURSUE release 4 July 10 2026",
+  "PURSUE release 5 August 7 2026",
+  "Gulf of Oman UAP videos 2021",
+  "Pacific Ocean UAP videos 2019",
   // viewer features
   "UAP search",
   "UAP TV mode",

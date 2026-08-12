@@ -63,7 +63,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: now,
     changeFrequency: "monthly",
     // PR-073 (Columbus OH) and the relabeled D-series get a small bump
-    priority: r.release === "release_4" ? 0.85 : r.release === "release_3" ? 0.8 : r.release === "release_2" ? 0.75 : 0.7,
+    priority: r.release === "release_5" ? 0.9 : r.release === "release_4" ? 0.85 : r.release === "release_3" ? 0.8 : r.release === "release_2" ? 0.75 : 0.7,
   }));
 
   return [...staticPages, ...findingPages, ...recordPages, ...programPages, ...missionPages, ...galleryPages];
